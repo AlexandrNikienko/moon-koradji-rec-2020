@@ -1,0 +1,110 @@
+.news {
+    padding-left: 30px;
+    padding-right: 25px;
+    margin-left: 15px;
+    border-left: 1px solid rgb(170, 170, 170);
+
+    &__header {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        display: table;
+        margin-bottom: 15px;
+
+        &:hover {
+            .news {
+                &__image {
+                    box-shadow: 0 0 1px rgb(255, 255, 51),
+                    -1px -1px 1px rgb(255, 221, 51),
+                    1px -1px 1px rgb(255, 136, 0),
+                    -1px 1px 1px rgb(255, 34, 0),
+                    1px 1px 1px rgb(102, 102, 255);
+                    border-radius: 0 50%;
+
+                    &::before {
+                        width: 0;
+                    }
+                }
+
+                &__desc {
+                    &::after {
+                        left: -9px;
+                    }
+                }
+
+                &__title {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &__image {
+        background-position: 50% 50%;
+        background-size: cover;
+        width: 60px;
+        height: 58px;
+        border: 1px solid rgba(255, 255, 255, .5);
+        margin-right: 10px;
+        border-radius: 50% 0 50% 0;
+        position: relative;
+        transition: .3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 30px;
+            left: -31px;
+            bottom: -1px;
+            background-color: rgb(170, 170, 170);
+            transition: .3s;
+        }
+    }
+
+    &__desc {
+        white-space: normal;
+        color: rgb(204, 204, 204);
+        font-size: 16px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -69px;
+            height: 1px;
+            width: 0;
+            background-color: rgba(255, 255, 255, .5);
+            transition: 0.3s;
+        }
+    }
+
+    &__info {
+        color: rgb(169, 169, 169);
+        font-size: 13px;
+    }
+
+    &__title {
+        transition: 0.3s;
+    }
+
+    .glyphicon,
+    .fa {
+        position: absolute;
+        right: 10px;
+        top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .news a:hover .news__desc::after {
+        width: calc(100% + 9px);
+        border-bottom: 1px solid rgba(255, 221, 51, .25);
+        box-shadow: -1px 1px 1px rgb(255, 136, 0);
+    }
+}

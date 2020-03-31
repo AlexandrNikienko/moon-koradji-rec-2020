@@ -1,0 +1,5 @@
+<div class="m-audio-player">
+    <app-shared-loader *ngIf="release.bandcampLink"></app-shared-loader>
+
+    <div *ngIf="release.embedAudio" [innerHTML]="release.embedAudio | safeHtml"></div>
+</div>

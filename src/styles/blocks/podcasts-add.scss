@@ -1,0 +1,123 @@
+.s-podcast-add {
+    height: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+
+    &__item {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        font-size: 22px;
+        text-shadow: 0 0 10px black;
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        margin-bottom: .5rem;
+    }
+
+    &__subtitle {
+        color: $themeColor;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 400;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        z-index: -1;
+        opacity: .2;
+        fill: #fff;
+    }
+
+    &__border {
+        &--top,
+        &--bottom,
+        &--right,
+        &--left {
+            position: absolute;
+            animation-duration: .75s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        &--top,
+        &--bottom {
+            height: 1px;
+            animation-name: growWidth;
+        }
+
+        &--right,
+        &--left {
+            width: 1px;
+            animation-name: growHeight;
+        }
+
+        &--top,
+        &--left {
+            left: 0;
+            top: 0;
+        }
+
+        &--bottom,
+        &--right {
+            right: 0;
+            bottom: 0;
+        }
+
+        &--top {
+            background: linear-gradient(to right, rgba($themeColor, 0) 0%, rgba($themeColor, 0.7) 100%);
+        }
+
+        &--bottom {
+            background: linear-gradient(to right, rgba($themeColor, 0.7) 0%, rgba($themeColor, 0) 100%);
+        }
+
+        &--right {
+            background: linear-gradient(to bottom, rgba($themeColor, 0.7) 0%, rgba($themeColor, 0) 100%);
+        }
+
+        &--left {
+            background: linear-gradient(to bottom, rgba($themeColor, 0) 0%, rgba($themeColor, 0.7) 100%);
+        }
+
+        @keyframes growWidth {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes growHeight {
+            from {
+                height: 0;
+            }
+            to {
+                height: 100%;
+            }
+        }
+    }
+
+    .fa-podcast {
+        color: $themeColor;
+        font-size: 40px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1599px) {
+    .s-podcast-add {
+        // height: 192px;
+    }
+}

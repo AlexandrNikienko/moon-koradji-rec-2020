@@ -1,0 +1,18 @@
+.m-not-found {
+    text-align: center;
+    @include page-gap;
+
+    .s-error {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .s-notes {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .s-text {
+        font-size: 16px;
+    }
+}

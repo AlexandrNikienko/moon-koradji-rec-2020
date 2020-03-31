@@ -1,0 +1,46 @@
+.s-tshirt {
+    height: 271px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    &:hover {
+        .s-tshirt__item--vissible {
+            opacity: 0;
+        }
+
+        .s-tshirt__notification {
+            bottom: 0;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        transition: opacity .3s;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__notification {
+        position: absolute;
+        bottom: -60px;
+        padding: 0 15px 15px;
+        color: $themeColor;
+        transition: .3s;
+    }
+
+    .s-gift {
+        width: 55px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}

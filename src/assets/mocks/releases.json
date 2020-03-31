@@ -1,0 +1,1107 @@
+{
+    "releases": [
+        {
+            "hidden": true,
+            "isNew": false,
+            "releaseNumber": "MKCD013",
+            "releaseNote": "coming soon",
+            "releaseDate": "",
+            "releaseTitle": "Already Maged - Mortar & Pestle",
+            "releaseSubTitle": "previews soon",
+            "releaseCover": "already_maged_cover.png",
+            "_releaseRoute": "already-maged-mortar-and-pestle",
+            "releaseDescription": [
+                {
+                    "paragraph": "coming soon"
+                }
+            ],
+            "compiledBy": "",
+            "masteredBy": "",
+            "artworkBy": "",
+            "beatspaceLink": "",
+            "bandcampLink": "",
+            "videoLink": "",
+            "tracklist": ""
+        },
+        {
+            "isNew": false,
+            "releaseNumber": "MKCD012",
+            "releaseNote": "coming soon",
+            "releaseDate": "coming soon",
+            "releaseTitle": "VA Neural Embers",
+            "releaseSubTitle": "previews soon",
+            "releaseCover": "mkcd012_neural_embers.jpg",
+            "releaseRoute": "va-neural-embers",
+            "releaseDescription": [
+                {
+                    "paragraph": "This split includes some of the most unique and avant-garde artists of our planet: Inzect from Sweden, Molchun from Russia and Adansonia from Argentina. Each of them will show his mastery of the transformation of thought into an audio form."
+                },
+                {
+                    "paragraph": "The journey will be entertaining and will undoubtedly open new horizons for you."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Christer Lundström @ Ka-Sol Studio",
+            "artworkBy": "Jonas Lovén @ FAIA Graphic Studio",
+            "beatspaceLink": "",
+            "bandcampLink": "",
+            "videoLink": "",
+            "artists": [
+                "Inzect", "Molchun", "Adansonia"
+            ]
+        },
+        {
+            "isFree": true,
+            "releaseNumber": "MKDG002",
+            "releaseNote": "2019",
+            "releaseDate": "November 20, 2019",
+            "releaseTitle": "oCeLoT - Iconoclast",
+            "releaseSubTitle": "listen & download",
+            "releaseCover": "mkdg002_ocelot.jpg",
+            "releaseRoute": "ocelot-iconoclast",
+            "releaseDescription": [
+                {
+                    "paragraph": "\"If you meet the Buddha on the road, kill him...\""
+                },
+                {
+                    "paragraph": "This indicates that one should not worship form, formalism, formats, styles, boxes."
+                },
+                {
+                    "paragraph": "If you recall: the first oCeLoT album was called \"Aural Sects\".\nThis is the last oCeLoT album. Conformist box-thought is for suckas.\nQuibbling genre sectarians are boring and played out. On with the show!"
+                }
+            ],
+            "cdAuthor": "Aaron Peacock",
+            "masteredBy": "Aaron Peacock",
+            "artworkBy": "Whrikk",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/iconoclast",
+            "videoLink": "",
+            "tracklist": "",
+            "artists": [
+                "Ocelot"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2872029860/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/iconoclast\">Iconoclast by oCeLoT</a></iframe>"
+        },
+        {
+            "isFree": true,
+            "releaseNumber": "MKDG001",
+            "releaseNote": "2019",
+            "releaseDate": "October 01, 2019",
+            "releaseTitle": "EP Bapholot On Earth",
+            "releaseSubTitle": "listen & download",
+            "releaseCover": "mkdg001_bapholot_on_earth.jpg",
+            "releaseRoute": "ep-bapholot-on-earth",
+            "releaseDescription": [
+                {
+                    "paragraph": "An exclusive project created specifically for Moon Koradji Records. The combination of dark avant-garde with synthetic superiority. A unique blend of leaders in their genres."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Yannick Thiry",
+            "artworkBy": "Gaoshan Oolong",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/ep-bapholot-on-earth",
+            "videoLink": "",
+            "artists": [
+                "Baphomet Engine", "Ocelot", "Ghreg on Earth"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 241px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3898821852/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/ep-bapholot-on-earth\">EP Bapholot On Earth by Moon Koradji Records</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD011",
+            "releaseNote": "2019",
+            "releaseDate": "September 19, 2019",
+            "releaseTitle": "VA Illusorium",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd011_illusorium.jpg",
+            "releaseRoute": "va-illusorium",
+            "releaseDescription": [
+                {
+                    "paragraph": "The compilation of mystic acoustic vibrations, which will transfer you to the place that is full of secrets and puzzles of the Universe."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Kim Svendsen",
+            "artworkBy": "Salamandra",
+            "beatspaceLink": "http://www.beatspace.com/mkcd011cd-illusorium.html",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/illusorium",
+            "videoLink": "",
+            "artists": [
+                "Adansonia", "Saikozaurus", "Time For Slime", "Uttu", "Molchun", "Olien", "Mik-Ha", "NoizeBug", "Trold", "Traskel", "FoGgY"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 439px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2422477240/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/illusorium\">Illusorium by Various Artists</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD010",
+            "releaseNote": "2017",
+            "releaseDate": "February 15, 2017",
+            "releaseTitle": "VA Mind Games",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd010_mind_games.jpg",
+            "releaseRoute": "va-mind-games",
+            "releaseDescription": [
+                {
+                    "paragraph": "Mind Games is a psychedelic journey with beautiful melodies and massive kicks."
+                },
+                {
+                    "paragraph": "It will twist your thoughts and turn your mind inside out. Feelings, confusions, clearity and craziness."
+                },
+                {
+                    "paragraph": "Prepare yourself for a psychedelic experience from beginning to end."
+                }
+            ],
+            "compiledBy": "DJ Zloj",
+            "masteredBy": "Ka-Sol",
+            "artworkBy": "Gaoshan Oolong",
+            "internationalReleaseLink": "",
+            "ukrainianReleaseLink": "",
+            "beatspaceLink": "http://www.beatspace.com/labels/moon-koradji-records/mkcd010-mind-games.html",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/mind-games",
+            "videoLink": "https://www.youtube.com/embed/dIPugj2SiDs",
+            "embedVideo": "<iframe src=\"https://www.youtube-nocookie.com/embed/dIPugj2SiDs\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd010_mind_games/1. Molchun - Common Features (145).mp3",
+                    "artistName": "Molchun",
+                    "trackName": "Common Features"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd010_mind_games/2. Odr - Hootdogs (146).mp3",
+                    "artistName": "Odr",
+                    "trackName": "Hootdogs"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd010_mind_games/3. Inzect - Harmonic Twist (148).mp3",
+                    "artistName": "Inzect",
+                    "trackName": "Harmonic Twist"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd010_mind_games/4.Taigan Sunset - Yes Iam Creepy (149).mp3",
+                    "artistName": "Taigan Sunset",
+                    "trackName": "Yes Iam Creepy"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd010_mind_games/5. Distorted Goblin - Forest Wanderer (149).mp3",
+                    "artistName": "Distorted Goblin",
+                    "trackName": "Forest Wanderer"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd010_mind_games/6. Taakelur - Hidden Mirror (150).mp3",
+                    "artistName": "Taakelur",
+                    "trackName": "Hidden Mirror"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd010_mind_games/7. Already Maged & Tersius - She Gonna Weaver (150).mp3",
+                    "artistName": "Already Maged & Tersius",
+                    "trackName": "She Gonna Weaver"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd010_mind_games/8. Uttu - Nebula Dance (151).mp3",
+                    "artistName": "Uttu",
+                    "trackName": "Nebula Dance"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd010_mind_games/9. Purosurpo - Attack Of The Dimensions (152).mp3",
+                    "artistName": "Purosurpo",
+                    "trackName": "Attack Of The Dimensions"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd010_mind_games/10. Kanka - The Other Self (156).mp3",
+                    "artistName": "Kanka",
+                    "trackName": "The Other Self"
+                }
+            ],
+            "artists": [
+                "Molchun", "Odr", "Inzect", "Taigan Sunset", "Distorted Goblin", "Taakelur", "Already Maged", "Tersius", "Uttu", "Purosurpo", "Kanka"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1812939013/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/mind-games\">Mind Games by Various Artists</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD009",
+            "releaseNote": "2013",
+            "releaseDate": "December 9, 2013",
+            "releaseTitle": "VA Intropix",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd009_intropix.jpg",
+            "releaseRoute": "va-intropix",
+            "releaseDescription": [
+                {
+                    "paragraph": "The state of Intropix is an astral projection of mind, soul and body to the world of fancy flora and fauna, memorable experience, flow of new emotions, underworld adventure alone with your imaginations."
+                },
+                {
+                    "paragraph": "The recipe of this trip will enhance your capacity for neurodiving. There are 9 special ingredients for more natural and deep effect, the preparation of which took more than one year."
+                },
+                {
+                    "paragraph": "Welcome to the new dimension."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Makus Overdream",
+            "artworkBy": "MadeInRealtime",
+            "internationalReleaseLink": "http://forum.isratrance.com/va-intropix-moon-koradji-rec-2013/",
+            "ukrainianReleaseLink": "http://forum.psyshine.org.ua/viewtopic.php?t=10681",
+            "beatspaceLink": "http://www.beatspace.com/mkcd009-intropix.html",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/intropix",
+            "videoLink": "https://www.youtube.com/embed/Dvh4MdCADTQ",
+            "embedVideo": "<iframe src=\"https://www.youtube-nocookie.com/embed/Dvh4MdCADTQ\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd009_intropix/01. Ka-Sol - VitaminK.mp3",
+                    "artistName": "Ka-Sol",
+                    "trackName": "VitaminK"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd009_intropix/02. Time For Slime - Huvudverk.mp3",
+                    "artistName": "Time For Slime",
+                    "trackName": "Huvudverk"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd009_intropix/03. Troglodytes - Potion Lotion.mp3",
+                    "artistName": "Troglodytes",
+                    "trackName": "Potion Lotion"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd009_intropix/04. Traskel - Pop My Partaj.mp3",
+                    "artistName": "Traskel",
+                    "trackName": "Pop My Partaj"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd009_intropix/05. Nolm - Is Over.mp3",
+                    "artistName": "Nolm",
+                    "trackName": "Is Over"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd009_intropix/06. Attoya - No More Excuses.mp3",
+                    "artistName": "Attoya",
+                    "trackName": "No More Excuses"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd009_intropix/07. Kanka - Split Personalities.mp3",
+                    "artistName": "Kanka",
+                    "trackName": "Split Personalities"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd009_intropix/08. Kiriyama - Ionic Flux.mp3",
+                    "artistName": "Kiriyama",
+                    "trackName": "Ionic Flux"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd009_intropix/09. Battle Of The Future Buddhas - Endorphin.mp3",
+                    "artistName": "Battle Of The Future Buddhas",
+                    "trackName": "Endorphin"
+                }
+            ],
+            "artists": [
+                "Ka-Sol", "Time For Slime", "Troglodytes", "Traskel", "Nolm", "Attoya", "Kanka", "Kiriyama", "Battle Of The Future Buddhas"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 439px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=205038030/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/intropix\">Intropix by Various Artists</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD008",
+            "releaseNote": "2013",
+            "releaseDate": "May 13th, 2013",
+            "releaseTitle": "oCeLoT - Night & Day",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd008_ocelot.jpg",
+            "releaseRoute": "ocelot-night-and-day",
+            "releaseDescription": [
+                {
+                    "paragraph": "Thank you and congratulations. You are one of a few people who have chosen this CD. May it bring you pleasure. This work was some years in the making and as such it spans a range of sounds."
+                },
+                {
+                    "paragraph": "'Thank You' to: You, the listener, Taras Habrel and Victor TrueShiva who gave life and magic to the artwork of the CD, Moon Koradji and life for it's constant evolution."
+                },
+                {
+                    "paragraph": "Innovate, invent, morph, go beyond and grow."
+                },
+                {
+                    "paragraph": "Peace."
+                }
+            ],
+            "cdAuthor": "Aaron Peacock",
+            "compiledBy": "",
+            "masteredBy": "Clement",
+            "artworkBy": "Taras Habrel (outside) & Victor TrueShiva (inside)",
+            "beatspaceLink": "http://www.beatspace.com/labels/moon-koradji-records/mkcd008-night-day.html",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/night-day",
+            "videoLink": "https://www.youtube.com/embed/Dvh4MdCADTQ",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd008_ocelot/01 - Ocelot - Hello, my name is.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Hello, my name is"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd008_ocelot/02 - Ocelot - One Year Later.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "One Year Later"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd008_ocelot/03 - Ocelot - Oxymoron.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Oxymoron"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd008_ocelot/04 - Ocelot - Pitcher.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Pitcher"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd008_ocelot/05 - Ocelot - Thirteen.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Thirteen"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd008_ocelot/06 - Ocelot - Crunch Time.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Crunch Time"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd008_ocelot/07 - Ocelot - Holographic Projection.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Holographic Projection"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd008_ocelot/08 - Ocelot - August.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "August"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd008_ocelot/09 - Ocelot - Wiggle Waggle.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "Wiggle Waggle"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd008_ocelot/10 - Ocelot - The First Day.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "The First Day"
+                },
+                {
+                    "trackNum": "11",
+                    "trackLink": "/assets/music/mkcd008_ocelot/11 - Ocelot - The Second Afternoon.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "The Second Afternoon"
+                }
+            ],
+            "artists": [
+                "Ocelot"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2601701/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/night-day\">Night &amp; Day by OCELOT</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD007",
+            "releaseNote": "2012",
+            "releaseDate": "July 4, 2012",
+            "releaseTitle": "VA Infinity Keepers 2: Depth Perception",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd007_infinity_keepers_2.jpg",
+            "releaseRoute": "va-infinity-keepers-2",
+            "releaseDescription": [
+                {
+                    "paragraph": "The unique mix of sonic messages "
+                },
+                {
+                    "paragraph": "from the major creators "
+                },
+                {
+                    "paragraph": "will let you plunge into a deep journey "
+                },
+                {
+                    "paragraph": "of the body and soul, "
+                },
+                {
+                    "paragraph": "descending deeper and deeper into the cosmic abyss "
+                },
+                {
+                    "paragraph": "in search of new sensations."
+                },
+                {
+                    "paragraph": "Infinity Keepers will prompt you the direction "
+                },
+                {
+                    "paragraph": "and help you to reach a suitable depth of flight "
+                },
+                {
+                    "paragraph": "for the contact..."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Already Maged",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/infinity-keepers-2-depth-perception",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/01. Vector Selector - Plunkspice.mp3",
+                    "artistName": "Vector Selector",
+                    "trackName": "Plunkspice"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/02. Lab - Forgotten Capital (rmx).mp3",
+                    "artistName": "LAB",
+                    "trackName": "Forgotten Capital (rmx)"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/03. Ghreg On Earth - Dazed And Infuzed.mp3",
+                    "artistName": "Ghreg On Earth",
+                    "trackName": "Dazed And Infuzed"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/04. Taigan Sunset - Barbro (Silent Horror rmx).mp3",
+                    "artistName": "Taigan Sunset",
+                    "trackName": "Barbro (Silent Horror rmx)"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/05. Baphomet Engine - Digesting The Universe.mp3",
+                    "artistName": "Baphomet Engine",
+                    "trackName": "Digesting The Universe"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/06. Mind Distortion System - Ariale.mp3",
+                    "artistName": "Mind Distortion System",
+                    "trackName": "Ariale"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/07. Whrikk - Idrelblorsk Gulgakult.mp3",
+                    "artistName": "Whrikk",
+                    "trackName": "Idrelblorsk Gulgakult"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/08. Enichkin - Burst Into Fire.mp3",
+                    "artistName": "Enichkin",
+                    "trackName": "Burst Into Fire"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/09. Ocelot - The Bowl Has A Hole.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "The Bowl Has A Hole"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd007_infinity_keepers_2/10. Dylalien - Super Lemon Haze.mp3",
+                    "artistName": "Dylalien",
+                    "trackName": "Super Lemon Haze"
+                }
+            ],
+            "artists": [
+                "Vector Selector", "LAB", "Ghreg on Earth", "Silent Horror", "Taigan Sunset", "Baphomet Engine", "Mind Distortion System", "Whrikk", "Enichkin", "Ocelot", "Dylalien"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2850070742/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers-2-depth-perception\">Infinity Keepers 2: depth perception by Various Artists</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD006",
+            "releaseNote": "2012",
+            "releaseDate": "April 18, 2012",
+            "releaseTitle": "Kirna - In Space!",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd006_kirna.jpg",
+            "releaseRoute": "kirna-in-space!",
+            "releaseDescription": [
+                {
+                    "paragraph": "After all these years, after many live performances and most importantly after a lots time spent in studio, Kirna's debut album is finally seeing the daylight. Each track on this album has been carefully crafted and attentively tweaked for a period of 4 years. Every little nuance has been considered, and all musical passages have been taken into account."
+                },
+                {
+                    "paragraph": "This album functions as a gateway to a galaxy far far away. Intended to be listened as a full trip, it connects each musical piece in a way of a planetary system. Still, each track is independent, with its own mindset for exploring sonic grounds and surroundings."
+                },
+                {
+                    "paragraph": "Acoustic horizon of this record covers wide range of surreal and ordinary soundscapes, designed to tingle and tangle every layer of your mind. Playful progressions within beautiful compositions assure that melodic receptor of your auditory sense will be stimulated emotionally and challenged musically. Let this music guide your way In Space!"
+                }
+            ],
+            "cdAuthor": "Kir Ylle",
+            "masteredBy": "Monno Onkel Dunkel",
+            "artworkBy": "Kirna",
+            "beatspaceLink": "http://www.beatspace.com/labels/moon-koradji-records/mkcd006cd-in-space.html",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/in-space",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd006_kirna/01 Happily Ever After.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Happily Ever After"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd006_kirna/02 Meteorite Shower.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Meteorite Shower"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd006_kirna/03 Cosa Nostra.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Cosa Nostra"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd006_kirna/04 Mecha Oil Poisoning.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Mecha Oil Poisoning"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd006_kirna/05 Pilot Course.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Pilot Course"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd006_kirna/06 Kauklahti Nightlife.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Kauklahti Nightlife"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd006_kirna/07 Badunkadunk.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Badunkadunk"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd006_kirna/08 Trali Vali.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Trali Vali"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd006_kirna/09 NWO.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "NWO"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd006_kirna/10 Cosmic Bostik.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Cosmic Bostik"
+                },
+                {
+                    "trackNum": "11",
+                    "trackLink": "/assets/music/mkcd006_kirna/11 Bottoms Up.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Bottoms Up"
+                },
+                {
+                    "trackNum": "12",
+                    "trackLink": "/assets/music/mkcd006_kirna/12 In Space!.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "In Space!"
+                },
+                {
+                    "trackNum": "13",
+                    "trackLink": "/assets/music/mkcd006_kirna/13 Shpace Out.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Shpace Out"
+                },
+                {
+                    "trackNum": "14",
+                    "trackLink": "/assets/music/mkcd006_kirna/14 Slippery Slope.mp3",
+                    "artistName": "Kirna",
+                    "trackName": "Slippery Slope"
+                }
+            ],
+            "artists": [
+                "Kirna"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2912520009/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/in-space\">In Space! by KIRNA</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD005",
+            "releaseNote": "2012",
+            "releaseDate": "January 11, 2012",
+            "releaseTitle": "Ascoil Sun - Emergence",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd005_ascoil_sun.jpg",
+            "releaseRoute": "ascoil-sun-emergence",
+            "releaseDescription": [
+                {
+                    "paragraph": "Formed back in 2008 by Matti Mikkola and Pasi Salo, Ascoil Sun presents their debut album 'Emergence'. Despite the young age of the project, two minds behind it have been interacting musically for a long time, and after releasing their debut EP, Ascoil Sun have occupied Lunar studios to sculpture their sound - resulting in a truly unique blend of vibes that only Ascoil Sun delivers."
+                },
+                {
+                    "paragraph": "Aiming towards feelings of spontaniousness and progressive vibes, with eteric slide-guitar melodies echoing colourful psychedelia of 60-70`s, synth-solos taking you into the journey to the future. Emergence is carefully crafted to a true experience which takes you from the surface to the ocean floor, building its pressure in emotion, complexity and mood towards its ending, where it all implodes to surreal beauty."
+                },
+                {
+                    "paragraph": "Representing a wide-range of musical styles Emergence bombards the listener with constant aural surprises in form of a unique mixture of sounds and melodies, yet keeping the ethereal psychedelia and vivid story telling in the front - a blend between future and past is definitely one way of describing the LP. Although this album is ment to be a story with beginning, middle and end - each track serve as a individual trip to planes of sound."
+                },
+                {
+                    "paragraph": "Let yourself dive in your thoughts, let your mind emerge and blossom."
+                }
+            ],
+            "cdAuthor": "Matti Mikkola & Pasi Salo",
+            "compiledBy": "",
+            "masteredBy": "Makus",
+            "artworkBy": "Nystrom (Darkstorn)",
+            "beatspaceLink": "http://www.beatspace.com/labels/moon-koradji-records/mk1cd005cd-emergence.html",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/emergence",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/01.Sun Therapy.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Sun Therapy"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/02.Foxy Tuning.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Foxy Tuning"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/03.Mermaid`s Hypothesis.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Mermaid`s Hypothesis"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/04.Ocean that you hold on your hands.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Ocean that you hold on your hands"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/05.Entanglementary.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Entanglementary"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/06.Chant of the Machines.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Chant of the Machines"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/07.Delay the time.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Delay the time"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/08.Magnitude in Front.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Magnitude in Front"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/09.Feel the Overflow.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Feel the Overflow"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd005_ascoil_sun/10.Settlers by the Sun.mp3",
+                    "artistName": "Ascoil Sun",
+                    "trackName": "Settlers by the Sun"
+                }
+            ],
+            "artists": [
+                "Ascoil Sun"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=560698242/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/emergence\">Emergence by ASCOIL SUN</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD004",
+            "releaseNote": "2010",
+            "releaseDate": "December 3, 2010",
+            "releaseTitle": "VA Legendarium",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd004_legendarium.jpg",
+            "releaseRoute": "va-legendarium",
+            "releaseDescription": [
+                {
+                    "paragraph": "Moon Koradji Records proudly present the new conceptual audio CD 'Legendarium' a collection of musical journeys from different worlds and epochs, ten spellbinding stories permeated with intriguing sounds and mythical beings, mysterious melodies and enigmatic secrets."
+                },
+                {
+                    "paragraph": "The compilation includes unreleased tracks from well-known artists as well as rising stars on the world trance scene from countries such as Finland, Netherlands, Taiwan, Ukraine, Denmark, England, Sweden and Israel."
+                },
+                {
+                    "paragraph": "Find your legend and become its hero!"
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Azur",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/legendarium",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd004_legendarium/01. Captain Kirk - Pakkasnapa.mp3",
+                    "artistName": "Captain Kirk",
+                    "trackName": "Pakkasnapa"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd004_legendarium/02. Whrikk - Misty Vacation.mp3",
+                    "artistName": "Whrikk",
+                    "trackName": "Misty Vacation"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd004_legendarium/03. Kerlivin - Psylloween.mp3",
+                    "artistName": "Kerlivin",
+                    "trackName": "Psylloween"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd004_legendarium/04. Already Maged - King Of The Winged Monkeys.mp3",
+                    "artistName": "Already Maged",
+                    "trackName": "King Of The Winged Monkeys"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd004_legendarium/05. Drone Bixie - Viol.mp3",
+                    "artistName": "Drone Bixie",
+                    "trackName": "Viol"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd004_legendarium/06. Tersius - Thundrafi.mp3",
+                    "artistName": "Tersius",
+                    "trackName": "Thundrafi"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd004_legendarium/07. Troglodytes & Taigan Sunset - Wide Eyed Child.mp3",
+                    "artistName": "Troglodytes & Taigan Sunset",
+                    "trackName": "Wide Eyed Child"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd004_legendarium/08. Attoya & Oil - Droidbox.mp3",
+                    "artistName": "Attoya & Oil",
+                    "trackName": "Droidbox"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd004_legendarium/09. Taigan Sunset & Troglodytes - Skruvapadenfan.mp3",
+                    "artistName": "Taigan Sunset & Troglodytes",
+                    "trackName": "Skruvapadenfan"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd004_legendarium/10. Molokow - The Lay Of The Last.mp3",
+                    "artistName": "Molokow",
+                    "trackName": "The Lay Of The Last"
+                }
+            ],
+            "artists": [
+                "Captain Kirk", "Whrikk", "Kerlivin", "Already Maged", "Drone Bixie", "Tersius", "Troglodytes", "Taigan Sunset", "Attoya", "Oil", "Molokow"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3132695529/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/legendarium\">Legendarium by VA</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD003",
+            "releaseNote": "2009",
+            "releaseDate": "April 24, 2009",
+            "releaseTitle": "VA Shadow Enuin 2",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd003_shadow_enuin_2.jpg",
+            "releaseRoute": "va-shadow-enuin-2",
+            "releaseDescription": [
+                {
+                    "paragraph": "There is a place in the universe completely hidden from human eyes. Here rustles of night and breath of mist, whispers of wind and voices of nature create mysterious sense of magic. Colourful stream of supernatural sounds will rush right to your consciousness. Here your thoughts materialize."
+                },
+                {
+                    "paragraph": "For those, who prefer wild mixture of sounds, for travelers between the lands of dreams and reality - Moon Koradji prepared a space flight beyond the borders of understanding. Stars will draw you the way, and music is the key to open the access to the unexplored dimension of the Enuin planet."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Hypomicro",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-shadow-enuin-2",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/01.ACCESS GREMLIN - Nordular (146).mp3",
+                    "artistName": "Access Gremlin",
+                    "trackName": "Nordular"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/02.DIGITALIAN - Micro Syndrome (148).mp3",
+                    "artistName": "Digitalian",
+                    "trackName": "Micro Syndrome"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/03.WHRIKK - Reaper's Digest (151).mp3",
+                    "artistName": "Whrikk",
+                    "trackName": "Reaper's Digest"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/04.AMORPHOUS - Loop Seven 20 (150).mp3",
+                    "artistName": "Amorphous",
+                    "trackName": "Loop Seven 20"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/05.PUROSURPO - Why Is Weird (148).mp3",
+                    "artistName": "Purosurpo",
+                    "trackName": "Why Is Weird"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/06.PANDORA'S BOX - Wazubi Klaczubi (148).mp3",
+                    "artistName": "Pandora's Box",
+                    "trackName": "Wazubi Klaczubi"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/07.TRASKEL - Re-Invention (148).mp3",
+                    "artistName": "Traskel",
+                    "trackName": "Re-Invention"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/08.ANNOYINGNINJAS - Der Var Ik Dem Der Ik Fik Finger (148).mp3",
+                    "artistName": "AnnoyingNinjas",
+                    "trackName": "Der Var Ik Dem Der Ik Fik Finger"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/09.DISTORTED GOBLIN - Constant Development (148).mp3",
+                    "artistName": "Distorted Goblin",
+                    "trackName": "Constant Development"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd003_shadow_enuin_2/10.KRUSSEDULL - Macedonian Yearhouse (146).mp3",
+                    "artistName": "Krussedull",
+                    "trackName": "Macedonian Yearhouse"
+                }
+            ],
+            "artists": [
+                "Access Gremlin", "Digitalian", "Whrikk", "Amorphous", "Purosurpo", "Pandora's Box", "Traskel", "AnnoyingNinjas", "Distorted Goblin", "Krussedull"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1789906262/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/shadow-enuin-2\">Shadow Enuin 2 by VA</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD002",
+            "releaseNote": "2008",
+            "releaseDate": "September 26, 2008",
+            "releaseTitle": "VA Infinity Keepers",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd002_infinity_keepers.jpg",
+            "releaseRoute": "va-infinity-keepers",
+            "releaseDescription": [
+                {
+                    "paragraph": "Under the cover of night, when lightning flashes cut the sky and the shadow of darkness absorbs last sun beam... here comes the dark side of Moon Koradji."
+                },
+                {
+                    "paragraph": "Prayers of Wizard will fly round the Earth with hurricane winds. He turns to the Infinity Keepers in order to touch the secrets, which eternity keeps in its depth. Through music the answers will be received. Through vibes He will feel the uncontrolable power of nature elements!"
+                },
+                {
+                    "paragraph": "Listen and feel..."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Tim Schuldt",
+            "artworkBy": "Ihtianderson",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-infinity-keepers",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/01 Ocelot - The Hole Is A Bowl.mp3",
+                    "artistName": "Ocelot",
+                    "trackName": "The Hole Is A Bowl"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/02 Shizobot - Space Dip.mp3",
+                    "artistName": "Shizobot",
+                    "trackName": "Space Dip"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/03 Digitalist - Screamed Up.mp3",
+                    "artistName": "Digitalist",
+                    "trackName": "Screamed Up"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/04 Silent Horror - Dementia.mp3",
+                    "artistName": "Silent Horror",
+                    "trackName": "Dementia"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/05 Already Maged - Broomstick Meeting.mp3",
+                    "artistName": "Already Maged",
+                    "trackName": "Broomstick Meeting"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/06 Karash - Magma.mp3",
+                    "artistName": "Karash",
+                    "trackName": "Magma"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/07 Magma Ohm - Dr Leary.mp3",
+                    "artistName": "Magma Ohm",
+                    "trackName": "Dr Leary"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/08 Olien - Enerdriven.mp3",
+                    "artistName": "Olien",
+                    "trackName": "Enerdriven"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/09 Oil - Feed Me To Pigs.mp3",
+                    "artistName": "Oil",
+                    "trackName": "Feed Me To Pigs"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd002_infinity_keepers/10 Fearkiller - Angel Eyes.mp3",
+                    "artistName": "Fearkiller",
+                    "trackName": "Angel Eyes"
+                }
+            ],
+            "artists": [
+                "Ocelot", "Schizobot", "Digitalist", "Silent Horror", "Already Maged", "Karash", "Magma Ohm", "Olien", "Oil", "Fearkiller"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=471755579/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers\">Infinity Keepers by VA</a></iframe>"
+        },
+        {
+            "releaseNumber": "MKCD001",
+            "releaseNote": "2008",
+            "releaseDate": "April 8, 2008",
+            "releaseTitle": "VA Shadow Enuin: at the Earth's edge",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": "mkcd001_shadow_enuin.jpg",
+            "releaseRoute": "va-shadow-enuin",
+            "releaseDescription": [
+                {
+                    "paragraph": "Moon Koradji records is a new born label for supporting of qualitative music production. After years of listening to psychedelic electronic music, going to parties, djing and organizing events DJ Omsun finally unleash his first compilation on the world."
+                },
+                {
+                    "paragraph": "Shadow Enuin - is a unique excursion through the minds and imagination of famous musicians and masters of psychedelic dimension. Enuin - a synthesis of magic and nature, a reflection of trick, free flight under the hidden paths of undiscovered civilisations, an elf-like creature, radiating waves of mystical sounds from the depth of wild soul."
+                },
+                {
+                    "paragraph": "Moon Koradji is proud to introduce you their first licensed CD and leaves three dots for your own comprehension of deserving attention material. Have a nice trip!"
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Furious",
+            "artworkBy": "Juaho",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-shadow-enuin-at-the-earths-edge",
+            "videoLink": "",
+            "tracklist": [
+                {
+                    "trackNum": "01",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/01. Shotu vs Suddha - Virtual Analog.mp3",
+                    "artistName": "Shotu vs Suddha",
+                    "trackName": "Virtual Analog"
+                },
+                {
+                    "trackNum": "02",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/02. Whrikk - Feet Seeker.mp3",
+                    "artistName": "Whrikk",
+                    "trackName": "Feet Seeker"
+                },
+                {
+                    "trackNum": "03",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/03. Gidra - Mute Mutated Mutant.mp3",
+                    "artistName": "Gidra",
+                    "trackName": "Mute Mutated Mutant"
+                },
+                {
+                    "trackNum": "04",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/04. Kuro Fusion - Take a Byte.mp3",
+                    "artistName": "Kuro Fusion",
+                    "trackName": "Take a Byte"
+                },
+                {
+                    "trackNum": "05",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/05. Pandora's Box - Natural Afinity.mp3",
+                    "artistName": "Pandora's Box",
+                    "trackName": "Natural Afinity"
+                },
+                {
+                    "trackNum": "06",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/06. Mubali - Spanksgiving.mp3",
+                    "artistName": "Mubali",
+                    "trackName": "Spanksgiving"
+                },
+                {
+                    "trackNum": "07",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/07. Phobos Azazel - Siberia.mp3",
+                    "artistName": "Phobos Azazel",
+                    "trackName": "Siberia"
+                },
+                {
+                    "trackNum": "08",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/08. DrURy  NeViL - LiL StaNKy.mp3",
+                    "artistName": "Drury  NeviL",
+                    "trackName": "Lil Stanky"
+                },
+                {
+                    "trackNum": "09",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/09. Acid Goblins - Age of Vampires.mp3",
+                    "artistName": "Acid Goblins",
+                    "trackName": "Age of Vampires"
+                },
+                {
+                    "trackNum": "10",
+                    "trackLink": "/assets/music/mkcd001_shadow_enuin/10. Tromo - Catacomb.mp3",
+                    "artistName": "Tromo",
+                    "trackName": "Catacomb"
+                }
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 472px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=786405981/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/shadow-enuin-at-the-earths-edge\">Shadow Enuin: at the Earth&#39;s edge by VA</a></iframe>",
+            "artists": [
+                "Shotu", "Whrikk", "Gidra", "Kuro Fusion", "Pandora's Box", "Mubali", "Phobos Azazel", "Drury Nevil", "Acid Goblins", "Tromo"
+            ]
+        }
+    ]
+}

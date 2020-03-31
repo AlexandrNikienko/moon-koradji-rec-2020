@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Myfont;
+    src: url(/assets/fonts/Haymaker.ttf);
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding: 15px 21%;
+    background: url('#{$imageFolder}/t-shirts/1/tshirt-artwork.png') repeat center/94%;
+    border-radius: 5px;
+}
+
+.swiper-slide {
+    padding: 0 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(135deg, #000 0%, #111 100%);
+    position: relative;
+    box-shadow: 0 0 2px black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+
+    p {
+        color: beige;
+        font-size: 36px;
+        font-weight: 300;
+        font-family: Myfont;
+        text-transform: uppercase;
+        text-shadow: -0.01em -0.01em red, 0.01em 0.01em #0ff;
+        letter-spacing: 2px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    right: 0;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23adff2f'%2F><%2Fsvg>");
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    left: 0;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23adff2f'%2F><%2Fsvg>");
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 45px;
+    margin-top: 0;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, .75);
+    }
+}
+
+@include mobile {
+    .swiper-slide {
+        p {
+            font-size: 22px;
+        }
+    }
+}

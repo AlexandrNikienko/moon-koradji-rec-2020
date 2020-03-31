@@ -1,0 +1,8 @@
+<div class="c-video" *ngIf="embedVideo" [innerHTML]="embedVideo | safeHtml"></div>
+
+<!--
+<div class="c-video" *ngIf="embedVideo">
+    <iframe *ngIf="videoLink" src="{{videoLink}}" frameborder="0" allowfullscreen></iframe>
+
+    <source *ngIf="videoLink" src="{{videoLink}}" type="video/mp4">
+</div>-->

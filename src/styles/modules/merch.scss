@@ -1,0 +1,40 @@
+.m-merch {
+    .s-merch-title {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .s-merch-text {
+        font-size: 18px;
+        text-align: center;
+        color: #a2d400;
+        margin-bottom: 10px;
+    }
+
+    .s-tshirt-item {
+        &__img {
+            max-width: 100%;
+            margin-bottom: 17px;
+            opacity: 0.85;
+
+            &--artwork {
+                opacity: 0.75;
+            }
+        }
+    }
+
+    .s-tshirt-info {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .s-color {
+        color: #a2d400;
+    }
+
+    .s-gift {
+        width: 50px;
+    }
+}

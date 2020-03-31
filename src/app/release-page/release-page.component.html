@@ -1,0 +1,66 @@
+<div class="m-release-info row" *ngIf="release">
+    <div class="col-lg-5 col-md-6 col-sm-12 offset-lg-1">
+        <h1 class="release-name">
+            {{release.releaseTitle}}
+            <a class="btn btn-link share-btn" href="javascript: void(0)" (click)="share()" title="Share on Facebook">
+                <i class="fas fa-share fa-2x"></i>
+            </a>
+        </h1>
+
+        <div class="release-main clearfix">
+            <img class="release-cover" src="/assets/images/release-cover/{{release.releaseCover}}" alt="">
+
+            <div class="release-description">
+                <p class="release-description__paragraph" *ngFor="let description of release.releaseDescription">
+                    {{description.paragraph}}
+                </p>
+            </div>
+        </div>
+
+        <div class="release-credits">
+            <p class="release-credits__paragraph" *ngIf="release.compiledBy">Compiled by {{release.compiledBy}}</p>
+
+            <p class="release-credits__paragraph" *ngIf="release.cdAuthor">W&P by {{release.cdAuthor}}</p>
+
+            <p class="release-credits__paragraph">Mastered by {{release.masteredBy}}</p>
+
+            <p class="release-credits__paragraph">Cover design by {{release.artworkBy}}</p>
+
+            <p class="release-credits__paragraph">Release date: {{release.releaseDate}}</p>
+        </div>
+
+        <div class="release-credits">
+            <div class="release-credits__side" *ngIf="release.beatspaceLink">
+                <div class="release-credits__icon"></div>
+
+                <p class="release-credits__paragraph">CD purchase:</p>
+
+                <a href="{{release.beatspaceLink}}" target="_blank" class="release-link">Beatspace</a>
+            </div>
+
+            <div class="release-credits__side" *ngIf="release.bandcampLink">
+                <p class="release-credits__paragraph">{{release.isFree ? "Free download:" : "Buy digital:"}}</p>
+
+                <a href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
+            </div>
+        </div>
+
+        <div class="s-involved-artists" *ngIf="release.artists">
+            <p class="s-involved-artists__title">Involved musicians:</p>
+
+            <div class="s-involved-artists__item" *ngFor="let artist of involved">
+                <a [routerLink]="['/artists', artist.artistRoute]"
+                   class="s-involved-artists__content"
+                   [ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + artist.artistAvatar + ')'}">
+                    <div class="s-involved-artists__name">{{artist.artistName}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5 col-md-6 col-sm-12">
+        <app-audio-player [release]="release"></app-audio-player>
+
+        <app-shared-video [embedVideo]="release.embedVideo"></app-shared-video>
+    </div>
+</div>

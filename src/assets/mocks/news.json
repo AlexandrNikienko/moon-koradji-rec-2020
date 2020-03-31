@@ -1,0 +1,17 @@
+{
+    "news": [
+        {
+            "link": "/podcasts",
+            "image": "/assets/images/mk_square.jpg",
+            "title": "Podcast #10 with Spindrift",
+            "text": "April"
+        },
+        {
+            "link": "https://www.goabase.net/party/the-shadow-of-the-dark-shaman-by-mindgamers/105799",
+            "image": "https://www.goabase.net/images/flyer/full/20200904_the-shadow-of-the-dark-shaman-by-mindgamers_20200108201039.jpg",
+            "title": "The Shadow Of The Dark Shaman",
+            "text": "Stockholm, Sep 4-6th 2020",
+            "target": "_blank"
+        }
+    ]
+}

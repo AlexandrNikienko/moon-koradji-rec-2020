@@ -1,0 +1,17 @@
+<div class="m-podcasts s-page row" *ngIf="podcasts$ | async as podcasts">
+    <div class="col-lg-10 col-sm-12 offset-lg-1">
+        <h2 class="s-module-title">
+            Greetings Earthlings!
+            <br>
+            Welcome to Moon Koradji Records podcasts page.
+        </h2>
+
+        <h3 class="s-module-subtitle">
+            Subscribe to our Podcasts with <a href="https://podcasts.apple.com/ua/podcast/moon-koradji-records/id1470758774" target="_blank">iTunes</a>, <a href="https://soundcloud.com/moon-koradji-records/" target="_blank">SoundCloud</a> or <a href="https://www.mixcloud.com/Moon_Koradji_Records/" target="_blank">Mixcloud</a>
+        </h3>
+
+        <app-shared-loader></app-shared-loader>
+
+        <div class="s-player-wrapper" [innerHTML]="podcasts[0].embedAudio | safeHtml"></div>
+    </div>
+</div>

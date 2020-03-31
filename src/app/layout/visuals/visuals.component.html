@@ -1,0 +1,5 @@
+<video *ngIf="true" class="video-bg" loop muted autoplay preload="auto" oncanplay="this.play()"
+       onloadedmetadata="this.muted = true">
+    <source src="{{videoSource}}" type="video/webm">
+    <source src="{{videoSource}}" type="video/mp4">
+</video>

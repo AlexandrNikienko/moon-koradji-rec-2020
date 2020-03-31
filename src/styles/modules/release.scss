@@ -1,0 +1,132 @@
+.m-release-info {
+    @include page-gap;
+
+    .release-name {
+        margin-bottom: 15px;
+        font-size: 26px;
+        font-weight: 300;
+
+        .share-btn {
+            display: none;
+        }
+    }
+
+    .release-main {
+        margin-bottom: 30px;
+    }
+
+    .release-cover {
+        width: 240px;
+        margin: 0 15px 10px 0;
+        float: left;
+        box-shadow: 0 0 1px #fff,
+        -1px -1px 1px #9ff,
+        1px -1px 1px #9c9,
+        -1px 1px 1px #6cf,
+        1px 1px 1px #66f;
+    }
+
+    .release-description {
+        &__paragraph {
+            margin-bottom: 10px;
+            line-height: 1.5em;
+        }
+    }
+
+    .release-credits {
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &__paragraph {
+            color: #bbb;
+            margin-bottom: 5px;
+            flex: 1 1 100%;
+        }
+
+        &__side {
+            flex-grow: 1;
+
+            &:not(:first-of-type) {
+                text-align: right;
+            }
+        }
+
+        &__icon {
+            background: url('#{$imageFolder}/long-play-record-cover.svg') no-repeat center;
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        a {
+            color: #e6e6e6;
+            transition: .1s;
+            text-decoration: underline;
+
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .s-involved-artists {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        margin: 0 -10px;
+
+        &__title {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 0 10px;
+            color: #bbb;
+        }
+
+        &__item {
+            flex: 0 0 128px;
+            position: relative;
+            padding: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                padding-top: 100%;
+            }
+        }
+
+        &__content {
+            $gap: 10px;
+            position: absolute;
+            top: $gap;
+            left: $gap;
+            right: $gap;
+            bottom: $gap;
+            background-image: url('#{$imageFolder}/mk_square.jpg');
+            background-size: 115%;
+            background-position: center;
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+            border-radius: 50% 0 50% 0;
+            overflow: hidden;
+            box-shadow: 0 0 1px #fff,
+            -1px -1px 1px #9ff,
+            1px -1px 1px #9c9,
+            -1px 1px 1px #6cf,
+            1px 1px 1px #66f;
+            transition: .3s;
+        }
+
+        &__name {
+            font-size: 12px;
+            width: 100%;
+            background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.75) 100%);
+            padding: 10px 30px 10px 10px;
+        }
+    }
+}

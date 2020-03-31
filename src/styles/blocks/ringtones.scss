@@ -1,0 +1,31 @@
+.ringtones {
+    margin: 0 0 30px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+        color: $themeColor;
+        margin-bottom: 10px;
+    }
+
+    .new-icon {
+        vertical-align: baseline;
+        margin-left: 5px;
+    }
+
+    .ringtones-list {
+        font-size: 16px;
+        line-height: normal;
+
+        &__item {
+            margin-bottom: 5px;
+        }
+    }
+
+    .fa-play {
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+}

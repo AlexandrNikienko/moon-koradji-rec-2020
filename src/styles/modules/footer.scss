@@ -1,0 +1,129 @@
+.m-footer {
+    box-sizing: border-box;
+    padding: 1rem 0;
+    background-color: #111;
+    width: 100%;
+    color: #9d9d9d;
+
+    .s-more-info {
+        text-align: right;
+        line-height: 1.5;
+
+        &__notes {
+            margin: .5rem 0 .25rem 0;
+            font-size: 1rem;
+
+            i {
+                font-style: italic;
+            }
+        }
+
+        &__contact {
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .s-follow {
+        &__header {
+            margin-bottom: .75rem;
+            text-align: right;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            border-bottom: 1px solid $themeColor;
+            padding-bottom: .25rem;
+            display: inline-block;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-bottom: .5rem;
+        }
+
+        .btn-link {
+            color: rgb(157, 157, 157);
+            flex: 0 0 auto;
+
+            &:hover {
+                text-decoration: none;
+                color: white;
+
+                .fa-facebook-square::before {
+                    color: rgb(59, 89, 152);
+                }
+
+                .fa-soundcloud::before {
+                    color: rgb(255, 115, 0);
+                }
+
+                .fa-music::before {
+                    color: rgb(97, 154, 169);
+                }
+
+                .fa-youtube::before {
+                    color: rgb(255, 0, 0);
+                }
+
+                .fa-bandcamp::before {
+                    color: rgba(33, 149, 185, .75);
+                }
+            }
+        }
+
+        .fab,
+        .fas {
+            margin-right: .25rem;
+
+            &::before {
+                transition: color .3s;
+            }
+        }
+    }
+
+    .fb-like {
+        padding: 0 .75rem;
+    }
+}
+
+@include desktopSmall {
+    .m-footer {
+        .s-follow {
+            .btn {
+                padding-right: .5rem;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .m-footer {
+        .s-left,
+        .s-right {
+            width: 100%;
+            text-align: center;
+        }
+
+        .s-left {
+            &__notes i {
+                display: none;
+            }
+        }
+
+        .s-right {
+            .btn-group {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .fb-like {
+            display: none;
+        }
+    }
+}

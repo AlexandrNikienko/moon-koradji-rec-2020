@@ -1,0 +1,23 @@
+<div class="release-card" [ngStyle]="{backgroundImage: 'url(/assets/images/release-cover/' + releaseItem.releaseCover + ')'}">
+    <a class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]" *ngIf="releaseItem.releaseRoute"></a>
+    <div class="s-inner">
+        <div class="s-top">
+            <div class="s-top__title">
+                {{releaseItem.releaseNumber}}
+                <img src="assets/images/icon_new.gif" *ngIf="releaseItem.isNew">
+            </div>
+            <div class="s-top__text">
+                {{releaseItem.releaseNote}}
+            </div>
+        </div>
+
+        <div class="s-bottom">
+            <div class="s-bottom__title">
+                <span *ngIf="releaseItem.isFree" class="s-free">Free</span>{{releaseItem.releaseTitle}}
+            </div>
+            <div class="s-bottom__text">
+                {{releaseItem.releaseSubTitle}}
+            </div>
+        </div>
+    </div>
+</div>

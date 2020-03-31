@@ -1,0 +1,67 @@
+<div class="m-artist row" *ngIf="artist">
+    <div class="col-lg-10 col-sm-12 offset-lg-1">
+        <img *ngIf="artist.artistAvatar" class="s-artist-foto" src="/assets/images/artists/{{artist.artistAvatar}}" alt="{{artist.artistName}}">
+
+        <a class="s-go-back" routerLink="/artists">
+            <i class="fas fa-long-arrow-alt-left"></i>Go to Artists page
+        </a>
+
+        <h1 class="s-artist-name">{{artist.artistName}}</h1>
+
+        <div *ngIf="artist.artistRealName" class="s-artist-details">Real name: {{artist.artistRealName}}</div>
+
+        <div class="s-artist-details">Country: {{artist.artistCountry}}</div>
+
+        <div class="s-artist-description">
+            <p class="s-artist-description__item" *ngFor="let description of artist.artistDescription">
+                {{description.paragraph}}
+            </p>
+        </div>
+
+        <div class="btn-group float-right" role="group">
+            <!--<a class="btn btn-link" href="javascript: void(0)" (click)="share()"
+               title="Share on Facebook">
+                <i class="fas fa-share fa-2x"></i>
+            </a>-->
+
+            <a class="btn btn-link" *ngIf="artist.artistFacebook" href="{{artist.artistFacebook}}" target="_blank"
+               title="Facebook page">
+                <i class="fab fa-facebook-square fa-2x"></i>
+            </a>
+
+            <a class="btn btn-link" *ngIf="artist.artistSoundcloud" href="{{artist.artistSoundcloud}}" target="_blank"
+               title="SoundCloud page">
+                <i class="fab fa-soundcloud fa-2x"></i>
+            </a>
+
+            <a class="btn btn-link" *ngIf="artist.artistMixcloud" href="{{artist.artistMixcloud}}" target="_blank"
+               title="Mixcloud page">
+                <i class="fab fa-mixcloud fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="s-involved row" *ngIf="artist.releases">
+            <p class="s-involved__title col-lg-12">
+                Moon Koradji Records releases with {{artist.artistName}}:
+            </p>
+
+            <div class="s-involved__item col-lg-2 col-md-2 col-sm-3 col-xs-3" *ngFor="let release of artist.releases">
+                <a class="s-involved__link " [routerLink]="['/releases', release.cdLink]">
+                    <div class="s-involved__image"
+                         [ngStyle]="{'background-image': 'url(/assets/images/release-cover/' + release.cdCover + ')'}">
+                    </div>
+
+                    <h5 class="s-involved__name">{{release.cdName}}</h5>
+                </a>
+            </div>
+        </div>
+
+        <div class="s-mixes" *ngIf="artist.mixes">
+            <div class="s-mixes__item" *ngFor="let mix of artist.mixes">
+                <p class="s-mix-year">{{mix.year}}</p>
+
+                <div class="s-mix-block" [innerHTML]="mix.embedCode | safeHtml"></div>
+            </div>
+        </div>
+    </div>
+</div>

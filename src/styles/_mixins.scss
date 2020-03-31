@@ -1,0 +1,32 @@
+// >1280px
+@mixin desktopLarge {
+    @media (min-width: #{$desktop-large-width}) {
+        @content;
+    }
+}
+
+// 992 - 1279px
+@mixin desktopSmall {
+    @media (min-width: #{$desktop-small-width}) and (max-width: #{$desktop-large-width - 1px}) {
+        @content;
+    }
+}
+
+// 768 - 991px
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-small-width - 1px}) {
+        @content;
+    }
+}
+
+// <768px
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin page-gap {
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
