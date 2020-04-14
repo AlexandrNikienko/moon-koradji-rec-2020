@@ -41,9 +41,12 @@
         margin-bottom: 20px;
 
         &__paragraph {
-            color: #bbb;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             flex: 1 1 100%;
+
+            &--dark {
+                color: #bbb;
+            }
         }
 
         &__side {
@@ -51,6 +54,9 @@
 
             &:not(:first-of-type) {
                 text-align: right;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 0;
             }
         }
 
@@ -63,13 +69,16 @@
         }
 
         a {
-            color: #e6e6e6;
-            transition: .1s;
-            text-decoration: underline;
+            color: $themeColor;
+            margin-bottom: 6px;
+            text-shadow: 1px 1px 2px black;
+            padding: 3px 5px;
+            border: 1px solid;
+            border-radius: 5px;
+            align-self: flex-end;
 
-            &:hover {
-                color: #fff;
-                text-decoration: none;
+            @include mobile {
+                font-size: 14px;
             }
         }
     }

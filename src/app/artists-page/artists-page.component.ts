@@ -26,12 +26,19 @@ export class ArtistsPageComponent implements AfterViewInit {
             firstLetter = '';
         const artistName = document.querySelectorAll('.js-artist-name');
 
-        [].forEach.call(artistName, (el, i) => {
-            firstLetter = el.textContent.charAt(0);
+        // [].forEach.call(artistName, (el, i) => {
+        //     firstLetter = el.textContent.charAt(0);
+        //     if (firstLetter > startLetter) {
+        //         el.insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter }</div>`);
+        //         startLetter = firstLetter;
+        //     }
+        // });
+        for(let i = 0; i <  artistName.length; i++) {
+            firstLetter = artistName[i].textContent.charAt(0);
             if (firstLetter > startLetter) {
-                el.parentNode.insertBefore('<div class="s-letter-separator">' + firstLetter + '</div>');
+                artistName[i].insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter }</div>`);
                 startLetter = firstLetter;
             }
-        });
+        }
     }
 }

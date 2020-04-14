@@ -19,6 +19,7 @@ export interface Release {
     artworkBy?: string;
     beatspaceLink?: string;
     bandcampLink?: string;
+    bandcamp24Link?: string;
     videoLink?: string;
     embedVideo?: any;
     tracklist?: Array<object>;

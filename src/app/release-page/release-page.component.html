@@ -18,15 +18,15 @@
         </div>
 
         <div class="release-credits">
-            <p class="release-credits__paragraph" *ngIf="release.compiledBy">Compiled by {{release.compiledBy}}</p>
+            <p class="release-credits__paragraph release-credits__paragraph--dark" *ngIf="release.compiledBy">Compiled by {{release.compiledBy}}</p>
 
-            <p class="release-credits__paragraph" *ngIf="release.cdAuthor">W&P by {{release.cdAuthor}}</p>
+            <p class="release-credits__paragraph release-credits__paragraph--dark" *ngIf="release.cdAuthor">W&P by {{release.cdAuthor}}</p>
 
-            <p class="release-credits__paragraph">Mastered by {{release.masteredBy}}</p>
+            <p class="release-credits__paragraph release-credits__paragraph--dark">Mastered by {{release.masteredBy}}</p>
 
-            <p class="release-credits__paragraph">Cover design by {{release.artworkBy}}</p>
+            <p class="release-credits__paragraph release-credits__paragraph--dark">Cover design by {{release.artworkBy}}</p>
 
-            <p class="release-credits__paragraph">Release date: {{release.releaseDate}}</p>
+            <p class="release-credits__paragraph release-credits__paragraph--dark">Release date: {{release.releaseDate}}</p>
         </div>
 
         <div class="release-credits">
@@ -39,9 +39,11 @@
             </div>
 
             <div class="release-credits__side" *ngIf="release.bandcampLink">
-                <p class="release-credits__paragraph">{{release.isFree ? "Free download:" : "Buy digital:"}}</p>
+                <p class="release-credits__paragraph">{{release.isFree ? "Free download:" : "Digital purchase:"}}</p>
 
                 <a href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
+
+                <a *ngIf="release.bandcamp24Link" href="{{release.bandcamp24Link}}" target="_blank" class="release-link">Bandcamp 24 bit</a>
             </div>
         </div>
 

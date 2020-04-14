@@ -24,17 +24,17 @@
             "tracklist": ""
         },
         {
-            "isNew": false,
+            "isNew": true,
             "releaseNumber": "MKCD012",
             "releaseNote": "coming soon",
-            "releaseDate": "coming soon",
+            "releaseDate": "May 10, 2020",
             "releaseTitle": "VA Neural Embers",
-            "releaseSubTitle": "previews soon",
+            "releaseSubTitle": "listen to previews",
             "releaseCover": "mkcd012_neural_embers.jpg",
             "releaseRoute": "va-neural-embers",
             "releaseDescription": [
                 {
-                    "paragraph": "This split includes some of the most unique and avant-garde artists of our planet: Inzect from Sweden, Molchun from Russia and Adansonia from Argentina. Each of them will show his mastery of the transformation of thought into an audio form."
+                    "paragraph": "This split includes some of the most unique and avant-garde artists of psytrance scene: Inzect from Sweden, Molchun from Russia and Adansonia from Argentina. Each of them will show his mastery of the transformation of thought into an audio form."
                 },
                 {
                     "paragraph": "The journey will be entertaining and will undoubtedly open new horizons for you."
@@ -43,12 +43,14 @@
             "compiledBy": "DJ Omsun",
             "masteredBy": "Christer Lundström @ Ka-Sol Studio",
             "artworkBy": "Jonas Lovén @ FAIA Graphic Studio",
-            "beatspaceLink": "",
-            "bandcampLink": "",
+            "beatspaceLink": "http://www.beatspace.com/mkcd012-neural-embers.html",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers",
+            "bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers-24-bit",
             "videoLink": "",
             "artists": [
                 "Inzect", "Molchun", "Adansonia"
-            ]
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 439px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=288505973/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/va-neural-embers-coming-soon\">VA Neural Embers (coming soon) by Moon Koradji Records</a></iframe>"
         },
         {
             "isFree": true,

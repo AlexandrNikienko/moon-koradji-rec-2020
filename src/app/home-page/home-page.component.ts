@@ -10,21 +10,6 @@ declare var window: any;
     templateUrl: './home-page.component.html'
 })
 export class HomePageComponent implements OnInit {
-    public swiperConfig = {
-        a11y: true,
-        direction: 'horizontal',
-        slidesPerView: 1,
-        keyboard: true,
-        mousewheel: false,
-        scrollbar: false,
-        navigation: true,
-        pagination: false,
-        loop: true,
-        autoplay: true,
-        centeredSlides: true,
-        effect: 'fade'
-    };
-
     public news$ = this.newsService.NEWS$;
 
     public releases$ = this.releasesService.RELEASES$;
@@ -35,7 +20,7 @@ export class HomePageComponent implements OnInit {
 
     ngOnInit() {
         /* FB page widget */
-        window.FB.XFBML.parse();
+        //window.FB.XFBML.parse();
         window.FB.init({
             appId      : '484153925308268',
             xfbml: true,
