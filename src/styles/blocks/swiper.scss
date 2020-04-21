@@ -6,46 +6,34 @@
 .swiper-container {
     width: 100%;
     height: 100%;
-    padding: 15px 21%;
-    background: url('#{$imageFolder}/t-shirts/1/tshirt-artwork.png') repeat center/94%;
-    border-radius: 5px;
 }
 
 .swiper-slide {
-    padding: 0 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background: linear-gradient(135deg, #000 0%, #111 100%);
-    position: relative;
-    box-shadow: 0 0 2px black;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
-    a {
+    .slide {
+        text-align: left;
+        width: 100%;
+        cursor: pointer;
 
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px 20px;
-        border-radius: 5px;
-        white-space: nowrap;
-    }
+        &__image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: .5rem;
+        }
 
-    p {
-        color: beige;
-        font-size: 36px;
-        font-weight: 300;
-        font-family: Myfont;
-        text-transform: uppercase;
-        text-shadow: -0.01em -0.01em red, 0.01em 0.01em #0ff;
-        letter-spacing: 2px;
+        &__text {
+            font-size: 20px;
+        }
     }
 
     img {
         max-width: 100%;
         max-height: 100%;
+        width: 100%;
     }
 }
 
@@ -67,7 +55,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, .5);
-    height: 100%;
+    bottom: 35px;
+    height: auto;
     width: 45px;
     margin-top: 0;
 

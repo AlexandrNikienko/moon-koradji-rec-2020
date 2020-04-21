@@ -24,6 +24,7 @@
             "tracklist": ""
         },
         {
+            "isHero": true,
             "isNew": true,
             "releaseNumber": "MKCD012",
             "releaseNote": "coming soon",

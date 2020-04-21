@@ -1,17 +1,17 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
-import {PipesModule} from '../core/pipes/pipes.module';
+import { PipesModule } from '../core/pipes/pipes.module';
 
-import {SharedGalleryComponent} from './gallery/gallery.component';
-import {SharedLoaderComponent} from './loader/loader.component';
-import {SharedVideoComponent} from './video/video.component';
+import { SharedGalleryComponent } from './gallery/gallery.component';
+import { SharedLoaderComponent } from './loader/loader.component';
+import { SharedVideoComponent } from './video/video.component';
+import { ReleaseCardComponent } from './release-card/release-card.component';
 
-import {SwiperModule} from 'ngx-swiper-wrapper';
-import {SWIPER_CONFIG} from 'ngx-swiper-wrapper';
-import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
-
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     observer: true,
@@ -29,12 +29,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
         SharedGalleryComponent,
         SharedLoaderComponent,
         SharedVideoComponent,
+        ReleaseCardComponent,
         RouterModule
     ],
     declarations: [
         SharedGalleryComponent,
         SharedLoaderComponent,
-        SharedVideoComponent
+        SharedVideoComponent,
+        ReleaseCardComponent
     ],
     providers: [
         {

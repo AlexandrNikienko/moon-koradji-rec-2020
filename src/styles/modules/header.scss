@@ -5,9 +5,11 @@
 
     .navbar-nav {
         .nav-link {
-            padding: 10px 15px;
+            padding: 10px 13px;
             color: #9d9d9d;
             transition: .1s;
+            text-transform: uppercase;
+            font-size: 14px;
 
             &:hover {
                 color: white;

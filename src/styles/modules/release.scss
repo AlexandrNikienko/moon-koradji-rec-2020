@@ -69,13 +69,14 @@
         }
 
         a {
-            color: $themeColor;
-            margin-bottom: 6px;
+            display: inline-block;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 2px black;
-            padding: 3px 5px;
+            padding: 5px 10px;
             border: 1px solid;
-            border-radius: 5px;
+            border-radius: 3px;
             align-self: flex-end;
+            background-color: rgba(0255, 255, 255, .25);
 
             @include mobile {
                 font-size: 14px;
@@ -87,7 +88,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-top: 10px;
-        margin: 0 -10px;
+        margin: 0 -10px 30px;
 
         &__title {
             width: 100%;

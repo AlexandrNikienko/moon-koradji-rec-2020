@@ -7,6 +7,10 @@ export const appRoutes: Routes = [
         loadChildren: './home-page/home-page.module#HomePageModule'
     },
     {
+        path: 'releases',
+        loadChildren: './releases/releases.module#ReleasesModule'
+    },
+    {
         path: 'releases/:releaseRoute',
         loadChildren: './release-page/release-page.module#ReleaseModule'
     },

@@ -1,6 +1,7 @@
 import { Paragraph } from './paragraph.model';
 
 export interface Release {
+    isHero: boolean;
     hidden?: boolean;
     isNew?: boolean;
     isFree?: boolean;

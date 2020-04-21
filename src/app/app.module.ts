@@ -19,6 +19,7 @@ import {AppComponent} from './app.component';
 import {LayoutModule} from './layout/layout.module';
 import {HomePageModule} from './home-page/home-page.module';
 import {ReleaseModule} from './release-page/release-page.module';
+import {ReleasesModule} from './releases/releases.module';
 import {ArtistsModule} from './artists-page/artists-page.module';
 import {ArtistModule} from './artist-page/artist-page.module';
 import {MerchModule} from './merch/merch.module';
@@ -43,6 +44,7 @@ import {LayoutNotFoundComponent} from './layout/not-found/layout-not-found.compo
         LayoutModule,
         HomePageModule,
         ReleaseModule,
+        ReleasesModule,
         ArtistsModule,
         ArtistModule,
         MerchModule,
