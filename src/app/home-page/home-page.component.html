@@ -120,8 +120,13 @@
     </a>
 </section>
 
-<section class="featured-artists-wrapper">
-    <app-shared-gallery></app-shared-gallery>
+<section class="featured-artists-wrapper" *ngIf="featuredGalleryItems">
+    <div class="heading">
+        <div class="heading__title">Featured Artists</div>
+        <div class="heading__link"><a routerLink="/artists">View All</a></div>
+    </div>
+    
+    <app-shared-gallery [items]="featuredGalleryItems"></app-shared-gallery>
 </section>
 
 <section class="bottom">

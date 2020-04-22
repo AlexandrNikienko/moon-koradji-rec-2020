@@ -1,7 +1,9 @@
 <div class="m-artists row">
     <div class="col-md-12">
         <ng-container *ngIf="djs$ | async as djs">
-            <p class="s-title">DJs:</p>
+            <div class="heading">
+                <p class="heading__title s-title">DJs:</p>
+            </div>
 
             <div class="s-artists-wrapper">
                 <div class="s-artist-item" *ngFor="let item of djs">
@@ -17,7 +19,9 @@
         </ng-container>
 
         <ng-container *ngIf="artists$ | async as artists">
-            <p class="s-title">Artists:</p>
+            <div class="heading">
+                <p class="heading__title s-title">Artists:</p>
+            </div>
 
             <div class="s-artists-wrapper">
                 <div #artistCell class="s-artist-item" *ngFor="let item of artists">

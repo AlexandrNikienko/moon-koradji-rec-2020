@@ -1,99 +1,17 @@
-<div class="heading">
-    <div class="heading__title">Featured Artists</div>
-    <div class="heading__link"><a routerLink="/artists">View All</a></div>
-</div>
-
 <div  class="swiper-container" [swiper]="swiperConfig">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/already-maged">
-                <div class="slide__image">
-                    <img src="/assets/images/artists/featured/featured_already_maged.jpg" alt="">
-                </div>
-                <div class="slide__text">
-                    Already Maged
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/molchun">
-            <div class="slide__image">
-                <img src="/assets/images/artists/featured/featured_molchun.jpg" alt="">
-            </div>
-            <div class="slide__text">
-                Molchun
-            </div>
-        </div>
-    </div>
-        <div class="swiper-slide"><div class="slide" routerLink="/artists/inzect">
-            <div class="slide__image">
-                <img src="/assets/images/artists/featured/featured_inzect.jpg" alt="">
-            </div>
-            <div class="slide__text">
-                Inzect
-            </div>
-        </div>
-    </div>
-        <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/adansonia">
-                <div class="slide__image">
-                    <img src="/assets/images/artists/featured/featured_adansonia.jpg" alt="">
-                </div>
-                <div class="slide__text">
-                    Adansonia
+        <div class="swiper-slide" *ngFor="let item of items">
+            <div class="swiper-slide">
+                <div class="slide" routerLink="{{item.route}}">
+                    <div class="slide__image">
+                        <img src="{{item.image}}" alt="">
+                    </div>
+                    <div class="slide__text">
+                        {{item.name}}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/taigan-sunset">
-                <div class="slide__image">
-                    <img src="/assets/images/artists/featured/featured_taigan_sunset.jpg" alt="">
-                </div>
-                <div class="slide__text">
-                    Taigan Sunset
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/traskel">
-                <div class="slide__image">
-                    <img src="/assets/images/artists/featured/featured_traskel.jpg" alt="">
-                </div>
-                <div class="slide__text">
-                    Traskel
-                </div>
-            </div>
-        </div>
-        <!-- <div class="swiper-slide">
-            <div class="slide" routerLink="/artists/already-maged">
-                <div class="slide__image">
-                    <img src="http://kamleshyadav.com/html/miraculous/version1/images/featured/song2.jpg" alt="">
-                </div>
-                <div class="slide__text">
-                    Already Maged
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <p class="">Taigan Sunset</p>
-            <a routerLink="/artists/taigan-sunset">visit page</a>
-        </div>
-        <div class="swiper-slide">
-            <p class="">Molchun</p>
-            <a routerLink="/artists/molchun">visit page</a>
-        </div>
-        <div class="swiper-slide">
-            <p class="">Adansonia</p>
-            <a routerLink="/artists/adansonia">visit page</a>
-        </div>
-        <div class="swiper-slide">
-            <p class="">Inzect</p>
-            <a routerLink="/artists/inzect">visit page</a>
-        </div>
-        <div class="swiper-slide">
-            <p class="">Traskel</p>
-            <a routerLink="/artists/traskel">visit page</a>
-        </div> -->
     </div>
 
     <div class="swiper-button-prev"></div>

@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Gallery } from '../../core/models/gallery.model';
 
 @Component({
     selector: 'app-shared-gallery',
     templateUrl: './gallery.component.html'
 })
 export class SharedGalleryComponent implements OnInit {
+    @Input() items: Gallery[];
     public swiperConfig: object;
 
     ngOnInit() {
@@ -19,7 +22,7 @@ export class SharedGalleryComponent implements OnInit {
             navigation: true,
             pagination: false,
             loop: true,
-            //autoplay: true,
+            autoplay: true,
             effect: 'slide',
             breakpoints: {
                 320: {
