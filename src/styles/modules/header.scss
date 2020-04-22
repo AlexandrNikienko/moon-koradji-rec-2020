@@ -10,6 +10,7 @@
             transition: .1s;
             text-transform: uppercase;
             font-size: 14px;
+            white-space: nowrap;
 
             &:hover {
                 color: white;
@@ -32,6 +33,10 @@
 
         &:hover {
             color: white;
+        }
+
+        @include tablet {
+            display: none;
         }
     }
 

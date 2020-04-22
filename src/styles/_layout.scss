@@ -130,19 +130,14 @@ app-root {
 }
 
 .home-page {
-    // display: grid;
-    // grid-template-columns: 4fr 1.2fr;
-    // grid-gap: 15px;
-
     .main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
         grid-auto-rows: 1fr;
-        grid-gap: 15px;
+        grid-gap: 30px;
     }
 
     .gallery {
-        // grid-column: span 3;
         grid-column: 1 / 5;
     }
 
@@ -154,10 +149,6 @@ app-root {
 
     @include mobile {
         grid-template-columns: 1fr;
-
-        .main {
-            //grid-template-rows: repeat(2, 160px) 1fr;
-        }
 
         .gallery,
         .podcast {
@@ -195,10 +186,6 @@ app-root {
             z-index: 0;
             background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
         }
-    }
-
-    &__link {
-        
     }
 }
 
