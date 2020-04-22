@@ -1,9 +1,7 @@
-<section class="page releases">
-    <main class="main">
-        <ng-container *ngIf="releases$ | async as releases">
-            <ng-container *ngFor="let release of releases">
-                <app-release-card [releaseItem]="release" [hidden]="release.hidden"></app-release-card>
-            </ng-container>
+<div class="releases">
+    <ng-container *ngIf="releases$ | async as releases">
+        <ng-container *ngFor="let release of releases">
+            <app-release-card [releaseItem]="release" [hidden]="release.hidden"></app-release-card>
         </ng-container>
-    </main>
-</section>
+    </ng-container>
+</div>

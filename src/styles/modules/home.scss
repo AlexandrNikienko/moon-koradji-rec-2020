@@ -1,0 +1,17 @@
+.hero-wrapper,
+.recent-releases-wrapper,
+.podcast-wrapper,
+.featured-artists-wrapper {
+    margin-bottom: 4rem;
+}
+
+.recent-releases-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 30px;
+}
+
+.podcast-wrapper {
+    height: 300px;
+}

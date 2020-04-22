@@ -1,4 +1,4 @@
-<section class="page hero-wrapper">
+<section class="hero-wrapper">
     <section class="hero">
         <div class="hero__image-wrapper">
             <div class="hero__image">
@@ -70,13 +70,13 @@
     </section>
 </section>
 
-<section class="page home-page">
+<section class="recent-releases-wrapper">
     <div class="heading">
         <div class="heading__title">Recent Releases</div>
         <div class="heading__link"><a routerLink="/releases">View All</a></div>
     </div>
 
-    <main class="main">
+    <main class="recent-releases-inner">
         <ng-container *ngIf="releases$ | async as releases">
             <ng-container *ngFor="let release of releases; let i = index">
                 <app-release-card *ngIf="(i < 5) && !release.isHero" [releaseItem]="release" [hidden]="release.hidden"></app-release-card>
@@ -85,7 +85,7 @@
     </main>
 </section>
 
-<section class="podcast" style="height: 300px">
+<section class="podcast-wrapper">
     <a routerLink="/podcasts" class="s-podcast-add">
         <div class="s-podcast-add__border s-podcast-add__border--top"></div>
         <div class="s-podcast-add__border s-podcast-add__border--right"></div>
@@ -120,53 +120,51 @@
     </a>
 </section>
 
-<section class="page gallery">
+<section class="featured-artists-wrapper">
     <app-shared-gallery></app-shared-gallery>
 </section>
 
-<div class="page home-page">
-    <aside class="side-bar">
-        <div class="ringtones">
-            <p class="ringtones__title">Download your ringtone</p>
-            <ul class="ringtones-list">
-                <li class="ringtones-list__item">
-                    <a href="/assets/music/ringtones/Moon_Koradji_-_Huvudverk.mp3" target="blank">
-                        <i class="fas fa-play"></i>Huvudverk
-                    </a>
-                </li>
-                <li class="ringtones-list__item">
-                    <a href="/assets/music/ringtones/Moon_Koradji_-_The_Other_Self.mp3" target="blank">
-                        <i class="fas fa-play"></i>The Other Self
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
-            smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div>
-
-        <div class="news" *ngIf="news$ | async as news">
-            <p class="news__header">More News</p>
-
-            <div class="news__item" *ngFor="let item of news">
-                <a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
-                    <div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-                    <h1 class="news__desc">
-                        <span class="news__title">{{item.title}}</span>
-                        <br>
-                        <span class="news__info" *ngIf="item.text">{{item.text}}</span>
-                    </h1>
+<section class="bottom">
+    <div class="ringtones">
+        <p class="ringtones__title">Download your ringtone</p>
+        <ul class="ringtones-list">
+            <li class="ringtones-list__item">
+                <a href="/assets/music/ringtones/Moon_Koradji_-_Huvudverk.mp3" target="blank">
+                    <i class="fas fa-play"></i>Huvudverk
                 </a>
-
-                <a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
-                    <div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-                    <h1 class="news__desc">
-                        <span class="news__title">{{item.title}}</span>
-                        <br>
-                        <span class="news__info" *ngIf="item.text">{{item.text}}</span>
-                    </h1>
+            </li>
+            <li class="ringtones-list__item">
+                <a href="/assets/music/ringtones/Moon_Koradji_-_The_Other_Self.mp3" target="blank">
+                    <i class="fas fa-play"></i>The Other Self
                 </a>
-            </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
+        smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div>
+
+    <div class="news" *ngIf="news$ | async as news">
+        <p class="news__header">More News</p>
+
+        <div class="news__item" *ngFor="let item of news">
+            <a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
+                <div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+                <h1 class="news__desc">
+                    <span class="news__title">{{item.title}}</span>
+                    <br>
+                    <span class="news__info" *ngIf="item.text">{{item.text}}</span>
+                </h1>
+            </a>
+
+            <a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
+                <div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+                <h1 class="news__desc">
+                    <span class="news__title">{{item.title}}</span>
+                    <br>
+                    <span class="news__info" *ngIf="item.text">{{item.text}}</span>
+                </h1>
+            </a>
         </div>
-    </aside>
-</div>
+    </div>
+</section>
