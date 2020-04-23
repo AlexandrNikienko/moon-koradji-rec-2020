@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {PodcastsService} from '../core/services/podcasts.service';
+import { Component } from '@angular/core';
+import { DataService } from '../core/services/data.service';
 
 @Component({
     selector: 'app-podcasts-page',
     templateUrl: './podcasts-page.component.html'
 })
 export class PodcastsPageComponent {
-    public podcasts$ = this.podcastsService.PODCASTS$;
+    public podcasts$ = this.datService.requestToData('podcasts');
 
-    constructor(private podcastsService: PodcastsService) {}
+    constructor(private datService: DataService) { }
 }

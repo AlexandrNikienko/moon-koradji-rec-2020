@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map, shareReplay} from 'rxjs/operators';
 
-import {DJS} from '../../../environments/environment';
-import {Artist} from '../models/artist.model';
+import {DJS} from '../../../../environments/environment';
+import {Artist} from '../../models/artist.model';
 
 @Injectable()
 export class DjsService {

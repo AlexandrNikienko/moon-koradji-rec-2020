@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map, shareReplay} from 'rxjs/operators';
 
-import {PODCASTS} from '../../../environments/environment';
-import {Podcast} from '../models/podcast.model';
+import {PODCASTS} from '../../../../environments/environment';
+import {Podcast} from '../../models/podcast.model';
 
 @Injectable()
 export class PodcastsService {

@@ -5,8 +5,7 @@ import {PipesModule} from '../core/pipes/pipes.module';
 
 import {ArtistsPageComponent} from './artists-page.component';
 
-import {ArtistsService} from '../core/services/artists.service';
-import {DjsService} from '../core/services/djs.service';
+import { DataService } from '../core/services/data.service';
 
 const artistsRoutes: Routes = [
     {
@@ -32,8 +31,7 @@ const artistsRoutes: Routes = [
         RouterModule
     ],
     providers: [
-        ArtistsService,
-        DjsService
+        DataService
     ]
 })
 

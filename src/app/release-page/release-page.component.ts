@@ -1,32 +1,30 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {forkJoin} from 'rxjs';
-import {Meta, Title} from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { Meta, Title } from '@angular/platform-browser';
 // import {FacebookService, UIParams, UIResponse} from 'ngx-facebook';
 
-import {Artist} from '../core/models/artist.model';
-import {Release} from '../core/models/release.model';
-import {DiscographyService} from '../core/services/discography.service';
-import {ArtistsService} from '../core/services/artists.service';
+import { Artist } from '../core/models/artist.model';
+import { Release } from '../core/models/release.model';
+import { DataService } from '../core/services/data.service';
 
 @Component({
     selector: 'app-release-page',
     templateUrl: './release-page.component.html'
 })
 export class ReleasePageComponent implements OnInit {
-    public releases$ = this.releasesService.RELEASES$;
-    public artists$ = this.artistsService.ARTISTS$;
+    public releases$ = this.dataService.requestToData('releases');
+    public artists$ = this.dataService.requestToData('artists');
     public releaseRoute: string;
     public release: Release;
     public releaseArtists: Array<string>;
     public involved: Artist[] = [];
 
     constructor(private route: ActivatedRoute,
-                private releasesService: DiscographyService,
-                private artistsService: ArtistsService,
-                private meta: Meta,
-                // private fb: FacebookService,
-                private title: Title) {
+        private dataService: DataService,
+        private meta: Meta,
+        // private fb: FacebookService,
+        private title: Title) {
     }
 
     ngOnInit() {

@@ -26,3 +26,5 @@ export const ARTISTS = {
 export const PODCASTS = {
     getItems: './assets/mocks/podcasts.json'
 };
+
+export const DATAFOLDER = './assets/mocks/';

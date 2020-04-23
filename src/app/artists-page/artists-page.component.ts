@@ -1,7 +1,6 @@
-import {Component, QueryList, ViewChildren, AfterViewInit} from '@angular/core';
+import { Component, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 
-import {ArtistsService} from '../core/services/artists.service';
-import {DjsService} from '../core/services/djs.service';
+import { DataService } from '../core/services/data.service';
 
 @Component({
     selector: 'app-artists-page',
@@ -9,11 +8,10 @@ import {DjsService} from '../core/services/djs.service';
 })
 export class ArtistsPageComponent implements AfterViewInit {
     @ViewChildren('artistCell') artistCell: QueryList<any>;
-    public artists$ = this.artistsService.ARTISTS$;
-    public djs$ = this.djsService.DJS$;
+    public artists$ = this.dataservice.requestToData('artists');
+    public djs$ = this.dataservice.requestToData('djs');
 
-    constructor(private artistsService: ArtistsService,
-                private djsService: DjsService) {}
+    constructor(private dataservice: DataService) { }
 
     ngAfterViewInit() {
         this.artistCell.changes.subscribe(t => {
@@ -26,17 +24,10 @@ export class ArtistsPageComponent implements AfterViewInit {
             firstLetter = '';
         const artistName = document.querySelectorAll('.js-artist-name');
 
-        // [].forEach.call(artistName, (el, i) => {
-        //     firstLetter = el.textContent.charAt(0);
-        //     if (firstLetter > startLetter) {
-        //         el.insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter }</div>`);
-        //         startLetter = firstLetter;
-        //     }
-        // });
-        for(let i = 0; i <  artistName.length; i++) {
+        for (let i = 0; i < artistName.length; i++) {
             firstLetter = artistName[i].textContent.charAt(0);
             if (firstLetter > startLetter) {
-                artistName[i].insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter }</div>`);
+                artistName[i].insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter}</div>`);
                 startLetter = firstLetter;
             }
         }

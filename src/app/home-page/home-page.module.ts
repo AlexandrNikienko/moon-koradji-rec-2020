@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 import { HomePageComponent } from './home-page.component';
-import { DiscographyService } from '../core/services/discography.service';
-import { NewsService } from '../core/services/news.service';
+import { DataService } from '../core/services/data.service';
 // import { FacebookModule } from 'ngx-facebook';
 
 const homeRoutes: Routes = [
@@ -33,8 +32,7 @@ const homeRoutes: Routes = [
         RouterModule
     ],
     providers: [
-        DiscographyService,
-        NewsService
+        DataService
     ]
 })
 

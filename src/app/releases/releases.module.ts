@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 import { ReleasesComponent } from './releases.component';
-import { DiscographyService } from '../core/services/discography.service';
+import { DataService } from '../core/services/data.service';
 
 
 const releasesRoutes: Routes = [
@@ -31,7 +31,7 @@ const releasesRoutes: Routes = [
     RouterModule
   ],
   providers: [
-    DiscographyService
+    DataService
   ]
 })
 export class ReleasesModule { }

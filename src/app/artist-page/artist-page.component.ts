@@ -4,8 +4,7 @@ import {Meta, Title} from '@angular/platform-browser';
 // import {FacebookService, UIParams, UIResponse} from 'ngx-facebook';
 
 import {Artist} from '../core/models/artist.model';
-import {ArtistsService} from '../core/services/artists.service';
-import {DjsService} from '../core/services/djs.service';
+import { DataService } from '../core/services/data.service';
 
 @Component({
     selector: 'app-artist-page',
@@ -15,12 +14,11 @@ export class ArtistPageComponent implements OnInit {
     public artists: Artist[];
     public artistRoute: string;
     public artist: Artist;
-    public artists$ = this.artistsService.ARTISTS$;
-    public djs$ = this.djsService.DJS$;
+    public artists$ = this.dataService.requestToData('artists');
+    public djs$ = this.dataService.requestToData('djs');
 
     constructor(private route: ActivatedRoute,
-                private artistsService: ArtistsService,
-                private djsService: DjsService,
+                private dataService: DataService,
                 private meta: Meta,
                 //private fb: FacebookService,
                 private title: Title) {

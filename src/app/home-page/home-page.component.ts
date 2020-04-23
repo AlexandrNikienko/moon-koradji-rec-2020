@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {NewsService} from '../core/services/news.service';
-import {DiscographyService} from '../core/services/discography.service';
+import { DataService } from '../core/services/data.service';
 
 import { Gallery } from '../core/models/gallery.model';
 
@@ -14,12 +13,11 @@ declare var window: any;
 export class HomePageComponent implements OnInit {
     public featuredArtists = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
     public featuredGalleryItems: Gallery[];
-    public news$ = this.newsService.NEWS$;
-    public releases$ = this.releasesService.RELEASES$;
 
-    constructor(private newsService: NewsService,
-                private releasesService: DiscographyService
-                ) {}
+    public _news$ = this.dataService.requestToData('news');;
+    public _releases$ = this.dataService.requestToData('releases');
+
+    constructor(private dataService: DataService) { }
 
     ngOnInit() {
         this.featuredGalleryItems = this.featuredArtists.map(artist => {
@@ -30,12 +28,10 @@ export class HomePageComponent implements OnInit {
             }
         })
 
-        console.log(this.featuredGalleryItems);
-
         /* FB page widget */
         //window.FB.XFBML.parse();
         window.FB.init({
-            appId      : '484153925308268',
+            appId: '484153925308268',
             xfbml: true,
             version: 'v3.2'
         });

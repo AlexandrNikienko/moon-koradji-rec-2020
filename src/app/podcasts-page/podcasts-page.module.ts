@@ -1,12 +1,12 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import {PipesModule} from '../core/pipes/pipes.module';
-import {SharedModule} from '../shared/shared.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { PipesModule } from '../core/pipes/pipes.module';
+import { SharedModule } from '../shared/shared.module';
 
-import {PodcastsPageComponent} from './podcasts-page.component';
+import { PodcastsPageComponent } from './podcasts-page.component';
 
-import {PodcastsService} from '../core/services/podcasts.service';
+import { DataService } from '../core/services/data.service';
 
 const artistRoutes: Routes = [
     {
@@ -33,8 +33,8 @@ const artistRoutes: Routes = [
         RouterModule,
     ],
     providers: [
-        PodcastsService
+        DataService
     ]
 })
 
-export class PodcastsPageModule {}
+export class PodcastsPageModule { }
