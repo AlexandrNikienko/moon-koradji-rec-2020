@@ -8,9 +8,9 @@ import {filter} from 'rxjs/operators';
     templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-    public winter: boolean;
+	public winter: boolean;
 
-    public constructor(private router: Router,
+    constructor(private router: Router,
                        private titleService: Title) {
     }
 

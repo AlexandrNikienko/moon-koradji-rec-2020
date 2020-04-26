@@ -1,0 +1,40 @@
+.crystalization {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	opacity: .5;
+	overflow: hidden;
+
+	&__canvas {
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+	}
+	
+	&__overlay {
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .8) 80%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%);
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: none;
+	}
+	
+	&__glow {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}

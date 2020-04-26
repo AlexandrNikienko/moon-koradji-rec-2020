@@ -10,7 +10,9 @@
             transition: .1s;
             text-transform: uppercase;
             font-size: 14px;
-            white-space: nowrap;
+			white-space: nowrap;
+			font-weight: 400;
+			line-height: normal;
 
             &:hover {
                 color: white;
@@ -29,7 +31,8 @@
     .navbar-brand {
         font-size: 16px;
         color: #9d9d9d;
-        transition: .1s;
+		transition: .1s;
+		font-weight: 400;
 
         &:hover {
             color: white;
@@ -124,11 +127,17 @@
             right: 80px;
         }
 
-        .nav-link i {
-            margin-right: 5px;
-            display: inline-block;
-            text-align: center;
-            width: 20px;
-        }
+        .navbar-nav .nav-link {
+			display: block;
+			line-height: 2rem;
+			text-align: left;
+
+			i {
+				margin-right: 5px;
+				display: inline-block;
+				text-align: center;
+				width: 20px;
+			}
+		} 
     }
 }

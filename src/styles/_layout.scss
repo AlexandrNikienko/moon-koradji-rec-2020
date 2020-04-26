@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: url('#{$imageFolder}/swamp.jpg') no-repeat center / cover fixed;
+    background: url('#{$imageFolder}/swamp-low.jpg') no-repeat center / cover fixed;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: white;
@@ -105,7 +105,7 @@ app-root {
 
 .page {
     padding-top: 30px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .heading {

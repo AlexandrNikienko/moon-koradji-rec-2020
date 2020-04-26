@@ -52,7 +52,9 @@ import {LayoutNotFoundComponent} from './layout/not-found/layout-not-found.compo
         AboutModule
     ],
     exports: [
-        RouterModule
+		RouterModule,
+		MatToolbarModule,
+        MatButtonModule
     ],
     providers: [
         Title

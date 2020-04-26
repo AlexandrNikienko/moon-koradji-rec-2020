@@ -6,6 +6,9 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {VisualsComponent} from './visuals/visuals.component';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule}  from '@angular/material/button';
+
 @NgModule({
     declarations: [
         HeaderComponent,
@@ -14,7 +17,9 @@ import {VisualsComponent} from './visuals/visuals.component';
     ],
     imports: [
         CommonModule,
-        RouterModule
+		RouterModule,
+		MatToolbarModule,
+        MatButtonModule
     ],
     exports: [
         HeaderComponent,
