@@ -23,12 +23,6 @@
     animation: $val;
 }
 
-@mixin box-sizing() {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 @mixin logoRender($set: 100px ) {
     $width: 4*$set;
     $height: 6*$set;
@@ -38,7 +32,6 @@
         height: $height;
         margin: 20px auto 0;
         position: relative;
-        background-color: #111;
         padding: $set*0.2;
         overflow: hidden;
         box-sizing: content-box;
@@ -107,7 +100,7 @@
     #top3 {
         width: $set*2;
         height: $set*3;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-bottom: $set*3 solid #FFF;
@@ -127,7 +120,7 @@
     #bot3 {
         width: $set*2;
         height: $set*3;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-top: $set*3 solid #eee;
@@ -154,7 +147,7 @@
     #top2 {
         width: $set*2;
         height: $set*2;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-bottom: $set*2 solid #CCC;
@@ -174,7 +167,7 @@
     #bot2 {
         width: $set*2;
         height: $set*2;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-top: $set*2 solid #bbb;
@@ -201,7 +194,7 @@
     #top1 {
         width: $set*2;
         height: $set;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-bottom: $set solid #999;
@@ -221,7 +214,7 @@
     #bot1 {
         width: $set*2;
         height: $set;
-        @include box-sizing();
+        box-sizing: border-box;
         border-right: $set solid transparent;
         border-left: $set solid transparent;
         border-top: $set solid #999;
@@ -261,11 +254,11 @@
         }
     }
 
-    #link, #descript {
+	#link, 
+	#descript {
         width: $width;
         margin: auto;
         text-align: center;
-        background-color: #111;
         box-sizing: content-box;
         @include animation (fade_in 5s ease-in-out);
     }
@@ -273,31 +266,19 @@
     #descript {
         font-size: 16px;
         color: #aaa;
-        font-family: Ubunta, Georgia, "Times New Roman", Times, serif;
         padding: 0 $set*0.2 $set*0.5;
 
         p {
             margin-bottom: 10px;
-        }
+		}
+		
+		a {
+			white-space: nowrap;
+		}
     }
 
     #link {
         padding: $set*0.2;
-
-        h1 {
-            font-size: 25px;
-            color: #aaa;
-            font-weight: normal;
-            position: relative;
-
-            &:after {
-                content: '\27a4';
-                position: absolute;
-                top: 8px;
-                margin-left: 15px;
-                @include animation (visit 1s linear infinite);
-            }
-        }
     }
 
     @include keyframes(visit) {
@@ -316,7 +297,12 @@
         #link & {
             color: #ddd;
             color: rgba(255, 255, 255, 0.5);
-            text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
+			text-shadow: 0 0 4px #fff, 
+						0 -5px 4px #9ff, 
+						2px -10px 6px #9c9, 
+						-2px -15px 11px #6cf, 
+						2px -25px 18px #66f;
+
             /*text-shadow: 0 0 4px white,
                  0 -5px 4px #FFFF33,
                  2px -10px 6px #FFDD33,
@@ -337,36 +323,37 @@
 }
 
 .m-about {
-    padding-top: 30px;
-    margin-bottom: 50px;
-
     &__inner {
-        background-color: #111;
+		background-color: #111;
     }
 
     @include logoRender();
 
     #link {
         a {
+			font-size: 26px;
             color: rgba(255, 255, 255, 0.5);
-            text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
+			text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
+			position: relative;
+			
+			&::after {
+                content: '\27a4';
+                position: absolute;
+                top: 8px;
+				margin-left: 15px;
+				text-shadow: none;
+                @include animation (visit 1s linear infinite);
+            }
         }
     }
 }
 
-@media(max-width: 767px) {
+@include mobile {
     .m-about {
-        padding-top: 0;
-        margin-bottom: 0;
-
-        &__inner {
-            padding: 0;
-        }
-
         @include logoRender($set: 70px);
 
         #link {
-            h1 {
+            a {
                 font-size: 22px;
             }
         }

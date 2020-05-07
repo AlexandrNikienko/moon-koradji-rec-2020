@@ -1,7 +1,8 @@
 .m-footer {
     box-sizing: border-box;
-    padding: 1rem 0;
-    background-color: #111;
+    padding: 2rem 0;
+	background-color: #111;
+	background: linear-gradient(135deg, #111 0%,#000 100%);
     width: 100%;
     color: #9d9d9d;
 
@@ -87,7 +88,29 @@
 
     .fb-like {
         padding: 0 .75rem;
-    }
+	}
+
+	.shops-wrapper {
+		margin-top: 2rem;
+	}
+	
+	.shops-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&__item {
+			margin: .5rem;
+		}
+
+		&__item-link {
+			img {
+				max-width: 150px;
+				max-height: 30px;
+			}
+		}
+	}
 }
 
 @include desktopSmall {

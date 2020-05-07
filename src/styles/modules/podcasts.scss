@@ -1,19 +1,23 @@
 .m-podcasts {
     .s-module-title {
-        font-size: 18px;
+		font-size: 20px;
+		font-weight: 400;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 1.5rem;
     }
 
     .s-module-subtitle {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
         margin-bottom: 2rem;
 
         a {
             padding: 3px 5px;
             border: 1px solid;
-            border-radius: 5px;
+			border-radius: 5px;
+			white-space: nowrap;
+			display: inline-block;
+    		margin-top: .5rem;;
         }
     }
 
@@ -51,7 +55,11 @@
 
     .fa-itunes {
         color: $themeColor;
-    }
+	}
+	
+	.fab {
+		margin-right: .5rem;
+	}
 }
 
 @include desktopSmall {
