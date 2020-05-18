@@ -1,69 +1,32 @@
 <section class="hero-wrapper">
-    <section class="hero">
+    <section class="hero" *ngIf="_purchase$ | async as purchase">
         <div class="hero__image-wrapper">
             <div class="hero__image">
-                <img src="http://moonkoradji.com/assets/images/release-cover/mkcd012_neural_embers.jpg" alt=""
+                <img src="/assets/images/release-cover/mkcd012_neural_embers.jpg" alt=""
                     class="hero__image">
             </div>
-            <div class="hero__image-title">Neural Embers</div>
-            <div class="hero__image-sub-title">by Various Artists</div>
-            <a routerLink="/releases/va-neural-embers" class="btn btn--light">Listen Now</a>
+            <div class="hero__image-title">{{purchase.item.title}}</div>
+            <div class="hero__image-sub-title">{{purchase.item.subtitle}}</div>
+            <a [routerLink]="purchase.item.button.title" class="btn btn--light">{{purchase.item.button.title}}</a>
         </div>
 
         <div class="hero__content">
-            <div class="hero__content-title">Pre-Order</div>
-            <!-- <div class="hero__content-sub-title">Release date: May 10th</div> -->
+            <div class="hero__content-title">Out Now</div>
+            <!-- <div class="hero__content-sub-title">Release date: May 15th</div> -->
             <div class="hero__info"></div>
             <div class="hero__purchase">
-                <div class="package">
-                    <div class="package__bg package__bg--left" style="background-image: url('http://moonkoradji.com/assets/images/release-cover/mkcd012_neural_embers.jpg')"></div>
-                    <div class="package__title">Digital</div>
-                    <div class="package__icon package__icon--cd">16 bit</div>
-                    <div class="package__price">9€</div>
+				<div class="package" *ngFor="let deal of purchase.deals" [class.package--highlight]="deal.highlight">
+                    <div class="package__bg package__bg--{{deal.background.position}}" style="background-image: url('{{deal.background.image}}')"></div>
+                    <div class="package__title">{{deal.title}}</div>
+                    <div class="package__icon" style="background-image: url('{{deal.image}}')">{{deal.subtitle}}</div>
+                    <div class="package__price">{{deal.price}}</div>
                     <div class="package__price-note"></div>
                     <div class="package__separator"></div>
                     <ul class="package__list">
-                        <li class="package__list-item">Fast Delivery</li>
-                        <li class="package__list-item">Choose Audio Format</li>
-                        <li class="package__list-item">mp3 / flac / wav</li>
-                        <li class="package__list-item">Grab & Listen</li>
+                        <li class="package__list-item" *ngFor="let description of deal.description">{{description.paragraph}}</li>
                     </ul>
-                    <a href="https://moonkoradjirecords.bandcamp.com/album/va-neural-embers" class="btn" target="blank">Purchase Now</a>
-                </div>
-
-                <div class="package package--highlight">
-                    <div class="package__bg package__bg--center" style="background-image: url('http://moonkoradji.com/assets/images/release-cover/mkcd012_neural_embers.jpg')"></div>
-                    <div class="package__title">CD</div>
-                    <div class="package__icon"
-                        style="background-image: url('/assets/images/release-cover/va-neural-embers-CD-design.png')">
-                    </div>
-                    <div class="package__price">10.90€</div>
-                    <div class="package__price-note"></div>
-                    <div class="package__separator"></div>
-                    <ul class="package__list">
-                        <li class="package__list-item">Digipack Box</li>
-                        <li class="package__list-item">+1 to Сollection</li>
-                        <li class="package__list-item">Limited Edition</li>
-                        <li class="package__list-item">Good Present</li>
-                    </ul>
-                    <a href="http://www.beatspace.com/mkcd012-neural-embers.html" class="btn" target="blank">Purchase Now</a>
-                </div>
-
-                <div class="package">
-                    <div class="package__bg package__bg--right" style="background-image: url('http://moonkoradji.com/assets/images/release-cover/mkcd012_neural_embers.jpg')"></div>
-                    <div class="package__title">Digital</div>
-                    <div class="package__icon package__icon--cd">24 bit</div>
-                    <div class="package__price">13.50€</div>
-                    <div class="package__price-note"></div>
-                    <div class="package__separator"></div>
-                    <ul class="package__list">
-                        <li class="package__list-item">Hight Resolution</li>
-                        <li class="package__list-item">3 tracks 32 bit!</li>
-                        <li class="package__list-item">Top Quality</li>
-                        <li class="package__list-item">Exclusively Here</li>
-                    </ul>
-                    <a href="https://moonkoradjirecords.bandcamp.com/album/va-neural-embers-24-bit" class="btn" target="blank">Purchase Now</a>
-                </div>
+					<a href="{{deal.button.link}}" class="btn" target="blank">{{deal.button.title}}</a>
+				</div>
             </div>
         </div>
 

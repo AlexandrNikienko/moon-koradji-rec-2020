@@ -1,7 +1,5 @@
 .news {
     padding-left: 30px;
-    padding-right: 25px;
-    margin-left: 15px;
     border-left: 1px solid rgb(170, 170, 170);
 
     &__header {
@@ -17,10 +15,10 @@
             .news {
                 &__image {
                     box-shadow: 0 0 1px rgb(255, 255, 51),
-                    -1px -1px 1px rgb(255, 221, 51),
-                    1px -1px 1px rgb(255, 136, 0),
-                    -1px 1px 1px rgb(255, 34, 0),
-                    1px 1px 1px rgb(102, 102, 255);
+						-1px -1px 1px rgb(255, 221, 51),
+						1px -1px 1px rgb(255, 136, 0),
+						-1px 1px 1px rgb(255, 34, 0),
+						1px 1px 1px rgb(102, 102, 255);
                     border-radius: 0 50%;
 
                     &::before {

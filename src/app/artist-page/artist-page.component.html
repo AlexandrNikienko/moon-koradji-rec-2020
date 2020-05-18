@@ -45,7 +45,7 @@
                 <div class="heading__title">Moon Koradji Records releases with {{artist.artistName}}:</div>
             </div>
 
-            <div class="s-involved__item col-lg-2 col-md-2 col-sm-3 col-xs-3" *ngFor="let release of artist.releases">
+            <div class="s-involved__item col-lg-2 col-md-3 col-sm-3 col-xs-3" *ngFor="let release of artist.releases">
                 <a class="s-involved__link " [routerLink]="['/releases', release.cdLink]">
                     <div class="s-involved__image"
                          [ngStyle]="{'background-image': 'url(/assets/images/release-cover/' + release.cdCover + ')'}">

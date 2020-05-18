@@ -14,10 +14,10 @@ export class PodcastsPageComponent implements OnInit {
 	constructor(private datService: DataService) { }
 	
 	ngOnInit() {
-		this.crystalization.init()
+		this.crystalization.init();
 	}
 
 	ngOnDestroy() {
-		this.crystalization.destroy()
+		this.crystalization.destroy();
 	}
 }

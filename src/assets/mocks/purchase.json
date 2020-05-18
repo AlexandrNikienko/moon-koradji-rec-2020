@@ -1,0 +1,100 @@
+{
+	"purchase": {
+		"item": {
+			"cover": "/assets/images/release-cover/mkcd012_neural_embers.jpg",
+			"title": "VA Neural Embers",
+			"subtitle": "by Various Artists",
+			"button": {
+				"title": "Listen Now",
+				"routerLink": "/releases/va-neural-embers"
+			}
+		},
+		"deals": [
+			{
+				"title": "Digital",
+				"subtitle": "16 bit",
+				"image": "",
+				"price": "9€",
+				"description": [
+					{
+						"paragraph": "Fast Delivery"
+					},
+					{
+						"paragraph": "Choose Audio Format"
+					},
+					{
+						"paragraph": "mp3 / flac / wav"
+					},
+					{
+						"paragraph": "Grab & Listen"
+					}
+				],
+				"background": {
+					"image": "/assets/images/release-cover/mkcd012_neural_embers.jpg",
+					"position": "left"
+				},
+				"button": {
+					"title": "Purchase Now",
+					"link": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers"
+				}
+			},
+			{
+				"highlight": true,
+				"title": "CD",
+				"subtitle": "",
+				"image": "/assets/images/release-cover/va-neural-embers-CD-design.png",
+				"price": "10.50€",
+				"description": [
+					{
+						"paragraph": "Digipack Box"
+					},
+					{
+						"paragraph": "+1 to the Collection"
+					},
+					{
+						"paragraph": "Limited Edition"
+					},
+					{
+						"paragraph": "Good Present"
+					}
+				],
+				"background": {
+					"image": "/assets/images/release-cover/mkcd012_neural_embers.jpg",
+					"position": "center"
+				},
+				"button": {
+					"title": "Purchase Now",
+					"link": "http://www.beatspace.com/mkcd012-neural-embers.html"
+				}
+			},
+			{
+				"title": "Digital",
+				"subtitle": "24 bit",
+				"image": "",
+				"price": "13.50€",
+				"description": [
+					{
+						"paragraph": "High Resolution"
+					},
+					{
+						"paragraph": "3 tracks 32 bit!"
+					},
+					{
+						"paragraph": "Top Quality"
+					},
+					{
+						"paragraph": "Exclusively Here"
+					}
+				],
+				"background": {
+					"image": "/assets/images/release-cover/mkcd012_neural_embers.jpg",
+					"position": "right"
+				},
+				"button": {
+					"title": "Purchase Now",
+					"link": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers-24-bit"
+				}
+			}
+		]
+	}
+}

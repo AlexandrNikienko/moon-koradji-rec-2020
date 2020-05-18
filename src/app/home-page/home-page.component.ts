@@ -14,6 +14,7 @@ export class HomePageComponent implements OnInit {
     public featuredArtists = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
     public featuredGalleryItems: Gallery[];
 
+    public _purchase$ = this.dataService.requestToData('purchase');;
     public _news$ = this.dataService.requestToData('news');;
     public _releases$ = this.dataService.requestToData('releases');
 
@@ -29,11 +30,13 @@ export class HomePageComponent implements OnInit {
         })
 
         /* FB page widget */
-        //window.FB.XFBML.parse();
-        window.FB.init({
-            appId: '484153925308268',
-            xfbml: true,
-            version: 'v3.2'
-        });
+		//window.FB.XFBML.parse();
+		if (window.FB) {
+			window.FB.init({
+				appId: '484153925308268',
+				xfbml: true,
+				version: 'v3.2'
+			});
+		}
     }
 }

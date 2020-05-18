@@ -62,7 +62,11 @@
 
     .s-involved {
         clear: both;
-        padding-top: 10px;
+		padding-top: 10px;
+		
+		&__item {
+			margin-bottom: 1rem;
+		}
 
         &__title {
             margin-bottom: 10px;
