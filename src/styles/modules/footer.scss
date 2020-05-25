@@ -108,8 +108,20 @@
 			img {
 				max-width: 150px;
 				max-height: 30px;
+				vertical-align: middle;
 			}
 		}
+	}
+
+	.beatport-headphones {
+		margin-right: 4px;
+		height: 29px;
+    	width: 29px;
+	}
+
+	.beatport-title {
+		height: 22px;
+    	width: 103px;
 	}
 }
 

@@ -36,7 +36,10 @@ import {LayoutNotFoundComponent} from './layout/not-found/layout-not-found.compo
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes, {useHash: !Boolean(history.pushState)}),
+		RouterModule.forRoot(appRoutes, { 
+			useHash: !Boolean(history.pushState),
+			scrollPositionRestoration: 'enabled'
+		}),
         BrowserAnimationsModule,
         MatToolbarModule,
         MatButtonModule,
