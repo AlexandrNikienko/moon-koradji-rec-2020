@@ -1,9 +1,8 @@
 <section class="hero-wrapper">
-    <section class="hero" *ngIf="_purchase$ | async as purchase">
+    <div class="hero" *ngIf="_purchase$ | async as purchase">
         <div class="hero__image-wrapper">
             <div class="hero__image">
-                <img src="/assets/images/release-cover/mkcd012_neural_embers.jpg" alt=""
-                    class="hero__image">
+                <img src="{{purchase.item.cover}}" class="hero__image" alt="">
             </div>
             <div class="hero__image-title">{{purchase.item.title}}</div>
             <div class="hero__image-sub-title">{{purchase.item.subtitle}}</div>
@@ -11,8 +10,7 @@
         </div>
 
         <div class="hero__content">
-            <div class="hero__content-title">Out Now</div>
-            <!-- <div class="hero__content-sub-title">Release date: May 15th</div> -->
+            <div class="hero__content-title">{{purchase.title}}</div>
             <div class="hero__info"></div>
             <div class="hero__purchase">
 				<div class="package" *ngFor="let deal of purchase.deals" [class.package--highlight]="deal.highlight">
@@ -29,8 +27,7 @@
 				</div>
             </div>
         </div>
-
-    </section>
+    </div>
 </section>
 
 <section class="recent-releases-wrapper">
@@ -65,7 +62,7 @@
 				<div class="recent-podcast__image" style="background-image: url(/assets/images/podcasts/mk-logo-may.png)"></div>
 
 				<h1 class="recent-podcast__desc">
-					<p class="recent-podcast__title">May Episode #11 </p>
+					<p class="recent-podcast__title">May Episode #11</p>
 					<p class="recent-podcast__info">with <strong>Molchun</strong></p>
 				</h1>
 			</div>
