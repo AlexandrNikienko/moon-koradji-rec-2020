@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
-// import {FacebookService, UIParams, UIResponse} from 'ngx-facebook';
 
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
@@ -23,7 +22,6 @@ export class ReleasePageComponent implements OnInit {
     constructor(private route: ActivatedRoute,
         private dataService: DataService,
         private meta: Meta,
-        // private fb: FacebookService,
         private title: Title) {
     }
 
@@ -34,7 +32,7 @@ export class ReleasePageComponent implements OnInit {
             .subscribe(releases => {
                 this.release = releases.filter(obj => obj['releaseRoute'] === this.releaseRoute)[0];
                 this.releaseArtists = this.release.artists;
-                this.setMetaData(this.release);
+                //this.setMetaData(this.release);
                 this.title.setTitle(this.release.releaseTitle);
             });
 
@@ -55,9 +53,7 @@ export class ReleasePageComponent implements OnInit {
         });
     }
 
-    setMetaData(release) {
-        // document.title = release.releaseTitle;
-
+    setMetaData(release: Release): void {
         this.meta.removeTag('property="og:title"');
         this.meta.removeTag('property="og:image"');
         this.meta.removeTag('property="og:url"');
@@ -68,8 +64,6 @@ export class ReleasePageComponent implements OnInit {
         for (let i = 0; i < release.releaseDescription.length; i++) {
             releaseDesc += release.releaseDescription[i].paragraph;
         }
-
-        // document.querySelector('meta[name="description"]').setAttribute('content', releaseDesc);
 
         this.meta.addTags([
             {
@@ -89,24 +83,5 @@ export class ReleasePageComponent implements OnInit {
                 content: releaseDesc
             }
         ]);
-
-        this.meta.getTag('property="og:title"');
-        this.meta.getTag('property="og:image"');
-        this.meta.getTag('property="og:url"');
-        this.meta.getTag('property="og:description"');
-    }
-
-    share() {
-        // const params: UIParams = {
-        //     link: 'http://www.moonkoradji.com/assets/images/release-cover/' + this.release.releaseCover,
-        //     picture: 'http://www.moonkoradji.com/assets/images/release-cover/' + this.release.releaseCover,
-        //     method: 'feed',
-        //     display: 'dialog'
-        // };
-
-        // this.fb.ui(params)
-        //     .then((res: UIResponse) => console.log(res))
-        //     .catch((e: any) => console.error(e));
-
     }
 }

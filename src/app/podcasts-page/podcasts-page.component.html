@@ -1,20 +1,46 @@
 <div class="m-podcasts row" *ngIf="podcasts$ | async as podcasts">
-    <div class="col-md-12">
-        <h2 class="s-module-title">
-            Greetings Earthlings!
-            <br>
-            Welcome to Moon Koradji Records podcasts page.
-        </h2>
+	<div class="col-md-12">
+		<h2 class="s-module-title">
+			Greetings Earthlings!
+			<br>
+			Welcome to Moon Koradji Records podcasts page.
+		</h2>
 
-        <h3 class="s-module-subtitle">
-			Subscribe to our Podcasts with 
-			<a href="https://soundcloud.com/moon-koradji-records/" target="_blank"><i class="fab fa-soundcloud"></i>SoundCloud</a>, 
-			<a href="https://www.mixcloud.com/Moon_Koradji_Records/" target="_blank"><i class="fab fa-mixcloud"></i>Mixcloud</a> or 
-			<a href="https://podcasts.apple.com/ua/podcast/moon-koradji-records/id1470758774" target="_blank"><i class="fab fa-apple"></i>Apple Podcasts</a>
-        </h3>
+		<h3 class="s-module-subtitle">
+			Subscribe to our Podcasts with
+		</h3>
 
-        <app-shared-loader></app-shared-loader>
+		<ul class="podcasts-list">
+			<li class="podcasts-list__item">
+				<a href="https://soundcloud.com/moon-koradji-records/" target="_blank">
+					<i class="fab fa-soundcloud"></i>SoundCloud</a>
+			</li>
+			<li class="podcasts-list__item">
+				<a href="https://www.mixcloud.com/Moon_Koradji_Records/" target="_blank">
+					<i class="fab fa-mixcloud"></i>Mixcloud</a>
+			</li>
+			<li class="podcasts-list__item">
+				<a href="https://podcasts.apple.com/ua/podcast/moon-koradji-records/id1470758774" target="_blank">
+					<i class="fab fa-apple"></i>Apple Podcasts</a>
+			</li>
+			<li class="podcasts-list__item">
+				<a href="https://podcasts.google.com/?feed=aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzL3NvdW5kY2xvdWQ6dXNlcnM6NTU1NjM5MTgvc291bmRzLnJzcw&ved=0CAIQ4aUDahcKEwjAhbLt6tbpAhUAAAAAHQAAAAAQFQ"
+					target="_blank">
+					<img class="google-podcast-icon" src="/assets/images/podcasts/google-podcasts.svg" alt="">
+					Google Podcasts</a>
+			</li>
+			<li class="podcasts-list__item">
+				<a href="https://open.spotify.com/show/3NvtOnCxCHWufvOG7G5QW4" target="_blank">
+					<i class="fab fa-spotify"></i>Spotify</a>
+			</li>
+			<li class="podcasts-list__item">
+				<a href="https://www.youtube.com/playlist?list=PL5ER29DAoUryb-10guHxxGxND8rw-S7HV" target="_blank">
+					<i class="fab fa-youtube"></i>YouTube</a>
+			</li>
+		</ul>
 
-        <div class="s-player-wrapper" [innerHTML]="podcasts[0].embedAudio | safeHtml"></div>
-    </div>
+		<app-shared-loader></app-shared-loader>
+
+		<div class="s-player-wrapper" [innerHTML]="podcasts[0].embedAudio | safeHtml"></div>
+	</div>
 </div>

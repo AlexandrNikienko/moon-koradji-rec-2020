@@ -9,16 +9,7 @@
     .s-module-subtitle {
         font-size: 16px;
         text-align: center;
-        margin-bottom: 2rem;
-
-        a {
-            padding: 3px 5px;
-            border: 1px solid;
-			border-radius: 5px;
-			white-space: nowrap;
-			display: inline-block;
-    		margin-top: .5rem;;
-        }
+        margin-bottom: .5rem;
     }
 
     .s-player-wrapper {
@@ -59,6 +50,31 @@
 	
 	.fab {
 		margin-right: .5rem;
+	}
+
+	.podcasts-list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 2rem;
+
+		&__item {
+			margin: 5px;
+
+			a {
+				padding: 3px 5px;
+				border: 1px solid;
+				border-radius: 5px;
+				white-space: nowrap;
+				display: inline-block;
+			}
+		}
+	}
+	
+	.google-podcast-icon {
+		width: 14px;
+		height: 14px;
 	}
 }
 

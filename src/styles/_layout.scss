@@ -119,7 +119,6 @@ app-root {
         position: relative;
         display: inline-block;
         padding-bottom: 10px;
-        text-transform: capitalize;
 
         &::after {
             content: '';
@@ -138,9 +137,27 @@ app-root {
     min-width: 100%;
 }
 
-@media (min-width: 1600px) {
-    .container {
-        //width: 1560px;
-        //max-width: none;
-    }
-}
+// .container.page {
+// 	app-home-page,
+// 	app-release-page,
+// 	app-releases,
+// 	app-artists-page,
+// 	app-artist-page,
+// 	app-podcasts-page,
+// 	app-about {
+// 		will-change: opacity;
+// 		display: block;
+// 		opacity: 0;
+// 		animation: 1s ease forwards fadeIn;
+// 	}
+// }
+
+// @keyframes fadeIn {
+// 	from {
+// 		opacity: 0;
+// 	}
+	
+// 	to {
+// 		opacity: 1;
+// 	}
+// }

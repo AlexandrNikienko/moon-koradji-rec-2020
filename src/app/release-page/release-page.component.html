@@ -2,7 +2,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12">
         <h1 class="release-name">
             {{release.releaseTitle}}
-            <a class="btn btn-link share-btn" href="javascript: void(0)" (click)="share()" title="Share on Facebook">
+            <a class="btn btn-link share-btn" href="javascript: void(0)" title="Share on Facebook">
                 <i class="fas fa-share fa-2x"></i>
             </a>
         </h1>
@@ -61,8 +61,8 @@
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12">
-        <app-audio-player [release]="release"></app-audio-player>
+        <app-audio-player *ngIf="release.embedAudio" [embedAudio]="release.embedAudio"></app-audio-player>
 
-        <app-shared-video [embedVideo]="release.embedVideo"></app-shared-video>
+        <app-shared-video *ngIf="release.embedVideo" [embedVideo]="release.embedVideo"></app-shared-video>
     </div>
 </div>

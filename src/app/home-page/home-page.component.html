@@ -39,7 +39,7 @@
     <main class="recent-releases-inner">
         <ng-container *ngIf="_releases$ | async as releases">
             <ng-container *ngFor="let release of releases; let i = index">
-                <app-release-card *ngIf="(i < 5) && !release.isHero" [releaseItem]="release" [hidden]="release.hidden"></app-release-card>
+                <app-release-card *ngIf="(i < 5) && !release.isHero && !release.hidden" [releaseItem]="release"></app-release-card>
             </ng-container>
         </ng-container>
     </main>
@@ -59,11 +59,11 @@
 			<div class="s-podcast-add__subtitle">podcasts</div>
 			
 			<div class="recent-podcast">
-				<div class="recent-podcast__image" style="background-image: url(/assets/images/podcasts/mk-logo-may.png)"></div>
+				<div class="recent-podcast__image" style="background-image: url(/assets/images/podcasts/mk-logo-jun.png)"></div>
 
 				<h1 class="recent-podcast__desc">
-					<p class="recent-podcast__title">May Episode #11</p>
-					<p class="recent-podcast__info">with <strong>Molchun</strong></p>
+					<p class="recent-podcast__title">June Episode #12</p>
+					<p class="recent-podcast__info">with <strong>Adansonia</strong></p>
 				</h1>
 			</div>
 
