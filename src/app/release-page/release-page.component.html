@@ -1,8 +1,9 @@
 <div class="m-release-info row" *ngIf="release">
     <div class="col-lg-6 col-md-6 col-sm-12">
         <h1 class="release-name">
-            {{release.releaseTitle}}
-            <a class="btn btn-link share-btn" href="javascript: void(0)" title="Share on Facebook">
+			{{release.releaseTitle}}
+			
+            <a *ngIf="false" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook">
                 <i class="fas fa-share fa-2x"></i>
             </a>
         </h1>
