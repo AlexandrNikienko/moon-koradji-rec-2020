@@ -8,13 +8,6 @@ import { DATAFOLDER } from '../../../environments/environment';
 
 @Injectable()
 export class DataService {
-    // _ARTISTS$ = this.requestToData('artists');
-    // _DJ$ = this.requestToData('djs');
-    // _NEWS$ = this.requestToData('news');
-    // _PODCASTS$ = this.requestToData('podcasts');
-    // _RELEASES$ = this.requestToData('releases');
-    // etc
-
     constructor(private http: HttpClient) { }
 
     requestToData(item: string): Observable<any> {

@@ -1,5 +1,11 @@
 {
     "news": [
+		{
+            "link": "/podcasts",
+            "image": "assets/images/podcasts/mk-logo-jul.png",
+            "title": "Podcast #13 with Uttu",
+            "text": "Coming in July"
+        },
         {
             "link": "https://www.goabase.net/party/the-shadow-of-the-dark-shaman-by-mindgamers/105799",
             "image": "https://www.goabase.net/images/flyer/full/20200904_the-shadow-of-the-dark-shaman-by-mindgamers_20200108201039.jpg",
