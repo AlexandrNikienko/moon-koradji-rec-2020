@@ -7,13 +7,13 @@ export interface Artist {
     artistRealName: string;
     artistCountry: string;
     artistAvatar: string;
-    artistDescription: Paragraph[];
-    artistFacebook: string;
-    artistSoundcloud: string;
-    artistOfficial: string;
-    artistMixcloud: string;
-    mixes: boolean;
-    releases: boolean;
-    embedCode: string;
-    flag: string;
+    artistDescription?: Paragraph[];
+    artistFacebook?: string;
+    artistSoundcloud?: string;
+    artistOfficial?: string;
+    artistMixcloud?: string;
+    mixes?: boolean;
+    releases?: boolean;
+    embedCode?: string;
+    flag?: string;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
 import { Artist } from '../core/models/artist.model';
 import { DataService } from '../core/services/data.service';
@@ -10,11 +11,10 @@ import { DataService } from '../core/services/data.service';
 	templateUrl: './artist-page.component.html'
 })
 export class ArtistPageComponent implements OnInit {
-	public artists: Artist[];
-	public artistRoute: string;
 	public artist: Artist;
-	public artists$ = this.dataService.requestToData('artists');
-	public djs$ = this.dataService.requestToData('djs');
+	private artistRoute: string;
+	private requestTo: string;
+	private requestTo$: Observable<any>;
 
 	constructor(private route: ActivatedRoute,
 		private dataService: DataService,
@@ -24,22 +24,14 @@ export class ArtistPageComponent implements OnInit {
 
 	ngOnInit() {
 		this.artistRoute = this.route.snapshot.params['artistRoute'];
+		this.requestTo = this.artistRoute.includes('dj-') ? 'djs' : 'artists';
+		this.requestTo$ = this.dataService.requestToData(this.requestTo);
 
-		if (this.artistRoute.includes('dj-')) {
-			this.djs$
-				.subscribe((djs) => {
-					this.artist = djs.filter(obj => obj['artistRoute'] === this.artistRoute)[0];
+		this.requestTo$.subscribe(artist => {
+					this.artist = artist.filter((obj: Artist) => obj['artistRoute'] === this.artistRoute)[0];
 					//this.setMetaData(this.artist);
 					this.title.setTitle(this.artist.artistName);
 				});
-		} else {
-			this.artists$
-				.subscribe((artists) => {
-					this.artist = artists.filter(obj => obj['artistRoute'] === this.artistRoute)[0];
-					//this.setMetaData(this.artist);
-					this.title.setTitle(this.artist.artistName);
-				});
-		}
 	}
 
 	setMetaData(artist: Artist): void {
