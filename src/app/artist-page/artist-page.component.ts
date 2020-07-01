@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 import { Artist } from '../core/models/artist.model';
 import { DataService } from '../core/services/data.service';
@@ -10,11 +10,12 @@ import { DataService } from '../core/services/data.service';
 	selector: 'app-artist-page',
 	templateUrl: './artist-page.component.html'
 })
-export class ArtistPageComponent implements OnInit {
+export class ArtistPageComponent implements OnInit, OnDestroy {
 	public artist: Artist;
 	private artistRoute: string;
 	private requestTo: string;
 	private requestTo$: Observable<any>;
+	private requestSubscription: Subscription;
 
 	constructor(private route: ActivatedRoute,
 		private dataService: DataService,
@@ -27,11 +28,17 @@ export class ArtistPageComponent implements OnInit {
 		this.requestTo = this.artistRoute.includes('dj-') ? 'djs' : 'artists';
 		this.requestTo$ = this.dataService.requestToData(this.requestTo);
 
-		this.requestTo$.subscribe(artist => {
-					this.artist = artist.filter((obj: Artist) => obj['artistRoute'] === this.artistRoute)[0];
-					//this.setMetaData(this.artist);
-					this.title.setTitle(this.artist.artistName);
-				});
+		this.requestSubscription = this.requestTo$.subscribe(artist => {
+			this.artist = artist.filter((obj: Artist) => obj['artistRoute'] === this.artistRoute)[0];
+			//this.setMetaData(this.artist);
+			this.title.setTitle(this.artist.artistName);
+		});
+	}
+
+	ngOnDestroy() {
+		if (this.requestSubscription) {
+			this.requestSubscription.unsubscribe();
+		}
 	}
 
 	setMetaData(artist: Artist): void {

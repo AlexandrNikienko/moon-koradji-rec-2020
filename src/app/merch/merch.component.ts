@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-merch',
-    templateUrl: './merch.component.html'
+	selector: 'app-merch',
+	templateUrl: './merch.component.html'
 })
 export class MerchComponent {
 }

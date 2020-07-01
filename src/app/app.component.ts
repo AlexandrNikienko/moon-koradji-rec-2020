@@ -1,52 +1,52 @@
-import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
-import {ActivatedRouteSnapshot, NavigationEnd, Router} from '@angular/router';
-import {filter} from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html'
+	selector: 'app-root',
+	templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
 	public winter: boolean;
 
-    constructor(private router: Router,
-                       private titleService: Title) {
-    }
+	constructor(private router: Router,
+		private titleService: Title) {
+	}
 
-    public setTitle(newTitle: string) {
-        this.titleService.setTitle(newTitle);
-    }
+	ngOnInit() {
+		this.router.events.pipe(
+			filter(event => event instanceof NavigationEnd))
+			.subscribe((event: NavigationEnd) => {
+				const titleToSet = this.getDeepestTitle(this.router.routerState.snapshot.root);
 
-    private getDeepestTitle(routeSnapshot: ActivatedRouteSnapshot) {
+				if (titleToSet) {
+					this.titleService.setTitle(titleToSet);
+				}
+			});
 
-        let title = routeSnapshot.data ? routeSnapshot.data['title'] : undefined;
+		this.checkIfWinter();
+	}
 
-        if (routeSnapshot.firstChild) {
-            title = this.getDeepestTitle(routeSnapshot.firstChild) || title;
-        }
+	checkIfWinter(): void {
+		const date = new Date;
+		const winter = [11, 0, 1]; // Dec, Jan, Feb
+		const month = date.getMonth();
+		this.winter = winter.includes(month);
+	}
 
-        return title;
-    }
+	setTitle(newTitle: string) {
+		this.titleService.setTitle(newTitle);
+	}
 
-    ngOnInit() {
-        this.router.events.pipe(
-            filter(event => event instanceof NavigationEnd))
-            .subscribe((event: NavigationEnd) => {
-                const titleToSet = this.getDeepestTitle(this.router.routerState.snapshot.root);
+	private getDeepestTitle(routeSnapshot: ActivatedRouteSnapshot) {
 
-                if (titleToSet) {
-                    this.titleService.setTitle(titleToSet);
-                }
-            });
-        
-            this.checkIfWinter();
-    }
+		let title = routeSnapshot.data ? routeSnapshot.data['title'] : undefined;
 
-    checkIfWinter(): void {
-        const date = new Date;
-        const winter = [11, 0, 1]; // Dec, Jan, Feb
-        const month = date.getMonth();
-        this.winter = winter.includes(month);
-    }
+		if (routeSnapshot.firstChild) {
+			title = this.getDeepestTitle(routeSnapshot.firstChild) || title;
+		}
+
+		return title;
+	}
 }

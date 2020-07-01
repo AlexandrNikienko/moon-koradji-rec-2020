@@ -14,36 +14,36 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-    observer: true,
-    direction: 'horizontal'
+	observer: true,
+	direction: 'horizontal'
 };
 
 @NgModule({
-    imports: [
-        SwiperModule,
-        PipesModule,
-        CommonModule,
-        RouterModule
-    ],
-    exports: [
-        SharedGalleryComponent,
-        SharedLoaderComponent,
-        SharedVideoComponent,
-        ReleaseCardComponent,
-        RouterModule
-    ],
-    declarations: [
-        SharedGalleryComponent,
-        SharedLoaderComponent,
-        SharedVideoComponent,
-        ReleaseCardComponent
-    ],
-    providers: [
-        {
-            provide: SWIPER_CONFIG,
-            useValue: DEFAULT_SWIPER_CONFIG
-        }
-    ]
+	imports: [
+		SwiperModule,
+		PipesModule,
+		CommonModule,
+		RouterModule
+	],
+	exports: [
+		SharedGalleryComponent,
+		SharedLoaderComponent,
+		SharedVideoComponent,
+		ReleaseCardComponent,
+		RouterModule
+	],
+	declarations: [
+		SharedGalleryComponent,
+		SharedLoaderComponent,
+		SharedVideoComponent,
+		ReleaseCardComponent
+	],
+	providers: [
+		{
+			provide: SWIPER_CONFIG,
+			useValue: DEFAULT_SWIPER_CONFIG
+		}
+	]
 })
 
 export class SharedModule {

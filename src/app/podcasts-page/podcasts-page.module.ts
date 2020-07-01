@@ -9,32 +9,32 @@ import { PodcastsPageComponent } from './podcasts-page.component';
 import { DataService } from '../core/services/data.service';
 
 const artistRoutes: Routes = [
-    {
-        path: '',
-        component: PodcastsPageComponent,
-        pathMatch: 'full',
-        data: {
-            title: 'Podcasts Page'
-        }
-    }
+	{
+		path: '',
+		component: PodcastsPageComponent,
+		pathMatch: 'full',
+		data: {
+			title: 'Podcasts Page'
+		}
+	}
 ];
 
 @NgModule({
-    declarations: [
-        PodcastsPageComponent
-    ],
-    imports: [
-        CommonModule,
-        PipesModule,
-        RouterModule.forChild(artistRoutes),
-        SharedModule
-    ],
-    exports: [
-        RouterModule,
-    ],
-    providers: [
-        DataService
-    ]
+	declarations: [
+		PodcastsPageComponent
+	],
+	imports: [
+		CommonModule,
+		PipesModule,
+		RouterModule.forChild(artistRoutes),
+		SharedModule
+	],
+	exports: [
+		RouterModule,
+	],
+	providers: [
+		DataService
+	]
 })
 
 export class PodcastsPageModule { }

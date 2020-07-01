@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-shared-loader',
-    templateUrl: './loader.component.html'
+	selector: 'app-shared-loader',
+	templateUrl: './loader.component.html'
 })
 export class SharedLoaderComponent {
 }

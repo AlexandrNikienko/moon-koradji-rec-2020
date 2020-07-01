@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-shared-video',
-    templateUrl: './video.component.html'
+	selector: 'app-shared-video',
+	templateUrl: './video.component.html'
 })
 export class SharedVideoComponent {
-    @Input() embedVideo: string;
+	@Input() embedVideo: string;
 }

@@ -9,29 +9,29 @@ import { Release } from './../core/models/release.model';
 declare var window: any;
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: './home-page.component.html'
+	selector: 'app-home-page',
+	templateUrl: './home-page.component.html'
 })
 export class HomePageComponent implements OnInit {
-    public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
-    public featuredGalleryItems: Gallery[];
+	public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
+	public featuredGalleryItems: Gallery[];
 
-    public _purchase$ = this.dataService.requestToData('purchase');;
-    public _news$: Observable<News[]> = this.dataService.requestToData('news');;
-    public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
+	public _purchase$ = this.dataService.requestToData('purchase');;
+	public _news$: Observable<News[]> = this.dataService.requestToData('news');;
+	public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
 
-    constructor(private dataService: DataService) { }
+	constructor(private dataService: DataService) { }
 
-    ngOnInit() {
-        this.featuredGalleryItems = this.featuredArtists.map(artist => {
-            return {
-                name: artist,
-                route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
-                image: `/assets/images/artists/featured/featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`
-            }
-        })
+	ngOnInit() {
+		this.featuredGalleryItems = this.featuredArtists.map(artist => {
+			return {
+				name: artist,
+				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
+				image: `/assets/images/artists/featured/featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`
+			}
+		})
 
-        /* FB page widget */
+		/* FB page widget */
 		//window.FB.XFBML.parse();
 		if (window.FB) {
 			window.FB.init({
@@ -40,5 +40,5 @@ export class HomePageComponent implements OnInit {
 				version: 'v3.2'
 			});
 		}
-    }
+	}
 }

@@ -1,14 +1,14 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 
-import {SafeHtmlPipe} from './safe-html.pipe';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
-    declarations: [
-        SafeHtmlPipe
-    ],
-    exports: [
-        SafeHtmlPipe
-    ]
+	declarations: [
+		SafeHtmlPipe
+	],
+	exports: [
+		SafeHtmlPipe
+	]
 })
 
-export class PipesModule {}
+export class PipesModule { }

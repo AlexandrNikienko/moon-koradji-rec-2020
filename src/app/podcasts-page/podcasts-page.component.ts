@@ -4,15 +4,15 @@ import { DataService } from '../core/services/data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 @Component({
-    selector: 'app-podcasts-page',
-    templateUrl: './podcasts-page.component.html'
+	selector: 'app-podcasts-page',
+	templateUrl: './podcasts-page.component.html'
 })
 export class PodcastsPageComponent implements OnInit {
 	public podcasts$ = this.datService.requestToData('podcasts');
 	public crystalization = new Crystalization();
 
 	constructor(private datService: DataService) { }
-	
+
 	ngOnInit() {
 		this.crystalization.init();
 	}

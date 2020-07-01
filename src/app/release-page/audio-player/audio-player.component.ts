@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-audio-player',
-    templateUrl: './audio-player.component.html'
+	selector: 'app-audio-player',
+	templateUrl: './audio-player.component.html'
 })
 export class AudioPlayerComponent {
-    @Input() embedAudio: string;
+	@Input() embedAudio: string;
 }

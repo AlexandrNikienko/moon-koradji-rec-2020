@@ -8,32 +8,32 @@ import { DataService } from '../core/services/data.service';
 import { PodcastComponent } from './podcast/podcast.component';
 
 const homeRoutes: Routes = [
-    {
-        path: '',
-        component: HomePageComponent,
-        pathMatch: 'full',
-        data: {
-            title: 'Home Page'
-        }
-    }
+	{
+		path: '',
+		component: HomePageComponent,
+		pathMatch: 'full',
+		data: {
+			title: 'Home Page'
+		}
+	}
 ];
 
 @NgModule({
-    declarations: [
+	declarations: [
 		HomePageComponent,
 		PodcastComponent
-    ],
-    imports: [
-        CommonModule,
-        RouterModule.forChild(homeRoutes),
-        SharedModule
-    ],
-    exports: [
-        RouterModule
-    ],
-    providers: [
-        DataService
-    ]
+	],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(homeRoutes),
+		SharedModule
+	],
+	exports: [
+		RouterModule
+	],
+	providers: [
+		DataService
+	]
 })
 
 export class HomePageModule { }

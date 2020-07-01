@@ -8,30 +8,30 @@ import { DataService } from '../core/services/data.service';
 
 
 const releasesRoutes: Routes = [
-  {
-    path: '',
-    component: ReleasesComponent,
-    pathMatch: 'full',
-    data: {
-      title: 'Releases Page'
-    }
-  }
+	{
+		path: '',
+		component: ReleasesComponent,
+		pathMatch: 'full',
+		data: {
+			title: 'Releases Page'
+		}
+	}
 ];
 
 @NgModule({
-  declarations: [
-    ReleasesComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(releasesRoutes),
-    SharedModule
-  ],
-  exports: [
-    RouterModule
-  ],
-  providers: [
-    DataService
-  ]
+	declarations: [
+		ReleasesComponent
+	],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(releasesRoutes),
+		SharedModule
+	],
+	exports: [
+		RouterModule
+	],
+	providers: [
+		DataService
+	]
 })
 export class ReleasesModule { }

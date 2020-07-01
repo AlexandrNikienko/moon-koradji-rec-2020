@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-visuals',
-    templateUrl: './visuals.component.html'
+	selector: 'app-visuals',
+	templateUrl: './visuals.component.html'
 })
 
 export class VisualsComponent {
-    public videoSource = '/assets/video/stars.mp4';
+	public videoSource = '/assets/video/stars.mp4';
 }
