@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { DataService } from '../core/services/data.service';
-
 import { Gallery } from '../core/models/gallery.model';
+import { News } from '../core/models/news.model';
+import { Release } from './../core/models/release.model';
 
 declare var window: any;
 
@@ -11,12 +13,12 @@ declare var window: any;
     templateUrl: './home-page.component.html'
 })
 export class HomePageComponent implements OnInit {
-    public featuredArtists = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
+    public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
     public featuredGalleryItems: Gallery[];
 
     public _purchase$ = this.dataService.requestToData('purchase');;
-    public _news$ = this.dataService.requestToData('news');;
-    public _releases$ = this.dataService.requestToData('releases');
+    public _news$: Observable<News[]> = this.dataService.requestToData('news');;
+    public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
 
     constructor(private dataService: DataService) { }
 

@@ -5,7 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { HomePageComponent } from './home-page.component';
 import { DataService } from '../core/services/data.service';
-// import { FacebookModule } from 'ngx-facebook';
+import { PodcastComponent } from './podcast/podcast.component';
 
 const homeRoutes: Routes = [
     {
@@ -20,12 +20,12 @@ const homeRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        HomePageComponent
+		HomePageComponent,
+		PodcastComponent
     ],
     imports: [
         CommonModule,
         RouterModule.forChild(homeRoutes),
-        // FacebookModule.forRoot(),
         SharedModule
     ],
     exports: [
