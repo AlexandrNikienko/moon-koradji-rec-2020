@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './footer.component.html'
 })
 export class FooterComponent implements OnInit {
-	public year: any;
+	public year: number;
 
 	ngOnInit() {
 		this.getCurrentYear();
 	}
 
-	getCurrentYear() {
+	getCurrentYear(): void {
 		this.year = (new Date()).getFullYear();
 	}
 }

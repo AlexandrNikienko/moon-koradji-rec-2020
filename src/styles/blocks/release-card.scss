@@ -68,13 +68,18 @@
     }
 
     &__bottom-title {
-        font-size: 16px;
+		//font-size: 16px;
         font-weight: 300;
         color: #f5f5f5;
         padding: 0 15px 15px;
         margin: 0;
         display: block;
-        transition: padding-bottom .3s;
+		transition: padding-bottom .3s;
+		
+		@include mobile {
+			//font-size: calc( 18px + (22 - 18) * ( (100vw - 320px) / ( 960 - 320)));
+			//font-size: calc( 1.25em + (2 - 1.25) * ( (100vw - 320px) / ( 768 - 320)));
+		}
     }
 
     &__bottom-text {

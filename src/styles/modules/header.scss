@@ -1,4 +1,6 @@
 .m-header {
+	position: relative;
+	
     .navbar {
         background-color: #111 !important;
     }
@@ -39,7 +41,7 @@
         }
 
         @include tablet {
-            display: none;
+            //display: none;
         }
     }
 

@@ -9,7 +9,7 @@ body {
     font-weight: 300;
     color: white;
     min-height: 100%;
-    position: relative;
+	position: relative;
 }
 
 a {
@@ -46,7 +46,7 @@ app-visuals {
     &:before {
         content: '';
         display: block;
-        padding-top: 100%*9/15;
+        padding-top: 100% * 9 / 15;
     }
 
     iframe {
@@ -95,18 +95,13 @@ app-visuals {
 }
 
 app-root {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-
-    app-footer {
-        margin-top: auto;
-    }
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+	height: 100vh;
 }
 
 .page {
-    padding-top: 30px;
-    padding-bottom: 50px;
+	padding: 30px $gap 50px;
 }
 
 .heading {

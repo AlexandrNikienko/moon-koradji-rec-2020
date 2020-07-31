@@ -45,7 +45,7 @@ export class ReleasePageComponent implements OnInit {
 			);
 	}
 
-	createInvolvedArtistsArray(allArtists, releaseArtists): void {
+	createInvolvedArtistsArray(allArtists: Artist[], releaseArtists: string[]): void {
 		const self = this;
 		releaseArtists.forEach((name) => {
 			const artist = allArtists.filter(arr => arr.artistName === name);

@@ -5,6 +5,8 @@
     margin-bottom: 4rem;
 }
 
+
+
 .recent-releases-inner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
@@ -23,5 +25,11 @@
 		background: rgba(0, 0, 0, .5);
 		padding: 1rem;
 		border-radius: 1rem;
+	}
+}
+
+@media (max-width: 575px) {
+	.featured-artists-wrapper {
+		width: calc(100vw - #{$gap} * 2);
 	}
 }

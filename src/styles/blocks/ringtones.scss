@@ -9,23 +9,23 @@
         margin-bottom: 10px;
     }
 
-    .new-icon {
-        vertical-align: baseline;
-        margin-left: 5px;
-    }
-
-    .ringtones-list {
+    &__list {
         font-size: 16px;
-        line-height: normal;
-
-        &__item {
-            margin-bottom: 5px;
-        }
-    }
+        line-height: normal; 
+	}
+	
+	&__item {
+		margin-bottom: 5px;
+	}
 
     .fa-play {
         cursor: pointer;
         font-size: 12px;
         margin-right: 10px;
+	}
+	
+	.new-icon {
+        vertical-align: baseline;
+        margin-left: 5px;
     }
 }
