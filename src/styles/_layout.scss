@@ -132,6 +132,65 @@ app-root {
     min-width: 100%;
 }
 
+.logo {
+	width: 40%;
+	margin: 3rem auto 1rem;
+}
+
+.wing {
+	//transition: .3s;
+	display: block;
+	//outline: 3px solid yellow;
+
+	&__right {
+		transform: rotate(0);
+		transform-origin: 50% 50%;
+		animation: fly-right 2s cubic-bezier(0.25, 1.7, 0.35, 0.8) 2s infinite both;
+		
+	}
+
+	&__left {
+		transform: rotate(-15deg);
+		transform-origin: 50% 50%;
+		animation: fly-left 3s cubic-bezier(0.25, 1.7, 0.35, 0.8) 2s infinite both;
+		
+	}
+}
+
+@keyframes fly-right {
+	0% {
+		transform: rotate(0);
+	}
+
+	20% {
+		transform: rotate(15deg);
+	}
+
+	70%{
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes fly-left {
+	0% {
+		transform: rotate(0);
+	}
+
+	15% {
+		transform: rotate(-15deg);
+	}
+
+	70%{
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
 // .container.page {
 // 	app-home-page,
 // 	app-release-page,
