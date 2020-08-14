@@ -1,4 +1,9 @@
-@import "_variables", "_reset", "_fonts", "_mixins", "_layout";
+@import "libraries/bootstrap-5.0.0-alpha1/scss/bootstrap";
+
+@import "_variables";
+@import "_fonts";
+@import "_mixins";
+@import "_layout";
 
 @import "blocks/crystal-paralax";
 @import "blocks/hero";
@@ -13,6 +18,7 @@
 @import "blocks/swiper";
 
 @import "modules/about";
+@import "modules/audio-player";
 @import "modules/artists";
 @import "modules/artist";
 @import "modules/footer";

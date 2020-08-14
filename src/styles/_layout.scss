@@ -13,12 +13,12 @@ body {
 }
 
 a {
-    color: white;
+	color: white;
+	text-decoration: none;
     transition: .3s;
 
     &:hover {
         color: white;
-        text-decoration: none;
     }
 }
 
@@ -110,10 +110,12 @@ app-root {
     margin-bottom: 1rem;
 
     &__title {
-        font-size: 20px;
+        font-size: 1.25rem;
         position: relative;
         display: inline-block;
-        padding-bottom: 10px;
+		padding-bottom: 10px;
+		margin: 0;
+		line-height: normal;
 
         &::after {
             content: '';

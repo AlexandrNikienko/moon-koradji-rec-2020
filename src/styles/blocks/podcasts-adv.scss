@@ -137,6 +137,8 @@
 
 	&__desc {
 		text-align: left;
+		font-size: 1rem;
+		font-weight: 300;
 	}
 
 	&__title {
@@ -144,6 +146,8 @@
 	}
 
 	&__info {
+		margin: 0;
+
 		strong {
 			font-weight: 400;
 		}

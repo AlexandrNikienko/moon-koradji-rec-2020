@@ -36,7 +36,8 @@
 
         &__paragraph {
             margin-bottom: 6px;
-            flex: 1 1 100%;
+			flex: 1 1 100%;
+			line-height: normal;
 
             &--dark {
                 color: #bbb;
@@ -70,7 +71,8 @@
             border: 1px solid;
             border-radius: 3px;
             align-self: flex-end;
-            background-color: rgba(0255, 255, 255, .25);
+			background-color: rgba(0255, 255, 255, .25);
+			line-height: normal;
 
             @include mobile {
                 font-size: 14px;

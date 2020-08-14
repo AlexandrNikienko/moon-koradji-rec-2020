@@ -1,5 +1,5 @@
 <div class="m-release-info row" *ngIf="release">
-    <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12">
         <h1 class="release-name">
 			{{release.releaseTitle}}
 			
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12">
         <app-audio-player *ngIf="release.embedAudio" [embedAudio]="release.embedAudio"></app-audio-player>
 
         <app-shared-video *ngIf="release.embedVideo" [embedVideo]="release.embedVideo"></app-shared-video>

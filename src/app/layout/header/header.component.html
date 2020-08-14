@@ -9,55 +9,63 @@
 	  </mat-toolbar-row>
 	</mat-toolbar>
   </header> -->
-  
-  <header class="m-header">
-    <a routerLink="/about" routerLinkActive="active">
-        <div id="outer-wrapper">
-            <div id="wrapper">
-                <div id="moon"></div>
-                <div id="black_planet"></div>
-                <div id="crystal_png"></div>
-            </div>
-        </div>
-    </a>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a mat-button class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
+<header class="m-header">
+	<a routerLink="/about" routerLinkActive="active">
+		<div id="outer-wrapper">
+			<div id="wrapper">
+				<div id="moon"></div>
+				<div id="black_planet"></div>
+				<div id="crystal_png"></div>
+			</div>
+		</div>
+	</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a mat-button class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
 
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav">
-                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                    <a mat-button class="nav-link" routerLink="/"><i class="fas fa-om"aria-hidden="true"></i>Home</a>
-                </li>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+				aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-                <li class="nav-item" routerLinkActive="active">
-                    <a mat-button class="nav-link" routerLink="/releases"><i class="fas fa-compact-disc"aria-hidden="true"></i>Releases</a>
-                </li>
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav">
+					<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+						<a mat-button class="nav-link" routerLink="/"><i class="fas fa-om"
+								aria-hidden="true"></i>Home</a>
+					</li>
 
-                <li class="nav-item" routerLinkActive="active">
-                    <a mat-button class="nav-link" routerLink="/artists"><i class="fas fa-headphones-alt" aria-hidden="true"></i>Artists</a>
-                </li>
+					<li class="nav-item" routerLinkActive="active">
+						<a mat-button class="nav-link" routerLink="/releases"><i class="fas fa-compact-disc"
+								aria-hidden="true"></i>Releases</a>
+					</li>
 
-                <!--<li class="nav-item" routerLinkActive="active">
+					<li class="nav-item" routerLinkActive="active">
+						<a mat-button class="nav-link" routerLink="/artists"><i class="fas fa-headphones-alt"
+								aria-hidden="true"></i>Artists</a>
+					</li>
+
+					<!--<li class="nav-item" routerLinkActive="active">
                     <a mat-button class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
                 </li>-->
 
-                <li class="nav-item" routerLinkActive="active">
-                    <a mat-button class="nav-link" routerLink="/podcasts"><i class="fas fa-podcast" aria-hidden="true"></i>Podcasts</a>
-                </li>
+					<li class="nav-item" routerLinkActive="active">
+						<a mat-button class="nav-link" routerLink="/podcasts"><i class="fas fa-podcast"
+								aria-hidden="true"></i>Podcasts</a>
+					</li>
 
-                <li class="nav-item" routerLinkActive="active">
-                    <a mat-button class="nav-link" routerLink="/about"><i class="fas fa-info" aria-hidden="true"></i>About</a>
-                </li>
+					<li class="nav-item" routerLinkActive="active">
+						<a mat-button class="nav-link" routerLink="/about"><i class="fas fa-info"
+								aria-hidden="true"></i>About</a>
+					</li>
 
-                <!-- <li class="nav-item">
+					<!-- <li class="nav-item">
                     <a mat-button class="nav-link" href="https://moonkoradjirecords.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp" aria-hidden="true"></i>Buy Digital</a>
                 </li> -->
-            </ul>
-        </div>
-    </nav>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </header>

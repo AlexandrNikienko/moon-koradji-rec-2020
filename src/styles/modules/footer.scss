@@ -36,7 +36,10 @@
             text-transform: uppercase;
             border-bottom: 1px solid $themeColor;
             padding-bottom: .25rem;
-            display: inline-block;
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0;
         }
 
         .btn-group {
@@ -92,6 +95,12 @@
 
 	.shops-wrapper {
 		margin-top: 2rem;
+
+		&__title {
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0;
+		}
 	}
 	
 	.shops-list {
@@ -99,6 +108,9 @@
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+		margin: 0;
 
 		&__item {
 			margin: .5rem;
