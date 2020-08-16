@@ -7,7 +7,6 @@
     display: block;
 	text-align: center;
 	background: url('#{$imageFolder}/mk-bg-alt.jpg') center / cover;
-	//background-attachment: fixed;
 
     &__item {
 		display: flex;
@@ -25,7 +24,7 @@
     }
 
     &__subtitle {
-        color: $themeColor;
+        color: var(--themeColor);
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 2px;
@@ -79,19 +78,19 @@
         }
 
         &--top {
-            background: linear-gradient(to right, rgba($themeColor, 0) 0%, rgba($themeColor, 0.7) 100%);
+            background: linear-gradient(to right, rgba(var(--themeColor--rgb), 0) 0%, rgba(var(--themeColor--rgb), 0.7) 100%);
         }
 
         &--bottom {
-            background: linear-gradient(to right, rgba($themeColor, 0.7) 0%, rgba($themeColor, 0) 100%);
+            background: linear-gradient(to right, rgba(var(--themeColor--rgb), 0.7) 0%, rgba(var(--themeColor--rgb), 0) 100%);
         }
 
         &--right {
-            background: linear-gradient(to bottom, rgba($themeColor, 0.7) 0%, rgba($themeColor, 0) 100%);
+            background: linear-gradient(to bottom, rgba(var(--themeColor--rgb), 0.7) 0%, rgba(var(--themeColor--rgb), 0) 100%);
         }
 
         &--left {
-            background: linear-gradient(to bottom, rgba($themeColor, 0) 0%, rgba($themeColor, 0.7) 100%);
+            background: linear-gradient(to bottom, rgba(var(--themeColor--rgb), 0) 0%, rgba(var(--themeColor--rgb), 0.7) 100%);
         }
 
         @keyframes growWidth {
@@ -114,7 +113,7 @@
     }
 
     .fa-podcast {
-        color: $themeColor;
+        color: var(--themeColor);
         font-size: 40px;
         margin-bottom: 1rem;
     }

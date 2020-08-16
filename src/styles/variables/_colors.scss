@@ -1,7 +1,21 @@
-$themeColor: rgb(162, 212, 0);
+@function hexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+}
 
-$darkGrey: #1A1A1A;
-$grey: #7E7E7E;
-$lightGrey: #CCC;
-$lightGreyAlt: #F1F1F1;
+$themeColor: #a2d400;
+$themeColorAlt: #24172e;
+$lightGrey: #ccc;
 $white: white;
+
+:root {
+	--themeColor: #{$themeColor};
+	--themeColor--rgb: #{hexToRGB($themeColor)};
+	--themeColorAlt: #{$themeColorAlt};
+	--themeColorAlt--rgb: #{hexToRGB($themeColorAlt)};
+	--darkGrey: #1a1a1a;
+	--grey: #7e7e7e;
+	--lightGrey: $lightGrey;
+	--lightGrey--rgb: #{hexToRGB($lightGrey)};
+	--lightGreyAlt: #f1f1f1;
+	--white: white;
+}

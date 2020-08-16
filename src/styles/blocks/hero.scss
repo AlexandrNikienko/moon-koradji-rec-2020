@@ -1,5 +1,5 @@
 .hero {
-	$themeColor: rgb(36, 23, 46);
+	--themeColor: rgb(36, 23, 46);
 
 	display: grid;
 	grid-template-columns: 1fr 2.5fr;
@@ -61,7 +61,7 @@
 		font-size: 1rem;
 		height: 56px;
 		width: 200px;
-		background-color: $themeColor;
+		background-color: var(--themeColor);
 		color: $white;
 		display: inline-flex;
 		align-items: center;
@@ -72,7 +72,7 @@
 
 		&--light {
 			background-color: $white;
-			color: $themeColor;
+			color: var(--themeColor);
 		}
 	}
 }

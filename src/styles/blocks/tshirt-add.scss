@@ -33,7 +33,7 @@
         position: absolute;
         bottom: -60px;
         padding: 0 15px 15px;
-        color: $themeColor;
+        color: var(--themeColor);
         transition: .3s;
     }
 

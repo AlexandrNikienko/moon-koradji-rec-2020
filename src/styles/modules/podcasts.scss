@@ -45,7 +45,7 @@
     }
 
     .fa-itunes {
-        color: $themeColor;
+        color: var(--themeColor);
 	}
 	
 	.fab {
@@ -58,6 +58,8 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 2rem;
+		padding: 0;
+		list-style: none;
 
 		&__item {
 			margin: 5px;

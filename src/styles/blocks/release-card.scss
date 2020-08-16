@@ -57,7 +57,7 @@
         display: inline-block;
         width: 100%;
         text-align: left;
-        color: $themeColor;
+        color: var(--themeColor);
         font-size: 14px;
     }
 
@@ -85,7 +85,7 @@
     &__bottom-text {
         padding: 0 15px 15px;
         font-size: 14px;
-        color: $themeColor;
+        color: var(--themeColor);
     }
 
     &:hover {
