@@ -1,39 +1,37 @@
 <div class="m-artists row">
-    <div class="col-md-12">
-        <ng-container *ngIf="djs$ | async as djs">
-            <div class="heading">
-                <p class="heading__title">DJs</p>
-            </div>
+	<div class="col-md-12 s-artists-wrapper">
+		<ng-container *ngIf="djs$ | async as djs">
+			<div class="heading">
+				<p class="heading__title">DJs</p>
+			</div>
 
-            <div class="s-artists-wrapper">
-                <div class="s-artist-item" *ngFor="let item of djs">
-                    <a [routerLink]="['/artists', item.artistRoute]" class="s-artist-item__link">
-                        <div class="s-artist-item__bg" [ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + item.artistAvatar + ')'}"></div>
+			<div class="s-artist-item" *ngFor="let item of djs">
+				<a [routerLink]="['/artists', item.artistRoute]" class="s-artist-item__link">
+					<div class="s-artist-item__bg"
+						[ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + item.artistAvatar + ')'}"></div>
 
-                        <p class="s-artist-item__name">{{item.artistName}}</p>
+					<p class="s-artist-item__name">{{item.artistName}}</p>
 
-                        <img class="s-artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-                    </a>
-                </div>
-            </div>
-        </ng-container>
+					<img class="s-artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+				</a>
+			</div>
+		</ng-container>
 
-        <ng-container *ngIf="artists$ | async as artists">
-            <div class="heading">
-                <p class="heading__title">Artists</p>
-            </div>
+		<ng-container *ngIf="artists$ | async as artists">
+			<div class="heading mt-4">
+				<p class="heading__title">Artists</p>
+			</div>
 
-            <div class="s-artists-wrapper">
-                <div #artistCell class="s-artist-item" *ngFor="let item of artists">
-                    <a [routerLink]="['/artists', item.artistRoute]" class="s-artist-item__link">
-                        <div class="s-artist-item__bg" [ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + item.artistAvatar + ')'}"></div>
+			<div #artistCell class="s-artist-item" *ngFor="let item of artists">
+				<a [routerLink]="['/artists', item.artistRoute]" class="s-artist-item__link">
+					<div class="s-artist-item__bg"
+						[ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + item.artistAvatar + ')'}"></div>
 
-                        <p class="s-artist-item__name js-artist-name">{{item.artistName}}</p>
+					<p class="s-artist-item__name js-artist-name">{{item.artistName}}</p>
 
-                        <img class="s-artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-                    </a>
-                </div>
-            </div>
-        </ng-container>
-    </div>
+					<img class="s-artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+				</a>
+			</div>
+		</ng-container>
+	</div>
 </div>

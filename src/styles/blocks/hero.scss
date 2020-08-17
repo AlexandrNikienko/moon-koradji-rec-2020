@@ -62,7 +62,7 @@
 		height: 56px;
 		width: 200px;
 		background-color: var(--themeColor);
-		color: $white;
+		color: var(--white);
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -71,7 +71,7 @@
 		text-decoration: none;
 
 		&--light {
-			background-color: $white;
+			background-color: var(--white);
 			color: var(--themeColor);
 		}
 	}
