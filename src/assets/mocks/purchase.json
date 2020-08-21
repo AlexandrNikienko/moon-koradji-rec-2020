@@ -1,8 +1,13 @@
 {
 	"purchase": {
-		"title": "Out Now",
+		"_title": "Out Now",
 		"item": {
-			"cover": "/assets/images/release-cover/mkcd012_neural_embers.jpg",
+			"cover": {
+				"default": "mkcd012_neural_embers.jpg",
+				"default2x": "mkcd012_neural_embers.jpg",
+				"webp": "mkcd012_neural_embers-500-075.webp",
+				"webp2x": "mkcd012_neural_embers-1200-05.webp"
+			},
 			"title": "VA Neural Embers",
 			"subtitle": "by Various Artists",
 			"button": {

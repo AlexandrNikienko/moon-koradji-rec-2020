@@ -4,15 +4,53 @@
 	background-color: #111;
 	background: linear-gradient(135deg, #111 0%,#000 100%);
     width: 100%;
-    color: #9d9d9d;
+	color: #9d9d9d;
+	
+	.b-short-about {
+		&__header {
+			margin-bottom: .75em;
+		}
+	
+		&__title {
+			text-transform: uppercase;
+			border-bottom: 1px solid var(--themeColor);
+			padding-bottom: .25em;
+			display: inline-block;
+			font-size: 1em;
+			font-weight: 300;
+			margin: 0;
+		}
+	
+		&__image {
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin: 0 .5em .5em 0;
+		}
+	
+		&__text {
+			line-height: 1.5;
+			margin: 0;
+		}
+	
+		&__link {
+			color: var(--themeColor);
+			white-space: nowrap;
+		}
+		
+		@include mobile {
+			margin-bottom: 1em;
+		}
+	}
+	
 
     .s-more-info {
         text-align: right;
         line-height: 1.5;
 
         &__notes {
-            margin: .5rem 0 .25rem 0;
-            font-size: 1rem;
+            margin: .5em 0 .25em 0;
+            font-size: 1em;
 
             i {
                 font-style: italic;
@@ -28,16 +66,16 @@
 
     .s-follow {
         &__header {
-            margin-bottom: .75rem;
+            margin-bottom: .75em;
             text-align: right;
         }
 
         &__title {
             text-transform: uppercase;
             border-bottom: 1px solid var(--themeColor);
-            padding-bottom: .25rem;
+            padding-bottom: .25em;
 			display: inline-block;
-			font-size: 16px;
+			font-size: 1em;
 			font-weight: 300;
 			margin: 0;
         }
@@ -46,12 +84,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
-            margin-bottom: .5rem;
+            margin-bottom: .5em;
         }
 
         .btn-link {
             color: rgb(157, 157, 157);
-            flex: 0 0 auto;
+			flex: 0 0 auto;
+			font-size: 1em;
+			text-decoration: none;
 
             &:hover {
                 text-decoration: none;
@@ -81,7 +121,7 @@
 
         .fab,
         .fas {
-            margin-right: .25rem;
+            margin-right: .25em;
 
             &::before {
                 transition: color .3s;
@@ -90,14 +130,14 @@
     }
 
     .fb-like {
-        padding: 0 .75rem;
+        padding: 0 .75em;
 	}
 
 	.shops-wrapper {
-		margin-top: 2rem;
+		margin-top: 2em;
 
 		&__title {
-			font-size: 16px;
+			font-size: 1em;
 			font-weight: 300;
 			margin: 0;
 		}
@@ -113,7 +153,7 @@
 		margin: 0;
 
 		&__item {
-			margin: .5rem;
+			margin: .5em;
 		}
 
 		&__item-link {
@@ -135,14 +175,19 @@
 		height: 22px;
     	width: 103px;
 	}
+
+	@include mobile {
+		//  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+		font-size: calc( 1em + (2 - 1) * ( (100vw - 320px) / ( 768 - 320)));
+	}
 }
 
 @include desktopSmall {
     .m-footer {
         .s-follow {
             .btn {
-                padding-right: .5rem;
-                padding-left: .5rem;
+                padding-right: .5em;
+                padding-left: .5em;
             }
         }
     }
