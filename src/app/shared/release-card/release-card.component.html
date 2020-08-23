@@ -25,11 +25,5 @@
         </div>
 	</div>
 	
-	<picture>
-		<source srcset="{{coverFolder + (releaseItem.releaseCover.webp || releaseItem.releaseCover.default)}},
-						{{coverFolder + releaseItem.releaseCover.default}},
-						{{coverFolder + (releaseItem.releaseCover.webp2x || releaseItem.releaseCover.default)}} 2x,
-						{{coverFolder + (releaseItem.releaseCover.default2x || releaseItem.releaseCover.default)}} 2x">
-		<img class="release-card__image" src="{{coverFolder + releaseItem.releaseCover}}" alt="">
-	</picture>
+	<app-picture [cover]="releaseItem.releaseCover" [class]="'release-card__image'"></app-picture>
 </div>
