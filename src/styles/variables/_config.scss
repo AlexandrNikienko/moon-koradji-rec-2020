@@ -1,7 +1,16 @@
-$desktop-large-width: 1280px;
+$desktop-large-width: 1200px;
 $desktop-small-width: 992px;
 $tablet-width: 768px;
 
-$imageFolder: '/assets/images';
+$imageFolder: "/assets/images";
 
 $gap: 15px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);

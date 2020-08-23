@@ -28,7 +28,8 @@
         left: -1px;
         top: -1px;
         right: -1px;
-        bottom: -1px;
+		bottom: -1px;
+		z-index: 10;
         background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .75) 100%);
     }
 
@@ -68,25 +69,28 @@
     }
 
     &__bottom-title {
-		//font-size: 16px;
         font-weight: 300;
         color: #f5f5f5;
         padding: 0 15px 15px;
         margin: 0;
         display: block;
 		transition: padding-bottom .3s;
-		
-		@include mobile {
-			//font-size: calc( 18px + (22 - 18) * ( (100vw - 320px) / ( 960 - 320)));
-			//font-size: calc( 1.25em + (2 - 1.25) * ( (100vw - 320px) / ( 768 - 320)));
-		}
     }
 
     &__bottom-text {
         padding: 0 15px 15px;
         font-size: 14px;
         color: var(--themeColor);
-    }
+	}
+	
+	&__image {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 5;
+	}
 
     &:hover {
         .release-card {

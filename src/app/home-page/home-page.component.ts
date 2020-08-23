@@ -5,6 +5,7 @@ import { DataService } from '../core/services/data.service';
 import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
 import { Release } from './../core/models/release.model';
+import { IMAGEFOLDER } from '../../environments/environment';
 
 declare var window: any;
 
@@ -13,6 +14,7 @@ declare var window: any;
 	templateUrl: './home-page.component.html'
 })
 export class HomePageComponent implements OnInit {
+	public coverFolder = IMAGEFOLDER + 'release-cover/';
 	public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];
 

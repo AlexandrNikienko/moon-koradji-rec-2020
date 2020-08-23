@@ -8,7 +8,9 @@
             "releaseDate": "",
             "releaseTitle": "Already Maged - Mortar & Pestle",
             "releaseSubTitle": "previews soon",
-            "releaseCover": "already_maged_cover.png",
+            "releaseCover": {
+				"default": "already_maged_cover.png"
+			},
             "_releaseRoute": "already-maged-mortar-and-pestle",
             "releaseDescription": [
                 {
@@ -31,7 +33,12 @@
             "releaseDate": "May 15, 2020",
             "releaseTitle": "VA Neural Embers",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd012_neural_embers.jpg",
+            "releaseCover": {
+				"default": "mkcd012_neural_embers.jpg",
+				"default2x": "mkcd012_neural_embers.jpg",
+				"webp": "mkcd012_neural_embers-500-075.webp",
+				"webp2x": "mkcd012_neural_embers-1000-075.webp"
+			},
             "releaseRoute": "va-neural-embers",
             "releaseDescription": [
                 {
@@ -60,7 +67,12 @@
             "releaseDate": "November 20, 2019",
             "releaseTitle": "oCeLoT - Iconoclast",
             "releaseSubTitle": "listen & download",
-            "releaseCover": "mkdg002_ocelot.jpg",
+            "releaseCover": {
+				"default": "mkdg002_ocelot.jpg",
+				"default2x": "mkdg002_ocelot.jpg",
+				"webp": "mkdg002_ocelot-500-075.webp",
+				"webp2x": "mkdg002_ocelot-1000-075.webp"
+			},
             "releaseRoute": "ocelot-iconoclast",
             "releaseDescription": [
                 {
@@ -92,7 +104,9 @@
             "releaseDate": "October 01, 2019",
             "releaseTitle": "EP «Bapholot On Earth»",
             "releaseSubTitle": "listen & download",
-            "releaseCover": "mkdg001_bapholot_on_earth.jpg",
+            "releaseCover": {
+				"default": "mkdg001_bapholot_on_earth.jpg"
+			},
             "releaseRoute": "ep-bapholot-on-earth",
             "releaseDescription": [
                 {
@@ -116,7 +130,9 @@
             "releaseDate": "September 19, 2019",
             "releaseTitle": "VA Illusorium",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd011_illusorium.jpg",
+            "releaseCover": {
+				"default": "mkcd011_illusorium.jpg"
+			},
             "releaseRoute": "va-illusorium",
             "releaseDescription": [
                 {
@@ -140,7 +156,9 @@
             "releaseDate": "February 15, 2017",
             "releaseTitle": "VA Mind Games",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd010_mind_games.jpg",
+            "releaseCover": {
+				"default": "mkcd010_mind_games.jpg"
+			},
             "releaseRoute": "va-mind-games",
             "releaseDescription": [
                 {
@@ -235,7 +253,9 @@
             "releaseDate": "December 9, 2013",
             "releaseTitle": "VA Intropix",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd009_intropix.jpg",
+            "releaseCover": {
+				"default": "mkcd009_intropix.jpg"
+			},
             "releaseRoute": "va-intropix",
             "releaseDescription": [
                 {
@@ -324,7 +344,9 @@
             "releaseDate": "May 13th, 2013",
             "releaseTitle": "oCeLoT - Night & Day",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd008_ocelot.jpg",
+            "releaseCover": {
+				"default": "mkcd008_ocelot.jpg"
+			},
             "releaseRoute": "ocelot-night-and-day",
             "releaseDescription": [
                 {
@@ -426,7 +448,9 @@
             "releaseDate": "July 4, 2012",
             "releaseTitle": "VA Infinity Keepers 2: Depth Perception",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd007_infinity_keepers_2.jpg",
+            "releaseCover": {
+				"default": "mkcd007_infinity_keepers_2.jpg"
+			},
             "releaseRoute": "va-infinity-keepers-2",
             "releaseDescription": [
                 {
@@ -535,7 +559,9 @@
             "releaseDate": "April 18, 2012",
             "releaseTitle": "Kirna - In Space!",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd006_kirna.jpg",
+            "releaseCover": {
+				"default": "mkcd006_kirna.jpg"
+			},
             "releaseRoute": "kirna-in-space!",
             "releaseDescription": [
                 {
@@ -651,7 +677,9 @@
             "releaseDate": "January 11, 2012",
             "releaseTitle": "Ascoil Sun - Emergence",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd005_ascoil_sun.jpg",
+            "releaseCover": {
+				"default": "mkcd005_ascoil_sun.jpg"
+			},
             "releaseRoute": "ascoil-sun-emergence",
             "releaseDescription": [
                 {
@@ -747,7 +775,9 @@
             "releaseDate": "December 3, 2010",
             "releaseTitle": "VA Legendarium",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd004_legendarium.jpg",
+            "releaseCover": {
+				"default": "mkcd004_legendarium.jpg"
+			},
             "releaseRoute": "va-legendarium",
             "releaseDescription": [
                 {
@@ -839,7 +869,9 @@
             "releaseDate": "April 24, 2009",
             "releaseTitle": "VA Shadow Enuin 2",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd003_shadow_enuin_2.jpg",
+            "releaseCover": {
+				"default": "mkcd003_shadow_enuin_2.jpg"
+			},
             "releaseRoute": "va-shadow-enuin-2",
             "releaseDescription": [
                 {
@@ -928,7 +960,9 @@
             "releaseDate": "September 26, 2008",
             "releaseTitle": "VA Infinity Keepers",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd002_infinity_keepers.jpg",
+            "releaseCover": {
+				"default": "mkcd002_infinity_keepers.jpg"
+			},
             "releaseRoute": "va-infinity-keepers",
             "releaseDescription": [
                 {
@@ -1020,7 +1054,9 @@
             "releaseDate": "April 8, 2008",
             "releaseTitle": "VA Shadow Enuin: at the Earth's edge",
             "releaseSubTitle": "listen & purchase",
-            "releaseCover": "mkcd001_shadow_enuin.jpg",
+            "releaseCover": {
+				"default": "mkcd001_shadow_enuin.jpg"
+			},
             "releaseRoute": "va-shadow-enuin",
             "releaseDescription": [
                 {

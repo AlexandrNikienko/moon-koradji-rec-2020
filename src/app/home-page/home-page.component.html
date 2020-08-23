@@ -3,11 +3,11 @@
 		<div class="hero__image-wrapper">
 			<div class="hero__image">
 				<picture>
-					<source srcset="./assets/images/release-cover/{{purchase.item.cover.webp || purchase.item.cover.default}},
-									./assets/images/release-cover/{{purchase.item.cover.default}},
-									./assets/images/release-cover/{{purchase.item.cover.webp2x || purchase.item.cover.default}} 2x,
-									./assets/images/release-cover/{{purchase.item.cover.default2x || purchase.item.cover.default}} 2x">
-					<img class="hero__image" src="./assets/images/release-cover/{{purchase.item.cover.default}}" alt="">
+					<source srcset="{{coverFolder + (purchase.item.cover.webp || purchase.item.cover.default)}},
+									{{coverFolder + purchase.item.cover.default}},
+									{{coverFolder + (purchase.item.cover.webp2x || purchase.item.cover.default)}} 2x,
+									{{coverFolder + (purchase.item.cover.default2x || purchase.item.cover.default)}} 2x">
+					<img class="hero__image" src="{{coverFolder + purchase.item.cover.default}}" alt="">
 				</picture>
 			</div>
 			<div class="hero__image-title">{{purchase.item.title}}</div>

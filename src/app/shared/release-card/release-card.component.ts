@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Release } from '../../core/models/release.model';
+import { IMAGEFOLDER } from '../../../environments/environment';
 
 @Component({
 	selector: 'app-release-card',
@@ -7,4 +8,5 @@ import { Release } from '../../core/models/release.model';
 })
 export class ReleaseCardComponent {
 	@Input() releaseItem: Release;
+	public coverFolder = IMAGEFOLDER + 'release-cover/';
 }

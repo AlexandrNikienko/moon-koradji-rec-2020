@@ -7,11 +7,14 @@ import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
 import { DataService } from '../core/services/data.service';
 
+import { IMAGEFOLDER } from '../../environments/environment';
+
 @Component({
 	selector: 'app-release-page',
 	templateUrl: './release-page.component.html'
 })
 export class ReleasePageComponent implements OnInit {
+	public coverFolder = IMAGEFOLDER + 'release-cover/';
 	public releases$ = this.dataService.requestToData('releases');
 	public artists$ = this.dataService.requestToData('artists');
 	public releaseRoute: string;

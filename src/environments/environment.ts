@@ -28,3 +28,5 @@ export const PODCASTS = {
 };
 
 export const DATAFOLDER = './assets/mocks/';
+
+export const IMAGEFOLDER = './assets/images/';

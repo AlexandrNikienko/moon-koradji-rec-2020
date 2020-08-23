@@ -10,7 +10,7 @@ export interface Release {
     releaseDate: string;
     releaseTitle: string;
     releaseSubTitle: string;
-    releaseCover: string;
+    releaseCover: any;
     releaseDescription?: Paragraph[];
     releaseRoute?: string;
     paragraph?: string;

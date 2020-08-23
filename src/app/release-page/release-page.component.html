@@ -8,8 +8,14 @@
             </a>
         </h1>
 
-        <div class="release-main clearfix">
-            <img class="release-cover" src="/assets/images/release-cover/{{release.releaseCover}}" alt="">
+        <div class="release-main clearfix">			
+			<picture>
+				<source srcset="{{coverFolder + (release.releaseCover.webp || release.releaseCover.default)}},
+								{{coverFolder + release.releaseCover.default}},
+								{{coverFolder + (release.releaseCover.webp2x || release.releaseCover.default)}} 2x,
+								{{coverFolder + (release.releaseCover.default2x || release.releaseCover.default)}} 2x">
+				<img class="release-cover" src="{{coverFolder + release.releaseCover}}" alt="">
+			</picture>
 
             <div class="release-description">
                 <p class="release-description__paragraph" *ngFor="let description of release.releaseDescription">
