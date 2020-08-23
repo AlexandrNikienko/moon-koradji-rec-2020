@@ -8,6 +8,7 @@ import { SharedGalleryComponent } from './gallery/gallery.component';
 import { SharedLoaderComponent } from './loader/loader.component';
 import { SharedVideoComponent } from './video/video.component';
 import { ReleaseCardComponent } from './release-card/release-card.component';
+import { PictureComponent } from './picture/picture.component';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
@@ -30,13 +31,15 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 		SharedLoaderComponent,
 		SharedVideoComponent,
 		ReleaseCardComponent,
+		PictureComponent,
 		RouterModule
 	],
 	declarations: [
 		SharedGalleryComponent,
 		SharedLoaderComponent,
 		SharedVideoComponent,
-		ReleaseCardComponent
+		ReleaseCardComponent,
+		PictureComponent
 	],
 	providers: [
 		{

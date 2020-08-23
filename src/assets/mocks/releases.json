@@ -9,7 +9,10 @@
             "releaseTitle": "Already Maged - Mortar & Pestle",
             "releaseSubTitle": "previews soon",
             "releaseCover": {
-				"default": "already_maged_cover.png"
+				"default": "already_maged_cover.png",
+				"default2x": "",
+				"webp": "",
+				"webp2x": ""
 			},
             "_releaseRoute": "already-maged-mortar-and-pestle",
             "releaseDescription": [
@@ -35,9 +38,9 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd012_neural_embers.jpg",
-				"default2x": "mkcd012_neural_embers.jpg",
-				"webp": "mkcd012_neural_embers-500-075.webp",
-				"webp2x": "mkcd012_neural_embers-1000-075.webp"
+				"default2x": "",
+				"webp": "mkcd012_neural_embers-500.webp",
+				"webp2x": "mkcd012_neural_embers-1000.webp"
 			},
             "releaseRoute": "va-neural-embers",
             "releaseDescription": [
@@ -54,7 +57,6 @@
             "beatspaceLink": "http://www.beatspace.com/mkcd012-neural-embers.html",
             "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers",
             "bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers-24-bit",
-            "videoLink": "",
             "artists": [
                 "Inzect", "Molchun", "Adansonia"
             ],
@@ -69,9 +71,9 @@
             "releaseSubTitle": "listen & download",
             "releaseCover": {
 				"default": "mkdg002_ocelot.jpg",
-				"default2x": "mkdg002_ocelot.jpg",
-				"webp": "mkdg002_ocelot-500-075.webp",
-				"webp2x": "mkdg002_ocelot-1000-075.webp"
+				"default2x": "",
+				"webp": "mkdg002_ocelot-500.webp",
+				"webp2x": "mkdg002_ocelot-1000.webp"
 			},
             "releaseRoute": "ocelot-iconoclast",
             "releaseDescription": [
@@ -90,8 +92,6 @@
             "artworkBy": "Whrikk",
             "beatspaceLink": "",
             "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/iconoclast",
-            "videoLink": "",
-            "tracklist": "",
             "artists": [
                 "Ocelot"
             ],
@@ -105,7 +105,10 @@
             "releaseTitle": "EP «Bapholot On Earth»",
             "releaseSubTitle": "listen & download",
             "releaseCover": {
-				"default": "mkdg001_bapholot_on_earth.jpg"
+				"default": "mkdg001_bapholot_on_earth.jpg",
+				"default2x": "",
+				"webp": "mkdg001_bapholot_on_earth-500.webp",
+				"webp2x": "mkdg001_bapholot_on_earth-1000.webp"
 			},
             "releaseRoute": "ep-bapholot-on-earth",
             "releaseDescription": [
@@ -131,7 +134,10 @@
             "releaseTitle": "VA Illusorium",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd011_illusorium.jpg"
+				"default": "mkcd011_illusorium.jpg",
+				"default2x": "",
+				"webp": "mkcd011_illusorium-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-illusorium",
             "releaseDescription": [
@@ -157,7 +163,10 @@
             "releaseTitle": "VA Mind Games",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd010_mind_games.jpg"
+				"default": "mkcd010_mind_games.jpg",
+				"default2x": "",
+				"webp": "mkcd010_mind_games-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-mind-games",
             "releaseDescription": [
@@ -254,7 +263,10 @@
             "releaseTitle": "VA Intropix",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd009_intropix.jpg"
+				"default": "mkcd009_intropix.jpg",
+				"default2x": "",
+				"webp": "mkcd009_intropix-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-intropix",
             "releaseDescription": [
@@ -345,7 +357,10 @@
             "releaseTitle": "oCeLoT - Night & Day",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd008_ocelot.jpg"
+				"default": "mkcd008_ocelot.jpg",
+				"default2x": "",
+				"webp": "mkcd008_ocelot-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "ocelot-night-and-day",
             "releaseDescription": [
@@ -449,7 +464,10 @@
             "releaseTitle": "VA Infinity Keepers 2: Depth Perception",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd007_infinity_keepers_2.jpg"
+				"default": "mkcd007_infinity_keepers_2.jpg",
+				"default2x": "",
+				"webp": "mkcd007_infinity_keepers_2-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-infinity-keepers-2",
             "releaseDescription": [
@@ -560,7 +578,10 @@
             "releaseTitle": "Kirna - In Space!",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd006_kirna.jpg"
+				"default": "mkcd006_kirna.jpg",
+				"default2x": "",
+				"webp": "mkcd006_kirna-500.webp",
+				"webp2x": "mkcd006_kirna-1000.webp"
 			},
             "releaseRoute": "kirna-in-space!",
             "releaseDescription": [
@@ -678,7 +699,10 @@
             "releaseTitle": "Ascoil Sun - Emergence",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd005_ascoil_sun.jpg"
+				"default": "mkcd005_ascoil_sun.jpg",
+				"default2x": "",
+				"webp": "mkcd005_ascoil_sun-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "ascoil-sun-emergence",
             "releaseDescription": [
@@ -776,7 +800,10 @@
             "releaseTitle": "VA Legendarium",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd004_legendarium.jpg"
+				"default": "mkcd004_legendarium.jpg",
+				"default2x": "",
+				"webp": "mkcd004_legendarium-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-legendarium",
             "releaseDescription": [
@@ -870,7 +897,10 @@
             "releaseTitle": "VA Shadow Enuin 2",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd003_shadow_enuin_2.jpg"
+				"default": "mkcd003_shadow_enuin_2.jpg",
+				"default2x": "",
+				"webp": "mkcd003_shadow_enuin_2-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-shadow-enuin-2",
             "releaseDescription": [
@@ -961,7 +991,10 @@
             "releaseTitle": "VA Infinity Keepers",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd002_infinity_keepers.jpg"
+				"default": "mkcd002_infinity_keepers.jpg",
+				"default2x": "",
+				"webp": "mkcd002_infinity_keepers-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-infinity-keepers",
             "releaseDescription": [
@@ -1055,7 +1088,10 @@
             "releaseTitle": "VA Shadow Enuin: at the Earth's edge",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "mkcd001_shadow_enuin.jpg"
+				"default": "mkcd001_shadow_enuin.jpg",
+				"default2x": "",
+				"webp": "mkcd001_shadow_enuin-500.webp",
+				"webp2x": ""
 			},
             "releaseRoute": "va-shadow-enuin",
             "releaseDescription": [
