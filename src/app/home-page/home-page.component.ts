@@ -29,7 +29,10 @@ export class HomePageComponent implements OnInit {
 			return {
 				name: artist,
 				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
-				image: `/assets/images/artists/featured/featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`
+				image: {
+					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
+					webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`,
+				}
 			}
 		})
 

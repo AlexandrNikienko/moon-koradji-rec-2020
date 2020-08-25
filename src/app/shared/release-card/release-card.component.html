@@ -1,5 +1,7 @@
 <div class="release-card">
-    <a class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]" *ngIf="releaseItem.releaseRoute"></a>
+	<a class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]" *ngIf="releaseItem.releaseRoute"></a>
+	
+	<app-picture [cover]="releaseItem.releaseCover" [class]="'release-card__image'" [imageFolder]="'release-cover/'"></app-picture>
     
     <div class="release-card__inner">
         <div class="release-card__top">
@@ -24,6 +26,4 @@
             </div>
         </div>
 	</div>
-	
-	<app-picture [cover]="releaseItem.releaseCover" [class]="'release-card__image'"></app-picture>
 </div>

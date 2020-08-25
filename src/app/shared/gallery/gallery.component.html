@@ -4,7 +4,7 @@
             <div class="swiper-slide">
                 <div class="slide" routerLink="{{item.route}}">
                     <div class="slide__image">
-                        <img src="{{item.image}}" alt="">
+						<app-picture [cover]="item.image" [imageFolder]="'artists/featured/'"></app-picture>
                     </div>
                     <div class="slide__text">
                         {{item.name}}

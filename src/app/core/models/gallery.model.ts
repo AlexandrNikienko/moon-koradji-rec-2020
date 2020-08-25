@@ -1,5 +1,5 @@
 export interface Gallery {
     name: string;
-    image: string;
+    image: any;
     route: string;
 }

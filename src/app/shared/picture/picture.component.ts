@@ -8,5 +8,6 @@ import { IMAGEFOLDER } from '../../../environments/environment';
 export class PictureComponent {
 	@Input() cover: any;
 	@Input() class: string;
-	public coverFolder = IMAGEFOLDER + 'release-cover/';
+	@Input() imageFolder: string;
+	public IMAGEFOLDER = IMAGEFOLDER;
 }
