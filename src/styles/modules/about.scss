@@ -1,277 +1,144 @@
-@mixin keyframes($animationName) {
-	@-webkit-keyframes #{$animationName} {
-		@content;
-	}
-	@-moz-keyframes #{$animationName} {
-		@content;
-	}
-	@-o-keyframes #{$animationName} {
-		@content;
-	}
-	@-ms-keyframes #{$animationName} {
-		@content;
-	}
-	@keyframes #{$animationName} {
-		@content;
-	}
-}
-
-@mixin animation($val...) {
-	-webkit-animation: $val;
-	-moz-animation: $val;
-	-o-animation: $val;
-	animation: $val;
-}
-
 @mixin logoRender($set: 100px) {
 	$width: 4 * $set;
 	$height: 6 * $set;
 
-	#wrapper {
+	.wrapper {
 		width: $width;
 		height: $height;
-		margin: 20px auto 0;
 		position: relative;
-		padding: $set * 0.2;
 		overflow: hidden;
-		box-sizing: content-box;
+		margin-bottom: $set * 0.2;
 	}
 
-	#moon {
+	.moon {
 		width: $width;
 		height: $width;
 		border-radius: 100%;
 		margin: $set auto;
 		box-shadow: inset 0 -50px 50px #111;
-		background: url("#{$imageFolder}/about/moon2.png") center no-repeat;
-		background-size: 101%;
-		@include animation(growing 5s ease-in-out);
-		// TODO use scale for grow
+		background: url("#{$imageFolder}/about/moon2.png") no-repeat center / 101%;
+		transform-origin: 50% 0;
+		will-change: transform, opacity;
+		animation: growing 5s ease-in-out forwards;
 	}
 
-	@include keyframes(growing) {
-		from {
-			width: 0;
-			height: 0;
-		}
-
-		to {
-			width: $width;
-			height: $width;
-		}
-	}
-
-	#black_planet {
+	.black-planet {
 		width: $set * 2.7;
 		height: $set * 2.7;
 		background-color: #111;
 		border-radius: 100%;
 		margin: auto;
-		position: relative;
-		top: $set * (-5.25);
+		position: absolute;
+		top: -3%;
+		left: 50%;
+		will-change: transform;
+		animation: coming 5s ease-in-out forwards;
 	}
 
-	#diamond {
+	.diamond,
+	.crystal {
 		width: $set * 2;
 		height: $height;
 		position: absolute;
-		top: $set * 0.2;
-		left: $set * 1.2;
+		top: 50%;
+		left: 50%;
+		will-change: opacity;
+	}
+
+	.diamond {
+		transform: translate(-50%, -50%);
+		animation: fade-out 4s ease-in 7s forwards;
+
+		&__item {
+			position: absolute;
+
+			&--big {
+				top: 0;
+			}
+
+			&--middle {
+				top: $set;
+			}
+
+			&--small {
+				top: $set * 2;
+			}
+		}
+
+		&__top-item,
+		&__bottom-item {
+			width: $set * 2;
+			box-sizing: border-box;
+			border-right: $set solid transparent;
+			border-left: $set solid transparent;
+			will-change: transform;
+		}
+
+		&__top-item {
+			transform-origin: 50% 100%;
+
+			&--big {
+				height: $set * 3;
+				border-bottom: $set * 3 solid #fff;
+				animation: grow 5s ease-in-out forwards;
+			}
+
+			&--middle {
+				height: $set * 2;
+				border-bottom: $set * 2 solid #ccc;
+				animation: grow 3.5s ease-in-out forwards;
+			}
+
+			&--small {
+				height: $set;
+				border-bottom: $set solid #999;
+				animation: grow 2.1s ease-in-out forwards;
+			}
+		}
+
+		&__bottom-item {
+			transform-origin: 50% 0;
+
+			&--big {
+				height: $set * 3;
+				border-top: $set * 3 solid #eee;
+				animation: grow 5s ease-in-out forwards;
+			}
+
+			&--middle {
+				height: $set * 2;
+				border-top: $set * 2 solid #bbb;
+				animation: grow 3.5s ease-in-out forwards;
+			}
+
+			&--small {
+				height: $set;
+				border-top: $set solid #999;
+				animation: grow 2.1s ease-in-out forwards;
+			}
+		}
+	}
+
+	.crystal {
 		opacity: 0;
-		@include animation(crystal_inviz 4s ease-in 7s backwards);
+		transform: translate(-50%, -50%) scale(1.01);
+		background: url("#{$imageFolder}/about/crystal.png") no-repeat center / cover;
+		animation: fade-in 4s linear 5s forwards;
 	}
 
-	@include keyframes(crystal_inviz) {
-		from {
-			opacity: 1;
-		}
-
-		to {
-			opacity: 0;
-		}
+	.link,
+	.descript {
+		will-change: opacity;
+		animation: fade-in 5s ease-in-out;
 	}
 
-	#d_3 {
-		position: absolute;
-		top: 0;
-		display: table-cell;
-		vertical-align: middle;
-	}
-
-	#top3 {
-		width: $set * 2;
-		height: $set * 3;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-bottom: $set * 3 solid #fff;
-		@include animation(border-bottom_top_3 5s ease-in-out);
-	}
-
-	@include keyframes(border-bottom_top_3) {
-		from {
-			border-bottom: 0 solid #fff;
-		}
-
-		to {
-			border-bottom: $set * 3 solid #fff;
-		}
-	}
-
-	#bot3 {
-		width: $set * 2;
-		height: $set * 3;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-top: $set * 3 solid #eee;
-		@include animation(border-top_bot_3 5s ease-in-out);
-	}
-
-	@include keyframes(border-top_bot_3) {
-		from {
-			border-top: 0 solid #eee;
-		}
-
-		to {
-			border-top: $set * 3 solid #eee;
-		}
-	}
-
-	#d_2 {
-		position: absolute;
-		top: $set;
-		display: table-cell;
-		vertical-align: middle;
-	}
-
-	#top2 {
-		width: $set * 2;
-		height: $set * 2;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-bottom: $set * 2 solid #ccc;
-		@include animation(border-bottom_top_2 3.5s ease-in-out);
-	}
-
-	@include keyframes(border-bottom_top_2) {
-		from {
-			border-bottom: 0 solid #ccc;
-		}
-
-		to {
-			border-bottom: $set * 2 solid #ccc;
-		}
-	}
-
-	#bot2 {
-		width: $set * 2;
-		height: $set * 2;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-top: $set * 2 solid #bbb;
-		@include animation(border-top_bot_2 3.5s ease-in-out);
-	}
-
-	@include keyframes(border-top_bot_2) {
-		from {
-			border-top: 0 solid #bbb;
-		}
-
-		to {
-			border-top: $set * 2 solid #bbb;
-		}
-	}
-
-	#d_1 {
-		position: absolute;
-		top: $set * 2;
-		display: table-cell;
-		vertical-align: middle;
-	}
-
-	#top1 {
-		width: $set * 2;
-		height: $set;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-bottom: $set solid #999;
-		@include animation(border-bottom_top_1 2.1s ease-in-out);
-	}
-
-	@include keyframes(border-bottom_top_1) {
-		from {
-			border-bottom: 0 solid #999;
-		}
-
-		to {
-			border-bottom: $set solid #999;
-		}
-	}
-
-	#bot1 {
-		width: $set * 2;
-		height: $set;
-		box-sizing: border-box;
-		border-right: $set solid transparent;
-		border-left: $set solid transparent;
-		border-top: $set solid #999;
-		@include animation(border-top_bot_1 2.1s ease-in-out);
-	}
-
-	@include keyframes(border-top_bot_1) {
-		from {
-			border-top: 0 solid #999;
-		}
-
-		to {
-			border-top: $set solid #999;
-		}
-	}
-
-	#crystal_png {
-		width: $set * 2;
-		height: $height;
-		position: absolute;
-		top: $set * 0.2;
-		left: $set * 1.2;
-		opacity: 1;
-		background: url("#{$imageFolder}/about/crystal.png") center no-repeat;
-		background-size: 100%;
-		transform: scale(1.01);
-		@include animation(crystal 4s linear 5s backwards);
-	}
-
-	@include keyframes(crystal) {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-
-	#link,
-	#descript {
-		width: $width;
-		margin: auto;
-		text-align: center;
-		box-sizing: content-box;
-		@include animation(fade_in 5s ease-in-out);
-	}
-
-	#descript {
-		font-size: 16px;
+	.descript {
 		color: #aaa;
-		padding: 0 $set * 0.2 $set * 0.5;
+		margin-bottom: $set * 0.2;
+		max-width: 62ch;
 
 		p {
-			margin-bottom: 10px;
-			line-height: normal;
+			margin-bottom: 0.75rem;
 		}
 
 		a {
@@ -279,49 +146,23 @@
 		}
 	}
 
-	#link {
-		padding: $set * 0.2;
-	}
-
-	@include keyframes(visit) {
-		from {
-			margin-left: 15px;
-		}
-
-		to {
-			margin-left: 25px;
-		}
-	}
-
-	a,
-	a:visited,
-	a:link {
-		#link & {
-			color: #ddd;
-			color: rgba(255, 255, 255, 0.5);
-			text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
-		}
-	}
-
-	@include keyframes(fade_in) {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
+	.link {
+		margin-bottom: $set * 0.2;
 	}
 }
 
 .m-about {
-	&__inner {
+	.page {
 		background-color: #111;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 
 	@include logoRender();
 
-	#link {
+	.link {
 		a {
 			font-size: 26px;
 			color: rgba(255, 255, 255, 0.5);
@@ -331,10 +172,9 @@
 			&::after {
 				content: "\27a4";
 				position: absolute;
-				top: 8px;
-				margin-left: 15px;
+				top: 2px;
 				text-shadow: none;
-				@include animation(visit 1s linear infinite);
+				animation: arrow 1s linear infinite;
 			}
 		}
 	}
@@ -344,10 +184,70 @@
 	.m-about {
 		@include logoRender($set: 70px);
 
-		#link {
+		.link {
 			a {
 				font-size: 22px;
 			}
 		}
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes grow {
+	from {
+		transform: rotateX(90deg);
+	}
+	to {
+		transform: rotateX(0deg);
+	}
+}
+
+@keyframes coming {
+	from {
+		transform: translate3D(-50%, -100%, 0);
+	}
+	to {
+		transform: translate3D(-50%, 35%, 0);
+	}
+}
+
+@keyframes growing {
+	from {
+		opacity: 0;
+		transform: scale3d(0, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes arrow {
+	from {
+		transform: translateX(15px);
+	}
+
+	to {
+		transform: translateX(25px);
 	}
 }
