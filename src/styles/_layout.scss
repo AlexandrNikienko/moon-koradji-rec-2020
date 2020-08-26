@@ -1,13 +1,12 @@
 html {
-    height: 100%;
-    min-height: 100%;
+	height: 100%;
+	min-height: 100%;
 }
 
 body {
-    background: url('#{$imageFolder}/swamp-low.jpg') no-repeat center / cover fixed;
-    font-family: 'Lato', sans-serif;
-    color: var(--white);
-    min-height: 100%;
+	font-family: "Lato", sans-serif;
+	color: var(--white);
+	min-height: 100%;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -16,79 +15,69 @@ body {
 a {
 	color: var(--white);
 	text-decoration: none;
-    transition: .3s;
+	transition: 0.3s;
 
-    &:hover {
+	&:hover {
 		color: var(--white);
-    }
+	}
 }
 
 .s-module-title {
-    color: var(--white);
-    margin-bottom: 15px;
-}
-
-app-visuals {
-    position: fixed;
-    z-index: -1;
-    opacity: .65;
-    min-width: 100%;
-    top: 0;
-    left: 0;
+	color: var(--white);
+	margin-bottom: 15px;
 }
 
 .is-underline {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .c-video {
-    position: relative;
+	position: relative;
 
-    &:before {
-        content: '';
-        display: block;
-        padding-top: 100% * 9 / 15;
-    }
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100% * 9 / 15;
+	}
 
-    iframe {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+	iframe {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
 }
 
 .fb-page {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 	display: block !important;
 	width: 100%;
 }
 
 .s-go-back {
-    color: orange;
-    margin-bottom: 5px;
-    display: inline-block;
+	color: orange;
+	margin-bottom: 5px;
+	display: inline-block;
 
-    .fas {
-        margin-right: 5px;
-    }
+	.fas {
+		margin-right: 5px;
+	}
 
-    &:hover {
-        color: orange;
-    }
+	&:hover {
+		color: orange;
+	}
 }
 
-
 .s-snowman {
-    width: 50px;
-    margin: auto;
-    display: block;
+	width: 50px;
+	margin: auto;
+	display: block;
 }
 
 app-root {
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
 	height: 100vh;
 }
 
@@ -97,33 +86,45 @@ app-root {
 }
 
 .heading {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
 
-    &__title {
-        font-size: 1.25rem;
-        position: relative;
-        display: inline-block;
+	&__title {
+		font-size: 1.25rem;
+		position: relative;
+		display: inline-block;
 		padding-bottom: 10px;
 		margin: 0;
 		line-height: normal;
 
-        &::after {
-            content: '';
-            width: 100px;
-            height: 5px;
-            position: absolute;
-            bottom: 0;
-            left: -15px;
-            z-index: 0;
-            background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
-        }
-    }
+		&::after {
+			content: "";
+			width: 100px;
+			height: 5px;
+			position: absolute;
+			bottom: 0;
+			left: -15px;
+			z-index: 0;
+			background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+		}
+	}
+}
+
+app-visuals {
+	background: url("#{$imageFolder}/swamp-low.jpg") no-repeat center / cover fixed;
+	position: fixed;
+	z-index: -10;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
 }
 
 .video-bg {
-    min-width: 100%;
+	opacity: 0.65;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 // .container.page {
@@ -145,7 +146,7 @@ app-root {
 // 	from {
 // 		opacity: 0;
 // 	}
-	
+
 // 	to {
 // 		opacity: 1;
 // 	}
