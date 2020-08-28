@@ -27,7 +27,7 @@
 				text-decoration: none;
 
 				.s-artist-item__bg {
-					opacity: .75;
+					opacity: .35;
 				}
 			}
 		}
@@ -38,13 +38,12 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 6px;
-			-webkit-filter: grayscale(50%);
 			filter: grayscale(50%);
 			position: absolute;
 			z-index: -1;
 			left: 0;
 			right: 0;
-			opacity: .35;
+			opacity: .15;
 		}
 
 		&__name {

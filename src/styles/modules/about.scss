@@ -216,6 +216,7 @@
 	from {
 		transform: rotateX(90deg);
 	}
+	
 	to {
 		transform: rotateX(0deg);
 	}
@@ -225,6 +226,7 @@
 	from {
 		transform: translate3D(-50%, -100%, 0);
 	}
+
 	to {
 		transform: translate3D(-50%, 35%, 0);
 	}

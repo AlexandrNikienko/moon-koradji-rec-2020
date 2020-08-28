@@ -1,5 +1,6 @@
 .podcast-adv {
 	$gap: 1rem;
+	
 	height: 100%;
 	min-height: 200px;
 	position: relative;
@@ -39,77 +40,27 @@
         width: 70%;
         z-index: -1;
         opacity: .15;
-        fill: #fff;
+        fill: var(--white);
     }
 
     &__border {
         &--top,
-        &--bottom,
-        &--right,
-        &--left {
-            position: absolute;
-            animation-duration: .75s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
-        }
-
-        &--top,
         &--bottom {
+            position: absolute;
+			width: 100%;
             height: 1px;
-            animation-name: growWidth;
-        }
-
-        &--right,
-        &--left {
-            width: 1px;
-			animation-name: growHeight;
-			display: none;
-        }
-
-        &--top,
-        &--left {
-            left: -$gap;
-            top: -$gap;
-        }
-
-        &--bottom,
-        &--right {
-            right: -$gap;
-            bottom: -$gap;
         }
 
         &--top {
+            left: -$gap;
+			top: -$gap;
             background: linear-gradient(to right, rgba(var(--themeColor--rgb), 0) 0%, rgba(var(--themeColor--rgb), 0.7) 100%);
         }
 
         &--bottom {
+            right: -$gap;
+			bottom: -$gap;
             background: linear-gradient(to right, rgba(var(--themeColor--rgb), 0.7) 0%, rgba(var(--themeColor--rgb), 0) 100%);
-        }
-
-        &--right {
-			background: linear-gradient(to bottom, rgba(var(--themeColor--rgb), 0.7) 0%, rgba(var(--themeColor--rgb), 0) 100%);
-        }
-
-        &--left {
-			background: linear-gradient(to bottom, rgba(var(--themeColor--rgb), 0) 0%, rgba(var(--themeColor--rgb), 0.7) 100%);
-        }
-
-        @keyframes growWidth {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes growHeight {
-            from {
-                height: 0;
-            }
-            to {
-                height: 100%;
-            }
         }
     }
 
