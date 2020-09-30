@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { Component, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 
 import { DataService } from '../core/services/data.service';
@@ -10,16 +11,23 @@ export class ArtistsPageComponent implements AfterViewInit {
 	@ViewChildren('artistCell') artistCell: QueryList<any>;
 	public artists$ = this.dataservice.requestToData('artists');
 	public djs$ = this.dataservice.requestToData('djs');
+	private changesSub: Subscription;
 
 	constructor(private dataservice: DataService) { }
 
-	ngAfterViewInit() {
-		this.artistCell.changes.subscribe(t => {
+	ngAfterViewInit(): void {
+		this.changesSub = this.artistCell.changes.subscribe(t => {
 			this.setAlphabeticalMarks();
 		});
 	}
 
-	setAlphabeticalMarks() {
+	ngOnDestroy(): void {
+		if (this.changesSub) {
+			this.changesSub.unsubscribe();
+		}
+	}
+
+	setAlphabeticalMarks(): void {
 		let startLetter = '',
 			firstLetter = '';
 		const artistName = document.querySelectorAll('.js-artist-name');

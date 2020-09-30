@@ -26,15 +26,15 @@
 
     .s-artist-description {
         color: #ddd;
-        line-height: 22px;
+        //line-height: 22px;
 
-        &__item {
-            margin-bottom: 10px;
-        }
+        // &__item {
+        //     margin-bottom: 10px;
+        // }
     }
 
     .s-mixes {
-        padding-top: 15px;
+        padding-top: 1rem;
         clear: both;
 
         .s-mix-year {
@@ -50,7 +50,7 @@
         }
 
         .s-mix-block {
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
 
             iframe {
                 border: 2px solid var(--white);
@@ -78,10 +78,9 @@
             }
         }
 
-        &__name {
-            font-size: 14px;
-            font-weight: 300;
-        }
+        // &__name {
+        //     font-size: 14px;
+        // }
 
         &__image {
             background-size: cover;

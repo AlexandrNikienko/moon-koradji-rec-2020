@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { forkJoin } from 'rxjs';
+import { forkJoin, Subscription } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { Artist } from '../core/models/artist.model';
@@ -21,6 +21,8 @@ export class ReleasePageComponent implements OnInit {
 	public release: Release;
 	public releaseArtists: Array<string>;
 	public involved: Artist[] = [];
+	private releasesSub: Subscription;
+	private joinSub: Subscription;
 
 	constructor(private route: ActivatedRoute,
 		private dataService: DataService,
@@ -46,6 +48,15 @@ export class ReleasePageComponent implements OnInit {
 					this.createInvolvedArtistsArray(allArtistsList, this.releaseArtists);
 				}
 			);
+	}
+
+	ngOnDestroy(): void {
+		if (this.releasesSub) {
+			this.releasesSub.unsubscribe();
+		}
+		if (this.joinSub) {
+			this.joinSub.unsubscribe();
+		}
 	}
 
 	createInvolvedArtistsArray(allArtists: Artist[], releaseArtists: string[]): void {

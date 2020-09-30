@@ -12,10 +12,11 @@ import { DataService } from '../core/services/data.service';
 })
 export class ArtistPageComponent implements OnInit, OnDestroy {
 	public artist: Artist;
-	private artistRoute: string;
+	private artistName: string;
 	private requestTo: string;
 	private requestTo$: Observable<any>;
-	private requestSubscription: Subscription;
+	private routeSub: Subscription;
+	private requestSub: Subscription;
 
 	constructor(private route: ActivatedRoute,
 		private dataService: DataService,
@@ -23,21 +24,26 @@ export class ArtistPageComponent implements OnInit, OnDestroy {
 		private title: Title) {
 	}
 
-	ngOnInit() {
-		this.artistRoute = this.route.snapshot.params['artistRoute'];
-		this.requestTo = this.artistRoute.includes('dj-') ? 'djs' : 'artists';
-		this.requestTo$ = this.dataService.requestToData(this.requestTo);
+	ngOnInit(): void {
+		this.routeSub = this.route.paramMap.subscribe(params => {
+			this.artistName = params.get('artistRoute');
+			this.requestTo = this.artistName.includes('dj-') ? 'djs' : 'artists';
+			this.requestTo$ = this.dataService.requestToData(this.requestTo);
 
-		this.requestSubscription = this.requestTo$.subscribe(artist => {
-			this.artist = artist.filter((obj: Artist) => obj['artistRoute'] === this.artistRoute)[0];
-			//this.setMetaData(this.artist);
-			this.title.setTitle(this.artist.artistName);
-		});
+			this.requestSub = this.requestTo$.subscribe(response => {
+				this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
+				//this.setMetaData(this.artist);
+				this.title.setTitle(this.artist.artistName);
+			});
+		})
 	}
 
-	ngOnDestroy() {
-		if (this.requestSubscription) {
-			this.requestSubscription.unsubscribe();
+	ngOnDestroy(): void {
+		if (this.routeSub) {
+			this.routeSub.unsubscribe();
+		}
+		if (this.requestSub) {
+			this.requestSub.unsubscribe();
 		}
 	}
 

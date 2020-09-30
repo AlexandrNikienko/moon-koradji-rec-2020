@@ -11,7 +11,8 @@ export class DataService {
 	constructor(private http: HttpClient) { }
 
 	requestToData(item: string): Observable<any> {
-		return this.http.get<any[]>(`${DATAFOLDER}${item}.json`)
+		const url = `${DATAFOLDER}${item}.json`;
+		return this.http.get<any[]>(url)
 			.pipe(
 				map(object => object[item]),
 				shareReplay(1)

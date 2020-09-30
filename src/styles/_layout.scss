@@ -151,3 +151,49 @@ app-visuals {
 // 		opacity: 1;
 // 	}
 // }
+
+.glitch-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.glitch {
+	$steps: 20;
+	color: white;
+	font-size: 50px;
+	line-height: 1;
+	position: relative;
+	cursor: default;
+
+	&::after,
+	&::before {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		color: white;
+		//background: black;
+		overflow: hidden;
+		clip: rect(0, 900px, 0, 0);
+		animation: noise-anim 2s infinite linear alternate-reverse;
+	}
+
+	&::after {
+		left: 2px;
+		text-shadow: -1px 0 red;
+	}
+
+	&::before {
+		left: -2px;
+		text-shadow: 1px 0 blue;
+		animation-duration: 3s;
+	}
+
+	@keyframes noise-anim {
+		@for $i from 0 through $steps {
+			#{percentage($i*(1/$steps))} {
+				clip: rect(random(50) + px, 9999px, random(50) + px, 0);
+			}
+		}
+	}
+}

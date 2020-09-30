@@ -15,8 +15,9 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.router.events.pipe(
-			filter(event => event instanceof NavigationEnd))
+		this.router.events
+			.pipe(
+				filter(event => event instanceof NavigationEnd))
 			.subscribe((event: NavigationEnd) => {
 				const titleToSet = this.getDeepestTitle(this.router.routerState.snapshot.root);
 
