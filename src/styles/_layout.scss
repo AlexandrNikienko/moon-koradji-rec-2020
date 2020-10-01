@@ -127,30 +127,20 @@ app-visuals {
 	min-height: 100%;
 }
 
-// .container.page {
-// 	app-home-page,
-// 	app-release-page,
-// 	app-releases,
-// 	app-artists-page,
-// 	app-artist-page,
-// 	app-podcasts-page,
-// 	app-about {
-// 		will-change: opacity;
-// 		display: block;
-// 		opacity: 0;
-// 		animation: 1s ease forwards fadeIn;
-// 	}
-// }
-
-// @keyframes fadeIn {
-// 	from {
-// 		opacity: 0;
-// 	}
-
-// 	to {
-// 		opacity: 1;
-// 	}
-// }
+.container.page {
+	app-home-page,
+	app-release-page,
+	app-releases,
+	app-artists-page,
+	app-artist-page,
+	app-podcasts-page,
+	app-about {
+		will-change: opacity;
+		display: block;
+		opacity: 0;
+		animation: .5s ease forwards fade-in;
+	}
+}
 
 .glitch-container {
 	display: flex;
@@ -172,7 +162,6 @@ app-visuals {
 		position: absolute;
 		top: 0;
 		color: white;
-		//background: black;
 		overflow: hidden;
 		clip: rect(0, 900px, 0, 0);
 		animation: noise-anim 2s infinite linear alternate-reverse;
