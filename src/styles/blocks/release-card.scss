@@ -37,14 +37,19 @@
 	&__bottom {
 		position: absolute;
 		left: 0;
+
+		@supports (inset-inline-start: 0) {
+			inset-inline-start: 0;
+			left: auto;
+		}
 	}
 
 	&__top {
 		z-index: 1;
 		background-color: rgba(0, 0, 0, 0.75);
 		padding: 0.5rem;
-		border-top-right-radius: 0.5rem;
-		border-bottom-right-radius: 0.5rem;
+		border-end-end-radius: .5rem;
+		border-start-end-radius: .5rem;
 		line-height: normal;
 		top: 0.5rem;
 	}
@@ -58,6 +63,7 @@
 		display: inline-block;
 		width: 100%;
 		text-align: left;
+		text-align: start;
 		color: var(--themeColor);
 	}
 
@@ -113,4 +119,10 @@
 	position: relative;
 	bottom: 2px;
 	text-transform: uppercase;
+	display: inline-block;
+
+	@supports (margin-inline-end: 0) {
+		margin-right: 0;
+		margin-inline-end: 0.5rem;
+	}
 }

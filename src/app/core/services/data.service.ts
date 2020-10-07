@@ -5,7 +5,6 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import { DATAFOLDER } from '../../../environments/environment';
 
-
 @Injectable()
 export class DataService {
 	constructor(private http: HttpClient) { }

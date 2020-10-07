@@ -61,7 +61,12 @@ a {
 	display: inline-block;
 
 	.fas {
-		margin-right: 5px;
+		margin-right: 0.25rem;
+
+		@supports (margin-inline-end: 0) {
+			margin-right: 0;
+			margin-inline-end: 0.25rem;
+		}
 	}
 
 	&:hover {
@@ -104,9 +109,14 @@ app-root {
 			height: 5px;
 			position: absolute;
 			bottom: 0;
-			left: -15px;
+			left: -1rem;
 			z-index: 0;
 			background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+
+			@supports (inset-inline-start: 0) {
+				left: auto;
+				inset-inline-start: -1rem;
+			}
 		}
 	}
 }
@@ -127,20 +137,20 @@ app-visuals {
 	min-height: 100%;
 }
 
-.container.page {
-	app-home-page,
-	app-release-page,
-	app-releases,
-	app-artists-page,
-	app-artist-page,
-	app-podcasts-page,
-	app-about {
-		will-change: opacity;
-		display: block;
-		opacity: 0;
-		animation: .5s ease forwards fade-in;
-	}
-}
+// .container.page {
+// 	app-home-page,
+// 	app-release-page,
+// 	app-releases,
+// 	app-artists-page,
+// 	app-artist-page,
+// 	app-podcasts-page,
+// 	app-about {
+// 		will-change: opacity;
+// 		display: block;
+// 		opacity: 0;
+// 		animation: .5s ease forwards fade-in;
+// 	}
+// }
 
 .glitch-container {
 	display: flex;

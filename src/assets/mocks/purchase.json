@@ -20,7 +20,7 @@
 				"title": "Digital",
 				"subtitle": "16 bit",
 				"image": "",
-				"price": "9€",
+				"price": "9",
 				"description": [
 					{
 						"paragraph": "Fast Delivery"
@@ -49,7 +49,7 @@
 				"title": "CD",
 				"subtitle": "",
 				"image": "/assets/images/release-cover/va-neural-embers-CD-design.png",
-				"price": "10.50€",
+				"price": "10.5",
 				"description": [
 					{
 						"paragraph": "Digipack Box"
@@ -77,7 +77,7 @@
 				"title": "Digital",
 				"subtitle": "24 bit",
 				"image": "",
-				"price": "13.50€",
+				"price": "13.5",
 				"description": [
 					{
 						"paragraph": "High Resolution"

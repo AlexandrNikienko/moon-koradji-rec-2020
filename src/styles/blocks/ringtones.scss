@@ -1,5 +1,5 @@
 .ringtones {
-    margin: 0 0 30px;
+    margin-bottom: 1rem;
 
     &__title {
         text-transform: uppercase;
@@ -23,8 +23,13 @@
 
     .fa-play {
         cursor: pointer;
-        font-size: 12px;
-        margin-right: 10px;
+        font-size: .75rem;
+		margin-right: 5rem;
+		
+		@supports (margin-inline-end: 0) {
+			margin-right: 0;
+			margin-inline-end: .5rem;
+		}
 	}
 	
 	.new-icon {

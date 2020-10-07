@@ -18,7 +18,7 @@
 
             &:hover {
                 color: white;
-            }
+			}
         }
     }
 
@@ -31,7 +31,7 @@
     }
 
     .navbar-brand {
-        font-size: 16px;
+        font-size: 1rem;
         color: #9d9d9d;
 		transition: .1s;
 		font-weight: 400;
@@ -40,15 +40,17 @@
         &:hover {
             color: white;
         }
-
-        @include tablet {
-            //display: none;
-        }
     }
 
     .nav-link {
         i {
-            margin-right: 5px;
+			vertical-align: baseline;
+			margin-right: .25em;
+			
+			@supports (margin-inline-end: 0) {
+				margin-right: 0;
+				margin-inline-end: .25em;
+			}
         }
     }
 
@@ -64,7 +66,8 @@
         background-color: #111;
         right: 10px;
         top: 2px;
-        z-index: 10;
+		z-index: 10;
+		
         &:hover {
             #black_planet {
                 top: $set*(0);
@@ -75,7 +78,12 @@
             #moon {
                 transform: scale(1.2);
             }
-        }
+		}
+		
+		@supports (inset-inline-end: 10px) {
+			right: auto;
+			inset-inline-end: 10px;
+		}
     }
 
     #wrapper {
@@ -127,13 +135,19 @@
 @include mobile {
     .m-header {
         #outer-wrapper {
-            right: 80px;
+			right: 80px;
+			
+			@supports (inset-inline-end: 0) {
+				right: auto;
+				inset-inline-end: 80px;
+			}
         }
 
         .navbar-nav .nav-link {
 			display: block;
 			line-height: 2rem;
 			text-align: left;
+			text-align: start;
 
 			i {
 				margin-right: 5px;

@@ -1,136 +1,154 @@
 .m-footer {
-    box-sizing: border-box;
-    padding: 2rem 0;
+	box-sizing: border-box;
+	padding: 2rem 0;
 	background-color: #111;
-	background: linear-gradient(135deg, #111 0%,#000 100%);
-    width: 100%;
+	background: linear-gradient(135deg, #111 0%, #000 100%);
+	width: 100%;
 	color: #9d9d9d;
-	
+
 	.b-short-about {
 		&__header {
-			margin-bottom: .75em;
+			margin-bottom: 0.75em;
 		}
-	
+
 		&__title {
 			text-transform: uppercase;
 			border-bottom: 1px solid var(--themeColor);
-			padding-bottom: .25em;
+			padding-bottom: 0.25em;
 			display: inline-block;
 			font-size: 1em;
 			font-weight: 300;
 			margin: 0;
 		}
-	
+
 		&__image {
 			width: 100px;
 			height: 100px;
 			float: left;
-			margin: 0 .5em .5em 0;
+			float: inline-start;
+			margin: 0 0.5em 0.5em 0;
+
+			@supports (margin-inline-end: 0) {
+				margin-right: 0;
+				margin-inline-end: 0.5rem;
+			}
+
+			@supports (margin-block-end: 0) {
+				margin-bottom: 0;
+				margin-block-end: 0.5rem;
+			}
 		}
-	
+
 		&__text {
 			line-height: 1.5;
 			margin: 0;
 		}
-	
+
 		&__link {
 			color: var(--themeColor);
 			white-space: nowrap;
+			display: inline-block;
 		}
-		
+
 		@include mobile {
 			margin-bottom: 1em;
 		}
 	}
-	
 
-    .s-more-info {
-        text-align: right;
-        line-height: 1.5;
+	.s-more-info {
+		text-align: right;
+		text-align: end;
+		line-height: 1.5;
 
-        &__notes {
-            margin: .5em 0 .25em 0;
-            font-size: 1em;
+		&__notes {
+			margin: 0.5em 0 0.25em 0;
+			font-size: 1em;
 
-            i {
-                font-style: italic;
-            }
-        }
+			i {
+				font-style: italic;
+			}
+		}
 
-        &__contact {
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+		&__contact {
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 
-    .s-follow {
-        &__header {
-            margin-bottom: .75em;
-            text-align: right;
-        }
+	.s-follow {
+		&__header {
+			margin-bottom: 0.75em;
+			text-align: right;
+			text-align: end;
+		}
 
-        &__title {
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--themeColor);
-            padding-bottom: .25em;
+		&__title {
+			text-transform: uppercase;
+			border-bottom: 1px solid var(--themeColor);
+			padding-bottom: 0.25em;
 			display: inline-block;
 			font-size: 1em;
 			font-weight: 300;
 			margin: 0;
-        }
+		}
 
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            margin-bottom: .5em;
-        }
+		.btn-group {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			margin-bottom: 0.5em;
+		}
 
-        .btn-link {
-            color: rgb(157, 157, 157);
+		.btn-link {
+			color: rgb(157, 157, 157);
 			flex: 0 0 auto;
 			font-size: 1em;
 			text-decoration: none;
 
-            &:hover {
-                text-decoration: none;
-                color: white;
+			&:hover {
+				text-decoration: none;
+				color: white;
 
-                .fa-facebook-square::before {
-                    color: rgb(59, 89, 152);
-                }
+				.fa-facebook-square::before {
+					color: rgb(59, 89, 152);
+				}
 
-                .fa-soundcloud::before {
-                    color: rgb(255, 115, 0);
-                }
+				.fa-soundcloud::before {
+					color: rgb(255, 115, 0);
+				}
 
-                .fa-music::before {
-                    color: rgb(97, 154, 169);
-                }
+				.fa-music::before {
+					color: rgb(97, 154, 169);
+				}
 
-                .fa-youtube::before {
-                    color: rgb(255, 0, 0);
-                }
+				.fa-youtube::before {
+					color: rgb(255, 0, 0);
+				}
 
-                .fa-bandcamp::before {
-                    color: rgba(33, 149, 185, .75);
-                }
-            }
-        }
+				.fa-bandcamp::before {
+					color: rgba(33, 149, 185, 0.75);
+				}
+			}
+		}
 
-        .fab,
-        .fas {
-            margin-right: .25em;
+		.fab,
+		.fas {
+			margin-right: 0.25em;
 
-            &::before {
-                transition: color .3s;
-            }
-        }
-    }
+			&::before {
+				transition: color 0.3s;
+			}
 
-    .fb-like {
-        padding: 0 .75em;
+			@supports (margin-inline-end: 0) {
+				margin-right: 0;
+				margin-inline-end: 0.25em;
+			}
+		}
+	}
+
+	.fb-like {
+		padding: 0 0.75em;
 	}
 
 	.shops-wrapper {
@@ -142,7 +160,7 @@
 			margin: 0;
 		}
 	}
-	
+
 	.shops-list {
 		display: flex;
 		align-items: center;
@@ -153,7 +171,7 @@
 		margin: 0;
 
 		&__item {
-			margin: .5em;
+			margin: 0.5em;
 		}
 
 		&__item-link {
@@ -168,54 +186,54 @@
 	.beatport-headphones {
 		margin-right: 4px;
 		height: 29px;
-    	width: 29px;
+		width: 29px;
 	}
 
 	.beatport-title {
 		height: 22px;
-    	width: 103px;
+		width: 103px;
 	}
 
 	@include mobile {
 		//  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-		font-size: calc( 1em + (2 - 1) * ( (100vw - 320px) / ( 768 - 320)));
+		font-size: calc(1em + (2 - 1) * ((100vw - 320px) / (768 - 320)));
 	}
 }
 
 @include desktopSmall {
-    .m-footer {
-        .s-follow {
-            .btn {
-                padding-right: .5em;
-                padding-left: .5em;
-            }
-        }
-    }
+	.m-footer {
+		.s-follow {
+			.btn {
+				padding-right: 0.5em;
+				padding-left: 0.5em;
+			}
+		}
+	}
 }
 
 @include mobile {
-    .m-footer {
-        .s-left,
-        .s-right {
-            width: 100%;
-            text-align: center;
-        }
+	.m-footer {
+		.s-left,
+		.s-right {
+			width: 100%;
+			text-align: center;
+		}
 
-        .s-left {
-            &__notes i {
-                display: none;
-            }
-        }
+		.s-left {
+			&__notes i {
+				display: none;
+			}
+		}
 
-        .s-right {
-            .btn-group {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
+		.s-right {
+			.btn-group {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
 
-        .fb-like {
-            display: none;
-        }
-    }
+		.fb-like {
+			display: none;
+		}
+	}
 }
