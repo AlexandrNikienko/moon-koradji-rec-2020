@@ -1,4 +1,3 @@
-import { takeUntil } from 'rxjs/operators';
 import { Component, HostListener } from '@angular/core';
 import {
 	trigger, state, style, animate, transition
@@ -9,7 +8,7 @@ import {
 	templateUrl: './scroll-to-top.component.html',
 	styleUrls: ['./scroll-to-top.component.scss'],
 	animations: [
-		trigger('fromTo', [
+		trigger('go', [
 			state('from', style({
 				bottom: '80px',
 				opacity: 1
@@ -34,11 +33,11 @@ export class ScrollToTopComponent {
 	scrollToTop(): void {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 		this.goToTop = true;
-		setTimeout(() => this.goToTop = false, 500)
+		setTimeout(() => this.goToTop = false, 1000);
 	}
 
 	@HostListener('document:scroll')
 	onScroll(): void {
-		this.showScrollBtn = window.pageYOffset > 100
+		this.showScrollBtn = window.pageYOffset > 100;
 	}
 }
