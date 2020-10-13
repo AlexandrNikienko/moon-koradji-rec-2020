@@ -1,0 +1,47 @@
+.scroll-to-top {
+	$color: #eee;
+
+	position: fixed;
+	right: 15px;
+	bottom: 80px;
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-top: none;
+	border-bottom: 40px solid $color;
+	transform: translateZ(0);
+	will-change: bottom;
+	z-index: 10;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -50px;
+		left: -15px;
+		width: 0;
+		height: 0;
+		border: 15px solid transparent;
+		border-bottom: none;
+		border-top: 10px solid $color;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -44px;
+		left: -10px;
+		width: 20px;
+		height: 10px;
+		box-shadow: inset 0px 0 1px white, 0 10px 10px red, 2px 10px 6px yellow, -2px 15px 11px orange, 2px 25px 18px tomato;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity .5s;
+	}
+
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}	
+}

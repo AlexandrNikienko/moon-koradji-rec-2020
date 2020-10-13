@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DataService } from '../core/services/data.service';
 
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
@@ -7,7 +7,7 @@ import { Crystalization } from '../../assets/scripts/crystal-paralax';
 	selector: 'app-podcasts-page',
 	templateUrl: './podcasts-page.component.html'
 })
-export class PodcastsPageComponent implements OnInit {
+export class PodcastsPageComponent implements OnInit, OnDestroy {
 	public podcasts$ = this.datService.requestToData('podcasts');
 	public crystalization = new Crystalization();
 

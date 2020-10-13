@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { DataService } from '../core/services/data.service';
 	templateUrl: './release-page.component.html'
 })
 
-export class ReleasePageComponent implements OnInit {
+export class ReleasePageComponent implements OnInit, OnDestroy {
 	release: Release;
 	involved: Artist[] = [];
 	private releases$ = this.dataService.requestToData('releases');

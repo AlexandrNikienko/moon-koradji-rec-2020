@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { VisualsComponent } from './visuals/visuals.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 	declarations: [
 		HeaderComponent,
 		FooterComponent,
-		VisualsComponent
+		VisualsComponent,
+		ScrollToTopComponent
 	],
 	imports: [
 		CommonModule,
@@ -25,7 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
 		HeaderComponent,
 		FooterComponent,
 		VisualsComponent,
-		RouterModule
+		RouterModule,
+		ScrollToTopComponent
 	]
 })
 

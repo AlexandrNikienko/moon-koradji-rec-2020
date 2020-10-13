@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs';
-import { Component, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
+import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy } from '@angular/core';
 
 import { DataService } from '../core/services/data.service';
 
@@ -7,7 +7,7 @@ import { DataService } from '../core/services/data.service';
 	selector: 'app-artists-page',
 	templateUrl: './artists-page.component.html'
 })
-export class ArtistsPageComponent implements AfterViewInit {
+export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
 	@ViewChildren('artistCell') artistCell: QueryList<any>;
 	public artists$ = this.dataservice.requestToData('artists');
 	public djs$ = this.dataservice.requestToData('djs');
