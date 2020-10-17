@@ -22,10 +22,10 @@ export const appRoutes: Routes = [
 		path: 'artists/:artistRoute',
 		loadChildren: './artist-page/artist-page.module#ArtistModule'
 	},
-	{
-		path: 'merch',
-		loadChildren: './merch/merch.module#MerchModule'
-	},
+	// {
+	// 	path: 'merch',
+	// 	loadChildren: './merch/merch.module#MerchModule'
+	// },
 	{
 		path: 'podcasts',
 		loadChildren: './podcasts-page/podcasts-page.module#PodcastsPageModule'
