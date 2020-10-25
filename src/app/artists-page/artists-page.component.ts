@@ -8,7 +8,8 @@ import { DataService } from '../core/services/data.service';
 	templateUrl: './artists-page.component.html'
 })
 export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
-	@ViewChildren('artistCell') artistCell: QueryList<any>;
+	@ViewChildren('artist') artist: QueryList<Element>;
+
 	public artists$ = this.dataservice.requestToData('artists');
 	public djs$ = this.dataservice.requestToData('djs');
 	private changesSub: Subscription;
@@ -16,9 +17,10 @@ export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
 	constructor(private dataservice: DataService) { }
 
 	ngAfterViewInit(): void {
-		this.changesSub = this.artistCell.changes.subscribe(t => {
+		this.changesSub = this.artist.changes.subscribe(t => {
 			this.setAlphabeticalMarks();
 		});
+
 	}
 
 	ngOnDestroy(): void {
@@ -28,14 +30,14 @@ export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
 	}
 
 	setAlphabeticalMarks(): void {
-		let startLetter = '',
-			firstLetter = '';
-		const artistName = document.querySelectorAll('.js-artist-name');
+		let startLetter = '';
+		let firstLetter = '';
+		const artistNames = document.querySelectorAll('.js-artist-name');
 
-		for (let i = 0; i < artistName.length; i++) {
-			firstLetter = artistName[i].textContent.charAt(0);
+		for (let i = 0; i < artistNames.length; i++) {
+			firstLetter = artistNames[i].textContent.charAt(0);
 			if (firstLetter > startLetter) {
-				artistName[i].insertAdjacentHTML('afterend', `<div class="s-letter-separator">${firstLetter}</div>`);
+				artistNames[i].insertAdjacentHTML('afterend', `<div class="letter-separator">${firstLetter}</div>`);
 				startLetter = firstLetter;
 			}
 		}
