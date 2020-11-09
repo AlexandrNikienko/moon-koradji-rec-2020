@@ -2,7 +2,7 @@
 .recent-releases-wrapper,
 .podcast-wrapper,
 .featured-artists-wrapper {
-	margin-bottom: 4rem;
+	margin-bottom: 5rem;
 }
 
 .recent-releases-inner {
@@ -18,9 +18,59 @@
 	height: 300px;
 }
 
+.bottom {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__left {
+		flex: 0 1 340px;
+	}
+
+	&__right {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+			flex: 1 0 530px;
+		}
+	}
+}
+
+.go-to-merch {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&__title {
+		width: 100%;
+		margin-bottom: 1rem;
+		text-align: center;
+
+		a {
+			font-size: 26px;
+			position: relative;
+
+			&::after {
+				content: "\27a4";
+				position: absolute;
+				top: 2px;
+				left: 100%;
+				text-shadow: none;
+				animation: arrow 1s linear infinite;
+			}
+		}
+	}
+
+	&__content {
+		img {
+			max-height: 522px;
+		}
+	}
+}
+
 @media (min-width: $tablet-width) {
 	.bottom {
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, 0.5);
 		padding: 1rem;
 		border-radius: 1rem;
 	}

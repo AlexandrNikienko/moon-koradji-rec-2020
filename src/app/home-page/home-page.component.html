@@ -80,46 +80,68 @@
 </section>
 
 <section class="bottom">
-	<div class="ringtones">
-		<p class="ringtones__title">Download your ringtone</p>
-		<ul class="ringtones__list">
-			<li class="ringtones__item">
-				<a href="/assets/music/ringtones/Moon_Koradji_-_Huvudverk.mp3" target="blank">
-					<i class="fas fa-play"></i>Huvudverk
+	<div class="bottom__left">
+		<div class="ringtones">
+			<p class="ringtones__title">Download your ringtone</p>
+			<ul class="ringtones__list">
+				<li class="ringtones__item">
+					<a href="/assets/music/ringtones/Moon_Koradji_-_Huvudverk.mp3" target="blank">
+						<i class="fas fa-play"></i>Huvudverk
+					</a>
+				</li>
+				<li class="ringtones__item">
+					<a href="/assets/music/ringtones/Moon_Koradji_-_The_Other_Self.mp3" target="blank">
+						<i class="fas fa-play"></i>The Other Self
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
+			smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div>
+	
+		<div class="news" *ngIf="_news$ | async as news">
+			<p class="news__header">More News</p>
+	
+			<div class="news__item" *ngFor="let item of news">
+				<a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
+					<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+					<h1 class="news__desc">
+						<span class="news__title">{{item.title}}</span>
+						<br>
+						<span class="news__info" *ngIf="item.text">{{item.text}}</span>
+					</h1>
 				</a>
-			</li>
-			<li class="ringtones__item">
-				<a href="/assets/music/ringtones/Moon_Koradji_-_The_Other_Self.mp3" target="blank">
-					<i class="fas fa-play"></i>The Other Self
+	
+				<a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
+					<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+					<h1 class="news__desc">
+						<span class="news__title">{{item.title}}</span>
+						<br>
+						<span class="news__info" *ngIf="item.text">{{item.text}}</span>
+					</h1>
 				</a>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 
-	<div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
-		smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div>
-
-	<div class="news" *ngIf="_news$ | async as news">
-		<p class="news__header">More News</p>
-
-		<div class="news__item" *ngFor="let item of news">
-			<a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
-				<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-				<h1 class="news__desc">
-					<span class="news__title">{{item.title}}</span>
-					<br>
-					<span class="news__info" *ngIf="item.text">{{item.text}}</span>
-				</h1>
-			</a>
-
-			<a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
-				<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-				<h1 class="news__desc">
-					<span class="news__title">{{item.title}}</span>
-					<br>
-					<span class="news__info" *ngIf="item.text">{{item.text}}</span>
-				</h1>
-			</a>
+	<div class="bottom__right">
+		<div class="go-to-merch">
+			<h2 class="go-to-merch__title">
+				<a href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">Visit our merch page</a>
+			</h2>
+			
+			<div class="go-to-merch__content">
+				<!-- <picture>
+					<source srcset="./assets/images/merch/artwork-by-anneta-salamandra-m.webp" type="image/webp">
+					<img src="" alt="">
+				</picture> -->
+	
+				<picture>
+					<source srcset="./assets/images/merch/tshirt-1-w1.webp" type="image/webp">
+					<img src="./assets/images/merch/tshirt-1-w1.png" alt="">
+				</picture>
+			</div>
 		</div>
 	</div>
 </section>

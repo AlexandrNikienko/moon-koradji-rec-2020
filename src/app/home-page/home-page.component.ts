@@ -18,8 +18,8 @@ export class HomePageComponent implements OnInit {
 	public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];
 
-	public _purchase$ = this.dataService.requestToData('purchase');;
-	public _news$: Observable<News[]> = this.dataService.requestToData('news');;
+	public _purchase$: Observable<any> = this.dataService.requestToData('purchase');
+	public _news$: Observable<News[]> = this.dataService.requestToData('news');
 	public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
 
 	constructor(private dataService: DataService) { }
@@ -31,13 +31,11 @@ export class HomePageComponent implements OnInit {
 				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
 				image: {
 					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
-					webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`,
+					webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
 				}
 			}
 		})
 
-		/* FB page widget */
-		//window.FB.XFBML.parse();
 		if (window.FB) {
 			window.FB.init({
 				appId: '484153925308268',

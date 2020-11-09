@@ -8,7 +8,7 @@ import {
 	templateUrl: './scroll-to-top.component.html',
 	styleUrls: ['./scroll-to-top.component.scss'],
 	animations: [
-		trigger('go', [
+		trigger('animate', [
 			state('from', style({
 				bottom: '80px',
 				opacity: 1

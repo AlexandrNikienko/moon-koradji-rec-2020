@@ -1,5 +1,7 @@
+import { Image } from './image.model';
+
 export interface Gallery {
-    name: string;
-    image: any;
-    route: string;
+	name: string;
+	image: Image;
+	route: string;
 }
