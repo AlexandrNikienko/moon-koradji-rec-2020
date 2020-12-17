@@ -2,8 +2,11 @@
 
 <main class="container page">
 	<router-outlet></router-outlet>
-	<img *ngIf="winter" class="s-snowman" src="/assets/images/winter/snowman.svg" alt="">
 </main>
+
+<div *ngIf="winter">
+	<img class="s-snowman" src="/assets/images/winter/snowman.svg" alt="">
+</div>
 
 <app-footer></app-footer>
 
