@@ -30,7 +30,6 @@
         },
         {
             "isHero": true,
-            "isNew": true,
             "releaseNumber": "MKCD012",
             "releaseNote": "2020",
             "releaseDate": "May 15, 2020",
@@ -67,7 +66,7 @@
             "releaseNumber": "MKDG002",
             "releaseNote": "2019",
             "releaseDate": "November 20, 2019",
-            "releaseTitle": "oCeLoT - Iconoclast",
+            "releaseTitle": "Ocelot - Iconoclast",
             "releaseSubTitle": "listen & download",
             "releaseCover": {
 				"default": "mkdg002_ocelot.jpg",
@@ -354,7 +353,7 @@
             "releaseNumber": "MKCD008",
             "releaseNote": "2013",
             "releaseDate": "May 13th, 2013",
-            "releaseTitle": "oCeLoT - Night & Day",
+            "releaseTitle": "Ocelot - Night & Day",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd008_ocelot.jpg",

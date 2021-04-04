@@ -1,6 +1,5 @@
-export interface PodcastAdd {
+export interface PodcastAdv {
 	artist: string,
 	month: string,
-	number: number,
-	logo: string
+	number: number
 }
