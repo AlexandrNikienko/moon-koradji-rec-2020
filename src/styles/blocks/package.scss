@@ -1,8 +1,7 @@
 .package {
 	text-align: center;
-	border: 2px solid var(--lightGreyAlt);
 	box-sizing: border-box;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	padding: 2rem 0.5rem;
 	position: relative;
 	align-self: center;
@@ -34,7 +33,7 @@
 		font-weight: bold;
 		font-size: 3rem;
 		line-height: 3.6rem;
-		color: var(--darkGrey);
+		color: var(--themeColorAlt);
 		margin-bottom: 1.5rem;
 	}
 
@@ -64,14 +63,11 @@
 	}
 
 	&--highlight {
-		box-shadow: 0 0 0.25rem 0.25rem rgba(255, 255, 255, 0.5);
-		border: 5px solid var(--themeColorAlt);
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 
 		.package {
 			&__price {
-				color: var(--themeColorAlt);
 				font-size: 3.5rem;
 			}
 		}

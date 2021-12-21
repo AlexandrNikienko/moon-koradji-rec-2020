@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Crystalization } from './../../assets/scripts/crystal-paralax';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { DataService } from '../core/services/data.service';
@@ -13,7 +14,9 @@ declare var window: any;
 	selector: 'app-home-page',
 	templateUrl: './home-page.component.html'
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit, OnDestroy {
+	// @ViewChild('welcomeBanner') welcomeBanner: ElementRef;
+
 	public coverFolder = IMAGEFOLDER + 'release-cover/';
 	public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];
@@ -22,9 +25,13 @@ export class HomePageComponent implements OnInit {
 	public _news$: Observable<News[]> = this.dataService.requestToData('news');
 	public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
 
+	// public crystalization = new Crystalization();
+
 	constructor(private dataService: DataService) { }
 
 	ngOnInit() {
+		// this.crystalization.init('.brand-text');
+
 		this.featuredGalleryItems = this.featuredArtists.map(artist => {
 			return {
 				name: artist,
@@ -43,5 +50,9 @@ export class HomePageComponent implements OnInit {
 				version: 'v3.2'
 			});
 		}
+	}
+
+	ngOnDestroy() {
+		// this.crystalization.destroy();
 	}
 }

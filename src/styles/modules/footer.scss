@@ -181,6 +181,10 @@
 				vertical-align: middle;
 			}
 		}
+
+		@include mobile {
+			justify-content: center;
+		}
 	}
 
 	.beatport-headphones {

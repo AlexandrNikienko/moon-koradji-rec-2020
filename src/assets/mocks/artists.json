@@ -1027,7 +1027,10 @@
 			"artistAvatar": "artist_molchun.jpg",
 			"artistDescription": [
 				{
-					"paragraph": ""
+					"paragraph": "Underground performer from Russia, blowing up the brain with non-standard approaches in detail, combination and purity of sounds, as well as the story that unfolds in his work. A lot of special effects, samples and synths peculiar only to him make his work unique and stunning."
+				},
+				{
+					"paragraph": "In life he is quiet and calm, but not in his works. There is a lot to hear, the data flow just blows away."
 				}
 			],
 			"artistFacebook": "https://www.facebook.com/evgeniy.molchun",
@@ -1050,6 +1053,10 @@
 				}
 			],
 			"mixes": [
+				{
+					"year": "2021",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1142140732\"></iframe>"
+				},
 				{
 					"year": "2020",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/810824971\"></iframe>"
@@ -1909,7 +1916,7 @@
 			],
 			"mixes": [
 				{
-					"year": "2020",
+					"year": "2021",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/953119021\"></iframe>"
 				}
 			]

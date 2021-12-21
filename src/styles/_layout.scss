@@ -1,3 +1,8 @@
+// @font-face {
+// 	font-family: "Beyond Wonderland";
+// 	src: url("/assets/fonts/beyond-wonderland.regular.ttf") format("truetype");
+// }
+
 html {
 	height: 100%;
 	min-height: 100%;
@@ -34,10 +39,16 @@ a {
 .c-video {
 	position: relative;
 
-	&:before {
-		content: "";
-		display: block;
-		padding-top: 100% * 9 / 15;
+	@supports (aspect-ratio: 1) {
+		aspect-ratio: 15 / 9;
+	}
+
+	@supports not (aspect-ratio: 1) {
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 100% * 9 / 15;
+		}
 	}
 
 	iframe {
@@ -120,6 +131,19 @@ app-root {
 	}
 }
 
+.brand-text {
+	font-family: "Beyond Wonderland";
+
+	h1 {
+		text-shadow: 1px 1px 2px tomato;
+		font-size: 4rem;
+
+		@include mobile {
+			font-size: 2.1rem;
+		}
+	}
+}
+
 app-visuals {
 	background: url("#{$imageFolder}/swamp-low.jpg") no-repeat center / cover fixed;
 	position: fixed;
@@ -155,12 +179,16 @@ app-visuals {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	
+	.m-footer & {
+		font-size: 50px;
+		align-items: center;
+	}
 }
 
 .glitch {
 	$steps: 20;
 	color: white;
-	font-size: 50px;
 	line-height: 1;
 	position: relative;
 	cursor: default;
