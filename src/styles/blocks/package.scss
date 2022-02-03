@@ -1,8 +1,7 @@
 .package {
 	text-align: center;
-	box-sizing: border-box;
 	border-radius: 1rem;
-	padding: 2rem 0.5rem;
+	padding: 2rem .5rem;
 	position: relative;
 	align-self: center;
 	cursor: default;
@@ -17,14 +16,16 @@
 	}
 
 	&__icon {
-		width: 100px;
-		height: 100px;
+		$size: 100px;
+		
+		width: $size;
+		aspect-ratio: 1;
 		margin: 0 auto 1rem;
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-color: gray;
-		line-height: 100px;
+		line-height: $size;
 		font-size: 2rem;
 		border-radius: 100%;
 	}
@@ -63,8 +64,7 @@
 	}
 
 	&--highlight {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+		padding-block: 3rem;
 
 		.package {
 			&__price {

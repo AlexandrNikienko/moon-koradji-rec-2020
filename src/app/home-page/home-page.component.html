@@ -36,14 +36,14 @@
 		<div class="heading__link"><a routerLink="/releases">View All</a></div>
 	</div>
 
-	<main class="recent-releases-inner">
+	<div class="recent-releases-inner">
 		<ng-container *ngIf="_releases$ | async as releases">
 			<ng-container *ngFor="let release of releases; let i = index">
 				<app-release-card *ngIf="(i < 5) && !release.isHero && !release.hidden" [releaseItem]="release">
 				</app-release-card>
 			</ng-container>
 		</ng-container>
-	</main>
+	</div>
 </section>
 
 <section class="podcast-wrapper">

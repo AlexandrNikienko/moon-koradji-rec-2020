@@ -8,10 +8,11 @@ import { Crystalization } from '../../assets/scripts/crystal-paralax';
 	templateUrl: './podcasts-page.component.html'
 })
 export class PodcastsPageComponent implements OnInit, OnDestroy {
-	public podcasts$ = this.datService.requestToData('podcasts');
+	public podcasts$ = this.dataService.requestToData('podcasts');
+
 	public crystalization = new Crystalization();
 
-	constructor(private datService: DataService) { }
+	constructor(private dataService: DataService) { }
 
 	ngOnInit() {
 		this.crystalization.init();

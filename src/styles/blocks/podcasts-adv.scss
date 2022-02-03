@@ -83,10 +83,11 @@
 	align-items: center;
 	justify-content: center;
 	margin-top: 1rem;
+	display: none;
 
 	&__image {
 		height: 60px;
-		width: 60px;
+		aspect-ratio: 1;
 		background-size: cover;
 		margin-right: 1rem;
 		border: 1px solid white;

@@ -11,6 +11,7 @@ export class DataService {
 
 	requestToData(item: string): Observable<any> {
 		const url = `${DATAFOLDER}${item}.json`;
+		
 		return this.http.get<any[]>(url)
 			.pipe(
 				map(object => object[item]),
