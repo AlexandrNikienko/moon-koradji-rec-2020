@@ -22,7 +22,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
 	public featuredGalleryItems: Gallery[];
 
 	public _purchase$: Observable<any> = this.dataService.requestToData('purchase');
-	public _news$: Observable<News[]> = this.dataService.requestToData('news');
+	public news$: Observable<News[]> = this.dataService.requestToData('news');
 	public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
 
 	// public crystalization = new Crystalization();

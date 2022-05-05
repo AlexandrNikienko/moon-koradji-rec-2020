@@ -53,6 +53,10 @@
 			background-color: var(--white);
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
+
+			&:empty {
+				display: none;
+			}
 		}
 
 		.s-mix-block {
@@ -62,6 +66,10 @@
 				border: 2px solid var(--white);
 				border-radius: 5px;
 				height: 124px;
+			}
+
+			.playlist-iframe {
+				height: 450px;
 			}
 		}
 	}

@@ -91,10 +91,10 @@
 			</ul>
 		</div>
 	
-		<div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
-			smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div>
+		<!-- <div class="fb-page" href="https://www.facebook.com/MoonKoradjiRecords/" tabs="timeline, messages" height="480"
+			smallHeader="false" adaptContainerWidth="true" hideCover="false" showFacepile="true"></div> -->
 	
-		<div class="news" *ngIf="_news$ | async as news">
+		<div class="news" *ngIf="news$ | async as news">
 			<p class="news__header">More News</p>
 	
 			<div class="news__item" *ngFor="let item of news">

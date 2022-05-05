@@ -63,12 +63,7 @@
             "artistMixcloud": "https://www.mixcloud.com/Omsun/playlists/dj-omsun/",
             "mixes": [
                 {
-                    "year": "2021",
-                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1078153534\"></iframe>"
-                },
-				{
-                    "year": "2018",
-                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/529769211\"></iframe>"
+					"embedCode": "<iframe class=\"playlist-iframe\" width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1428110791&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
                 }
             ]
         },

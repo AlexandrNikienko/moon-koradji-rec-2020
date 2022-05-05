@@ -1,16 +1,13 @@
 .m-artists {
     .artists-wrapper {
-        column-gap: 36px;
-        columns: 250px auto;
-        padding: 0 15px;
-        width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 25px 36px;
         margin-bottom: 25px;
 	}
 
 	.artist-item {
 		position: relative;
-		line-height: 45px;
-		margin-bottom: 20px;
 
 		&__link {
 			display: block;
@@ -20,10 +17,10 @@
 
 			&:hover {
 				box-shadow: inset 0 0 1px #fff,
-				inset -1px -1px 1px #9ff,
-				inset 1px -1px 1px #9c9,
-				inset -1px 1px 1px #6cf,
-				inset 1px 1px 1px #66f;
+							inset -1px -1px 1px #9ff,
+							inset 1px -1px 1px #9c9,
+							inset -1px 1px 1px #6cf,
+							inset 1px 1px 1px #66f;
 				text-decoration: none;
 
 				.s-artist-item__bg {
@@ -32,25 +29,10 @@
 			}
 		}
 
-		// &__bg {
-		// 	height: 100%;
-		// 	background-size: 130%;
-		// 	background-repeat: no-repeat;
-		// 	background-position: center;
-		// 	border-radius: 6px;
-		// 	filter: grayscale(50%);
-		// 	position: absolute;
-		// 	z-index: -1;
-		// 	left: 0;
-		// 	right: 0;
-		// 	opacity: .15;
-		// }
-
 		&__name {
 			margin: 0;
 			line-height: 45px;
 			text-align: center;
-			width: 100%;
 		}
 
 		&__flag {
@@ -58,7 +40,7 @@
 			top: 1px;
 			right: 1px;
 			height: 12px;
-			width: 16px;
+			aspect-ratio: 4 / 3;
 		}
 
 		&__mark {
@@ -69,17 +51,14 @@
 	}
 	
 	.heading {
-		column-span: all;
+		grid-column: 1 / -1;
 	}
 
     .letter-separator {
         position: absolute;
         color: rgb(162, 212, 0);
         line-height: normal;
-        font-weight: normal;
-        left: 0;
-        right: 0;
-        top: 0;
+        inset: 0 0 auto 3px;
         pointer-events: none;
 
         &::after {
@@ -87,9 +66,7 @@
             height: 1px;
             display: block;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+			inset: 0 1px auto 0;
             background: linear-gradient(to right, rgba(162, 212, 0, 0) 0%, rgba(162, 212, 0, 0.7) 100%);
         }
     }
