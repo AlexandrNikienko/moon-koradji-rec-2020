@@ -220,3 +220,40 @@ app-visuals {
 		}
 	}
 }
+
+.support-ukraine {
+	display: flex;
+	width: 100%;
+	position: relative;
+
+	&__link {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mat-icon-button {
+		color: white;
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	svg {
+		margin-inline: 16px;
+	}
+
+	.message {
+		color: #bae0ff;
+
+		@include mobile {
+			display: none;
+		}
+	}
+}

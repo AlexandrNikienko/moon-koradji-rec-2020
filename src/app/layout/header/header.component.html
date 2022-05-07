@@ -1,14 +1,21 @@
-<!-- <header class="header">
-	<mat-toolbar color="primary">
-	  <mat-toolbar-row>
-		<ul class="navbar-nav">
-		  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-			  <a mat-button routerLink="/"><i class="fas fa-om" aria-hidden="true"></i>Home</a>
-		  </li>
-		</ul>
-	  </mat-toolbar-row>
-	</mat-toolbar>
-</header> -->
+<nav *ngIf="showSupportUkraine" class="support-ukraine navbar navbar-expand-md bg-dark">
+	<a class="support-ukraine__link" href="https://u24.gov.ua/" target="_blank">
+		<span>Support Ukraine</span>
+
+		<svg height="24" width="24" version="1.1" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+			<rect fill="#0057b7" height="72" width="240" x="0" y="48"></rect>
+			<rect fill="#ffd700" height="72" width="240" x="0" y="120"></rect>
+		</svg>
+
+		<span class="message">Help Provide Humanitarian Aid to Ukraine.</span>
+	</a>
+
+	<div class="support-ukraine__close">
+		<button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</div>
+</nav>
 
 <header class="m-header">
 	<a routerLink="/about" routerLinkActive="active" title="About">
@@ -23,7 +30,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
-			<svg height="24" width="24" version="1.1" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+			<svg *ngIf="!showSupportUkraine" height="24" width="24" version="1.1" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
 				<rect fill="#0057b7" height="72" width="240" x="0" y="48"></rect>
 				<rect fill="#ffd700" height="72" width="240" x="0" y="120"></rect>
 			</svg>
@@ -39,41 +46,43 @@
 				<ul class="navbar-nav">
 					<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 						<a mat-button class="nav-link" routerLink="/">
-							<i class="fas fa-om" aria-hidden="true"></i>Home</a>
+							<i class="fas fa-om" aria-hidden="true"></i>Home
+						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/releases"><i class="fas fa-compact-disc"
-								aria-hidden="true"></i>Releases</a>
+						<a mat-button class="nav-link" routerLink="/releases">
+							<i class="fas fa-compact-disc" aria-hidden="true"></i>Releases
+						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/artists"><i class="fas fa-headphones-alt"
-								aria-hidden="true"></i>Artists</a>
+						<a mat-button class="nav-link" routerLink="/artists">
+							<i class="fas fa-headphones-alt" aria-hidden="true"></i>Artists
+						</a>
 					</li>
 
 					<!--<li class="nav-item" routerLinkActive="active">
-                    <a mat-button class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
-                </li>-->
+						<a mat-button class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
+					</li>-->
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/podcasts"><i class="fas fa-podcast"
-								aria-hidden="true"></i>Podcasts</a>
+						<a mat-button class="nav-link" routerLink="/podcasts">
+							<i class="fas fa-podcast" aria-hidden="true"></i>Podcasts
+						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank"><i class="fas fa-tshirt"
-								aria-hidden="true"></i>Merch</a>
+						<a mat-button class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">
+							<i class="fas fa-tshirt" aria-hidden="true"></i>Merch
+						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/about"><i class="fas fa-info"
-								aria-hidden="true"></i>About</a>
+						<a mat-button class="nav-link" routerLink="/about">
+							<i class="fas fa-info" aria-hidden="true"></i>About
+						</a>
 					</li>
-
-					<!-- <li class="nav-item">
-                    <a mat-button class="nav-link" href="https://moonkoradjirecords.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp" aria-hidden="true"></i>Buy Digital</a>
-                </li> -->
 				</ul>
 			</div>
 		</div>
