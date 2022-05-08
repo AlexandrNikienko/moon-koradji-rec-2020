@@ -4,11 +4,11 @@ import { DataService } from '../core/services/data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 @Component({
-	selector: 'app-podcasts-page',
-	templateUrl: './podcasts-page.component.html',
-	styleUrls: ['podcasts.scss']
+	selector: 'app-podcasts',
+	templateUrl: './podcasts.component.html',
+	styleUrls: ['podcasts.component.scss']
 })
-export class PodcastsPageComponent implements OnInit, OnDestroy {
+export class PodcastsComponent implements OnInit, OnDestroy {
 	public podcasts$ = this.dataService.requestToData('podcasts');
 
 	public crystalization = new Crystalization();

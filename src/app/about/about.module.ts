@@ -9,7 +9,7 @@ const aboutRoutes: Routes = [
 		component: AboutComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'About Page'
+			title: 'About'
 		}
 	}
 ];

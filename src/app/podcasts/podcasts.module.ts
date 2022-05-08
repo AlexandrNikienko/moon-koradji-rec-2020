@@ -4,24 +4,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { PipesModule } from '../core/pipes/pipes.module';
 import { SharedModule } from '../shared/shared.module';
 
-import { PodcastsPageComponent } from './podcasts-page.component';
+import { PodcastsComponent } from './podcasts.component';
 
 import { DataService } from '../core/services/data.service';
 
 const artistRoutes: Routes = [
 	{
 		path: '',
-		component: PodcastsPageComponent,
+		component: PodcastsComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Podcasts Page'
+			title: 'Podcasts'
 		}
 	}
 ];
 
 @NgModule({
 	declarations: [
-		PodcastsPageComponent
+		PodcastsComponent
 	],
 	imports: [
 		CommonModule,
@@ -37,4 +37,4 @@ const artistRoutes: Routes = [
 	]
 })
 
-export class PodcastsPageModule { }
+export class PodcastsModule { }

@@ -3,24 +3,24 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PipesModule } from '../core/pipes/pipes.module';
 
-import { ArtistsPageComponent } from './artists-page.component';
+import { ArtistsComponent } from './artists.component';
 
 import { DataService } from '../core/services/data.service';
 
 const artistsRoutes: Routes = [
 	{
 		path: '',
-		component: ArtistsPageComponent,
+		component: ArtistsComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Artists Page'
+			title: 'Artists'
 		}
 	}
 ];
 
 @NgModule({
 	declarations: [
-		ArtistsPageComponent
+		ArtistsComponent
 	],
 	imports: [
 		CommonModule,

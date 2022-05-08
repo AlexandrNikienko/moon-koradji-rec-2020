@@ -9,12 +9,12 @@ import { Release } from '../core/models/release.model';
 import { DataService } from '../core/services/data.service';
 
 @Component({
-	selector: 'app-release-page',
-	templateUrl: './release-page.component.html',
-	styleUrls: ['release.scss']
+	selector: 'app-release',
+	templateUrl: './release.component.html',
+	styleUrls: ['release.component.scss']
 })
 
-export class ReleasePageComponent implements OnInit, OnDestroy {
+export class ReleaseComponent implements OnInit, OnDestroy {
 	release: Release;
 	involved: Artist[] = [];
 	private releases$ = this.dataService.requestToData('releases');

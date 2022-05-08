@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { PipesModule } from '../core/pipes/pipes.module';
 import { SharedModule } from '../shared/shared.module';
 
-import { ReleasePageComponent } from './release-page.component';
+import { ReleaseComponent } from './release.component';
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
 
 const releaseRoutes: Routes = [
 	{
 		path: '',
-		component: ReleasePageComponent,
+		component: ReleaseComponent,
 		pathMatch: 'full',
 		data: {
 			title: 'Release Page'
@@ -20,7 +20,7 @@ const releaseRoutes: Routes = [
 
 @NgModule({
 	declarations: [
-		ReleasePageComponent,
+		ReleaseComponent,
 		AudioPlayerComponent
 	],
 	imports: [

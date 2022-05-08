@@ -63,14 +63,14 @@
 	.s-mix-block {
 		margin-bottom: 1rem;
 
-		iframe {
+		::ng-deep iframe {
 			border: 2px solid var(--white);
 			border-radius: 5px;
 			height: 124px;
-		}
 
-		.playlist-iframe {
-			height: 450px;
+			&.playlist-iframe {
+				height: 450px;
+			}
 		}
 	}
 }

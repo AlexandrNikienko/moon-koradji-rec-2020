@@ -7,11 +7,11 @@ import { Artist } from '../core/models/artist.model';
 import { DataService } from '../core/services/data.service';
 
 @Component({
-	selector: 'app-artist-page',
-	templateUrl: './artist-page.component.html',
-	styleUrls: ['artist.scss']
+	selector: 'app-artist',
+	templateUrl: 'artist.component.html',
+	styleUrls: ['artist.component.scss']
 })
-export class ArtistPageComponent implements OnInit, OnDestroy {
+export class ArtistComponent implements OnInit, OnDestroy {
 	public artist: Artist;
 	private artistName: string;
 	private requestTo: string;

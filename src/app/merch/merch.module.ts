@@ -9,7 +9,7 @@ const merchRoutes: Routes = [
 		component: MerchComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Merchandise Page'
+			title: 'Merchandise'
 		}
 	}
 ];

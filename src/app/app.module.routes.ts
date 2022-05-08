@@ -4,7 +4,7 @@ import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.com
 export const appRoutes: Routes = [
 	{
 		path: 'index',
-		loadChildren: './home-page/home-page.module#HomePageModule'
+		loadChildren: './home/home.module#HomeModule'
 	},
 	{
 		path: 'releases',
@@ -12,15 +12,15 @@ export const appRoutes: Routes = [
 	},
 	{
 		path: 'releases/:releaseRoute',
-		loadChildren: './release-page/release-page.module#ReleaseModule'
+		loadChildren: './release/release.module#ReleaseModule'
 	},
 	{
 		path: 'artists',
-		loadChildren: './artists-page/artists-page.module#ArtistsModule'
+		loadChildren: './artists/artists.module#ArtistsModule'
 	},
 	{
 		path: 'artists/:artistRoute',
-		loadChildren: './artist-page/artist-page.module#ArtistModule'
+		loadChildren: './artist/artist.module#ArtistModule'
 	},
 	// {
 	// 	path: 'merch',
@@ -28,7 +28,7 @@ export const appRoutes: Routes = [
 	// },
 	{
 		path: 'podcasts',
-		loadChildren: './podcasts-page/podcasts-page.module#PodcastsPageModule'
+		loadChildren: './podcasts/podcasts.module#PodcastsModule'
 	},
 	{
 		path: 'about',

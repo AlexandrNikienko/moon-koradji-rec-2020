@@ -4,11 +4,11 @@ import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy } from '@a
 import { DataService } from '../core/services/data.service';
 
 @Component({
-	selector: 'app-artists-page',
-	templateUrl: './artists-page.component.html',
+	selector: 'app-artists',
+	templateUrl: './artists.component.html',
 	styleUrls: ['artists.scss']
 })
-export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
+export class ArtistsComponent implements AfterViewInit, OnDestroy {
 	@ViewChildren('artist') artist: QueryList<Element>;
 
 	public artists$ = this.dataservice.requestToData('artists');

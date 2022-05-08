@@ -1,21 +1,21 @@
-import { Crystalization } from './../../assets/scripts/crystal-paralax';
+import { Crystalization } from '../../assets/scripts/crystal-paralax';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { DataService } from '../core/services/data.service';
 import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
-import { Release } from './../core/models/release.model';
+import { Release } from '../core/models/release.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 
 declare var window: any;
 
 @Component({
-	selector: 'app-home-page',
-	templateUrl: './home-page.component.html',
-	styleUrls: ['home.scss']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['home.component.scss']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
 	// @ViewChild('welcomeBanner') welcomeBanner: ElementRef;
 
 	public coverFolder = IMAGEFOLDER + 'release-cover/';
