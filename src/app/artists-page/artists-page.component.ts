@@ -5,7 +5,8 @@ import { DataService } from '../core/services/data.service';
 
 @Component({
 	selector: 'app-artists-page',
-	templateUrl: './artists-page.component.html'
+	templateUrl: './artists-page.component.html',
+	styleUrls: ['artists.scss']
 })
 export class ArtistsPageComponent implements AfterViewInit, OnDestroy {
 	@ViewChildren('artist') artist: QueryList<Element>;

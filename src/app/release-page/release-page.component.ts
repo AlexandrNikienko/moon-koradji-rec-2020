@@ -10,7 +10,8 @@ import { DataService } from '../core/services/data.service';
 
 @Component({
 	selector: 'app-release-page',
-	templateUrl: './release-page.component.html'
+	templateUrl: './release-page.component.html',
+	styleUrls: ['release.scss']
 })
 
 export class ReleasePageComponent implements OnInit, OnDestroy {

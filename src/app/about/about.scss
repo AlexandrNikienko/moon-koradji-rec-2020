@@ -1,3 +1,5 @@
+@import '../../styles/_utils.scss';
+
 @mixin logoRender($set: 100px) {
 	$width: 4 * $set;
 	$height: 6 * $set;
@@ -151,44 +153,36 @@
 	}
 }
 
-.m-about {
-	.page {
-		background-color: #111;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
+.page {
+	background-color: #111;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
 
-	@include logoRender();
+@include logoRender();
 
-	.link {
-		a {
-			font-size: 26px;
-			color: rgba(255, 255, 255, 0.5);
-			text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
-			position: relative;
+.link {
+	font-size: 26px;
+	color: rgba(255, 255, 255, 0.5);
+	text-shadow: 0 0 4px #fff, 0 -5px 4px #9ff, 2px -10px 6px #9c9, -2px -15px 11px #6cf, 2px -25px 18px #66f;
+	position: relative;
 
-			&::after {
-				content: "\27a4";
-				position: absolute;
-				top: 2px;
-				left: 100%;
-				text-shadow: none;
-				animation: arrow 1s linear infinite;
-			}
-		}
+	&::after {
+		content: "\27a4";
+		position: absolute;
+		top: 2px;
+		left: 100%;
+		text-shadow: none;
+		animation: arrow 1s linear infinite;
 	}
 }
 
 @include mobile {
-	.m-about {
-		@include logoRender($set: 70px);
+	@include logoRender($set: 70px);
 
-		.link {
-			a {
-				font-size: 22px;
-			}
-		}
+	.link {
+		font-size: 22px;
 	}
 }

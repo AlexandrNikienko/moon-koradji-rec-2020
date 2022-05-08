@@ -1,0 +1,141 @@
+@import '../../styles/_utils.scss';
+
+.release-name {
+	margin-bottom: 15px;
+	font-size: 26px;
+	font-weight: 300;
+}
+
+.release-main {
+	margin-bottom: 30px;
+}
+
+::ng-deep .release-cover {
+	width: 240px;
+	margin: 0 1rem 0.75rem 0;
+	float: left;
+	float: inline-start;
+	box-shadow: 0 0 1px #fff, -1px -1px 1px #9ff, 1px -1px 1px #9c9, -1px 1px 1px #6cf, 1px 1px 1px #66f;
+
+	@supports (margin-inline-end: 0) {
+		margin-right: 0;
+		margin-inline-end: 1rem;
+	}
+
+	@supports (margin-block-end: 0) {
+		margin-bottom: 0;
+		margin-block-end: 0.75rem;
+	}
+}
+
+.release-credits {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	&__paragraph {
+		margin-bottom: 6px;
+		flex: 1 1 100%;
+		line-height: normal;
+
+		&--dark {
+			color: #bbb;
+		}
+	}
+
+	&__side {
+		flex-grow: 1;
+
+		&:not(:first-of-type) {
+			text-align: right;
+			text-align: end;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 0;
+		}
+	}
+
+	&__icon {
+		background: url("#{$imageFolder}/long-play-record-cover.svg") no-repeat center;
+		width: 40px;
+		height: 40px;
+		float: left;
+		float: inline-start;
+		margin-right: 0.75rem;
+
+		@supports (margin-inline-end: 0) {
+			margin-right: 0;
+			margin-inline-end: 0.75rem;
+		}
+	}
+
+	a {
+		display: inline-block;
+		margin-bottom: 10px;
+		text-shadow: 1px 1px 2px black;
+		padding: 5px 10px;
+		border: 1px solid;
+		border-radius: 3px;
+		align-self: flex-end;
+		background-color: rgba(0255, 255, 255, 0.25);
+		line-height: normal;
+
+		@include mobile {
+			font-size: 14px;
+		}
+	}
+}
+
+.s-involved-artists {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 10px;
+	margin: 0 -10px 30px;
+
+	&__title {
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 0 10px;
+		color: #bbb;
+	}
+
+	&__item {
+		flex: 0 0 128px;
+		position: relative;
+		padding: 10px;
+
+		&::before {
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+	}
+
+	&__content {
+		$gap: 10px;
+		position: absolute;
+		top: $gap;
+		left: $gap;
+		right: $gap;
+		bottom: $gap;
+		background-image: url("#{$imageFolder}/mk_square.jpg");
+		background-size: 115%;
+		background-position: center;
+		display: flex;
+		justify-content: end;
+		align-items: flex-end;
+		border-radius: 50% 0 50% 0;
+		overflow: hidden;
+		box-shadow: 0 0 1px #fff, -1px -1px 1px #9ff, 1px -1px 1px #9c9, -1px 1px 1px #6cf, 1px 1px 1px #66f;
+		transition: 0.3s;
+	}
+
+	&__name {
+		font-size: 12px;
+		width: 100%;
+		background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.75) 100%);
+		padding: 10px 30px 10px 10px;
+	}
+}

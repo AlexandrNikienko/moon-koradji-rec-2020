@@ -5,7 +5,8 @@ import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 @Component({
 	selector: 'app-podcasts-page',
-	templateUrl: './podcasts-page.component.html'
+	templateUrl: './podcasts-page.component.html',
+	styleUrls: ['podcasts.scss']
 })
 export class PodcastsPageComponent implements OnInit, OnDestroy {
 	public podcasts$ = this.dataService.requestToData('podcasts');

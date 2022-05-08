@@ -4,7 +4,8 @@ import { Gallery } from '../../core/models/gallery.model';
 
 @Component({
 	selector: 'app-shared-gallery',
-	templateUrl: './gallery.component.html'
+	templateUrl: './gallery.component.html',
+	styleUrls: ['swiper.scss']
 })
 export class SharedGalleryComponent implements OnInit {
 	@Input() items: Gallery[];

@@ -6,7 +6,8 @@ import { PodcastAdv } from './../../core/models/podcast-add.model';
 
 @Component({
 	selector: 'app-podcast',
-	templateUrl: './podcast.component.html'
+	templateUrl: './podcast.component.html',
+	styleUrls: ['podcasts-adv.scss']
 })
 export class PodcastComponent {
 	public _podcast$: Observable<PodcastAdv> = this.dataService.requestToData('podcast');

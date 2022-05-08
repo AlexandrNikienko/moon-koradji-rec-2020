@@ -12,7 +12,8 @@ declare var window: any;
 
 @Component({
 	selector: 'app-home-page',
-	templateUrl: './home-page.component.html'
+	templateUrl: './home-page.component.html',
+	styleUrls: ['home.scss']
 })
 export class HomePageComponent implements OnInit, OnDestroy {
 	// @ViewChild('welcomeBanner') welcomeBanner: ElementRef;

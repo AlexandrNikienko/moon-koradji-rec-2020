@@ -1,31 +1,14 @@
 @import "libraries/bootstrap-5.0.0-alpha1/scss/bootstrap";
 
-@import "_variables";
-@import "_mixins";
-@import "_keyframes";
+@import "utils";
+
 @import "_layout";
 
-@import "blocks/crystal-paralax";
-@import "blocks/hero";
-@import "blocks/loader";
-@import "blocks/more-news";
-@import "blocks/package";
-@import "blocks/podcasts-adv";
-@import "blocks/release-card";
-@import "blocks/ringtones";
-@import "blocks/tshirt-add";
-@import "blocks/swiper";
-
-@import "modules/about";
-@import "modules/audio-player";
-@import "modules/artists";
-@import "modules/artist";
-@import "modules/footer";
-@import "modules/header";
-@import "modules/home";
-@import "modules/merch";
-@import "modules/not-found";
-@import "modules/podcasts";
-@import "modules/release";
-@import "modules/releases";
-@import "modules/socials";
+@import "blocks/crystal-paralax",
+		"blocks/hero",
+		"blocks/loader",
+		"blocks/more-news",
+		"blocks/package",
+		"blocks/release-card",
+		"blocks/ringtones",
+		"blocks/tshirt-add";

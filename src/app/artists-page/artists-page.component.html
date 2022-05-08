@@ -1,31 +1,29 @@
-<div class="m-artists row">
-	<div class="col-md-12 artists-wrapper">
-		<ng-container *ngIf="djs$ | async as djs">
-			<div class="heading">
-				<p class="heading__title">DJs</p>
-			</div>
+<div class="artists-wrapper">
+	<ng-container *ngIf="djs$ | async as djs">
+		<div class="heading">
+			<p class="heading__title">DJs</p>
+		</div>
 
-			<div class="artist-item" *ngFor="let item of djs">
-				<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-					<p class="artist-item__name">{{item.artistName}}</p>
+		<div class="artist-item" *ngFor="let item of djs">
+			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+				<p class="artist-item__name">{{item.artistName}}</p>
 
-					<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-				</a>
-			</div>
-		</ng-container>
+				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+			</a>
+		</div>
+	</ng-container>
 
-		<ng-container *ngIf="artists$ | async as artists">
-			<div class="heading mt-4">
-				<p class="heading__title">Artists</p>
-			</div>
+	<ng-container *ngIf="artists$ | async as artists">
+		<div class="heading mt-4">
+			<p class="heading__title">Artists</p>
+		</div>
 
-			<div #artist class="artist-item" *ngFor="let item of artists">
-				<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-					<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+		<div #artist class="artist-item" *ngFor="let item of artists">
+			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
 
-					<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-				</a>
-			</div>
-		</ng-container>
-	</div>
+				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+			</a>
+		</div>
+	</ng-container>
 </div>

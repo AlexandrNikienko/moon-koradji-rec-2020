@@ -8,7 +8,8 @@ import { DataService } from '../core/services/data.service';
 
 @Component({
 	selector: 'app-artist-page',
-	templateUrl: './artist-page.component.html'
+	templateUrl: './artist-page.component.html',
+	styleUrls: ['artist.scss']
 })
 export class ArtistPageComponent implements OnInit, OnDestroy {
 	public artist: Artist;
