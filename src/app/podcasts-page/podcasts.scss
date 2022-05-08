@@ -19,26 +19,28 @@
 	margin: auto;
 	position: relative;
 
-	&::before,
-	&::after {
-		content: '';
-		width: 400px;
-		height: 400px;
-		background: url('#{$imageFolder}/podcast-logo.png') no-repeat center / cover;
-		position: absolute;
-		z-index: -5;
-		opacity: .5;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	&::before {
-		left: -200px;
-	}
-
-	&::after {
-		left: auto;
-		right: -200px;
+	&:first-of-type {
+		&::before,
+		&::after {
+			content: '';
+			width: 400px;
+			height: 400px;
+			background: url('#{$imageFolder}/podcast-logo.png') no-repeat center / cover;
+			position: absolute;
+			z-index: -5;
+			opacity: .5;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	
+		&::before {
+			left: -200px;
+		}
+	
+		&::after {
+			left: auto;
+			right: -200px;
+		}
 	}
 }
 
@@ -82,7 +84,7 @@
 }
 
 @include desktopSmall {
-	.s-player-wrapper {
+	.s-player-wrapper:first-of-type {
 		&::before {
 			left: -145px;
 		}

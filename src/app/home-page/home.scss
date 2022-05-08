@@ -15,7 +15,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 	grid-auto-rows: 1fr;
-	grid-gap: 30px;
+	grid-gap: 50px;
 	position: relative;
 	z-index: 10;
 }
