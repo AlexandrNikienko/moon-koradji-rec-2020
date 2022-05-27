@@ -7,6 +7,7 @@ import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
 import { Release } from '../core/models/release.model';
 import { IMAGEFOLDER } from '../../environments/environment';
+import { JsonLDService } from './../core/services/json-ld.service';
 
 declare var window: any;
 
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	// public crystalization = new Crystalization();
 
-	constructor(private dataService: DataService) { }
+	constructor(private dataService: DataService, private jsonLDService: JsonLDService) { }
 
 	ngOnInit() {
 		// this.crystalization.init('.brand-text');
@@ -44,13 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 			}
 		})
 
-		if (window.FB) {
-			window.FB.init({
-				appId: '484153925308268',
-				xfbml: true,
-				version: 'v3.2'
-			});
-		}
+		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema)
 	}
 
 	ngOnDestroy() {
