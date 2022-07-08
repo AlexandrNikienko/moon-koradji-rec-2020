@@ -1,4 +1,4 @@
-@import '../../styles/_utils.scss';
+@use '../../styles/_utils.scss' as *;
 
 @mixin logoRender($set: 100px) {
 	$width: 4 * $set;

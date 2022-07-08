@@ -1,6 +1,6 @@
 
 
-@import '../../../styles/utils';
+@use '../../../styles/utils' as *;
 
 .swiper-container {
     width: 100%;

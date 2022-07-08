@@ -1,4 +1,4 @@
-@import '../../styles/_utils.scss';
+@use '../../styles/_utils.scss' as *;
 
 .release-name {
 	margin-bottom: 15px;

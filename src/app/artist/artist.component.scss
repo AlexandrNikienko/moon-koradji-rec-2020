@@ -1,4 +1,4 @@
-@import '../../styles/_utils.scss';
+@use '../../styles/_utils.scss' as *;
 
 .s-artist-foto {
 	width: 350px;

@@ -1,4 +1,4 @@
-@import '../../styles/_utils.scss';
+@use '../../styles/_utils.scss' as *;
 
 .artists-wrapper {
 	display: grid;

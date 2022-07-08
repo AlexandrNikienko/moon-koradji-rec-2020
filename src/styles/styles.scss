@@ -1,14 +1,12 @@
-@import 'libraries/bootstrap-5.0.0-alpha1/scss/bootstrap';
+@use 'libraries/bootstrap-5.0.0-alpha1/scss/bootstrap';
 
-@import 'utils';
+@use '_layout';
 
-@import '_layout';
-
-@import 'blocks/crystal-paralax',
-		'blocks/hero',
-		'blocks/loader',
-		'blocks/more-news',
-		'blocks/package',
-		'blocks/release-card',
-		'blocks/ringtones',
-		'blocks/tshirt-add';
+@use 'blocks/crystal-paralax';
+@use 'blocks/hero';
+@use 'blocks/loader';
+@use 'blocks/more-news';
+@use 'blocks/package';
+@use 'blocks/release-card';
+@use 'blocks/ringtones';
+@use 'blocks/tshirt-add';
