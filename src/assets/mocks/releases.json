@@ -4,7 +4,7 @@
             "hidden": true,
             "isNew": false,
             "releaseNumber": "MKCD013",
-            "releaseNote": "coming soon",
+            "releaseNote": "",
             "releaseDate": "",
             "releaseTitle": "Already Maged - Mortar & Pestle",
             "releaseSubTitle": "previews soon",
@@ -17,7 +17,7 @@
             "_releaseRoute": "already-maged-mortar-and-pestle",
             "releaseDescription": [
                 {
-                    "paragraph": "coming soon"
+                    "paragraph": ""
                 }
             ],
             "compiledBy": "",
@@ -28,8 +28,39 @@
             "videoLink": "",
             "tracklist": ""
         },
-        {
+		{
             "isHero": true,
+            "releaseNumber": "MKDG003",
+            "releaseNote": "2022",
+            "releaseDate": "Dec 10, 2022",
+            "releaseTitle": "Ziul Oiram - Eternal Shadow",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkdg003_ziul_oiram_eternal_shadow.jpg",
+				"default2x": "",
+				"webp": "",
+				"webp2x": ""
+			},
+            "releaseRoute": "ziul-oiram-eternal-shadow",
+            "releaseDescription": [
+                {
+                    "paragraph": "Mystical, deep and driving sound by Brazilian musician Ziul Oiram. He represents the new generation of artists who develop quality psychedelic music."
+                },
+                {
+                    "paragraph": "Dense bass and drums massage the body, dynamic sounds and percussion call you to dance, mysterious backgrounds envelope the brain and delight the ears with a new story about the sacred."
+                }
+            ],
+            "cdAuthor": "Luiz Mario",
+            "masteredBy": "Petran",
+            "artworkBy": "Fernando Fetex",
+            "beatspaceLink": "",
+            "bandcampLink": "",
+            "artists": [
+                "Ziul Oiram"
+            ],
+            "embedAudio": ""
+        },
+        {
             "releaseNumber": "MKCD012",
             "releaseNote": "2020",
             "releaseDate": "May 15, 2020",
@@ -59,7 +90,7 @@
             "artists": [
                 "Inzect", "Molchun", "Adansonia"
             ],
-            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 439px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=288505973/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/va-neural-embers-coming-soon\">VA Neural Embers (coming soon) by Moon Koradji Records</a></iframe>"
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 439px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=288505973/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/va-neural-embers-coming-soon\">VA Neural Embers by Moon Koradji Records</a></iframe>"
         },
         {
             "isFree": true,

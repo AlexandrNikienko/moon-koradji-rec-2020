@@ -22,4 +22,10 @@ describe('FooterComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+	it('should return current year', () => {
+		spyOn(component, 'getCurrentYear').and.returnValue(2022);
+		const result = component.getCurrentYear();
+		expect(result).toEqual(2022);
+	});
 });

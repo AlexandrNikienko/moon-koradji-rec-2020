@@ -11,7 +11,7 @@
 
 		<div class="podcast-adv__subtitle">podcasts</div>
 
-		<div class="recent-podcast">
+		<div *ngIf="false" class="recent-podcast">
 			<div class="recent-podcast__image" style="background-image: url(/assets/images/podcasts/{{logo}})"></div>
 
 			<h1 class="recent-podcast__desc">
@@ -19,6 +19,8 @@
 				<p class="recent-podcast__info">with <strong>{{podcast.artist}}</strong></p>
 			</h1>
 		</div>
+
+		<span class="btn btn--light">Listen</span>
 	</a>
 
 	<svg class="podcast-adv__bg" viewBox="0 0 60 55" xmlns="http://www.w3.org/2000/svg">

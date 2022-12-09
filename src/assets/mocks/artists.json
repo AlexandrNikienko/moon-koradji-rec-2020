@@ -1221,6 +1221,10 @@
 			],
 			"mixes": [
 				{
+					"year": "2022",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1305585199\"></iframe>"
+				},
+				{
 					"year": "2020",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/747751603\"></iframe>"
 				}
@@ -1918,6 +1922,31 @@
 				{
 					"year": "2021",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/953119021\"></iframe>"
+				}
+			]
+		},
+		{
+			"artistRoute": "ziul-oiram",
+			"artistName": "Ziul Oiram",
+			"artistRealName": "Luiz Mário",
+			"artistCountry": "Brazil",
+			"flag": "br",
+			"artistAvatar": "artist_ziul_oiram.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Ziul Oiram the project was born from the mind of Brazilian music producer and multi-instrumentalist Luiz Mário aka Cuca. A musician since childhood who develops his talent in various areas of art, he is the founder of the label Om Shanti Records."
+				},
+				{
+					"paragraph": "With more than 10 years of experience as a DJ and music producer, his project is going through a new phase. Its sound features a more atmospheric and deep forest line, charged basslines, and digital leads."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/Ziuloiramlive",
+			"artistSoundcloud": "https://soundcloud.com/ziuloiram",
+			"releases": [
+				{
+					"cdName": "Ziul Oiram - Eternal Shadow",
+					"cdCover": "mkdg003_ziul_oiram_eternal_shadow.jpg",
+					"cdLink": "ziul-oiram-eternal-shadow"
 				}
 			]
 		}

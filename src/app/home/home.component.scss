@@ -8,7 +8,11 @@
 .recent-releases-wrapper,
 .podcast-wrapper,
 .featured-artists-wrapper {
-	margin-bottom: 7rem;
+	margin-bottom: 9rem;
+
+	@include mobile {
+		margin-bottom: 5rem;
+	}
 }
 
 .recent-releases-inner {

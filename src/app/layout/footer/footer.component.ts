@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
 		this.getCurrentYear();
 	}
 
-	getCurrentYear(): void {
-		this.year = (new Date()).getFullYear();
+	getCurrentYear(): number {
+		return this.year = (new Date()).getFullYear();
 	}
 }

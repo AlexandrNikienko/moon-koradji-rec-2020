@@ -88,10 +88,16 @@
 	}
 }
 
+.release-description {
+	&__paragraph {
+		text-indent: 1rem;
+	}
+}
+
 .s-involved-artists {
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 10px;
+	padding-top: 4rem;
 	margin: 0 -10px 30px;
 
 	&__title {

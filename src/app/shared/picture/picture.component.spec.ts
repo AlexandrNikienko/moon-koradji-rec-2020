@@ -16,6 +16,12 @@ describe('PictureComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(PictureComponent);
 		component = fixture.componentInstance;
+		component.cover = {
+			default: '',
+			default2x: '',
+			webp: '',
+			webp2x: ''
+		};
 		fixture.detectChanges();
 	});
 

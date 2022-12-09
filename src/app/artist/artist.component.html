@@ -40,9 +40,7 @@
 	</div>
 
 	<div class="s-involved row" *ngIf="artist.releases">
-		<div class="heading col-lg-12">
-			<div class="heading__title">Moon Koradji Records releases with {{artist.artistName}}:</div>
-		</div>
+		<div class="s-involved__title">Moon Koradji Records releases with {{artist.artistName}}:</div>
 
 		<div class="s-involved__item col-lg-2 col-md-3 col-sm-3 col-xs-3" *ngFor="let release of artist.releases">
 			<a class="s-involved__link " [routerLink]="['/releases', release.cdLink]">

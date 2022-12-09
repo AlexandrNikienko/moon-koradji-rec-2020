@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	// @ViewChild('welcomeBanner') welcomeBanner: ElementRef;
 
 	public coverFolder = IMAGEFOLDER + 'release-cover/';
-	public featuredArtists: string[] = ['Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
+	public featuredArtists: string[] = ['Ziul Oiram', 'Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];
 
 	public _purchase$: Observable<any> = this.dataService.requestToData('purchase');
@@ -34,21 +34,25 @@ export class HomeComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 		// this.crystalization.init('.brand-text');
 
-		this.featuredGalleryItems = this.featuredArtists.map(artist => {
-			return {
-				name: artist,
-				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
-				image: {
-					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
-					webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
-				}
-			}
-		})
+		this.getFeatureGaleryItems();
 
 		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema)
 	}
 
 	ngOnDestroy() {
 		// this.crystalization.destroy();
+	}
+
+	getFeatureGaleryItems() {
+		this.featuredGalleryItems = this.featuredArtists.map(artist => {
+			return {
+				name: artist,
+				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
+				image: {
+					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
+					//webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
+				}
+			}
+		})
 	}
 }

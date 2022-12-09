@@ -13,6 +13,7 @@ html {
 body {
 	font-family: "Lato", sans-serif;
 	color: var(--white);
+	background: black;
 	min-height: 100%;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
@@ -110,16 +111,19 @@ app-root {
 
 .heading {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 1rem;
+	justify-content: center;
+	margin-bottom: 2rem;
+	position: relative;
 
 	&__title {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		position: relative;
 		display: inline-block;
 		padding-bottom: 10px;
 		margin: 0;
 		line-height: normal;
+		text-transform: uppercase;
+		letter-spacing: 5px;
 
 		&::after {
 			content: "";
@@ -127,15 +131,20 @@ app-root {
 			height: 5px;
 			position: absolute;
 			bottom: 0;
-			left: -1rem;
+			left: 50%;
+			transform: translateX(-50%);
 			z-index: 0;
 			background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
-
-			@supports (inset-inline-start: 0) {
-				left: auto;
-				inset-inline-start: -1rem;
-			}
 		}
+
+		@include mobile {
+			letter-spacing: 0;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		right: 0;
 	}
 }
 
@@ -238,7 +247,7 @@ app-visuals {
 		}
 	}
 
-	svg {
+	img {
 		margin-inline: 16px;
 	}
 
@@ -283,4 +292,28 @@ app-visuals {
 	@include mobile {
 		display: none;
 	}
+}
+
+app-home .btn {
+	font-size: 1rem;
+	height: 56px;
+	width: 200px;
+	background-color: var(--themeColorAlt);
+	color: var(--white);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-decoration: none;
+
+	&--light {
+		background-color: var(--white);
+		color: var(--themeColorAlt);
+	}
+}
+
+.support-ua {
+	height: 24px;
+	width: auto;
 }

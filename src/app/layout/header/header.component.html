@@ -2,10 +2,7 @@
 	<a class="support-ukraine__link" href="https://u24.gov.ua/" target="_blank">
 		<span>Support Ukraine</span>
 
-		<svg height="24" width="24" version="1.1" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-			<rect fill="#0057b7" height="72" width="240" x="0" y="48"></rect>
-			<rect fill="#ffd700" height="72" width="240" x="0" y="120"></rect>
-		</svg>
+		<img class="support-ua" src="./assets/images/support-ua.png" alt="">
 
 		<span class="message">Help Provide Humanitarian Aid to Ukraine.</span>
 	</a>
@@ -31,10 +28,7 @@
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="" href="https://u24.gov.ua/" target="_blank" title="Support Ukraine">
-				<svg *ngIf="!showSupportUkraine" height="24" width="24" version="1.1" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-					<rect fill="#0057b7" height="72" width="240" x="0" y="48"></rect>
-					<rect fill="#ffd700" height="72" width="240" x="0" y="120"></rect>
-				</svg>
+				<img *ngIf="!showSupportUkraine" class="support-ua" src="./assets/images/support-ua.png" alt="">
 			</a>
 
 			<a mat-button class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>

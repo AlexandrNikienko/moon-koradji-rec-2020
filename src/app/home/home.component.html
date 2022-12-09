@@ -1,5 +1,9 @@
-<section class="hero-wrapper">
-	<div class="hero" *ngIf="_purchase$ | async as purchase">
+<section *ngIf="_purchase$ | async as purchase" class="hero-wrapper">
+	<div *ngIf="purchase.title" class="heading">
+		<div class="heading__title"> {{ purchase.title }}</div>
+	</div>
+
+	<div class="hero" [class.hero--only-cover]="!purchase.deals.length">
 		<div class="hero__image-wrapper">
 			<div class="hero__image">
 				<app-picture [cover]="purchase.item.cover" [class]="'hero__image'" [imageFolder]="'release-cover/'">
@@ -10,13 +14,12 @@
 			<a [routerLink]="purchase.item.button.routerLink" class="btn btn--light">{{purchase.item.button.title}}</a>
 		</div>
 
-		<div class="hero__content">
-			<div *ngIf="purchase.title" class="hero__content-title">{{purchase.title}}</div>
+		<div *ngIf="purchase.deals.length" class="hero__content">
 			<div class="hero__purchase">
 				<div class="package" *ngFor="let deal of purchase.deals" [class.package--highlight]="deal.highlight">
 					<div class="package__title">{{deal.title}}</div>
 					<div class="package__icon" style="background-image: url('{{deal.image}}')">{{deal.subtitle}}</div>
-					<div class="package__price">{{deal.price | currency : "EUR" : true}}</div>
+					<div class="package__price">{{deal.price | currency : "EUR" : "symbol"}}</div>
 					<div class="package__price-note"></div>
 					<div class="package__separator"></div>
 					<ul class="package__list">
