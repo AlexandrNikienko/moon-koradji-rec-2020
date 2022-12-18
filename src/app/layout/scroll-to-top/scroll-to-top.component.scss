@@ -2,7 +2,7 @@
 	$color: #eee;
 
 	position: fixed;
-	right: 15px;
+	right: 18px;
 	bottom: 80px;
 	width: 0;
 	height: 0;
@@ -14,7 +14,7 @@
 	z-index: 10;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: -50px;
 		left: -15px;
@@ -26,13 +26,13 @@
 	}
 
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: -44px;
 		left: -10px;
 		width: 20px;
 		height: 10px;
-		box-shadow: inset 0px 0 1px white, 0 10px 10px red, 2px 10px 6px yellow, -2px 15px 11px orange,
+		box-shadow: inset 0 0 1px white, 0 10px 10px red, 2px 10px 6px yellow, -2px 15px 11px orange,
 			2px 25px 18px tomato;
 		z-index: -1;
 		opacity: 0;

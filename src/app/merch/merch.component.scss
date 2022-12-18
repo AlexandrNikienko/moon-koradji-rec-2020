@@ -7,7 +7,7 @@
 .s-merch-text {
 	font-size: 18px;
 	text-align: center;
-	color: #a2d400;
+	color: var(--themeColor);
 	margin-bottom: 10px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .s-color {
-	color: #a2d400;
+	color: var(--themeColor);
 }
 
 .s-gift {

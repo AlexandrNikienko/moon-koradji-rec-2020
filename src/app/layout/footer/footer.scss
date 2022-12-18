@@ -184,6 +184,10 @@
 			}
 		}
 
+		@include tablet {
+			justify-content: center;
+		}
+
 		@include mobile {
 			justify-content: center;
 		}

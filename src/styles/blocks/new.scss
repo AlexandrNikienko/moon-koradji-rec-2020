@@ -1,0 +1,74 @@
+@use '../utils' as *;
+
+.new {
+    display: flex;
+    background-color: rgba(0 0 0 / 0.5);
+    padding: 2rem;
+	gap: 2rem;
+
+	&__left {
+		align-self: center
+	}
+
+	&__right {
+		display: flex;
+		justify-content: space-between;
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		border-bottom: 1px solid white;
+		padding-bottom: 2rem;
+		border-top: 1px solid white;
+		padding-top: 2rem;
+	}
+
+	&__title,
+	&__sub-title {
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		line-height: normal;
+		background-image: url('#{$imageFolder}/release-cover/mkdg003_ziul_oiram_eternal_shadow.jpg');
+		background-clip: text;
+		color: transparent;
+		background-size: cover;
+		background-position: bottom;
+		text-shadow: 0 0 4px rgb(255 255 255 / 25%);
+	}
+
+	&__title {
+		font-size: 4rem;
+		letter-spacing: .2rem;
+		line-height: 1;
+		// color: #c5c2b8;
+		
+	}
+
+	&__sub-title {
+		font-size: 2rem;
+		letter-spacing: .1rem;
+		text-shadow: 0 0 1px rgb(255 255 255 / 50%);
+	}
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		border-radius: 1rem;
+	}
+
+	.heading {
+		margin-bottom: 0;
+	}
+
+	@include mobile {
+		flex-direction: column;
+
+		img {
+			max-width: 100%;
+		}
+
+		.btn {
+			margin-top: 2rem;
+		}
+	}
+}

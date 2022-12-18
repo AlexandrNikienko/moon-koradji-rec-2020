@@ -1,4 +1,20 @@
-<section *ngIf="_purchase$ | async as purchase" class="hero-wrapper">
+<section *ngIf="_purchase$ | async as purchase" class="new">
+	<div class="new__left">
+		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'">
+		</app-picture>
+	</div>
+
+	<div class="new__right">
+		<div *ngIf="purchase.title" class="heading">
+			<div class="heading__title"> {{ purchase.title }}</div>
+		</div>
+		<div class="new__title">{{purchase.item.title}}</div>
+		<div class="new__sub-title">{{purchase.item.subtitle}}</div>
+		<a [routerLink]="purchase.item.button.routerLink" class="btn btn--light">{{purchase.item.button.title}}</a>
+	</div>
+</section>
+
+<!-- <section *ngIf="_purchase$ | async as purchase" class="hero-wrapper">
 	<div *ngIf="purchase.title" class="heading">
 		<div class="heading__title"> {{ purchase.title }}</div>
 	</div>
@@ -31,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="recent-releases-wrapper">
 	<div class="heading">
