@@ -32,7 +32,7 @@
             "isHero": true,
             "releaseNumber": "MKDG003",
             "releaseNote": "2022",
-            "releaseDate": "Dec 10, 2022",
+            "releaseDate": "Dec 20, 2022",
             "releaseTitle": "Ziul Oiram - Eternal Shadow",
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
@@ -48,17 +48,20 @@
                 },
                 {
                     "paragraph": "Dense bass and drums massage your body, dynamic sounds and percussion call you to dance, mysterious backgrounds envelope the brain and delight the ears with a new story about the sacred."
+                },
+                {
+                    "paragraph": "p.s. Buy full length EP and get a bonus with 24 bit tracks (only on our bandcamp)."
                 }
             ],
             "cdAuthor": "Luiz Mario",
             "masteredBy": "Petran",
             "artworkBy": "Fernando Fetex",
             "beatspaceLink": "",
-            "bandcampLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/ziul-oiram-eternal-shadow-16-24-bit",
             "artists": [
                 "Ziul Oiram"
             ],
-            "embedAudio": ""
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 406px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=916531499/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/ziul-oiram-eternal-shadow-16-24-bit\">Ziul Oiram - Eternal Shadow (16 &amp; 24 bit) by Moon Koradji Records</a></iframe>"
         },
         {
             "releaseNumber": "MKCD012",
