@@ -33,7 +33,7 @@ export class ArtistComponent implements OnInit, OnDestroy {
 
 			this.requestSub = this.requestTo$.subscribe(response => {
 				this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
-				//this.setMetaData(this.artist);
+				this.setMetaData(this.artist);
 				this.title.setTitle(this.artist.artistName);
 			});
 		})
@@ -48,7 +48,9 @@ export class ArtistComponent implements OnInit, OnDestroy {
 		}
 	}
 
+	// TODO
 	setMetaData(artist: Artist): void {
+		console.log('setMetaData')
 		this.meta.removeTag('property="og:title"');
 		this.meta.removeTag('property="og:image"');
 		this.meta.removeTag('property="og:url"');
