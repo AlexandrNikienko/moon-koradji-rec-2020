@@ -2,14 +2,14 @@
     "news": [
 		{
             "link": "https://www.facebook.com/events/690893822772495",
-            "image": "https://scontent.fiev11-1.fna.fbcdn.net/v/t39.30808-6/325746738_573953997908244_2008928292825130512_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=340051&_nc_ohc=rnlQIUsKiO4AX_MLd8j&_nc_ht=scontent.fiev11-1.fna&oh=00_AfDu0cJShZ1k7ZBmt346rO4S5gfQoNxgc0IUS1INDxgMAg&oe=63CC59E9",
+            "image": "assets/images/events/Mexico.jpg",
             "title": "Sopa de Cerebro 2023: Moon Koradji label edition",
             "text": "México -Tierra, Apr 22-23 2023",
             "target": "_blank"
         },
         {
             "link": "https://www.facebook.com/events/1559646241203206",
-            "image": "https://scontent.fiev11-1.fna.fbcdn.net/v/t39.30808-6/321490110_2419118954922423_217153352620346950_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=340051&_nc_ohc=mkgLzJBv8nsAX-aNVt0&_nc_ht=scontent.fiev11-1.fna&oh=00_AfDpCCpddTQX8QfGbf5LX7XktSgofqIM1v0dK21x8dRjLA&oe=63CCCE98",
+            "image": "assets/images/events/Shadow.jpg",
             "title": "The Shadow Of The Dark Shaman",
             "text": "Stockholm, Aug 25-27 2023",
             "target": "_blank"
