@@ -1,7 +1,8 @@
 <div class="artists-wrapper">
 	<ng-container *ngIf="djs$ | async as djs">
 		<div class="heading">
-			<p class="heading__title">DJs</p>
+			<h1 class="heading__title">Our DJs</h1>
+			<h2 class="heading__sub-title">Meet our talented roster of DJs</h2>
 		</div>
 
 		<div class="artist-item" *ngFor="let item of djs">
@@ -15,7 +16,8 @@
 
 	<ng-container *ngIf="artists$ | async as artists">
 		<div class="heading mt-4">
-			<p class="heading__title">Artists</p>
+			<h1 class="heading__title">Our Artists</h1>
+			<h2 class="heading__sub-title">Get to know the creative minds behind our music</h2>
 		</div>
 
 		<div #artist class="artist-item" *ngFor="let item of artists">

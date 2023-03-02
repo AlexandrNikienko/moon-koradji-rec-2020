@@ -5,7 +5,11 @@
 		<i class="fas fa-long-arrow-alt-left"></i>Go to Artists page
 	</a>
 
-	<h1 class="s-artist-name">{{artist.artistName}}</h1>
+	<!-- <h1 class="s-artist-name">{{artist.artistName}}</h1> -->
+
+	<div class="heading">
+		<h1 class="heading__title">{{artist.artistName}}</h1>
+	</div>
 
 	<div *ngIf="artist.artistRealName" class="s-artist-details">Real name: {{artist.artistRealName}}</div>
 

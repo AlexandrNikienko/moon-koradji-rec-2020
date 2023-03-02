@@ -13,7 +13,7 @@ const artistRoutes: Routes = [
 		component: ArtistComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Artist'
+			title: 'Artist Page | Moon Koradji Records'
 		}
 	}
 ];

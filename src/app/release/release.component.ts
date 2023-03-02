@@ -1,8 +1,8 @@
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
-import { Meta, Title } from '@angular/platform-browser';
 
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
@@ -22,11 +22,13 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 	private releaseRoute = this.route.snapshot.params['releaseRoute'];
 	private destroyStream = new Subject<void>();
 
-	constructor(private route: ActivatedRoute,
+	private metaDataObj: iMeta;
+
+	constructor(
+		private route: ActivatedRoute,
 		private dataService: DataService,
-		private meta: Meta,
-		private title: Title) {
-	}
+		private metaData: MetaDataService
+	) {}
 
 	ngOnInit() {
 		this.releases$.pipe(
@@ -36,8 +38,24 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 			}),
 			takeUntil(this.destroyStream)
 		).subscribe(artists => {
-			this.title.setTitle(this.release.releaseTitle);
 			this.involved = this.getInvolvedArtists(artists, this.release.artists);
+
+			let releaseDesc = '';
+
+			for (let i = 0; i < this.release.releaseDescription.length; i++) {
+				releaseDesc += this.release.releaseDescription[i].paragraph;
+			}
+
+			this.metaDataObj = {
+				title: `${this.release.releaseTitle} | Moon Koradji Records`,
+				description: releaseDesc,
+				ogTitle: this.release.releaseTitle,
+				ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + this.release.releaseCover.default,
+				ogUrl: 'https://www.moonkoradji.com/releases/' + this.release.releaseRoute,
+				ogDescription: releaseDesc
+			}
+
+			this.metaData.setMetaData(this.metaDataObj);
 		})
 	}
 
@@ -54,35 +72,7 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 		return involved;
 	}
 
-	setMetaData(release: Release): void {
-		this.meta.removeTag('property="og:title"');
-		this.meta.removeTag('property="og:image"');
-		this.meta.removeTag('property="og:url"');
-		this.meta.removeTag('property="og:description"');
-
-		let releaseDesc = '';
-
-		for (let i = 0; i < release.releaseDescription.length; i++) {
-			releaseDesc += release.releaseDescription[i].paragraph;
-		}
-
-		this.meta.addTags([
-			{
-				property: 'og:title',
-				content: release.releaseTitle
-			},
-			{
-				property: 'og:image',
-				content: 'http://www.moonkoradji.com/assets/images/release-cover/' + release.releaseCover
-			},
-			{
-				property: 'og:url',
-				content: 'http://www.moonkoradji.com/releases/' + release.releaseRoute
-			},
-			{
-				property: 'og:description',
-				content: releaseDesc
-			}
-		]);
-	}
+	shareOnFacebook(): void {
+		window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent('https://www.moonkoradji.com/releases/' + this.release.releaseRoute), '_blank');
+	  }
 }

@@ -6,7 +6,8 @@
 
 	<div class="new__right">
 		<div *ngIf="purchase.title" class="heading">
-			<div class="heading__title"> {{ purchase.title }}</div>
+			<h1 class="heading__title"> {{ purchase.title }}</h1>
+			<h2 class="heading__sub-title"> {{ purchase.subtitle }}</h2>
 		</div>
 		<div class="new__title">{{purchase.item.title}}</div>
 		<div class="new__sub-title">{{purchase.item.subtitle}}</div>
@@ -51,7 +52,8 @@
 
 <section class="recent-releases-wrapper">
 	<div class="heading">
-		<div class="heading__title">Recent Releases</div>
+		<h1 class="heading__title">Recent Releases</h1>
+		<h2 class="heading__sub-title">New Psychedelic Trance Music From Moon Koradji Records</h2>
 		<div class="heading__link"><a routerLink="/releases">View All</a></div>
 	</div>
 
@@ -85,7 +87,8 @@
 
 <section class="featured-artists-wrapper" *ngIf="featuredGalleryItems">
 	<div class="heading">
-		<div class="heading__title">Featured Artists</div>
+		<h1 class="heading__title">Featured Artists</h1>
+		<h2 class="heading__sub-title">Meet our talented featured artists</h2>
 		<div class="heading__link"><a routerLink="/artists">View All</a></div>
 	</div>
 

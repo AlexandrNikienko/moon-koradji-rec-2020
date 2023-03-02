@@ -5,6 +5,11 @@
     background-color: rgba(0 0 0 / 0.5);
     padding: 2rem;
 	gap: 2rem;
+	margin-top: 5rem;
+
+	@include mobile {
+		margin-top: 0;
+	}
 
 	&__left {
 		align-self: center

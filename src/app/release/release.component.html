@@ -1,12 +1,12 @@
 <div class="row" *ngIf="release">
     <div class="col-md-6 col-sm-12">
-        <h1 class="release-name">
-			{{release.releaseTitle}}
-			
-            <a *ngIf="false" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook">
-                <i class="fas fa-share fa-2x"></i>
-            </a>
-        </h1>
+		<div class="heading">
+			<h1 class="heading__title">{{release.releaseTitle}}</h1>
+		</div>
+
+		<a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
+			<span class="fas fa-share fa-2x"></span>
+		</a>
 
         <div class="release-main clearfix">
 			<app-picture [cover]="release.releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>

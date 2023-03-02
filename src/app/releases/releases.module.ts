@@ -13,7 +13,7 @@ const releasesRoutes: Routes = [
 		component: ReleasesComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Releases Page'
+			title: 'Our Catalogue | Moon Koradji Records'
 		}
 	}
 ];

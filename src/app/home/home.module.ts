@@ -13,7 +13,7 @@ const homeRoutes: Routes = [
 		component: HomeComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Home'
+			title: ''
 		}
 	}
 ];

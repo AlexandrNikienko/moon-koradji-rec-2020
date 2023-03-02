@@ -14,7 +14,7 @@ const artistRoutes: Routes = [
 		component: PodcastsComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Podcasts'
+			title: 'Dive into the Psychedelic Soundscape: Our Podcasts on Moon Koradji Records'
 		}
 	}
 ];

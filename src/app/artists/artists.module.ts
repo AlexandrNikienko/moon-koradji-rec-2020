@@ -13,7 +13,7 @@ const artistsRoutes: Routes = [
 		component: ArtistsComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Artists'
+			title: 'Innovative Sounds of Psychedelic Trance: Meet Our Talented Artists and DJs'
 		}
 	}
 ];

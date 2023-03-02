@@ -15,16 +15,16 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.router.events
-			.pipe(
-				filter(event => event instanceof NavigationEnd))
-			.subscribe((event: NavigationEnd) => {
-				const titleToSet = this.getDeepestTitle(this.router.routerState.snapshot.root);
+		// this.router.events
+		// 	.pipe(
+		// 		filter(event => event instanceof NavigationEnd))
+		// 	.subscribe((event: NavigationEnd) => {
+		// 		const titleToSet = this.getDeepestTitle(this.router.routerState.snapshot.root);
 
-				if (titleToSet) {
-					this.titleService.setTitle(titleToSet);
-				}
-			});
+		// 		if (titleToSet) {
+		// 			this.titleService.setTitle(titleToSet);
+		// 		}
+		// 	});
 
 		this.checkIfWinter();
 	}
@@ -34,10 +34,6 @@ export class AppComponent implements OnInit {
 		const winter = [11, 0, 1]; // Dec, Jan, Feb
 		const month = date.getMonth();
 		this.winter = winter.includes(month);
-	}
-
-	setTitle(newTitle: string) {
-		this.titleService.setTitle(newTitle);
 	}
 
 	private getDeepestTitle(routeSnapshot: ActivatedRouteSnapshot) {

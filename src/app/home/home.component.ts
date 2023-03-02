@@ -1,3 +1,4 @@
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -29,14 +30,29 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	// public crystalization = new Crystalization();
 
-	constructor(private dataService: DataService, private jsonLDService: JsonLDService) { }
+	constructor(
+		private dataService: DataService,
+		private jsonLDService: JsonLDService,
+		private metaData: MetaDataService
+	) {}
 
 	ngOnInit() {
 		// this.crystalization.init('.brand-text');
 
 		this.getFeatureGaleryItems();
 
-		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema)
+		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
+
+		const metaDataObj: iMeta = {
+			title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
+			description: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko a.k.a. dj Omsun.',
+			ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
+			ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
+			ogUrl: 'https://www.moonkoradji.com/',
+			ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko a.k.a. dj Omsun.'
+		}
+
+		this.metaData.setMetaData(metaDataObj);
 	}
 
 	ngOnDestroy() {

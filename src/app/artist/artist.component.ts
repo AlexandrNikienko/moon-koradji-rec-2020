@@ -1,3 +1,4 @@
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -19,11 +20,13 @@ export class ArtistComponent implements OnInit, OnDestroy {
 	private routeSub: Subscription;
 	private requestSub: Subscription;
 
-	constructor(private route: ActivatedRoute,
+	private metaDataObj: iMeta;
+
+	constructor(
+		private route: ActivatedRoute,
 		private dataService: DataService,
-		private meta: Meta,
-		private title: Title) {
-	}
+		private metaData: MetaDataService
+	) {}
 
 	ngOnInit(): void {
 		this.routeSub = this.route.paramMap.subscribe(params => {
@@ -33,8 +36,23 @@ export class ArtistComponent implements OnInit, OnDestroy {
 
 			this.requestSub = this.requestTo$.subscribe(response => {
 				this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
-				this.setMetaData(this.artist);
-				this.title.setTitle(this.artist.artistName);
+
+				let artistDesc = '';
+
+				for (let i = 0; i < this.artist.artistDescription.length; i++) {
+					artistDesc += this.artist.artistDescription[i].paragraph;
+				}
+
+				this.metaDataObj = {
+					title: `${this.artist.artistName} | Moon Koradji Records`,
+					description: artistDesc,
+					ogTitle: this.artist.artistName,
+					ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + this.artist.artistAvatar,
+					ogUrl: 'https://www.moonkoradji.com/artists/' + this.artist.artistRoute,
+					ogDescription: artistDesc
+				}
+
+				this.metaData.setMetaData(this.metaDataObj);
 			});
 		})
 	}
@@ -46,39 +64,5 @@ export class ArtistComponent implements OnInit, OnDestroy {
 		if (this.requestSub) {
 			this.requestSub.unsubscribe();
 		}
-	}
-
-	// TODO
-	setMetaData(artist: Artist): void {
-		console.log('setMetaData')
-		this.meta.removeTag('property="og:title"');
-		this.meta.removeTag('property="og:image"');
-		this.meta.removeTag('property="og:url"');
-		this.meta.removeTag('property="og:description"');
-
-		let artistDesc = '';
-
-		for (let i = 0; i < artist.artistDescription.length; i++) {
-			artistDesc += artist.artistDescription[i].paragraph;
-		}
-
-		this.meta.addTags([
-			{
-				property: 'og:title',
-				content: artist.artistName
-			},
-			{
-				property: 'og:image',
-				content: 'http://www.moonkoradji.com/assets/images/artists/' + artist.artistAvatar
-			},
-			{
-				property: 'og:url',
-				content: 'http://www.moonkoradji.com/artists/' + artist.artistRoute
-			},
-			{
-				property: 'og:description',
-				content: artistDesc
-			}
-		]);
 	}
 }
