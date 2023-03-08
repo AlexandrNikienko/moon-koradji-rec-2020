@@ -126,7 +126,7 @@
   "defaultProject": "moon-koradji-rec",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }
