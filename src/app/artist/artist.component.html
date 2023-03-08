@@ -1,15 +1,13 @@
 <ng-container *ngIf="artist">
+	<div class="heading">
+		<h1 class="heading__title">{{artist.artistName}}</h1>
+	</div>
+	
 	<img *ngIf="artist.artistAvatar" class="s-artist-foto" src="/assets/images/artists/{{artist.artistAvatar}}" alt="{{artist.artistName}}">
 
 	<a class="s-go-back" routerLink="/artists">
 		<i class="fas fa-long-arrow-alt-left"></i>Go to Artists page
 	</a>
-
-	<!-- <h1 class="s-artist-name">{{artist.artistName}}</h1> -->
-
-	<div class="heading">
-		<h1 class="heading__title">{{artist.artistName}}</h1>
-	</div>
 
 	<div *ngIf="artist.artistRealName" class="s-artist-details">Real name: {{artist.artistRealName}}</div>
 

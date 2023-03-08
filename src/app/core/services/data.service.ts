@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
+import { map, shareReplay, tap } from 'rxjs/operators';
 
 import { DATAFOLDER } from '../../../environments/environment';
 
 @Injectable()
 export class DataService {
-	constructor(private http: HttpClient) { }
+	existingParamsRoutes = ['artists', 'djs', 'releases'];
+	existingPramas = new Subject<any[]>();
+
+	constructor(private http: HttpClient) {
+		this.getExistingParams();
+	}
 
 	requestToData(item: string): Observable<any> {
 		const url = `${DATAFOLDER}${item}.json`;
@@ -17,5 +22,26 @@ export class DataService {
 				map(object => object[item]),
 				shareReplay(1)
 			);
+	}
+
+	getExistingParams(): void {
+		const existingParams = [];
+
+		this.existingParamsRoutes.forEach(route => {
+			const url = `${DATAFOLDER}${route}.json`;
+
+			this.http.get<any[]>(url)
+				.subscribe(object => {
+					if (Object.keys(object)[0] === 'releases') {
+						existingParams.push(object[route].map(obj => obj.releaseRoute))
+					} else {
+						existingParams.push(object[route].map(obj => obj.artistRoute))
+					}
+					
+					if (existingParams.length > 0 && existingParams.length === this.existingParamsRoutes.length) {
+						this.existingPramas.next(existingParams.flat());
+					  }
+				})
+		});
 	}
 }

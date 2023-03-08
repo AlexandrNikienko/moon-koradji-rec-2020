@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ResourceExistsGuard } from './core/services/resource-exist-guard.service';
 import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.component';
 
 export const appRoutes: Routes = [
@@ -12,7 +13,8 @@ export const appRoutes: Routes = [
 	},
 	{
 		path: 'releases/:releaseRoute',
-		loadChildren: './release/release.module#ReleaseModule'
+		loadChildren: './release/release.module#ReleaseModule',
+		canActivate: [ResourceExistsGuard]
 	},
 	{
 		path: 'artists',
@@ -20,7 +22,8 @@ export const appRoutes: Routes = [
 	},
 	{
 		path: 'artists/:artistRoute',
-		loadChildren: './artist/artist.module#ArtistModule'
+		loadChildren: './artist/artist.module#ArtistModule',
+		canActivate: [ResourceExistsGuard]
 	},
 	// {
 	// 	path: 'merch',
@@ -34,8 +37,12 @@ export const appRoutes: Routes = [
 		path: 'about',
 		loadChildren: './about/about.module#AboutModule'
 	},
-	{
-		path: '**',
+	{ 
+		path: '404',
 		component: LayoutNotFoundComponent
+	},
+  	{ 
+		path: '**',
+		redirectTo: '/404'
 	}
 ];

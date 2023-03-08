@@ -56,7 +56,7 @@ export class JsonLDService {
 	}
 
 	insertSchema(schema: Record<string, any>, className = 'structured-data'): void {
-		console.log(this.orgSchema())
+		// console.log(this.orgSchema())
 		let script;
 		let shouldAppend = false;
 		if (this._document.head.getElementsByClassName(className).length) {

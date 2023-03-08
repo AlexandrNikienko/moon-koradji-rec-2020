@@ -280,6 +280,7 @@ app-visuals {
 
 .socials {
 	position: fixed;
+	z-index: 111;
 	top: 100px;
 	right: 5px;
 	display: flex;
@@ -301,10 +302,6 @@ app-visuals {
 			transform: scale3d(1.5, 1.5, 1);
 			text-decoration: none;
 		}
-	}
-
-	@include tablet {
-		display: none;
 	}
 	
 	@include mobile {

@@ -11,10 +11,8 @@
 }
 
 ::ng-deep .release-cover {
-	width: 240px;
+	// width: 240px;
 	margin: 0 1rem 0.75rem 0;
-	float: left;
-	float: inline-start;
 	box-shadow: 0 0 1px #fff, -1px -1px 1px #9ff, 1px -1px 1px #9c9, -1px 1px 1px #6cf, 1px 1px 1px #66f;
 
 	@supports (margin-inline-end: 0) {
@@ -40,7 +38,7 @@
 		flex: 1 1 100%;
 		line-height: normal;
 
-		&--dark {
+		&.dark-color {
 			color: #bbb;
 		}
 	}
@@ -97,35 +95,25 @@
 .s-involved-artists {
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 4rem;
-	margin: 0 -10px 30px;
+	gap: 20px;
+	padding-top: 1rem;
+	margin-bottom: 2rem;
 
 	&__title {
 		width: 100%;
 		margin-bottom: 10px;
-		padding: 0 10px;
 		color: #bbb;
 	}
 
 	&__item {
-		flex: 0 0 128px;
+		flex: 0 0 110px;
 		position: relative;
-		padding: 10px;
-
-		&::before {
-			content: "";
-			display: block;
-			padding-top: 100%;
-		}
+		aspect-ratio: 1;
 	}
 
 	&__content {
-		$gap: 10px;
 		position: absolute;
-		top: $gap;
-		left: $gap;
-		right: $gap;
-		bottom: $gap;
+		inset: 0;
 		background-image: url("#{$imageFolder}/mk_square.jpg");
 		background-size: 115%;
 		background-position: center;

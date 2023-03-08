@@ -1,14 +1,14 @@
 <div class="row" *ngIf="release">
-    <div class="col-md-6 col-sm-12">
-		<div class="heading">
-			<h1 class="heading__title">{{release.releaseTitle}}</h1>
-		</div>
+	<div class="heading">
+		<h1 class="heading__title">{{release.releaseTitle}}</h1>
+	</div>
 
+    <div class="col-md-6 col-sm-12">
 		<a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
 			<span class="fas fa-share fa-2x"></span>
 		</a>
 
-        <div class="release-main clearfix">
+        <div class="release-main">
 			<app-picture [cover]="release.releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
 
             <div class="release-description">
@@ -19,15 +19,15 @@
         </div>
 
         <div class="release-credits">
-            <p class="release-credits__paragraph release-credits__paragraph--dark" *ngIf="release.compiledBy">Compiled by {{release.compiledBy}}</p>
+            <p class="release-credits__paragraph dark-color" *ngIf="release.compiledBy">Compiled by {{release.compiledBy}}</p>
 
-            <p class="release-credits__paragraph release-credits__paragraph--dark" *ngIf="release.cdAuthor">W&P by {{release.cdAuthor}}</p>
+            <p class="release-credits__paragraph dark-color" *ngIf="release.cdAuthor">W&P by {{release.cdAuthor}}</p>
 
-            <p class="release-credits__paragraph release-credits__paragraph--dark">Mastered by {{release.masteredBy}}</p>
+            <p class="release-credits__paragraph dark-color">Mastered by {{release.masteredBy}}</p>
 
-            <p class="release-credits__paragraph release-credits__paragraph--dark">Cover design by {{release.artworkBy}}</p>
+            <p class="release-credits__paragraph dark-color">Cover design by {{release.artworkBy}}</p>
 
-            <p class="release-credits__paragraph release-credits__paragraph--dark">Release date: {{release.releaseDate}}</p>
+            <p class="release-credits__paragraph dark-color">Release date: {{release.releaseDate}}</p>
         </div>
 
         <div class="release-credits">

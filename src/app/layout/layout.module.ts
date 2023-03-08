@@ -9,6 +9,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
 	declarations: [
@@ -21,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
 		CommonModule,
 		RouterModule,
 		MatToolbarModule,
-		MatButtonModule
+		MatButtonModule,
+		MatTooltipModule
 	],
 	exports: [
 		HeaderComponent,

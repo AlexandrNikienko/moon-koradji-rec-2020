@@ -20,35 +20,15 @@ export class MetaDataService {
 	}
 
 	setMetaData(meta: iMeta): void {
-		this.meta.removeTag('property="og:title"');
-		this.meta.removeTag('property="og:image"');
-		this.meta.removeTag('property="og:url"');
-		this.meta.removeTag('property="og:description"');
-		this.meta.removeTag('name="description"');
-
+		if (!meta) {
+			return;
+		}
+		
 		this.title.setTitle(meta.title);
-
-		this.meta.addTags([
-			{
-				property: 'og:title',
-				content: meta.ogTitle
-			},
-			{
-				property: 'og:image',
-				content: meta.ogImage
-			},
-			{
-				property: 'og:url',
-				content: meta.ogUrl
-			},
-			{
-				property: 'og:description',
-				content: meta.ogDescription
-			},
-			{
-				name: 'description',
-				content: meta.description
-			}
-		]);
+		this.meta.updateTag({name: 'description', content: meta.description});
+		this.meta.updateTag({property: 'og:title', content: meta.ogTitle});
+		this.meta.updateTag({property: 'og:image', content: meta.ogImage});
+		this.meta.updateTag({property: 'og:url', content: meta.ogUrl});
+		this.meta.updateTag({property: 'og:description', content: meta.ogDescription});
 	}
 }
