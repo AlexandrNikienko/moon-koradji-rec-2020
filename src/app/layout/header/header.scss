@@ -38,15 +38,10 @@
 		transition: .1s;
 		font-weight: 400;
 		min-width: unset;
-		// display: none;
 
         &:hover {
             color: white;
         }
-
-		@include mobile {
-			// display: block;
-		}
     }
 
     .nav-link {

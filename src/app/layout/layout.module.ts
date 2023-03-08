@@ -8,8 +8,10 @@ import { VisualsComponent } from './visuals/visuals.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatRippleModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 	declarations: [
@@ -23,7 +25,9 @@ import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/le
 		RouterModule,
 		MatToolbarModule,
 		MatButtonModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatRippleModule,
+		MatIconModule
 	],
 	exports: [
 		HeaderComponent,

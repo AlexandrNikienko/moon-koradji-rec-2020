@@ -253,9 +253,12 @@ app-visuals {
 		align-items: center;
 	}
 
-	.mat-icon-button {
+	.mdc-icon-button {
 		color: white;
 		position: absolute;
+		width: 40px;
+		height: 40px;
+		padding: 0;
 		right: 12px;
 		top: 50%;
 		transform: translateY(-50%);
