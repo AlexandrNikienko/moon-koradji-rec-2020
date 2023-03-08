@@ -5,24 +5,24 @@ import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.com
 export const appRoutes: Routes = [
 	{
 		path: 'index',
-		loadChildren: './home/home.module#HomeModule'
+		loadChildren: () => import('./home/home.module').then(x => x.HomeModule)
 	},
 	{
 		path: 'releases',
-		loadChildren: './releases/releases.module#ReleasesModule'
+		loadChildren: () => import('./releases/releases.module').then(x => x.ReleasesModule)
 	},
 	{
 		path: 'releases/:releaseRoute',
-		loadChildren: './release/release.module#ReleaseModule',
+		loadChildren: () => import('./release/release.module').then(x => x.ReleaseModule),
 		canActivate: [ResourceExistsGuard]
 	},
 	{
 		path: 'artists',
-		loadChildren: './artists/artists.module#ArtistsModule'
+		loadChildren: () => import('./artists/artists.module').then(x => x.ArtistsModule)
 	},
 	{
 		path: 'artists/:artistRoute',
-		loadChildren: './artist/artist.module#ArtistModule',
+		loadChildren: () => import('./artist/artist.module').then(x => x.ArtistModule),
 		canActivate: [ResourceExistsGuard]
 	},
 	// {
@@ -31,11 +31,11 @@ export const appRoutes: Routes = [
 	// },
 	{
 		path: 'podcasts',
-		loadChildren: './podcasts/podcasts.module#PodcastsModule'
+		loadChildren: () => import('./podcasts/podcasts.module').then(x => x.PodcastsModule)
 	},
 	{
 		path: 'about',
-		loadChildren: './about/about.module#AboutModule'
+		loadChildren: () => import('./about/about.module').then(x => x.AboutModule)
 	},
 	{ 
 		path: '404',

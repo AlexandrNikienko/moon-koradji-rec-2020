@@ -12,7 +12,6 @@ interface Cover {
 	selector: 'app-picture',
 	templateUrl: './picture.component.html'
 })
-
 export class PictureComponent {
 	@Input() cover: Cover;
 	@Input() class: string;
