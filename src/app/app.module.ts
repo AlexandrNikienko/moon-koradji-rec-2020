@@ -7,9 +7,6 @@ import { RouterModule } from '@angular/router';
 
 import { appRoutes } from './app.module.routes';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -38,8 +35,6 @@ import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.com
 			scrollPositionRestoration: 'enabled'
 		}),
 		BrowserAnimationsModule,
-		MatToolbarModule,
-		MatButtonModule,
 		PipesModule,
 		LayoutModule,
 		HomeModule,
@@ -52,9 +47,7 @@ import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.com
 		AboutModule
 	],
 	exports: [
-		RouterModule,
-		MatToolbarModule,
-		MatButtonModule
+		RouterModule
 	],
 	providers: [
 		Title

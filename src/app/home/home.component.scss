@@ -32,6 +32,8 @@
 .bottom {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
 
 	&__left {
 		flex: 0 1 340px;

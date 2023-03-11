@@ -34,7 +34,8 @@ import { MatIconModule } from '@angular/material/icon';
 		FooterComponent,
 		VisualsComponent,
 		RouterModule,
-		ScrollToTopComponent
+		ScrollToTopComponent,
+		MatTooltipModule
 	]
 })
 

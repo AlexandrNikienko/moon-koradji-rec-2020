@@ -54,9 +54,16 @@ src/assets/images/merch/design-by-anneta-salamandra-c.webp
 src/assets/images/merch/design-by-anneta-salamandra-c2.webp
 
 #Anguar Cache
+./angular
 /.angular/cache
+/.angular/cache/15.2.1
+/.angular/cache/15.2.1/angular-webpack
+/.angular/cache/15.2.1/babel-webpack
 /.angular/**
 .angular
 .angular/cache
+.angular/cache/15.2.1
+.angular/cache/15.2.1/angular-webpack
+.angular/cache/15.2.1/babel-webpack
 .angular/**
 

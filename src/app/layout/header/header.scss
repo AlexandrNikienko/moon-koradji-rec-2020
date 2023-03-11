@@ -65,7 +65,7 @@
         position: absolute;
         width: $height;
         height: $height;
-        background-color: #111;
+        background-color: transparent;
         right: 10px;
         top: 2px;
 		z-index: 10;
@@ -132,6 +132,10 @@
         background-size: 100%;
         transition: 1s;
     }
+}
+
+.support-link {
+	margin-right: 16px;
 }
 
 @include mobile {

@@ -1,9 +1,9 @@
 export class Crystalization {
-	template: string = `<div class="crystalization">
-							<div class="crystalization__glow"></div>
-							<div class="crystalization__overlay"></div>
-							<canvas class="crystalization__canvas"></canvas>
-						</div>`
+	template = `<div class="crystalization">
+					<div class="crystalization__glow"></div>
+					<div class="crystalization__overlay"></div>
+					<canvas class="crystalization__canvas"></canvas>
+				</div>`
 
 	createHTML(selector: string): void {
 		let el = <HTMLElement>document.querySelector(selector);
@@ -15,6 +15,7 @@ export class Crystalization {
 			wrapper.style.position = 'absolute';
 		}
 	}
+
 	init(selector = 'body'): void {
 		this.createHTML(selector);
 
@@ -34,12 +35,12 @@ export class Crystalization {
 			ctx.globalCompositeOperation = "lighter";
 		};
 		
-		document.querySelector(".crystalization__overlay").addEventListener("click", function () {
-			hue = Math.random() * 360;
-			bgg.style.background = "radial-gradient(ellipse at center, hsla(" + hue + ",50%,50%,.8) 0%,rgba(0,0,0,0) 100%)";
-			dots = [];
-			pushDots();
-		})
+		// document.querySelector("body").addEventListener("click", function() {
+		// 	hue = Math.random() * 360;
+		// 	bgg.style.background = "radial-gradient(ellipse at center, hsla(" + hue + ",50%,50%,.8) 0%,rgba(0,0,0,0) 100%)";
+		// 	dots = [];
+		// 	pushDots();
+		// })
 		
 		var dots = [];
 		var md = 100;
@@ -51,7 +52,7 @@ export class Crystalization {
 		var minSpeed = 6;
 		var hue = 230;
 		var hueDif = 50; // Hue +/-
-		var glow = 10; // Turn this off for better performance
+		var glow = 0; // 10; // Turn this off for better performance
 		ctx.globalCompositeOperation = "lighter";
 		
 		function pushDots() {
@@ -65,10 +66,11 @@ export class Crystalization {
 					m: Math.random() * (maxSpeed - minSpeed) + minSpeed
 				});
 			}
-		} pushDots();
+		};
 		
 		function render() {
 			ctx.clearRect(0, 0, w, h);
+
 			for (let i = 1; i < dots.length; i++) {
 				ctx.beginPath();
 				const grd = ctx.createLinearGradient(dots[i].x, dots[i].y, dots[i].x + dots[i].w, dots[i].y + dots[i].h);
@@ -99,8 +101,11 @@ export class Crystalization {
 		}
 		
 		bgg.style.background = "radial-gradient(ellipse at center, hsla(" + hue + ",50%,50%,.8) 0%,rgba(0,0,0,0) 100%)";
+
+		pushDots();
 		render();
 	}
+
 	destroy() {
 		document.querySelector('.crystalization').remove()
 	}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -10,18 +10,8 @@ import { SharedVideoComponent } from './video/video.component';
 import { ReleaseCardComponent } from './release-card/release-card.component';
 import { PictureComponent } from './picture/picture.component';
 
-// import { SwiperModule } from 'ngx-swiper-wrapper';
-// import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-// import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-
-// const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-// 	observer: true,
-// 	direction: 'horizontal'
-// };
-
 @NgModule({
 	imports: [
-		// SwiperModule,
 		PipesModule,
 		CommonModule,
 		RouterModule
@@ -41,12 +31,7 @@ import { PictureComponent } from './picture/picture.component';
 		ReleaseCardComponent,
 		PictureComponent
 	],
-	// providers: [
-	// 	{
-	// 		provide: SWIPER_CONFIG,
-	// 		useValue: DEFAULT_SWIPER_CONFIG
-	// 	}
-	// ]
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class SharedModule {

@@ -27,15 +27,16 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a href="https://u24.gov.ua/" target="_blank"
+			<a href="https://u24.gov.ua/" class="support-link" target="_blank"
 				[matTooltip]="'Support Ukraine'"
 				[matTooltipPosition]="'below'"
+				[matTooltipShowDelay]="100"
 				aria-label="Flag of Ukraine"
 			>
 				<img *ngIf="!showSupportUkraine" class="support-ua" src="./assets/images/support-ua.png" alt="">
 			</a>
 
-			<a mat-button class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
+			<a class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
 				aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,41 +46,41 @@
 			<div class="collapse navbar-collapse" id="navbarToggler">
 				<ul class="navbar-nav">
 					<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-						<a mat-button class="nav-link" routerLink="/">
+						<a class="nav-link" routerLink="/">
 							<i class="fas fa-om" aria-hidden="true"></i>Home
 						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/releases">
+						<a class="nav-link" routerLink="/releases">
 							<i class="fas fa-compact-disc" aria-hidden="true"></i>Releases
 						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/artists">
+						<a class="nav-link" routerLink="/artists">
 							<i class="fas fa-headphones-alt" aria-hidden="true"></i>Artists
 						</a>
 					</li>
 
 					<!--<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
+						<a class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
 					</li>-->
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/podcasts">
+						<a class="nav-link" routerLink="/podcasts">
 							<i class="fas fa-podcast" aria-hidden="true"></i>Podcasts
 						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">
+						<a class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">
 							<i class="fas fa-tshirt" aria-hidden="true"></i>Merch
 						</a>
 					</li>
 
 					<li class="nav-item" routerLinkActive="active">
-						<a mat-button class="nav-link" routerLink="/about">
+						<a class="nav-link" routerLink="/about">
 							<i class="fas fa-info" aria-hidden="true"></i>About
 						</a>
 					</li>

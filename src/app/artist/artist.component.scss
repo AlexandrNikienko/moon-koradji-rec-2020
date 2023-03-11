@@ -3,7 +3,7 @@
 .s-artist-foto {
 	width: 350px;
 	margin: 0 1rem 0.75rem 0;
-	box-shadow: 0 0 1px #fff, -1px -1px 1px #9ff, 1px -1px 1px #9c9, -1px 1px 1px #6cf, 1px 1px 1px #66f;
+	box-shadow: $brand-border;
 	border-radius: 6px;
 	float: left;
 	float: inline-start;
@@ -98,7 +98,7 @@
 		transition: 0.3s;
 
 		&:hover {
-			box-shadow: 0 0 1px #fff, -1px -1px 1px #9ff, 1px -1px 1px #9c9, -1px 1px 1px #6cf, 1px 1px 1px #66f;
+			box-shadow: $brand-border;
 		}
 
 		&::before {
