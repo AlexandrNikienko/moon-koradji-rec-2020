@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ReleaseComponent } from './release.component';
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
+import { HeadingComponent } from './../layout/heading/heading.component';
 
 const releaseRoutes: Routes = [
 	{
@@ -13,7 +14,7 @@ const releaseRoutes: Routes = [
 		component: ReleaseComponent,
 		pathMatch: 'full',
 		data: {
-			title: 'Release Page | Moon Koradji Records'
+			title: ''
 		}
 	}
 ];
@@ -28,7 +29,8 @@ const releaseRoutes: Routes = [
 		RouterModule,
 		PipesModule,
 		RouterModule.forChild(releaseRoutes),
-		SharedModule
+		SharedModule,
+		HeadingComponent
 	],
 	exports: [
 		RouterModule

@@ -1,0 +1,9 @@
+<div class="heading">
+	<h1 class="heading__title">{{ title }}</h1>
+
+	<h2 *ngIf="subTitle" class="heading__sub-title">{{ subTitle }}</h2>
+
+	<div *ngIf="route" class="heading__link">
+		<a [routerLink]="route">View All</a>
+	</div>
+</div>

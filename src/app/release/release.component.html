@@ -1,7 +1,5 @@
 <div class="row" *ngIf="release">
-	<div class="heading">
-		<h1 class="heading__title">{{release.releaseTitle}}</h1>
-	</div>
+	<mk-heading [title]="release.releaseTitle"></mk-heading>
 
     <div class="col-md-6 col-sm-12">
 		<a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">

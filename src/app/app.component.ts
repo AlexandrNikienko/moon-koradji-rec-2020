@@ -8,8 +8,6 @@ import { filter } from 'rxjs/operators';
 	templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-	public winter: boolean;
-
 	constructor(private router: Router,
 		private titleService: Title) {
 	}
@@ -25,25 +23,16 @@ export class AppComponent implements OnInit {
 		// 			this.titleService.setTitle(titleToSet);
 		// 		}
 		// 	});
-
-		this.checkIfWinter();
 	}
 
-	checkIfWinter(): void {
-		const date = new Date;
-		const winter = [11, 0, 1]; // Dec, Jan, Feb
-		const month = date.getMonth();
-		this.winter = winter.includes(month);
-	}
+	// private getDeepestTitle(routeSnapshot: ActivatedRouteSnapshot) {
 
-	private getDeepestTitle(routeSnapshot: ActivatedRouteSnapshot) {
+	// 	let title = routeSnapshot.data ? routeSnapshot.data['title'] : undefined;
 
-		let title = routeSnapshot.data ? routeSnapshot.data['title'] : undefined;
+	// 	if (routeSnapshot.firstChild) {
+	// 		title = this.getDeepestTitle(routeSnapshot.firstChild) || title;
+	// 	}
 
-		if (routeSnapshot.firstChild) {
-			title = this.getDeepestTitle(routeSnapshot.firstChild) || title;
-		}
-
-		return title;
-	}
+	// 	return title;
+	// }
 }

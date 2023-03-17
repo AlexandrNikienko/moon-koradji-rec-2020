@@ -1,3 +1,6 @@
+import { SharedLoaderComponent } from './../shared/loader/loader.component';
+import { PipesModule } from './../core/pipes/pipes.module';
+import { CommonModule } from '@angular/common';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DataService } from '../core/services/data.service';

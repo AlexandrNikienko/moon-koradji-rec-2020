@@ -5,7 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ReleasesComponent } from './releases.component';
 import { DataService } from '../core/services/data.service';
-
+import { HeadingComponent } from './../layout/heading/heading.component';
 
 const releasesRoutes: Routes = [
 	{
@@ -25,7 +25,8 @@ const releasesRoutes: Routes = [
 	imports: [
 		CommonModule,
 		RouterModule.forChild(releasesRoutes),
-		SharedModule
+		SharedModule,
+		HeadingComponent
 	],
 	exports: [
 		RouterModule

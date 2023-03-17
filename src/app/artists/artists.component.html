@@ -1,9 +1,6 @@
 <div class="artists-wrapper">
 	<ng-container *ngIf="djs$ | async as djs">
-		<div class="heading">
-			<h1 class="heading__title">Our DJs</h1>
-			<h2 class="heading__sub-title">Meet our talented roster of DJs</h2>
-		</div>
+		<mk-heading [title]="'Our DJs'" [subTitle]="'Meet our talented roster of DJs'"></mk-heading>
 
 		<div class="artist-item" *ngFor="let item of djs">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
@@ -15,10 +12,7 @@
 	</ng-container>
 
 	<ng-container *ngIf="artists$ | async as artists">
-		<div class="heading mt-4">
-			<h1 class="heading__title">Our Artists</h1>
-			<h2 class="heading__sub-title">Get to know the creative minds behind our music</h2>
-		</div>
+		<mk-heading class="mt-4" [title]="'Our Artists'" [subTitle]="'Get to know the creative minds behind our music'"></mk-heading>
 
 		<div #artist class="artist-item" *ngFor="let item of artists">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">

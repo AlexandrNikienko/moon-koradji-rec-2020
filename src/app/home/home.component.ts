@@ -1,3 +1,4 @@
+import { HeadingComponent } from './../layout/heading/heading.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
@@ -13,13 +14,12 @@ import { JsonLDService } from './../core/services/json-ld.service';
 declare var window: any;
 
 @Component({
+	// imports: [HeadingComponent],
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-	// @ViewChild('welcomeBanner') welcomeBanner: ElementRef;
-
 	public coverFolder = IMAGEFOLDER + 'release-cover/';
 	public featuredArtists: string[] = ['Ziul Oiram', 'Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];

@@ -7,22 +7,14 @@ const aboutRoutes: Routes = [
 	{
 		path: '',
 		component: AboutComponent,
-		pathMatch: 'full',
-		data: {
-			title: 'Our Mission at Moon Koradji Records'
-		}
+		pathMatch: 'full'
 	}
 ];
 
 @NgModule({
-	declarations: [
-		AboutComponent
-	],
 	imports: [
 		CommonModule,
-		RouterModule.forChild(aboutRoutes)
-	],
-	exports: [
+		RouterModule.forChild(aboutRoutes),
 		AboutComponent
 	]
 })

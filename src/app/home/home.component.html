@@ -5,12 +5,16 @@
 	</div>
 
 	<div class="new__right">
-		<div *ngIf="purchase.title" class="heading">
-			<h1 class="heading__title"> {{ purchase.title }}</h1>
-			<h2 class="heading__sub-title"> {{ purchase.subtitle }}</h2>
-		</div>
+		<mk-heading
+			*ngIf="purchase.title"
+			[title]="purchase.title"
+			[subTitle]="purchase.subtitle">
+		</mk-heading>
+
 		<div class="new__title">{{purchase.item.title}}</div>
+
 		<div class="new__sub-title">{{purchase.item.subtitle}}</div>
+
 		<a [routerLink]="purchase.item.button.routerLink" class="btn btn--light">{{purchase.item.button.title}}</a>
 	</div>
 </section>
@@ -51,11 +55,11 @@
 </section> -->
 
 <section class="recent-releases-wrapper">
-	<div class="heading">
-		<h1 class="heading__title">Recent Releases</h1>
-		<h2 class="heading__sub-title">New Psychedelic Trance Music From Moon Koradji Records</h2>
-		<div class="heading__link"><a routerLink="/releases">View All</a></div>
-	</div>
+	<mk-heading
+		[title]="'Recent Releases'"
+		[subTitle]="'New Psychedelic Trance Music From Moon Koradji Records'"
+		[route]="'/releases'">
+	</mk-heading>
 
 	<div class="recent-releases-inner">
 		<ng-container *ngIf="_releases$ | async as releases">
@@ -86,11 +90,11 @@
 </section>
 
 <section class="featured-artists-wrapper" *ngIf="featuredGalleryItems">
-	<div class="heading">
-		<h1 class="heading__title">Featured Artists</h1>
-		<h2 class="heading__sub-title">Meet our talented featured artists</h2>
-		<div class="heading__link"><a routerLink="/artists">View All</a></div>
-	</div>
+	<mk-heading
+		[title]="'Featured Artists'"
+		[subTitle]="'Meet our talented featured artists'"
+		[route]="'/artists'">
+	</mk-heading>
 
 	<app-shared-gallery [items]="featuredGalleryItems"></app-shared-gallery>
 </section>

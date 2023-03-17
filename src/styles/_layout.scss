@@ -93,12 +93,6 @@ img {
 	}
 }
 
-.s-snowman {
-	width: 50px;
-	margin: auto;
-	display: block;
-}
-
 app-root {
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
@@ -107,63 +101,6 @@ app-root {
 
 .page {
 	padding: 30px $gap 50px;
-}
-
-.heading {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-bottom: 2rem;
-	position: relative;
-
-	&__title {
-		font-size: 1.5rem;
-		position: relative;
-		flex: 1 0 100%;
-		text-align: center;
-		padding-bottom: 10px;
-		margin: 0;
-		line-height: normal;
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		font-family: 'Orbitron', sans-serif;
-		font-size: 2rem;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
-		text-shadow: 2px 2px 4px #000;
-
-		&::after {
-			content: "";
-			width: 100px;
-			height: 5px;
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			z-index: 0;
-			background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
-		}
-
-		@include mobile {
-			letter-spacing: 0;
-		}
-	}
-
-	&__sub-title {
-		font-size: 20px;
-		margin-block-start: 8px;
-		opacity: 0.7;
-		text-align: center;
-	}
-
-	&__link {
-		position: absolute;
-		right: 0;
-
-		@include mobile {
-			bottom: 100%;
-		}
-	}
 }
 
 // .brand-text {

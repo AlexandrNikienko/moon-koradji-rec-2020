@@ -1,3 +1,4 @@
+import { HeadingComponent } from './../layout/heading/heading.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,8 @@ const homeRoutes: Routes = [
 	imports: [
 		CommonModule,
 		RouterModule.forChild(homeRoutes),
-		SharedModule
+		SharedModule,
+		HeadingComponent
 	],
 	exports: [
 		RouterModule

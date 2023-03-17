@@ -1,8 +1,8 @@
-<div class="heading">
-	<h1 class="heading__title">Podcasts</h1>
-	<h2 class="heading__sub-title">Listen to exclusive mixes from renowned DJs and producers</h2>
-	<div class="heading__link"><a routerLink="/releases">View All</a></div>
-</div>
+<mk-heading
+	[title]="'Podcasts'"
+	[subTitle]="'Listen to exclusive mixes from renowned DJs and producers'"
+	[route]="'/podcasts'">
+</mk-heading>
 
 <div class="podcast-adv" *ngIf="_podcast$ | async as podcast">
 	<div class="podcast-adv__border podcast-adv__border--top"></div>

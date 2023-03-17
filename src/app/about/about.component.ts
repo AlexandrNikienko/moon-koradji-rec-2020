@@ -2,6 +2,7 @@ import { iMeta, MetaDataService } from './../core/services/meta-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+	standalone: true,
 	selector: 'app-about',
 	templateUrl: 'about.component.html',
 	styleUrls: ['about.component.scss'] 

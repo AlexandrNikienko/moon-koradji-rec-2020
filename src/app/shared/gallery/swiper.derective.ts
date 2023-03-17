@@ -1,6 +1,8 @@
 import {AfterViewInit, Directive, ElementRef, Input} from '@angular/core';
 import {SwiperOptions} from "swiper";
 
+// TODO not in use
+
 @Directive({
   selector: '[fmSwiper]',
   standalone: true,

@@ -1,7 +1,5 @@
 <ng-container *ngIf="artist">
-	<div class="heading">
-		<h1 class="heading__title">{{artist.artistName}}</h1>
-	</div>
+	<mk-heading [title]="artist.artistName"></mk-heading>
 	
 	<img *ngIf="artist.artistAvatar" class="s-artist-foto" src="/assets/images/artists/{{artist.artistAvatar}}" alt="{{artist.artistName}}">
 

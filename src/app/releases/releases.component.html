@@ -1,7 +1,4 @@
-<div class="heading">
-	<h1 class="heading__title">Our Releases</h1>
-	<h2 class="heading__sub-title">Purchase digital downloads or physical copies of our releases</h2>
-</div>
+<mk-heading [title]="'Our Releases'" [subTitle]="'Purchase digital downloads or physical copies of our releases'"></mk-heading>
 
 <div *ngIf="releases$ | async as releases" class="releases">
 	<ng-container *ngFor="let release of releases">
