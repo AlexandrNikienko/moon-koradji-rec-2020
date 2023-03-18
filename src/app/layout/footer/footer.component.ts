@@ -1,6 +1,9 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+	standalone: true,
+	imports: [RouterModule],
 	selector: 'app-footer',
 	templateUrl: './footer.component.html',
 	styleUrls: ['footer.scss']

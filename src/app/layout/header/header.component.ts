@@ -1,6 +1,12 @@
+import { MatButtonModule } from '@angular/material/button';
+import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+	standalone: true,
+	imports: [CommonModule, RouterModule, MatTooltipModule, MatButtonModule],
 	selector: 'app-header',
 	templateUrl: './header.component.html',
 	styleUrls: ['header.scss']

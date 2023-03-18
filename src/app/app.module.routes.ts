@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { ResourceExistsGuard } from './core/services/resource-exist-guard.service';
-import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.component';
 
 export const appRoutes: Routes = [
 	{
@@ -35,7 +34,7 @@ export const appRoutes: Routes = [
 	},
 	{ 
 		path: '404',
-		component: LayoutNotFoundComponent
+		loadComponent: () => import('./layout/not-found/layout-not-found.component').then(x => x.LayoutNotFoundComponent)
 	},
   	{ 
 		path: '**',
