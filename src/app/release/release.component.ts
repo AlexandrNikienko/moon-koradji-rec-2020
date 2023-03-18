@@ -1,3 +1,4 @@
+import { SharedVideoComponent } from './../shared/video/video.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { PipesModule } from './../core/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
@@ -16,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
 @Component({
 	standalone: true,
 	selector: 'app-release',
-	imports: [CommonModule, RouterModule, PipesModule, HeadingComponent, AudioPlayerComponent, SharedModule],
+	imports: [CommonModule, RouterModule, PipesModule, HeadingComponent, AudioPlayerComponent, SharedVideoComponent, SharedModule],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']
 })
