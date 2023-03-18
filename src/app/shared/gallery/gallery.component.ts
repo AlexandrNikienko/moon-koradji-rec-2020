@@ -9,7 +9,6 @@ register();
 import { Swiper } from 'swiper/types';
 
 @Component({
-	// standalone: true,
 	selector: 'app-shared-gallery',
 	templateUrl: './gallery.component.html',
 	styleUrls: ['swiper.scss']

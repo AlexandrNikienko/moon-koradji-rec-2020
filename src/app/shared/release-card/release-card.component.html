@@ -1,5 +1,5 @@
 <div class="release-card">
-	<a class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]" *ngIf="releaseItem.releaseRoute"></a>
+	<a *ngIf="releaseItem.releaseRoute" class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]"></a>
 	
 	<app-picture [cover]="releaseItem.releaseCover" [class]="'release-card__image'" [imageFolder]="'release-cover/'"></app-picture>
     

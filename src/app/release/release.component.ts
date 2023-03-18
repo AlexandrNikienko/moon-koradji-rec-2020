@@ -1,3 +1,4 @@
+import { PictureComponent } from './../shared/picture/picture.component';
 import { SharedVideoComponent } from './../shared/video/video.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { PipesModule } from './../core/pipes/pipes.module';
@@ -17,7 +18,16 @@ import { SharedModule } from '../shared/shared.module';
 @Component({
 	standalone: true,
 	selector: 'app-release',
-	imports: [CommonModule, RouterModule, PipesModule, HeadingComponent, AudioPlayerComponent, SharedVideoComponent, SharedModule],
+	imports: [
+		CommonModule,
+		RouterModule,
+		PipesModule,
+		HeadingComponent,
+		AudioPlayerComponent,
+		SharedVideoComponent,
+		PictureComponent,
+		SharedModule
+	],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']
 })

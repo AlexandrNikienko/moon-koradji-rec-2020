@@ -52,7 +52,8 @@
             <div class="s-involved-artists__item" *ngFor="let artist of involved">
                 <a [routerLink]="['/artists', artist.artistRoute]"
                    class="s-involved-artists__content"
-                   [ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + artist.artistAvatar + ')'}">
+                   [ngStyle]="{backgroundImage: 'url(/assets/images/artists/m_' + artist.artistAvatar + ')'}"
+				>
                     <div class="s-involved-artists__name">{{artist.artistName}}</div>
                 </a>
             </div>

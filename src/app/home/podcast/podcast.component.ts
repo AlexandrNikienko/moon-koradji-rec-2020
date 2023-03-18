@@ -1,3 +1,6 @@
+import { HeadingComponent } from './../../layout/heading/heading.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { Component } from "@angular/core";
 import { Observable, Subscription } from 'rxjs';
 
@@ -5,6 +8,8 @@ import { DataService } from './../../core/services/data.service';
 import { PodcastAdv } from './../../core/models/podcast-add.model';
 
 @Component({
+	standalone: true,
+	imports: [CommonModule, RouterModule, HeadingComponent],
 	selector: 'app-podcast',
 	templateUrl: './podcast.component.html',
 	styleUrls: ['podcasts-adv.scss']

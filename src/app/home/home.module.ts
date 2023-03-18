@@ -1,3 +1,4 @@
+import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,19 +23,17 @@ const homeRoutes: Routes = [
 @NgModule({
 	declarations: [
 		HomeComponent,
-		PodcastComponent
 	],
 	imports: [
 		CommonModule,
 		RouterModule.forChild(homeRoutes),
 		SharedModule,
-		HeadingComponent
+		HeadingComponent,
+		ReleaseCardComponent,
+		PodcastComponent
 	],
 	exports: [
 		RouterModule
-	],
-	providers: [
-		DataService
 	]
 })
 
