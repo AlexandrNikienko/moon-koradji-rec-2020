@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { PipesModule } from '../core/pipes/pipes.module';
 
 import { SharedGalleryComponent } from './gallery/gallery.component';
-import { SharedLoaderComponent } from './loader/loader.component';
 import { SharedVideoComponent } from './video/video.component';
 import { ReleaseCardComponent } from './release-card/release-card.component';
 import { PictureComponent } from './picture/picture.component';
@@ -18,7 +17,6 @@ import { PictureComponent } from './picture/picture.component';
 	],
 	exports: [
 		SharedGalleryComponent,
-		SharedLoaderComponent,
 		SharedVideoComponent,
 		ReleaseCardComponent,
 		PictureComponent,
@@ -26,7 +24,6 @@ import { PictureComponent } from './picture/picture.component';
 	],
 	declarations: [
 		SharedGalleryComponent,
-		SharedLoaderComponent,
 		SharedVideoComponent,
 		ReleaseCardComponent,
 		PictureComponent

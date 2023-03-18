@@ -9,33 +9,29 @@ export const appRoutes: Routes = [
 	},
 	{
 		path: 'releases',
-		loadChildren: () => import('./releases/releases.module').then(x => x.ReleasesModule)
+		loadComponent: () => import('./releases/releases.component').then(x => x.ReleasesComponent)
 	},
 	{
 		path: 'releases/:releaseRoute',
-		loadChildren: () => import('./release/release.module').then(x => x.ReleaseModule),
+		loadComponent: () => import('./release/release.component').then(x => x.ReleaseComponent),
 		canActivate: [ResourceExistsGuard]
 	},
 	{
 		path: 'artists',
-		loadChildren: () => import('./artists/artists.module').then(x => x.ArtistsModule)
+		loadComponent: () => import('./artists/artists.component').then(x => x.ArtistsComponent)
 	},
 	{
 		path: 'artists/:artistRoute',
-		loadChildren: () => import('./artist/artist.module').then(x => x.ArtistModule),
+		loadComponent: () => import('./artist/artist.component').then(x => x.ArtistComponent),
 		canActivate: [ResourceExistsGuard]
 	},
-	// {
-	// 	path: 'merch',
-	// 	loadChildren: './merch/merch.module#MerchModule'
-	// },
 	{
 		path: 'podcasts',
-		loadChildren: () => import('./podcasts/podcasts.module').then(x => x.PodcastsModule)
+		loadComponent: () => import('./podcasts/podcasts.component').then(x => x.PodcastsComponent)
 	},
 	{
 		path: 'about',
-		loadChildren: () => import('./about/about.module').then(x => x.AboutModule)
+		loadComponent: () => import('./about/about.component').then(x => x.AboutComponent)
 	},
 	{ 
 		path: '404',

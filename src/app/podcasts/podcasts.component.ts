@@ -8,6 +8,8 @@ import { DataService } from '../core/services/data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 @Component({
+	standalone: true,
+	imports: [CommonModule, PipesModule, SharedLoaderComponent],
 	selector: 'app-podcasts',
 	templateUrl: './podcasts.component.html',
 	styleUrls: ['podcasts.component.scss']

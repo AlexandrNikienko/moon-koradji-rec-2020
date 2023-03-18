@@ -12,13 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
-import { ReleaseModule } from './release/release.module';
-import { ReleasesModule } from './releases/releases.module';
-import { ArtistsModule } from './artists/artists.module';
-import { ArtistModule } from './artist/artist.module';
-import { MerchModule } from './merch/merch.module';
-import { PodcastsModule } from './podcasts/podcasts.module';
-import { AboutModule } from './about/about.module';
 import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.component';
 
 @NgModule({
@@ -37,14 +30,7 @@ import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.com
 		BrowserAnimationsModule,
 		PipesModule,
 		LayoutModule,
-		HomeModule,
-		ReleaseModule,
-		ReleasesModule,
-		ArtistsModule,
-		ArtistModule,
-		MerchModule,
-		PodcastsModule,
-		AboutModule
+		HomeModule
 	],
 	exports: [
 		RouterModule

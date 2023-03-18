@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { map, shareReplay, tap } from 'rxjs/operators';
 
 import { DATAFOLDER } from '../../../environments/environment';
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class DataService {
 	existingParamsRoutes = ['artists', 'djs', 'releases'];
 	existingPramas = new Subject<any[]>();

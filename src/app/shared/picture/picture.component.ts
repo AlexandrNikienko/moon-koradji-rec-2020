@@ -9,6 +9,7 @@ interface Cover {
 };
 
 @Component({
+	// standalone: true,
 	selector: 'app-picture',
 	templateUrl: './picture.component.html'
 })

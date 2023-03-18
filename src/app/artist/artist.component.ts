@@ -4,7 +4,6 @@ import { PipesModule } from './../core/pipes/pipes.module';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
 
 import { Artist } from '../core/models/artist.model';
@@ -14,7 +13,6 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 @Component({
 	standalone: true,
 	imports: [HeadingComponent, PipesModule, CommonModule, RouterModule],
-	selector: 'app-artist',
 	templateUrl: 'artist.component.html',
 	styleUrls: ['artist.component.scss']
 })

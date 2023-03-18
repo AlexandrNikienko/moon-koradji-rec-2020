@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 import { Gallery } from '../../core/models/gallery.model';
@@ -8,6 +9,7 @@ register();
 import { Swiper } from 'swiper/types';
 
 @Component({
+	// standalone: true,
 	selector: 'app-shared-gallery',
 	templateUrl: './gallery.component.html',
 	styleUrls: ['swiper.scss']

@@ -1,15 +1,22 @@
+import { HeadingComponent } from './../layout/heading/heading.component';
+import { PipesModule } from './../core/pipes/pipes.module';
+import { CommonModule } from '@angular/common';
+import { AudioPlayerComponent } from './audio-player/audio-player.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
 
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
 import { DataService } from '../core/services/data.service';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
+	standalone: true,
 	selector: 'app-release',
+	imports: [CommonModule, RouterModule, PipesModule, HeadingComponent, AudioPlayerComponent, SharedModule],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']
 })
