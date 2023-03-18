@@ -16,7 +16,6 @@ import { ScrollToTopComponent } from './layout/scroll-to-top/scroll-to-top.compo
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
 import { LayoutNotFoundComponent } from './layout/not-found/layout-not-found.component';
 import { VisualsComponent } from './layout/visuals/visuals.component';
 
@@ -39,8 +38,7 @@ import { VisualsComponent } from './layout/visuals/visuals.component';
 		ScrollToTopComponent,
 		VisualsComponent,
 		LayoutNotFoundComponent,
-		MatTooltipModule,
-		HomeModule
+		MatTooltipModule
 	],
 	exports: [
 		RouterModule

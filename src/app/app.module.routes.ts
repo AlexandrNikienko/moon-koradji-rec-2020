@@ -4,7 +4,7 @@ import { ResourceExistsGuard } from './core/services/resource-exist-guard.servic
 export const appRoutes: Routes = [
 	{
 		path: 'index',
-		loadChildren: () => import('./home/home.module').then(x => x.HomeModule)
+		loadComponent: () => import('./home/home.component').then(x => x.HomeComponent)
 	},
 	{
 		path: 'releases',

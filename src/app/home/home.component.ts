@@ -1,3 +1,8 @@
+import { PodcastComponent } from './podcast/podcast.component';
+import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
+import { SharedModule } from './../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
@@ -14,7 +19,8 @@ import { JsonLDService } from './../core/services/json-ld.service';
 declare var window: any;
 
 @Component({
-	// imports: [HeadingComponent],
+	standalone: true,
+	imports: [CommonModule, RouterModule,SharedModule, HeadingComponent, ReleaseCardComponent, PodcastComponent],
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: ['home.component.scss']
