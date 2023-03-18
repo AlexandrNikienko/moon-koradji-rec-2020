@@ -20,7 +20,14 @@ declare var window: any;
 
 @Component({
 	standalone: true,
-	imports: [CommonModule, RouterModule,SharedModule, HeadingComponent, ReleaseCardComponent, PodcastComponent],
+	imports: [
+		CommonModule,
+		RouterModule,
+		SharedModule, // TODO
+		HeadingComponent,
+		ReleaseCardComponent,
+		PodcastComponent
+	],
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: ['home.component.scss']
@@ -45,7 +52,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 		// this.crystalization.init('.brand-text');
 
-		this.getFeatureGaleryItems();
+		this.getFeaturedGaleryItems();
 
 		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
@@ -65,7 +72,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 		// this.crystalization.destroy();
 	}
 
-	getFeatureGaleryItems() {
+	getFeaturedGaleryItems() {
 		this.featuredGalleryItems = this.featuredArtists.map(artist => {
 			return {
 				name: artist,

@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component, HostListener } from '@angular/core';
 import {
 	trigger, state, style, animate, transition
@@ -5,6 +6,7 @@ import {
 
 @Component({
 	standalone: true,
+	imports: [BrowserAnimationsModule],
 	selector: 'app-scroll-to-top',
 	templateUrl: './scroll-to-top.component.html',
 	styleUrls: ['./scroll-to-top.component.scss'],
