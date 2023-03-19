@@ -13,7 +13,6 @@ import { takeUntil, switchMap } from 'rxjs/operators';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
 import { DataService } from '../core/services/data.service';
-import { SharedModule } from '../shared/shared.module';
 
 @Component({
 	standalone: true,
@@ -26,7 +25,6 @@ import { SharedModule } from '../shared/shared.module';
 		AudioPlayerComponent,
 		SharedVideoComponent,
 		PictureComponent,
-		SharedModule
 	],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']

@@ -1,6 +1,5 @@
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
-import { SharedModule } from './../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
@@ -9,7 +8,7 @@ import { DataService } from '../core/services/data.service';
 
 @Component({
 	standalone: true,
-	imports: [CommonModule, RouterModule, SharedModule, HeadingComponent, ReleaseCardComponent],
+	imports: [CommonModule, RouterModule, HeadingComponent, ReleaseCardComponent],
 	selector: 'app-releases',
 	templateUrl: './releases.component.html',
 	styleUrls: ['releases.scss']

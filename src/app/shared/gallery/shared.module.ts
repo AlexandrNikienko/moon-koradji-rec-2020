@@ -2,14 +2,11 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { PipesModule } from '../core/pipes/pipes.module';
-
-import { SharedGalleryComponent } from './gallery/gallery.component';
-import { PictureComponent } from './picture/picture.component';
+import { SharedGalleryComponent } from './gallery.component';
+import { PictureComponent } from '../picture/picture.component';
 
 @NgModule({
 	imports: [
-		PipesModule,
 		CommonModule,
 		RouterModule,
 		PictureComponent,
@@ -25,5 +22,5 @@ import { PictureComponent } from './picture/picture.component';
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class SharedModule {
+export class GalleryModule {
 }

@@ -1,6 +1,6 @@
 import { PodcastComponent } from './podcast/podcast.component';
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
-import { SharedModule } from './../shared/shared.module';
+import { GalleryModule } from '../shared/gallery/shared.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeadingComponent } from './../layout/heading/heading.component';
@@ -19,16 +19,16 @@ import { JsonLDService } from './../core/services/json-ld.service';
 declare var window: any;
 
 @Component({
+	selector: 'mk-home',
 	standalone: true,
 	imports: [
 		CommonModule,
 		RouterModule,
-		SharedModule, // TODO
+		GalleryModule, // TODO
 		HeadingComponent,
 		ReleaseCardComponent,
 		PodcastComponent
 	],
-	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: ['home.component.scss']
 })
