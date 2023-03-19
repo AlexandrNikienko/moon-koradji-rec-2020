@@ -1,6 +1,6 @@
 import { PodcastComponent } from './podcast/podcast.component';
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
-import { GalleryModule } from '../shared/gallery/shared.module';
+import { GalleryModule } from '../shared/gallery/gallery.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeadingComponent } from './../layout/heading/heading.component';
