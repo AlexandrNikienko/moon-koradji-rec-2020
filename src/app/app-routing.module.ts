@@ -1,9 +1,11 @@
-import { Routes } from '@angular/router';
+import { Route } from '@angular/router';
+
 import { ResourceExistsGuard } from './core/services/resource-exist-guard.service';
 
-export const appRoutes: Routes = [
+export const routes: Route[] = [
 	{
 		path: '',
+		pathMatch: 'full',
 		loadComponent: () => import('./home/home.component').then(x => x.HomeComponent)
 	},
 	{
@@ -13,7 +15,7 @@ export const appRoutes: Routes = [
 	{
 		path: 'releases/:releaseRoute',
 		loadComponent: () => import('./release/release.component').then(x => x.ReleaseComponent),
-		canActivate: [ResourceExistsGuard]
+		//resolve: [ResourceExistsGuard]
 	},
 	{
 		path: 'artists',
@@ -21,8 +23,7 @@ export const appRoutes: Routes = [
 	},
 	{
 		path: 'artists/:artistRoute',
-		loadComponent: () => import('./artist/artist.component').then(x => x.ArtistComponent),
-		canActivate: [ResourceExistsGuard]
+		loadComponent: () => import('./artist/artist.component').then(x => x.ArtistComponent)
 	},
 	{
 		path: 'podcasts',
@@ -41,3 +42,4 @@ export const appRoutes: Routes = [
 		redirectTo: '/404'
 	}
 ];
+

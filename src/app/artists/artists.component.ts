@@ -1,16 +1,22 @@
-import { PipesModule } from './../core/pipes/pipes.module';
+import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
+import { PipesModule } from './../core/pipes/pipes.module';
+import { DataService } from '../core/services/data.service';
+
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Subscription } from 'rxjs';
-import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit } from '@angular/core';
-
-import { DataService } from '../core/services/data.service';
 
 @Component({
 	standalone: true,
-	imports: [HeadingComponent, CommonModule, RouterModule, PipesModule],
+	imports: [
+		HeadingComponent,
+		CommonModule,
+		RouterModule,
+		PipesModule
+	],
 	selector: 'app-artists',
 	templateUrl: './artists.component.html',
 	styleUrls: ['artists.scss']

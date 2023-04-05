@@ -1,18 +1,23 @@
-import { HeadingComponent } from './../layout/heading/heading.component';
 import { CommonModule } from '@angular/common';
-import { PipesModule } from './../core/pipes/pipes.module';
-import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
+import { PipesModule } from './../core/pipes/pipes.module';
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
+
+import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { DataService } from '../core/services/data.service';
-import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 @Component({
 	standalone: true,
-	imports: [HeadingComponent, PipesModule, CommonModule, RouterModule],
+	imports: [
+		HeadingComponent,
+		PipesModule,
+		CommonModule, 
+		RouterModule
+	],
 	templateUrl: 'artist.component.html',
 	styleUrls: ['artist.component.scss']
 })
@@ -35,6 +40,7 @@ export class ArtistComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		this.routeSub = this.route.paramMap.subscribe(params => {
 			this.artistName = params.get('artistRoute');
+			// this.dataService.checkIfRouteCorrect(this.artistName);
 			this.requestTo = this.artistName.includes('dj-') ? 'djs' : 'artists';
 			this.requestTo$ = this.dataService.requestToData(this.requestTo);
 

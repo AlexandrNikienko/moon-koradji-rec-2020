@@ -1,15 +1,20 @@
-import { SharedLoaderComponent } from './../shared/loader/loader.component';
-import { PipesModule } from './../core/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
-import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DataService } from '../core/services/data.service';
 
+import { PipesModule } from './../core/pipes/pipes.module';
+import { DataService } from '../core/services/data.service';
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
+
+import { SharedLoaderComponent } from './../shared/loader/loader.component';
 
 @Component({
 	standalone: true,
-	imports: [CommonModule, PipesModule, SharedLoaderComponent],
+	imports: [
+		CommonModule,
+		PipesModule,
+		SharedLoaderComponent
+	],
 	selector: 'app-podcasts',
 	templateUrl: './podcasts.component.html',
 	styleUrls: ['podcasts.component.scss']

@@ -1,7 +1,6 @@
-<section *ngIf="_purchase$ | async as purchase" class="new">
+<section *ngIf="purchase$ | async as purchase" class="new">
 	<div class="new__left">
-		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'">
-		</app-picture>
+		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'"></app-picture>
 	</div>
 
 	<div class="new__right">
@@ -15,7 +14,13 @@
 
 		<div class="new__sub-title">{{purchase.item.subtitle}}</div>
 
-		<a [routerLink]="purchase.item.button.routerLink" class="btn btn--light">{{purchase.item.button.title}}</a>
+		<a *ngIf="purchase.item.button"
+			[routerLink]="purchase.item.button?.routerLink"
+			[attr.disabled]="!purchase.item.button?.routerLink"
+			class="btn btn--light"
+		>
+			{{purchase.item.button?.title}}
+		</a>
 	</div>
 </section>
 
@@ -62,9 +67,9 @@
 	</mk-heading>
 
 	<div class="recent-releases-inner">
-		<ng-container *ngIf="_releases$ | async as releases">
+		<ng-container *ngIf="releases$ | async as releases">
 			<ng-container *ngFor="let release of releases; let i = index">
-				<app-release-card *ngIf="(i < 5) && !release.isHero && !release.hidden" [releaseItem]="release">
+				<app-release-card *ngIf="(i < 4) && !release.isHero && !release.hidden" [releaseItem]="release">
 				</app-release-card>
 			</ng-container>
 		</ng-container>

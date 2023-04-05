@@ -1,22 +1,23 @@
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
+
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
+import { JsonLDService } from './../core/services/json-ld.service';
+import { DataService } from '../core/services/data.service';
+import { Crystalization } from '../../assets/scripts/crystal-paralax';
+
+import { HeadingComponent } from './../layout/heading/heading.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
 import { GalleryModule } from '../shared/gallery/gallery.module';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { HeadingComponent } from './../layout/heading/heading.component';
-import { MetaDataService, iMeta } from './../core/services/meta-data.service';
-import { Crystalization } from '../../assets/scripts/crystal-paralax';
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
-
-import { DataService } from '../core/services/data.service';
 import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
 import { Release } from '../core/models/release.model';
 import { IMAGEFOLDER } from '../../environments/environment';
-import { JsonLDService } from './../core/services/json-ld.service';
+import { PictureComponent } from '../shared/picture/picture.component';
 
-declare var window: any;
 
 @Component({
 	selector: 'mk-home',
@@ -27,7 +28,8 @@ declare var window: any;
 		GalleryModule, // TODO
 		HeadingComponent,
 		ReleaseCardComponent,
-		PodcastComponent
+		PodcastComponent,
+		PictureComponent
 	],
 	templateUrl: './home.component.html',
 	styleUrls: ['home.component.scss']
@@ -37,11 +39,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 	public featuredArtists: string[] = ['Ziul Oiram', 'Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
 	public featuredGalleryItems: Gallery[];
 
-	public _purchase$: Observable<any> = this.dataService.requestToData('purchase');
-	public news$: Observable<News[]> = this.dataService.requestToData('news');
-	public _releases$: Observable<Release[]> = this.dataService.requestToData('releases');
+	public purchase$: Observable<any>;
+	public news$: Observable<News[]>;
+	public releases$: Observable<Release[]>;
 
-	// public crystalization = new Crystalization();
+	public crystalization = new Crystalization();
 
 	constructor(
 		private dataService: DataService,
@@ -50,7 +52,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 	) {}
 
 	ngOnInit() {
-		// this.crystalization.init('.brand-text');
+		this.purchase$ = this.dataService.requestToData('purchase');
+		this.purchase$.subscribe(s => {
+			setTimeout(() => {
+				this.crystalization.init('.new', 180);
+			}, 0)
+		});
+		this.news$ = this.dataService.requestToData('news');
+		this.releases$ = this.dataService.requestToData('releases');
 
 		this.getFeaturedGaleryItems();
 
@@ -69,7 +78,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		// this.crystalization.destroy();
+		this.crystalization.destroy();
 	}
 
 	getFeaturedGaleryItems() {
@@ -79,7 +88,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
 				image: {
 					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
-					//webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
+					// webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
 				}
 			}
 		})

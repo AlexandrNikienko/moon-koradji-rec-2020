@@ -9,11 +9,10 @@ import { PictureComponent } from '../picture/picture.component';
 	imports: [
 		CommonModule,
 		RouterModule,
-		PictureComponent,
+		PictureComponent
 	],
 	exports: [
 		SharedGalleryComponent,
-		PictureComponent,
 		RouterModule
 	],
 	declarations: [

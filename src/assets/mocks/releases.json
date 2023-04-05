@@ -1,35 +1,44 @@
 {
     "releases": [
         {
-            "hidden": true,
-            "isNew": false,
-            "releaseNumber": "MKCD013",
-            "releaseNote": "",
-            "releaseDate": "",
-            "releaseTitle": "Already Maged - Mortar & Pestle",
-            "releaseSubTitle": "previews soon",
+			"isHero": true,
+            "hidden": false,
+            "isNew": true,
+            "releaseNumber": "MKDG004",
+            "releaseNote": "2023",
+            "releaseDate": "Apr 05, 2023",
+            "releaseTitle": "Oliwave - Alive Memory",
+            "releaseSubTitle": "listen & purchase",
             "releaseCover": {
-				"default": "already_maged_cover.png",
+				"default": "mkdg004_oliwave_alive_memory.jpg",
 				"default2x": "",
-				"webp": "",
-				"webp2x": ""
+				"webp": "mkdg004_oliwave_alive_memory-500.webp",
+				"webp2x": "mkdg004_oliwave_alive_memory-1000.webp"
 			},
-            "_releaseRoute": "already-maged-mortar-and-pestle",
+            "releaseRoute": "oliwave-alive-memory",
             "releaseDescription": [
-                {
-                    "paragraph": ""
+                {   
+                    "paragraph": "\"Alive Memory\" is more than just a collection of beautiful and mesmerizing sounds. It's an exploration of the human psyche, a journey through the inner workings of our minds and hearts."
+                },
+				{
+                    "paragraph": "From the very first track you'll be transported to a world of pure bliss and euphoria. The melodic and uplifting tones will immediately fill you with positive energy, creating a sense of joy and ecstasy that will stay with you throughout the entire album."
+                },
+				{
+                    "paragraph": "This collection is a true masterpiece of psychedelic trance music, a reflection of the Oliwaves’s own memories and experiences. It will leave you feeling open-minded, inspired, and deeply moved."
                 }
             ],
-            "compiledBy": "",
-            "masteredBy": "",
-            "artworkBy": "",
+            "cdAuthor": "Oliver Bach",
+            "masteredBy": "Yannick Thiry",
+            "artworkBy": "Mischlichter",
             "beatspaceLink": "",
-            "bandcampLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/oliwave-alive-memory",
             "videoLink": "",
-            "tracklist": ""
+			"artists": [
+                "Oliwave"
+            ],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 540px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3904856309/size=large/bgcol=333333/linkcol=0687f5/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/oliwave-alive-memory\">Oliwave - Alive Memory by Moon Koradji Records</a></iframe>"
         },
 		{
-            "isHero": true,
             "releaseNumber": "MKDG003",
             "releaseNote": "2022",
             "releaseDate": "Dec 20, 2022",

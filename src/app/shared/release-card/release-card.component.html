@@ -8,7 +8,7 @@
             <div class="release-card__top-title">
                 {{releaseItem.releaseNumber}}
 
-                <img src="assets/images/icon_new.gif" *ngIf="releaseItem.isNew">
+                <img *ngIf="releaseItem.isNew" class="release-card__new" src="assets/images/icon_new.gif">
             </div>
 
             <div class="release-card__top-text">

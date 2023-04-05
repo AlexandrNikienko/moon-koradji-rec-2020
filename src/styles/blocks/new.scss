@@ -13,19 +13,16 @@
 	}
 
 	&__left {
-		align-self: center
+		align-self: center;
 	}
 
 	&__right {
 		display: flex;
-		justify-content: space-between;
 		flex: 1;
 		flex-direction: column;
 		align-items: center;
-		// border-bottom: 1px solid white;
 		padding-bottom: 2rem;
-		// border-top: 1px solid white;
-		padding-top: 2rem;
+		padding-top: 1.75rem;
 	}
 
 	&__title,
@@ -34,26 +31,25 @@
 		font-weight: bold;
 		text-align: center;
 		line-height: normal;
-		background-image: url('#{$imageFolder}/release-cover/mkdg003_ziul_oiram_eternal_shadow.jpg');
+		background-image: url('#{$imageFolder}/release-cover/mkdg004_oliwave_alive_memory.jpg');
 		background-clip: text;
 		color: transparent;
 		background-size: cover;
 		background-position: bottom;
-		text-shadow: 0 0 4px rgb(255 255 255 / 25%);
+		text-shadow: 0 0 1px rgb(255 255 255 / 25%);
 	}
 
 	&__title {
 		font-size: 4rem;
 		letter-spacing: .2rem;
-		line-height: 1;
-		// color: #c5c2b8;
-		
+		line-height: 1;		
 	}
 
 	&__sub-title {
 		font-size: 2rem;
 		letter-spacing: .1rem;
 		text-shadow: 0 0 1px rgb(255 255 255 / 50%);
+		margin-bottom: 2rem;
 	}
 
 	img {
@@ -67,13 +63,5 @@
 
 	@include mobile {
 		flex-direction: column;
-
-		img {
-			max-width: 100%;
-		}
-
-		.btn {
-			margin-top: 2rem;
-		}
 	}
 }

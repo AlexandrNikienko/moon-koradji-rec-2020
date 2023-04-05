@@ -259,12 +259,15 @@ mk-home .btn {
 	align-items: center;
 	justify-content: center;
 	border-radius: 0.5rem;
-	cursor: pointer;
 	text-decoration: none;
 
 	&--light {
 		background-color: var(--white);
 		color: var(--themeColorAlt);
+	}
+
+	&[disabled="true"] {
+		cursor: default;
 	}
 }
 

@@ -1,18 +1,19 @@
-import { PictureComponent } from './../shared/picture/picture.component';
-import { SharedVideoComponent } from './../shared/video/video.component';
-import { HeadingComponent } from './../layout/heading/heading.component';
-import { PipesModule } from './../core/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
-import { AudioPlayerComponent } from './audio-player/audio-player.component';
-import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
 
+import { DataService } from '../core/services/data.service';
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
+import { PipesModule } from './../core/pipes/pipes.module';
+
+import { AudioPlayerComponent } from './audio-player/audio-player.component';
+import { PictureComponent } from './../shared/picture/picture.component';
+import { SharedVideoComponent } from './../shared/video/video.component';
+import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
-import { DataService } from '../core/services/data.service';
 
 @Component({
 	standalone: true,
@@ -24,7 +25,7 @@ import { DataService } from '../core/services/data.service';
 		HeadingComponent,
 		AudioPlayerComponent,
 		SharedVideoComponent,
-		PictureComponent,
+		PictureComponent
 	],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']
@@ -43,8 +44,11 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 	constructor(
 		private route: ActivatedRoute,
 		private dataService: DataService,
-		private metaData: MetaDataService
-	) {}
+		private metaData: MetaDataService,
+		private router: Router
+	) {
+		// this.dataService.checkIfRouteCorrect(this.releaseRoute);
+	}
 
 	ngOnInit() {
 		this.releases$.pipe(

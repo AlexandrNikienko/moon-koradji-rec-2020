@@ -16,7 +16,7 @@ export class Crystalization {
 		}
 	}
 
-	init(selector = 'body'): void {
+	init(selector = 'body', hue = 230): void {
 		this.createHTML(selector);
 
 		var canvas = <HTMLCanvasElement>document.querySelector(".crystalization__canvas");
@@ -50,7 +50,15 @@ export class Crystalization {
 		var minHeight = h * .5;
 		var maxSpeed = 35;
 		var minSpeed = 6;
-		var hue = 230;
+
+		var hue = hue; // 230;
+		// Red falls between 0 and 60 degrees.
+		// Yellow falls between 61 and 120 degrees.
+		// Green falls between 121 and 180 degrees.
+		// Cyan falls between 181 and 240 degrees.
+		// Blue falls between 241 and 300 degrees.
+		// Magenta falls between 301 and 360 degrees.
+
 		var hueDif = 50; // Hue +/-
 		var glow = 0; // 10; // Turn this off for better performance
 		ctx.globalCompositeOperation = "lighter";

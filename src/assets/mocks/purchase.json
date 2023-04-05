@@ -1,19 +1,19 @@
 {
 	"purchase": {
 		"title": "Out Now",
-		"subtitle": "Fresh Psychedelic Trance Sounds",
+		"subtitle": "Fresh Psychedelic Melodic Sounds",
 		"item": {
 			"cover": {
-				"default": "mkdg003_ziul_oiram_eternal_shadow.jpg",
+				"default": "mkdg004_oliwave_alive_memory.jpg",
 				"default2x": "",
-				"webp": "",
-				"webp2x": ""
+				"webp": "mkdg004_oliwave_alive_memory-500.webp",
+				"webp2x": "mkdg004_oliwave_alive_memory-1000.webp"
 			},
-			"title": "Eternal Shadow",
-			"subtitle": "by Ziul Oiram",
+			"title": "Alive Memory",
+			"subtitle": "by Oliwave",
 			"button": {
-				"title": "Listen and Purchase",
-				"routerLink": "/releases/ziul-oiram-eternal-shadow"
+				"title": "Listen & Purchase",
+				"routerLink": "releases/oliwave-alive-memory"
 			}
 		},
 		"deals": [

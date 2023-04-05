@@ -1,20 +1,27 @@
-import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
-import { HeadingComponent } from './../layout/heading/heading.component';
+import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MetaDataService, iMeta } from './../core/services/meta-data.service';
-import { Component, OnInit } from '@angular/core';
+
 import { DataService } from '../core/services/data.service';
+import { MetaDataService, iMeta } from './../core/services/meta-data.service';
+import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
+import { HeadingComponent } from './../layout/heading/heading.component';
 
 @Component({
 	standalone: true,
-	imports: [CommonModule, RouterModule, HeadingComponent, ReleaseCardComponent],
+	imports: [
+		CommonModule,
+		RouterModule,
+		HeadingComponent,
+		ReleaseCardComponent
+	],
 	selector: 'app-releases',
 	templateUrl: './releases.component.html',
 	styleUrls: ['releases.scss']
 })
 export class ReleasesComponent implements OnInit {
-	public releases$ = this.dataService.requestToData('releases');
+	public releases$: Observable<any>;
 
 	constructor(
 		private dataService: DataService,
@@ -22,6 +29,8 @@ export class ReleasesComponent implements OnInit {
 	) {}
 
 	ngOnInit(): void {
+		this.releases$ = this.dataService.requestToData('releases');
+		
 		const metaDataObj: iMeta = {
 			title: 'Our Catalogue | Moon Koradji Records',
 			description: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko a.k.a. dj Omsun.',

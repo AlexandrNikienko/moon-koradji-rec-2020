@@ -1319,6 +1319,37 @@
 			]
 		},
 		{
+			"artistRoute": "oliwave",
+			"artistName": "Oliwave",
+			"artistRealName": "Oliver Bach",
+			"artistCountry": "Germany",
+			"flag": "de",
+			"artistAvatar": "artist_olien.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Oliver, a German producer, has been a pioneer in the psytrance scene for over two decades. Born in Leipzig, in 1980, he began experimenting with electronic music production in 1995."
+				},
+				{
+					"paragraph": "Oliwave’s musical style is diverse, ranging from ambient music to fast-paced psychedelic goa trance. The project represents melodic rhythms with a positive, energetic and open-minded mood."
+				},
+				{
+					"paragraph": "Moon Koradji Records, a label renowned for its avant-garde approach to electronic music, proudly released Oliwave’s debut album “Alive Memory” in 2023, a work that speaks to the very essence of the human experience, evoking feelings of hope, joy, and optimism."
+				},
+				{
+					"paragraph": "In addition to the Oliwave project, Oliver has also explored the dark side of psytrance through his side project, Olien, but that’s another story :)"
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "",
+			"releases": [
+				{
+					"cdName": "Oliwave - Alive Memory",
+					"cdCover": "mkdg004_oliwave_alive_memory.jpg",
+					"cdLink": "oliwave-alive-memory"
+				}
+			]
+		},
+		{
 			"artistRoute": "pandors's-box",
 			"artistName": "Pandora's Box",
 			"artistRealName": "Valentin Rusiechi & Luciano Losiggio",

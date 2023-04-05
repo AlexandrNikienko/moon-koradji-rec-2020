@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
@@ -12,7 +13,10 @@ export class DataService {
 	existingParamsRoutes = ['artists', 'djs', 'releases'];
 	existingPramas = new Subject<any[]>();
 
-	constructor(private http: HttpClient) {
+	constructor(
+		private http: HttpClient,
+		private router: Router
+	) {
 		this.getExistingParams();
 	}
 
@@ -44,6 +48,16 @@ export class DataService {
 						this.existingPramas.next(existingParams.flat());
 					  }
 				})
+		});
+	}
+
+	checkIfRouteCorrect(route: string) {
+		this.existingPramas.subscribe(items => {
+			const resourceExists = !!items.find(item => item === route);
+
+			if (!resourceExists) {
+				this.router.navigate(['/404']);
+			}
 		});
 	}
 }
