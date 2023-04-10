@@ -47,22 +47,7 @@ export class ArtistComponent implements OnInit, OnDestroy {
 			this.requestSub = this.requestTo$.subscribe(response => {
 				this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
 
-				let artistDesc = '';
-
-				for (let i = 0; i < this.artist.artistDescription.length; i++) {
-					artistDesc += this.artist.artistDescription[i].paragraph;
-				}
-
-				this.metaDataObj = {
-					title: `${this.artist.artistName} | Moon Koradji Records`,
-					description: artistDesc,
-					ogTitle: this.artist.artistName,
-					ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + this.artist.artistAvatar,
-					ogUrl: 'https://www.moonkoradji.com/artists/' + this.artist.artistRoute,
-					ogDescription: artistDesc
-				}
-
-				this.metaData.setMetaData(this.metaDataObj);
+				this.setMetaData(this.artist);
 			});
 		})
 	}
@@ -74,5 +59,24 @@ export class ArtistComponent implements OnInit, OnDestroy {
 		if (this.requestSub) {
 			this.requestSub.unsubscribe();
 		}
+	}
+
+	setMetaData(artist: Artist): void {
+		let artistDesc = '';
+
+		for (let i = 0; i < artist.artistDescription.length; i++) {
+			artistDesc += artist.artistDescription[i].paragraph;
+		}
+
+		this.metaDataObj = {
+			title: `${artist.artistName} | Moon Koradji Records`,
+			description: artistDesc,
+			ogTitle: artist.artistName,
+			ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + artist.artistAvatar,
+			ogUrl: 'https://www.moonkoradji.com/artists/' + artist.artistRoute,
+			ogDescription: artistDesc
+		}
+
+		this.metaData.setMetaData(this.metaDataObj);
 	}
 }

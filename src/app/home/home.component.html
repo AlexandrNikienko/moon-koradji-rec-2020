@@ -59,7 +59,7 @@
 	</div>
 </section> -->
 
-<section class="recent-releases-wrapper">
+<section *ngIf="releases$ | async as releases" class="recent-releases-wrapper">
 	<mk-heading
 		[title]="'Recent Releases'"
 		[subTitle]="'New Psychedelic Trance Music From Moon Koradji Records'"
@@ -67,11 +67,9 @@
 	</mk-heading>
 
 	<div class="recent-releases-inner">
-		<ng-container *ngIf="releases$ | async as releases">
-			<ng-container *ngFor="let release of releases; let i = index">
-				<app-release-card *ngIf="(i < 4) && !release.isHero && !release.hidden" [releaseItem]="release">
-				</app-release-card>
-			</ng-container>
+		<ng-container *ngFor="let release of releases; let i = index">
+			<app-release-card *ngIf="(i < 4) && !release.isHero && !release.hidden" [releaseItem]="release">
+			</app-release-card>
 		</ng-container>
 	</div>
 </section>
@@ -79,7 +77,7 @@
 <section class="podcast-wrapper">
 	<app-podcast></app-podcast>
 
-	<a routerLink="/merch" class="s-tshirt" *ngIf="false">
+	<!-- <a routerLink="/merch" class="s-tshirt" *ngIf="false">
 		<div class="s-tshirt__item s-tshirt__item--hidden">
 			<img src="/assets/images/t-shirts/1/t-shirt-male-glowing.jpg" class="s-tshirt__img">
 		</div>
@@ -91,10 +89,10 @@
 		<div class="s-tshirt__notification">Buy t-shirt with glowing print</div>
 
 		<img class="s-gift" src="/assets/images/winter/gift-2.svg" alt="">
-	</a>
+	</a> -->
 </section>
 
-<section class="featured-artists-wrapper" *ngIf="featuredGalleryItems">
+<section *ngIf="featuredGalleryItems" class="featured-artists-wrapper">
 	<mk-heading
 		[title]="'Featured Artists'"
 		[subTitle]="'Meet our talented featured artists'"
@@ -108,12 +106,14 @@
 	<div class="bottom__left">
 		<div class="ringtones">
 			<p class="ringtones__title">Download your ringtone</p>
+
 			<ul class="ringtones__list">
 				<li class="ringtones__item">
 					<a href="/assets/music/ringtones/Moon_Koradji_-_Huvudverk.mp3" target="blank">
 						<i class="fas fa-play"></i>Huvudverk
 					</a>
 				</li>
+
 				<li class="ringtones__item">
 					<a href="/assets/music/ringtones/Moon_Koradji_-_The_Other_Self.mp3" target="blank">
 						<i class="fas fa-play"></i>The Other Self
@@ -122,7 +122,7 @@
 			</ul>
 		</div>
 	
-		<div class="news" *ngIf="news$ | async as news">
+		<div *ngIf="news$ | async as news" class="news">
 			<p class="news__header">More News</p>
 	
 			<div class="news__item" *ngFor="let item of news">

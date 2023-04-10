@@ -54,28 +54,14 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 		this.releases$.pipe(
 			switchMap(releases => {
 				this.release = releases.find((release: Release) => release['releaseRoute'] === this.releaseRoute);
+
+				this.setMetaData(this.release);
+
 				return this.artists$;
 			}),
 			takeUntil(this.destroyStream)
 		).subscribe(artists => {
 			this.involved = this.getInvolvedArtists(artists, this.release.artists);
-
-			let releaseDesc = '';
-
-			for (let i = 0; i < this.release.releaseDescription.length; i++) {
-				releaseDesc += this.release.releaseDescription[i].paragraph;
-			}
-
-			this.metaDataObj = {
-				title: `${this.release.releaseTitle} | Moon Koradji Records`,
-				description: releaseDesc,
-				ogTitle: this.release.releaseTitle,
-				ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + this.release.releaseCover.default,
-				ogUrl: 'https://www.moonkoradji.com/releases/' + this.release.releaseRoute,
-				ogDescription: releaseDesc
-			}
-
-			this.metaData.setMetaData(this.metaDataObj);
 		})
 	}
 
@@ -94,5 +80,24 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 
 	shareOnFacebook(): void {
 		window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent('https://www.moonkoradji.com/releases/' + this.release.releaseRoute), '_blank');
-	  }
+	}
+
+	setMetaData(release: Release): void {
+		let releaseDesc = '';
+
+		for (let i = 0; i < release.releaseDescription.length; i++) {
+			releaseDesc += release.releaseDescription[i].paragraph;
+		}
+
+		this.metaDataObj = {
+			title: `${release.releaseTitle} | Moon Koradji Records`,
+			description: releaseDesc,
+			ogTitle: release.releaseTitle,
+			ogImage: 'https://www.moonkoradji.com/assets/images/release-cover/' + release.releaseCover.default,
+			ogUrl: 'https://www.moonkoradji.com/releases/' + release.releaseRoute,
+			ogDescription: releaseDesc
+		}
+
+		this.metaData.setMetaData(this.metaDataObj);
+	}
 }

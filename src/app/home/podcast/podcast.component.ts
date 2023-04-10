@@ -1,7 +1,7 @@
 import { HeadingComponent } from './../../layout/heading/heading.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
 import { Observable, Subscription } from 'rxjs';
 
 import { DataService } from './../../core/services/data.service';
@@ -14,7 +14,7 @@ import { PodcastAdv } from './../../core/models/podcast-add.model';
 	templateUrl: './podcast.component.html',
 	styleUrls: ['podcasts-adv.scss']
 })
-export class PodcastComponent {
+export class PodcastComponent implements OnDestroy {
 	public _podcast$: Observable<PodcastAdv> = this.dataService.requestToData('podcast');
 
 	public logoMap: object = {
@@ -39,5 +39,9 @@ export class PodcastComponent {
 		this.logoSub = this._podcast$.subscribe(podcast => {
 			this.logo = this.logoMap[podcast.month.toLowerCase()]
 		})
+	}
+
+	ngOnDestroy() {
+		this.logoSub.unsubscribe();
 	}
 }

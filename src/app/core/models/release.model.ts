@@ -26,6 +26,7 @@ export interface Release {
 	tracklist?: Array<object>;
 	embedAudio?: string;
 	artists: Array<string>;
+	hub?: string;
 }
 
 interface ReleaseCover {

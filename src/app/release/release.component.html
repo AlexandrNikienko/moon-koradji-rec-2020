@@ -67,7 +67,7 @@
         <app-shared-video *ngIf="release.embedVideo" [embedVideo]="release.embedVideo"></app-shared-video>
     </div>
 
-	<div class="offset-md-1 col-md-10 col-sm-12 s-involved-artists" *ngIf="release.artists">
+	<div *ngIf="release.artists" class="offset-md-1 col-md-10 col-sm-12 s-involved-artists">
 		<p class="s-involved-artists__title">Involved musicians:</p>
 
 		<div class="s-involved-artists__item" *ngFor="let artist of involved">
@@ -78,5 +78,9 @@
 				<div class="s-involved-artists__name">{{artist.artistName}}</div>
 			</a>
 		</div>
+	</div>
+
+	<div *ngIf="release.hub" class="offset-md-1 col-md-10 col-sm-12">
+		<iframe class="release-hub" src="https://music.imusician.pro/a/Ye7MKZqr/" title="{{release.releaseTitle}}"></iframe>
 	</div>
 </div>
