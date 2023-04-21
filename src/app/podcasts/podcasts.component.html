@@ -28,7 +28,7 @@
 
 	<app-shared-loader></app-shared-loader>
 
-	<div class="s-player-wrapper" [innerHTML]="podcasts[0].radiOzora | safeHtml"></div>
+	<div class="s-player-wrapper" [innerHTML]="podcasts[0].radiOzora | safe: 'html'"></div>
 
-	<div class="s-player-wrapper" [innerHTML]="podcasts[0].soundCloud | safeHtml"></div>
+	<div class="s-player-wrapper" [innerHTML]="podcasts[0].soundCloud | safe: 'html'"></div>
 </ng-container>

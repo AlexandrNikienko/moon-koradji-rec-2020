@@ -19,15 +19,17 @@
 			line-height: normal;
 
             &:hover {
-                color: white;
+                color: #dee2e6;
 			}
         }
     }
 
     .nav-item {
+		cursor: default;
+
         &.active {
             .nav-link {
-                color: white;
+                color: #dee2e6;
             }
         }
     }
@@ -48,6 +50,7 @@
         i {
 			vertical-align: baseline;
 			margin-right: .25em;
+			display: none !important;
 			
 			@supports (margin-inline-end: 0) {
 				margin-right: 0;
@@ -136,6 +139,24 @@
 
 .support-link {
 	margin-right: 16px;
+}
+
+.dropdown {
+	&:hover {
+		.dropdown-menu {
+			display: block;
+			margin-top: 0;
+		}
+	}
+}
+
+.dropdown-menu-dark {
+	background-color: rgba(0,0,0,.9);
+	backdrop-filter: saturate(180%) blur(20px); // ???
+}
+
+.dropdown-toggle:after {
+	display: none;
 }
 
 @include mobile {

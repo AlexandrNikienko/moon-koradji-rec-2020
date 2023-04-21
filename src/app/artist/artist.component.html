@@ -57,7 +57,7 @@
 		<div class="s-mixes__item" *ngFor="let mix of artist.mixes">
 			<p class="s-mix-year">{{mix.year}}</p>
 
-			<div class="s-mix-block" [innerHTML]="mix.embedCode | safeHtml"></div>
+			<div class="s-mix-block" [innerHTML]="mix.embedCode | safe: 'html'"></div>
 		</div>
 	</div>
 </ng-container>

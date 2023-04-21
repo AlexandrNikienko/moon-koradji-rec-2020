@@ -2,9 +2,9 @@
 	<mk-heading [title]="release.releaseTitle"></mk-heading>
 
     <div class="offset-md-1 col-md-4 col-sm-12">
-		<a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
+		<!-- <a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
 			<span class="fas fa-share fa-2x"></span>
-		</a>
+		</a> -->
 
         <div class="release-main">
 			<app-picture [cover]="release.releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 
-	<div *ngIf="release.hub" class="offset-md-1 col-md-10 col-sm-12">
-		<iframe class="release-hub" src="https://music.imusician.pro/a/Ye7MKZqr/" title="{{release.releaseTitle}}"></iframe>
-	</div>
+	<!-- <div *ngIf="release.hub" class="offset-md-1 col-md-10 col-sm-12">
+		<iframe class="release-hub" [src]="release.hub | safe: 'resourceUrl'" title="{{release.releaseTitle}}"></iframe>
+	</div> -->
 </div>
