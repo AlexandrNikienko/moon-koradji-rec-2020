@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
@@ -32,23 +32,18 @@ import { Release } from '../core/models/release.model';
 })
 
 export class ReleaseComponent implements OnInit, OnDestroy {
+	private route = inject(ActivatedRoute);
+	private dataService = inject(DataService);
+	private metaData = inject(MetaDataService);
+
 	release: Release;
 	involved: Artist[] = [];
-	private releases$ = this.dataService.requestToData('releases');
-	private artists$ = this.dataService.requestToData('artists');
+	private releases$ = this.dataService.requestToData<Release>('releases');
+	private artists$ = this.dataService.requestToData<Artist>('artists');
 	private releaseRoute = this.route.snapshot.params['releaseRoute'];
 	private destroyStream = new Subject<void>();
 
 	private metaDataObj: iMeta;
-
-	constructor(
-		private route: ActivatedRoute,
-		private dataService: DataService,
-		private metaData: MetaDataService,
-		private router: Router
-	) {
-		// this.dataService.checkIfRouteCorrect(this.releaseRoute);
-	}
 
 	ngOnInit() {
 		this.releases$.pipe(
@@ -70,12 +65,7 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 	}
 
 	getInvolvedArtists(allArtists: Artist[], releaseArtists: string[]): Artist[] {
-		let involved = [];
-		releaseArtists.forEach(name => {
-			const artist = allArtists.find(artist => artist.artistName === name);
-			involved.push(artist);
-		});
-		return involved;
+		return allArtists.filter(artist => releaseArtists.includes(artist.artistName));
 	}
 
 	shareOnFacebook(): void {
@@ -83,11 +73,7 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 	}
 
 	setMetaData(release: Release): void {
-		let releaseDesc = '';
-
-		for (let i = 0; i < release.releaseDescription.length; i++) {
-			releaseDesc += release.releaseDescription[i].paragraph;
-		}
+		const releaseDesc = release.releaseDescription.reduce((desc, par) => desc + par.paragraph, '');
 
 		this.metaDataObj = {
 			title: `${release.releaseTitle} | Moon Koradji Records`,

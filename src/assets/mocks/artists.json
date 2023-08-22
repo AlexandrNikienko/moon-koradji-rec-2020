@@ -87,6 +87,34 @@
 			]
 		},
 		{
+			"artistRoute": "akkma",
+			"artistName": "Akkma",
+			"artistRealName": "Maxime Hermeneau",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_akkma.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Akkma is the psytrance project of Maxime created in 2011."
+				},
+				{
+					"paragraph": "After participating in many techno events he is very quickly attracted by psytrance. Enchanted by the magic of this music, he decides to experiment and compose his own tracks."
+				},
+				{
+					"paragraph": "His compositions are a mixture of dark atmospheres, strange soundscapes and organic textures that allow him to get closer to his vision of psychedelic trance. Maxime likes to take inspiration from the atmospheres and sounds of nature. For him, music brings to a form of spirituality, allows to arouse emotions, to connect to nature and that's what he tries to share through his compositions."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/Akkma/",
+			"artistSoundcloud": "https://soundcloud.com/akkma",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				}
+			]
+		},
+		{
 			"artistRoute": "already-maged",
 			"artistName": "Already Maged",
 			"artistRealName": "Egor Yudin",
@@ -107,6 +135,11 @@
 			"artistFacebook": "https://www.facebook.com/Already-Maged-179276062095555/",
 			"artistSoundcloud": "https://soundcloud.com/alreadymaged",
 			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				},
 				{
 					"cdName": "VA Mind Games",
 					"cdCover": "mkcd010_mind_games.jpg",
@@ -321,6 +354,28 @@
 			]
 		},
 		{
+			"artistRoute": "critter",
+			"artistName": "Critter",
+			"artistRealName": "Daniel Ritter",
+			"artistCountry": "Mexico",
+			"flag": "mx",
+			"artistAvatar": "artist_critter.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Critter - psytrance producer and composer from Mexico City, provides psychedelic music with synthetic organic style."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/critterpsytrance",
+			"artistSoundcloud": "https://soundcloud.com/crittermusic",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				}
+			]
+		},
+		{
 			"artistRoute": "digitalian",
 			"artistName": "Digitalian",
 			"artistRealName": "Teruki Fujii",
@@ -335,7 +390,7 @@
 					"paragraph": "He has been making music since 2006 with much influence by early time of Parvati sound such as Grapes Of Wrath, Digital Talk."
 				},
 				{
-					"paragraph": "Got into psychedelic trance music in 1999, after a couple of years started to dj and now ready for a live set. His music is telling trippy stories with sense of humor, filled of twisted sound, groovy rhythm and always full power!!!"
+					"paragraph": "Got into psychedelic trance music in 1999, after a couple of years started to DJ and now ready for a live set. His music is telling trippy stories with sense of humor, filled of twisted sound, groovy rhythm and always full power!!!"
 				}
 			],
 			"artistFacebook": "",
@@ -391,6 +446,11 @@
 			"artistFacebook": "https://www.facebook.com/Distorted-Goblin-287801394154/",
 			"artistSoundcloud": "https://soundcloud.com/distorted-goblin",
 			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				},
 				{
 					"cdName": "VA Mind Games",
 					"cdCover": "mkcd010_mind_games.jpg",
@@ -614,6 +674,62 @@
 					"cdName": "VA Shadow Enuin: at the Earth's edge",
 					"cdCover": "mkcd001_shadow_enuin.jpg",
 					"cdLink": "va-shadow-enuin"
+				}
+			]
+		},
+		{
+			"artistRoute": "gnohm",
+			"artistName": "GnOhm",
+			"artistRealName": "Kalle Christensen",
+			"artistCountry": "Denmark",
+			"flag": "dk",
+			"artistAvatar": "artist_gnohm.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "GnOhm is the solo project of electronic music producer Kalle."
+				},
+				{
+					"paragraph": "Ever since picking up the guitar at the age of 5 his life have been focused on music. His inspiration comes from many different places nature, music, pictures etc. Some people describe his sound as hypnotic and groovey, but decide for yourself ;)"
+				},
+				{
+					"paragraph": "Outside of the trance project he also do downtempo/ambient Both Solo and as a part of the duo Lauge & Baba Gnohm."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/profile.php?id=100083214642945",
+			"artistSoundcloud": "https://soundcloud.com/gnohmbaba",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				}
+			],
+			"mixes": [
+				{
+					"year": "2021",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1114116088&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
+				}
+			]
+		},
+		{
+			"artistRoute": "ingraval",
+			"artistName": "Ingraval",
+			"artistRealName": "Nikita Tselovalnikov",
+			"artistCountry": "USA",
+			"flag": "us",
+			"artistAvatar": "artist_ingraval.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Ingraval is a dark psy trance and hi-tech project from the mind of Nikita Tselovalnikov aka Penta."
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
 				}
 			]
 		},
@@ -916,25 +1032,7 @@
 					"paragraph": "LAB's music is based on fast passed and groove full beats, inducing futuristic ambiences and breaks, featuring powerful mental twisting leads!"
 				},
 				{
-					"paragraph": "In the last years, LAB has performed Live Acts and DJ Sets all over the world, in festivals and parties located in places like : Portugal,Poland, Sweden, Czech Republic, Belgium, Austria, USA, Costa Rica, Germany..."
-				},
-				{
-					"paragraph": "AB has cooperated in many production projects (new tracks and remixes) from and with artists such as Ocelot, Simian, Zik, Orestis, Claw , CPC, Mubali, RED, Gu, Twisted Kala, Kiryiama, Malice in Wonderland, Mania-X and Illow ."
-				},
-				{
-					"paragraph": "Numerous releases have also been out in the last years in compilations in CD format, 2 Digital EP's and one Full Length album called 'Roleplayers' , with labels such as : No Comment, En Sof, D-A-R-K, Darklife, Deviant Force, MoonStation, Triplag, Golden Dawn, 5th Element, 6362 Metaforce, Dead of Night and Moon Koradji Records."
-				},
-				{
-					"paragraph": "Currently, LAB is straight cooperation with the labels No Comment Records from Poland , Devilsmind Records from Sweden, Quest4goa from Portugal and Deviant Force Records based in Munich, Germany."
-				},
-				{
-					"paragraph": "Recently, LAB has finished compiling the CD 'VA: Laboratorium' for No Comment Records, containing 10 unreleased tracks of many new and old artists in the Psytrance scene."
-				},
-				{
-					"paragraph": "In parallel, LAB is producing Downtempo, Breaks and Progressive with a new project called Unikorp, wich will also release the first digital EP in September 2011 for the french label Pyratrance Records. "
-				},
-				{
-					"paragraph": "Good vibrations to everyone !!"
+					"paragraph": "In parallel, LAB is producing Downtempo, Breaks and Progressive with a project called Unikorp."
 				}
 			],
 			"artistFacebook": "",
@@ -944,6 +1042,34 @@
 					"cdName": "VA Infinity Keepers 2: depth perception",
 					"cdCover": "mkcd007_infinity_keepers_2.jpg",
 					"cdLink": "va-infinity-keepers-2"
+				}
+			]
+		},
+		{
+			"artistRoute": "loom",
+			"artistName": "Loom",
+			"artistRealName": "Nicolas Marcato",
+			"artistCountry": "Italy",
+			"flag": "it",
+			"artistAvatar": "artist_loom.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Loom was born on 13th February 1995. His love for music began in his childhood and in the early days. He had his first musical experience as a singer, drummer, and other instruments as well. During middle school, he started to study guitar and music theory at the ''Experience Music Academy'' near Padova, where he got his diploma in the summer of 2017."
+				},
+				{
+					"paragraph": " In 2013/2014 Loom got in touch with the world of Trance music and after taking part in some parties, he fell in love with it, giving him the opportunity to develop as a person and soul."
+				},
+				{
+					"paragraph": "He also teaches guitar in his studio and produces Psytrance with some funky/jazz/blues influences as part of the Slide project."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/LoomPsy",
+			"artistSoundcloud": "https://soundcloud.com/loompsy",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
 				}
 			]
 		},
@@ -969,6 +1095,31 @@
 					"cdName": "VA Infinity Keepers",
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
+				}
+			]
+		},
+		{
+			"artistRoute": "mendrion",
+			"artistName": "Mendrion",
+			"artistRealName": "Diego Garofo",
+			"artistCountry": "Brazil",
+			"flag": "br",
+			"artistAvatar": "artist_mendrion.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Mendrion is the psytrance project of Diego Garofo created in 2013."
+				},
+				{
+					"paragraph": "His project can be described as deep and atmospheric psychedelic music. The inspiration come from the people, places, atmospheres and nature."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/mendrionlive",
+			"artistSoundcloud": "https://soundcloud.com/mendrionlive",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
 				}
 			]
 		},
@@ -1104,7 +1255,7 @@
 			"artistAvatar": "artist_mubali.jpg",
 			"artistDescription": [
 				{
-					"paragraph": "I am a psychedelic trance dj/producer living in Berkeley, California. I have been a dj since 2000 and my styles have varied during the course of the past few years... I mainly spin Psychedelic Trance and occasionally Drum & Bass/ Jungle. In August of 2003, I began producing my own Psychedelic Trance and really enjoy writing my own music."
+					"paragraph": "I am a psychedelic trance dj/producer living in Berkeley, California. I have been a DJ since 2000 and my styles have varied during the course of the past few years... I mainly spin Psychedelic Trance and occasionally Drum & Bass/ Jungle. In August of 2003, I began producing my own Psychedelic Trance and really enjoy writing my own music."
 				},
 				{
 					"paragraph": "I was a violist for 10 years in my adolescence and have been a fan of all types of music, instrumental and non... I am a big fan of all types of psychedelic music, as well as funk, jazz, rock, and heavy metal.... I have found that in electronic dance music, a lot of the structure is similar to classical music. I also have been researching a lot of classical music to use as structural inspiration for my own pieces... My Debut album Cats @ Play has been released on Trishula Records in March 2006, and now I am beginning conceptual ideas for the next Mubali album as well as starting a new abstract electronica project, Xabuumuphu."
@@ -1117,6 +1268,43 @@
 					"cdName": "VA Shadow Enuin: at the Earth's edge",
 					"cdCover": "mkcd001_shadow_enuin.jpg",
 					"cdLink": "va-shadow-enuin"
+				}
+			]
+		},
+		{
+			"artistRoute": "noise-gust",
+			"artistName": "Noise Gust",
+			"artistRealName": "Kagetoshi Nakamura",
+			"artistCountry": "Japan",
+			"flag": "jp",
+			"artistAvatar": "artist_noise_gust.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Noise Gust is Kagetoshi Nakamura psytrance producer from Japan. He has started making his own music since 2001."
+				},
+				{
+					"paragraph": "This project is based on the combination of dark industrial sounds mixed with a very energetic bass and kick for dancing. His energy is dedicated to promote the Japanese scene through the production and promotion of psychedelic trance music."
+				},
+				{
+					"paragraph": "That made incredible music creates profound stories where different energies from many horizons units to create a real and unique vibration to feel the space that extends in the sound are taking advantage of experience obtained from this scene."
+				},
+				{
+					"paragraph": "Kagetoshi have any other projects or unit name of Quixotics and Mongust are active work too."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/noisegust",
+			"artistSoundcloud": "https://soundcloud.com/noisegust",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				}
+			],
+			"mixes": [
+				{
+					"year": "2020",
+					"embedCode": "<iframe width=\"100%\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/889197328&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
 				}
 			]
 		},
@@ -1146,6 +1334,12 @@
 					"cdCover": "mkcd011_illusorium.jpg",
 					"cdLink": "va-illusorium"
 				}
+			],
+			"mixes": [
+				{
+					"year": "2023",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1524554662&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
+				}
 			]
 		},
 		{
@@ -1160,7 +1354,7 @@
 					"paragraph": "Nolm was born and bred in a traditional and working-class district in Tokyo, Japan. Surrounded by matsuri (festival) culture, he has learned Japanese folk music since he was 3 years old."
 				},
 				{
-					"paragraph": "After encountering psytrance in 2002, he has become a dj and discovered forest sound on VA / Boldly Audio, released by Sanaton Records in 2005. In the following year, he joined Savage Family artist group, which led by Savage Scream and started producing his own sound. Then he moved to Kansai area in south Japan, organised psytrance parties, Mystlake with likeminded people in 2007, and invited forest psytrance artists such as Procs and Hutti Heita. In 2008, he released some of his first tracks from Phreex Networx and a track called, “Mystlake” from Sanaton Records."
+					"paragraph": "After encountering psytrance in 2002, he has become a DJ and discovered forest sound on VA / Boldly Audio, released by Sanaton Records in 2005. In the following year, he joined Savage Family artist group, which led by Savage Scream and started producing his own sound. Then he moved to Kansai area in south Japan, organised psytrance parties, Mystlake with likeminded people in 2007, and invited forest psytrance artists such as Procs and Hutti Heita. In 2008, he released some of his first tracks from Phreex Networx and a track called, “Mystlake” from Sanaton Records."
 				},
 				{
 					"paragraph": "At the same time, he founded his own label, Mental Sauce and has been releasing compilations consisting of Japanese underground sound with the essence of North European forest sound."
@@ -1331,7 +1525,7 @@
 			"artistAvatar": "artist_olien.jpg",
 			"artistDescription": [
 				{
-					"paragraph": "Oliver, a German producer, has been a pioneer in the psytrance scene for over two decades. Born in Leipzig, in 1980, he began experimenting with electronic music production in 1995."
+					"paragraph": "Oliver, a German producer, has been a pioneer in the psytrance scene for over two decades. Born in Freiburg, in 1980, he began experimenting with electronic music production in 1995."
 				},
 				{
 					"paragraph": "Oliwave’s musical style is diverse, ranging from ambient music to fast-paced psychedelic goa trance. The project represents melodic rhythms with a positive, energetic and open-minded mood."
@@ -1344,8 +1538,13 @@
 				}
 			],
 			"artistFacebook": "",
-			"artistSoundcloud": "",
+			"artistSoundcloud": "https://soundcloud.com/oliwav",
 			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
+				},
 				{
 					"cdName": "Oliwave - Alive Memory",
 					"cdCover": "mkdg004_oliwave_alive_memory.jpg",
@@ -1462,7 +1661,7 @@
 			"artistAvatar": "artist_saikozaurus.jpg",
 			"artistDescription": [
 				{
-					"paragraph": "Daniil, the body-mind mechanism behind Saikozaurus project, was born in Odessa, Ukraine in 1980. He discovered psytrance music again back in 1998 and then it was only a matter of time before he started to dj in 2001. Later in 2003 first computer was purchased and Saikozaurus project was born. In 2007 Saikozaurus came up on psytrance scene with his first release on the v/a Neverending Story by Zaikadelic Rec. In 2012  Saikozaurus released his first solo EP “Demiurgent Agent” on Moon Station Rec. Also his tracks were released at different labels, such as Vantara Vichitra, Insomnia, Mighty Quinn, Treetrolla, Zaikadelic and Skygravity and some more. In 2018 Saikozaurus joined Moon Koradji Records."
+					"paragraph": "Daniil, the body-mind mechanism behind Saikozaurus project, was born in Odessa, Ukraine in 1980. He discovered psytrance music again back in 1998 and then it was only a matter of time before he started to DJ in 2001. Later in 2003 first computer was purchased and Saikozaurus project was born. In 2007 Saikozaurus came up on psytrance scene with his first release on the v/a Neverending Story by Zaikadelic Rec. In 2012  Saikozaurus released his first solo EP “Demiurgent Agent” on Moon Station Rec. Also his tracks were released at different labels, such as Vantara Vichitra, Insomnia, Mighty Quinn, Treetrolla, Zaikadelic and Skygravity and some more. In 2018 Saikozaurus joined Moon Koradji Records."
 				},
 				{
 					"paragraph": "Also you can find his tracks under name Tursiopsis and Face of Space (in collaboration with Shivattva)."
@@ -1487,6 +1686,34 @@
 				{
 					"year": "2020",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/881420572\"></iframe>"
+				}
+			]
+		},
+		{
+			"artistRoute": "savage-scream",
+			"artistName": "Savage Scream",
+			"artistRealName": "Mizuki Nishihata",
+			"artistCountry": "Japan",
+			"flag": "jp",
+			"artistAvatar": "artist_savage_scream.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Savage Scream is the solo project of Mizuki Nishihata, a renowned veteran of Japan's psytrance scene."
+				},
+				{
+					"paragraph": "Known for his captivating music, Mizuki has also gained recognition through various solo side projects, including Psyfix and Scaltinof, as well as successful collaborations like Baal, Bug Funk, Savajun, Yasagure Pan Nakotta, and Kukunochi."
+				},
+				{
+					"paragraph": "Mizuki Nishihata's boundless creativity continues to push the boundaries of electronic music, captivating audiences with his eclectic ventures."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/mizuki.ni",
+			"artistSoundcloud": "https://soundcloud.com/mizukinishi",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
 				}
 			]
 		},
@@ -1567,6 +1794,31 @@
 					"cdName": "VA Infinity Keepers",
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
+				}
+			]
+		},
+		{
+			"artistRoute": "simon-hayes",
+			"artistName": "Simon Hayes",
+			"artistRealName": "Simon Hayes",
+			"artistCountry": "South Africa",
+			"flag": "za",
+			"artistAvatar": "artist_simon_hayes.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Emotion, Soul, Serenity, harnessing the power of peace within the bandwidths of darkness & light. With hopes to re-discover ancient ways of conduction & care for spirit to release. Guiding lines of divine essence merging with static electricity_-*"
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/simonhayesmusic",
+			"artistSoundcloud": "https://soundcloud.com/simonhayesmusic",
+			"releases": [
+				{
+					"cdName": "VA Blackout",
+					"cdCover": "mkdg005_blackout.jpg",
+					"cdLink": "va-blackout"
 				}
 			]
 		},

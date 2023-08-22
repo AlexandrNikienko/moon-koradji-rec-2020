@@ -12,7 +12,7 @@ export class ResourceExistsGuard implements Resolve<any> {
 	) {}
   
 	resolve(route: ActivatedRouteSnapshot): boolean {
-		this.dataService.existingPramas.subscribe(items => {
+		this.dataService.existingParams.subscribe(items => {
 			const param = Object.values(route.params)[0];
 			const resourceExists = !!items.find(item => item === param);
 

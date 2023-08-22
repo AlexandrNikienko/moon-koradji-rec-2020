@@ -1,4 +1,5 @@
 import { Paragraph } from './paragraph.model';
+import { Release } from './release.model';
 
 export interface Artist {
     id: string;
@@ -12,8 +13,8 @@ export interface Artist {
     artistSoundcloud?: string;
     artistOfficial?: string;
     artistMixcloud?: string;
-    mixes?: boolean;
-    releases?: boolean;
+    mixes?: any[]; // TODO
+    releases?: any[]; // TODO
     embedCode?: string;
     flag?: string;
 }

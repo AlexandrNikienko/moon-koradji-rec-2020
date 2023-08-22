@@ -1,11 +1,12 @@
 import { HeadingComponent } from './../../layout/heading/heading.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy } from "@angular/core";
+import { Component, OnDestroy, OnInit, inject } from "@angular/core";
 import { Observable, Subscription } from 'rxjs';
 
 import { DataService } from './../../core/services/data.service';
-import { PodcastAdv } from './../../core/models/podcast-add.model';
+import { PodcastAdv } from '../../core/models/podcast-adv.model';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
 	standalone: true,
@@ -14,10 +15,13 @@ import { PodcastAdv } from './../../core/models/podcast-add.model';
 	templateUrl: './podcast.component.html',
 	styleUrls: ['podcasts-adv.scss']
 })
-export class PodcastComponent implements OnDestroy {
-	public _podcast$: Observable<PodcastAdv> = this.dataService.requestToData('podcast');
+export class PodcastComponent implements OnInit {
+	private dataService = inject(DataService);
 
-	public logoMap: object = {
+	podcast$: Observable<PodcastAdv[]>;
+	logo$: Observable<string>;
+
+	logoMap: object = {
 		january: "01-mk-logo-jan-200.jpg",
 		february: "02-mk-logo-feb-200.jpg",
 		march: "03-mk-logo-mar-200.jpg",
@@ -32,16 +36,11 @@ export class PodcastComponent implements OnDestroy {
 		december: "12-mk-logo-dec-200.jpg",
 	}
 
-	public logoSub: Subscription;
-	public logo: string;
+	ngOnInit(): void {
+		this.podcast$ = this.dataService.requestToData<PodcastAdv>('podcast');
 
-	constructor(private dataService: DataService) { 
-		this.logoSub = this._podcast$.subscribe(podcast => {
-			this.logo = this.logoMap[podcast.month.toLowerCase()]
-		})
-	}
-
-	ngOnDestroy() {
-		this.logoSub.unsubscribe();
+		this.logo$ = this.podcast$.pipe(
+			map(podcastArray => this.logoMap[podcastArray[0].month.toLowerCase()])
+		)
 	}
 }

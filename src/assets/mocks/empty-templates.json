@@ -9,3 +9,94 @@
         }
     ]
 }
+
+{
+	"isHero": true,
+	"hidden": false,
+	"isNew": true,
+	"releaseNumber": "",
+	"releaseNote": "",
+	"releaseDate": "",
+	"releaseTitle": "",
+	"releaseSubTitle": "",
+	"releaseCover": {
+		"default": "",
+		"default2x": "",
+		"webp": "",
+		"webp2x": ""
+	},
+	"releaseRoute": "",
+	"releaseDescription": [
+		{   
+			"paragraph": ""
+		},
+		{   
+			"paragraph": ""
+		}
+	],
+	"compiledBy": "",
+	"cdAuthor": "",
+	"masteredBy": "",
+	"artworkBy": "",
+	"beatspaceLink": "",
+	"bandcampLink": "",
+	"videoLink": "",
+	"artists": [
+		""
+	],
+	"embedAudio": "",
+	"hub": ""
+}
+
+{
+	"artistRoute": "",
+	"artistName": "",
+	"artistRealName": "",
+	"artistCountry": "",
+	"flag": "",
+	"artistAvatar": "",
+	"artistDescription": [
+		{
+			"paragraph": ""
+		},
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "",
+	"artistSoundcloud": "",
+	"releases": [
+		{
+			"cdName": "",
+			"cdCover": "",
+			"cdLink": ""
+		}
+	],
+	"mixes": [
+		{
+			"year": "",
+			"embedCode": ""
+		}
+	]
+}
+
+{
+	"artistRoute": "metaphyz",
+	"artistName": "Metaphyz",
+	"artistRealName": "Bat",
+	"artistCountry": "France",
+	"flag": "fr",
+	"artistAvatar": "artist_metaphyz.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "After his birth in a deep cave Bat aka Metaphyz learned how to emit ultrasounds, and he quickly increased his high sensitivity to the earth’s magnetic field."
+		},
+		{
+			"paragraph": "After finding acoustically the right basement, Bat began to produce echoes in order to propagate his own frequencies around the planet. The idea behind the Metaphyz project is to unleash your inner beast and reconnect with your zoanthropic instinct."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/MetaphyzMusic/",
+	"artistSoundcloud": "https://soundcloud.com/metaphyz",
+	"releases": [
+	]
+},

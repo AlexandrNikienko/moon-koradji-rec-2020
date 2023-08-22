@@ -1,8 +1,39 @@
 {
     "releases": [
-        {
+		{
 			"isHero": true,
-            "hidden": false,
+			"hidden": false,
+			"isNew": true,
+			"releaseNumber": "MKDG005",
+			"releaseNote": "2023",
+			"releaseDate": "comming soon",
+			"releaseTitle": "VA Blackout",
+			"releaseSubTitle": "comming soon",
+			"releaseCover": {
+				"default": "mkdg005_blackout.jpg",
+				"default2x": "",
+				"webp": "mkdg005_blackout-500.webp",
+				"webp2x": "mkdg005_blackout-1000.webp"
+			},
+			"releaseRoute": "va-blackout",
+			"releaseDescription": [
+				{   
+					"paragraph": "When darkness is a source of inspiration, creativity born in the gloom takes on a specials power under the light of the stars."
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"masteredBy": "Ankur",
+			"artworkBy": "Salamandra",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Akkma", "Mendrion", "GnOhm", "Distorted Goblin", "Simon Hayes", "Critter", "Loom", "Savage Scream", "Oliwave", "Already Maged", "Noise Gust", "Ingraval"
+			],
+			"embedAudio": "",
+			"hub": ""
+		},
+        {
             "isNew": true,
             "releaseNumber": "MKDG004",
             "releaseNote": "2023",

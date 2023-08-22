@@ -3,5 +3,5 @@
 	<source srcset="{{IMAGEFOLDER + imageFolder + (cover.default2x || cover.default)}} 2x" type="image/jpeg">
 	<source srcset="{{IMAGEFOLDER + imageFolder + (cover.webp || cover.default)}}" type="image/webp">
 	<source srcset="{{IMAGEFOLDER + imageFolder + cover.default}}" type="image/jpeg">
-	<img [class]="class" src="{{IMAGEFOLDER + imageFolder + cover.default}}" alt="">
+	<img [class]="class" src="{{IMAGEFOLDER + imageFolder + cover.default}}" alt="" loading="lazy">
 </picture>

@@ -60,9 +60,10 @@
 		width: 100%;
 		margin-bottom: 1rem;
 		text-align: center;
+		font-size: 26px;
+		line-height: 1;
 
-		a {
-			font-size: 26px;
+		&__link {
 			position: relative;
 
 			&::after {
@@ -86,7 +87,7 @@
 @media (min-width: $tablet-width) {
 	.bottom {
 		background: rgba(0, 0, 0, 0.5);
-		padding: 1rem;
+		padding: 2rem;
 		border-radius: 1rem;
 	}
 }

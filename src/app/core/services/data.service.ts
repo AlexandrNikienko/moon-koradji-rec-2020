@@ -11,7 +11,7 @@ import { DATAFOLDER } from '../../../environments/environment';
 })
 export class DataService {
 	existingParamsRoutes = ['artists', 'djs', 'releases'];
-	existingPramas = new Subject<any[]>();
+	existingParams = new Subject<any[]>();
 
 	constructor(
 		private http: HttpClient,
@@ -20,10 +20,10 @@ export class DataService {
 		this.getExistingParams();
 	}
 
-	requestToData(item: string): Observable<any> {
+	requestToData<T>(item: string): Observable<T[]> {
 		const url = `${DATAFOLDER}${item}.json`;
 		
-		return this.http.get<any[]>(url)
+		return this.http.get<T[]>(url)
 			.pipe(
 				map(object => object[item]),
 				shareReplay(1)
@@ -45,14 +45,14 @@ export class DataService {
 					}
 					
 					if (existingParams.length > 0 && existingParams.length === this.existingParamsRoutes.length) {
-						this.existingPramas.next(existingParams.flat());
+						this.existingParams.next(existingParams.flat());
 					  }
 				})
 		});
 	}
 
 	checkIfRouteCorrect(route: string) {
-		this.existingPramas.subscribe(items => {
+		this.existingParams.subscribe(items => {
 			const resourceExists = !!items.find(item => item === route);
 
 			if (!resourceExists) {

@@ -4,7 +4,7 @@
 	[route]="'/podcasts'">
 </mk-heading>
 
-<div class="podcast-adv" *ngIf="_podcast$ | async as podcast">
+<div class="podcast-adv" *ngIf="podcast$ | async as podcast">
 	<div class="podcast-adv__border podcast-adv__border--top"></div>
 	<div class="podcast-adv__border podcast-adv__border--right"></div>
 	<div class="podcast-adv__border podcast-adv__border--bottom"></div>
@@ -18,11 +18,18 @@
 		<div class="podcast-adv__subtitle">podcasts</div>
 
 		<div *ngIf="false" class="recent-podcast">
-			<div class="recent-podcast__image" style="background-image: url(/assets/images/podcasts/{{logo}})"></div>
+			<div *ngIf="logo$ | async as logo"
+				class="recent-podcast__image"
+				style="background-image: url(/assets/images/podcasts/{{logo}})"></div>
 
 			<h1 class="recent-podcast__desc">
-				<p class="recent-podcast__title">{{podcast.month}} Episode #{{podcast.number}}</p>
-				<p class="recent-podcast__info">with <strong>{{podcast.artist}}</strong></p>
+				<p class="recent-podcast__title">
+					{{podcast[0].month}} Episode #{{podcast[0].number}}
+				</p>
+
+				<p class="recent-podcast__info">
+					with <strong>{{podcast[0].artist}}</strong>
+				</p>
 			</h1>
 		</div>
 

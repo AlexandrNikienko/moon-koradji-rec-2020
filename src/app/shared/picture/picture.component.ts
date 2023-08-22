@@ -1,12 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IMAGEFOLDER } from '../../../environments/environment';
-
-interface Cover {
-	default: string;
-	default2x: string;
-	webp: string;
-	webp2x: string;
-};
+import { Cover } from 'src/app/core/models/image.model';
 
 @Component({
 	standalone: true,

@@ -6,7 +6,7 @@
     padding: 2rem;
 	gap: 2rem;
 	margin-top: 5rem;
-	box-shadow: $brand-border;
+	border-radius: 1rem;
 
 	@include mobile {
 		margin-top: 0;
@@ -27,11 +27,10 @@
 
 	&__title,
 	&__sub-title {
-		text-transform: uppercase;
 		font-weight: bold;
 		text-align: center;
 		line-height: normal;
-		background-image: url('#{$imageFolder}/release-cover/mkdg004_oliwave_alive_memory.jpg');
+		background-image: url('#{$imageFolder}/release-cover/mkdg005_blackout.jpg');
 		background-clip: text;
 		color: transparent;
 		background-size: cover;
@@ -40,6 +39,7 @@
 	}
 
 	&__title {
+		text-transform: uppercase;
 		font-size: 4rem;
 		letter-spacing: .2rem;
 		line-height: 1;		
@@ -55,6 +55,7 @@
 	img {
 		width: 400px;
 		border-radius: 1rem;
+		box-shadow: $brand-border;
 	}
 
 	.heading {

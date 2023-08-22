@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
 	standalone: true,
@@ -9,9 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 	templateUrl: './heading.component.html',
 	styleUrls: ['./heading.component.scss']
 })
-export class HeadingComponent {
-	constructor(private router: Router) {}
-	
+export class HeadingComponent {	
 	@Input()
 	title: string;
 

@@ -1,6 +1,18 @@
-<div class="artists-wrapper">
+<section class="artists-wrapper">
+	<ng-container *ngIf="artists$ | async as artists">
+		<mk-heading class="mt-4" [title]="'Artists'" [subTitle]="'Get to know the creative minds behind our music'"></mk-heading>
+
+		<div #artist class="artist-item mb-16" *ngFor="let item of artists">
+			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+
+				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+			</a>
+		</div>
+	</ng-container>
+
 	<ng-container *ngIf="djs$ | async as djs">
-		<mk-heading [title]="'Our DJs'" [subTitle]="'Meet our talented roster of DJs'"></mk-heading>
+		<mk-heading [title]="'DJs'" [subTitle]="'Meet our talented roster of DJs'"></mk-heading>
 
 		<div class="artist-item" *ngFor="let item of djs">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
@@ -10,16 +22,4 @@
 			</a>
 		</div>
 	</ng-container>
-
-	<ng-container *ngIf="artists$ | async as artists">
-		<mk-heading class="mt-4" [title]="'Our Artists'" [subTitle]="'Get to know the creative minds behind our music'"></mk-heading>
-
-		<div #artist class="artist-item" *ngFor="let item of artists">
-			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
-
-				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-			</a>
-		</div>
-	</ng-container>
-</div>
+</section>

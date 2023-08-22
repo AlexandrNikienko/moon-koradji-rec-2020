@@ -13,5 +13,6 @@ import { PictureComponent } from '../picture/picture.component';
 })
 export class ReleaseCardComponent {
 	@Input() releaseItem: Release;
+	
 	public coverFolder = IMAGEFOLDER + 'release-cover/';
 }

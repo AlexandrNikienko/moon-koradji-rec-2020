@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { JsonLDService } from './../core/services/json-ld.service';
@@ -35,25 +35,33 @@ import { PictureComponent } from '../shared/picture/picture.component';
 	styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-	public coverFolder = IMAGEFOLDER + 'release-cover/';
-	public featuredArtists: string[] = ['Ziul Oiram', 'Already Maged', 'Molchun', 'Inzect', 'Adansonia', 'Taigan Sunset', 'Traskel'];
-	public featuredGalleryItems: Gallery[];
+	private dataService = inject(DataService);
+	private jsonLDService = inject(JsonLDService);
+	private metaData = inject(MetaDataService);
 
-	public purchase$: Observable<any>;
-	public news$: Observable<News[]>;
-	public releases$: Observable<Release[]>;
+	coverFolder = IMAGEFOLDER + 'release-cover/';
+	featuredArtists: string[] = ['Ziul Oiram', 'Already Maged', 'Inzect', 'Adansonia', 'Molchun', 'Traskel'];
+	featuredGalleryItems: Gallery[];
 
-	public crystalization = new Crystalization();
+	purchase$: Observable<any>;
+	news$: Observable<News[]>;
+	releases$: Observable<Release[]>;
+	purchaseSub: Subscription;
 
-	constructor(
-		private dataService: DataService,
-		private jsonLDService: JsonLDService,
-		private metaData: MetaDataService
-	) {}
+	crystalization = new Crystalization();
+
+	private metaDataObj: iMeta = {
+		title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
+		description: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko aka DJ Omsun.',
+		ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
+		ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
+		ogUrl: 'https://www.moonkoradji.com/',
+		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko aka DJ Omsun.'
+	}
 
 	ngOnInit() {
 		this.purchase$ = this.dataService.requestToData('purchase');
-		this.purchase$.subscribe(s => {
+		this.purchaseSub = this.purchase$.subscribe(s => {
 			setTimeout(() => {
 				this.crystalization.init('.new', 180);
 			}, 0)
@@ -65,20 +73,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
-		const metaDataObj: iMeta = {
-			title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
-			description: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko a.k.a. dj Omsun.',
-			ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
-			ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
-			ogUrl: 'https://www.moonkoradji.com/',
-			ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko a.k.a. dj Omsun.'
-		}
-
-		this.metaData.setMetaData(metaDataObj);
+		this.metaData.setMetaData(this.metaDataObj);
 	}
 
 	ngOnDestroy() {
 		this.crystalization.destroy();
+		this.purchaseSub.unsubscribe();
 	}
 
 	getFeaturedGaleryItems() {

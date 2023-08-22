@@ -1,19 +1,19 @@
 {
 	"purchase": {
-		"title": "Out Now",
-		"subtitle": "Fresh Psychedelic Melodic Sounds",
+		"title": "Comming Soon",
+		"subtitle": "Fresh Psychedelic Sounds",
 		"item": {
 			"cover": {
-				"default": "mkdg004_oliwave_alive_memory.jpg",
+				"default": "mkdg005_blackout.jpg",
 				"default2x": "",
-				"webp": "mkdg004_oliwave_alive_memory-500.webp",
-				"webp2x": "mkdg004_oliwave_alive_memory-1000.webp"
+				"webp": "",
+				"webp2x": ""
 			},
-			"title": "Alive Memory",
-			"subtitle": "by Oliwave",
+			"title": "VA Blackout",
+			"subtitle": "by DJ Omsun",
 			"button": {
-				"title": "Listen & Purchase",
-				"routerLink": "releases/oliwave-alive-memory"
+				"title": "More Info",
+				"routerLink": "releases/va-blackout"
 			}
 		},
 		"deals": [

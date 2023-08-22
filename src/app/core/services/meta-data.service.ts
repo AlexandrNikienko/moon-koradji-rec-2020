@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 export interface iMeta {
@@ -14,10 +14,8 @@ export interface iMeta {
 	providedIn: 'root'
 })
 export class MetaDataService {
-	constructor(
-		private meta: Meta,
-		private title: Title) {
-	}
+	private meta = inject(Meta);
+	private title = inject(Title);
 
 	setMetaData(meta: iMeta): void {
 		if (!meta) {
