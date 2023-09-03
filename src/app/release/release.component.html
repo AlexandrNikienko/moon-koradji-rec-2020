@@ -44,7 +44,7 @@
 
 		<div class="release-credits text-align-right">
             <p *ngIf="release.compiledBy" class="release-credits__paragraph dark-color">
-				Compiled by {{release.compiledBy}}
+				Compiled by <a routerLink="{{'/artists/' + release.compiledBy.replace(' ', '-').toLowerCase()}}">{{release.compiledBy}}</a>
 			</p>
 
             <p *ngIf="release.cdAuthor" class="release-credits__paragraph dark-color">
