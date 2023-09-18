@@ -30,7 +30,7 @@
 		font-weight: bold;
 		text-align: center;
 		line-height: normal;
-		background-image: url('#{$imageFolder}/release-cover/mkdg005_blackout.jpg');
+		// background-image: url('#{$imageFolder}/release-cover/mkdg005_blackout.jpg');
 		background-clip: text;
 		color: transparent;
 		background-size: cover;
@@ -46,7 +46,7 @@
 	}
 
 	&__sub-title {
-		font-size: 2rem;
+		font-size: 1.7rem;
 		letter-spacing: .1rem;
 		text-shadow: 0 0 1px rgb(255 255 255 / 50%);
 		margin-bottom: 2rem;

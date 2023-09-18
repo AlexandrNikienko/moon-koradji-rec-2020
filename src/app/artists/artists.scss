@@ -1,10 +1,21 @@
 @use '../../styles/_utils.scss' as *;
 
 .artists-wrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	columns: 4;
 	gap: 25px 36px;
 	margin-bottom: 25px;
+
+	@include desktopSmall {
+		columns: 3;
+	}
+
+	@include tablet {
+		columns: 2;
+	}
+
+	@include mobile {
+		columns: 1;
+	}
 }
 
 .artist-item {
