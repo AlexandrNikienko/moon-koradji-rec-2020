@@ -10,6 +10,8 @@
 
 	@include mobile {
 		margin-top: 0;
+		padding: 1rem;
+		gap: 0;
 	}
 
 	&__left {
@@ -23,6 +25,10 @@
 		align-items: center;
 		padding-bottom: 2rem;
 		padding-top: 1.75rem;
+
+		@include mobile {
+			padding-bottom: 1rem;
+		}
 	}
 
 	&__title,
@@ -42,7 +48,12 @@
 		text-transform: uppercase;
 		font-size: 4rem;
 		letter-spacing: .2rem;
-		line-height: 1;		
+		line-height: 1;
+
+		@include mobile {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__sub-title {
@@ -50,6 +61,10 @@
 		letter-spacing: .1rem;
 		text-shadow: 0 0 1px rgb(255 255 255 / 50%);
 		margin-bottom: 2rem;
+
+		@include mobile {
+			font-size: 1.2rem;
+		}
 	}
 
 	img {

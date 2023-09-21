@@ -49,6 +49,12 @@
 			margin-top: 3rem;
 		}
 	}
+
+	@media (min-width: $tablet-width) {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 2rem;
+		border-radius: 1rem;
+	}
 }
 
 .go-to-merch {
@@ -80,15 +86,11 @@
 	&__content {
 		img {
 			max-height: 522px;
-		}
-	}
-}
 
-@media (min-width: $tablet-width) {
-	.bottom {
-		background: rgba(0, 0, 0, 0.5);
-		padding: 2rem;
-		border-radius: 1rem;
+			@include mobile {
+				max-height: auto;
+			}
+		}
 	}
 }
 
