@@ -6,9 +6,9 @@
 			"isNew": true,
 			"releaseNumber": "MKDG005",
 			"releaseNote": "2023",
-			"releaseDate": "comming soon",
+			"releaseDate": "Sep 23, 2023",
 			"releaseTitle": "VA Blackout",
-			"releaseSubTitle": "comming soon",
+			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkdg005_blackout.jpg",
 				"default2x": "",
@@ -25,12 +25,12 @@
 			"masteredBy": "Ankur",
 			"artworkBy": "Salamandra",
 			"beatspaceLink": "",
-			"bandcampLink": "",
+			"bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-blackout",
 			"videoLink": "",
 			"artists": [
 				"Akkma", "Mendrion", "GnOhm", "Distorted Goblin", "Simon Hayes", "Critter", "Loom", "Savage Scream", "Oliwave", "Already Maged", "Noise Gust", "Ingraval"
 			],
-			"embedAudio": "",
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 412px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1107016927/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout\">VA Blackout by Moon Koradji Records</a></iframe>",
 			"hub": ""
 		},
         {

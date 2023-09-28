@@ -85,11 +85,8 @@
 
 	&__content {
 		img {
-			max-height: 522px;
-
-			@include mobile {
-				max-height: auto;
-			}
+			height: 522px;
+			width: auto;
 		}
 	}
 }
