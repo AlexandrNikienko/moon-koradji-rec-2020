@@ -4,17 +4,17 @@ import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
-import { PipesModule } from './../core/pipes/pipes.module';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { DataService } from '../core/services/data.service';
+import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 @Component({
 	standalone: true,
 	imports: [
 		HeadingComponent,
-		PipesModule,
+		SafeHtmlPipe,
 		CommonModule, 
 		RouterModule
 	],

@@ -1,19 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 
-import { PipesModule } from './../core/pipes/pipes.module';
 import { DataService } from '../core/services/data.service';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 import { SharedLoaderComponent } from './../shared/loader/loader.component';
 import { Observable } from 'rxjs';
+import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 @Component({
 	standalone: true,
 	imports: [
 		CommonModule,
-		PipesModule,
+		SafeHtmlPipe,
 		SharedLoaderComponent
 	],
 	selector: 'app-podcasts',

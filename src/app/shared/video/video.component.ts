@@ -1,9 +1,9 @@
-import { PipesModule } from './../../core/pipes/pipes.module';
+import { SafeHtmlPipe } from 'src/app/core/pipes/safe-html.pipe';
 import { Component, Input } from '@angular/core';
 
 @Component({
 	standalone: true,
-	imports: [PipesModule],
+	imports: [SafeHtmlPipe],
 	selector: 'app-shared-video',
 	templateUrl: './video.component.html'
 })

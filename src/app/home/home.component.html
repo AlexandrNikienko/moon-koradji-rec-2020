@@ -122,29 +122,31 @@
 			</ul>
 		</div>
 	
-		<div *ngIf="news$ | async as news" class="news">
-			<p class="news__header">More News</p>
-	
-			<div class="news__item" *ngFor="let item of news">
-				<!-- <a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
-					<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-					<h1 class="news__desc">
-						<span class="news__title">{{item.title}}</span>
-						<br>
-						<span class="news__info" *ngIf="item.text">{{item.text}}</span>
-					</h1>
-				</a> -->
-	
-				<a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
-					<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-					<h1 class="news__desc">
-						<span class="news__title">{{item.title}}</span>
-						<br>
-						<span class="news__info" *ngIf="item.text">{{item.text}}</span>
-					</h1>
-				</a>
+		<ng-container *ngIf="news$ | async as news">
+			<div *ngIf="news.length > 0" class="news">
+				<p class="news__header">More News</p>
+		
+				<div class="news__item" *ngFor="let item of news">
+					<!-- <a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
+						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+						<h1 class="news__desc">
+							<span class="news__title">{{item.title}}</span>
+							<br>
+							<span class="news__info" *ngIf="item.text">{{item.text}}</span>
+						</h1>
+					</a> -->
+		
+					<a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
+						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+						<h1 class="news__desc">
+							<span class="news__title">{{item.title}}</span>
+							<br>
+							<span class="news__info" *ngIf="item.text">{{item.text}}</span>
+						</h1>
+					</a>
+				</div>
 			</div>
-		</div>
+		</ng-container>
 	</div>
 
 	<div class="bottom__right">

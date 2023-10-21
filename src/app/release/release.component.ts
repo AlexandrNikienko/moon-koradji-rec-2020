@@ -6,7 +6,6 @@ import { takeUntil, switchMap } from 'rxjs/operators';
 
 import { DataService } from '../core/services/data.service';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
-import { PipesModule } from './../core/pipes/pipes.module';
 
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
 import { PictureComponent } from './../shared/picture/picture.component';
@@ -14,6 +13,7 @@ import { SharedVideoComponent } from './../shared/video/video.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
+import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 @Component({
 	standalone: true,
@@ -21,7 +21,7 @@ import { Release } from '../core/models/release.model';
 	imports: [
 		CommonModule,
 		RouterModule,
-		PipesModule,
+		SafeHtmlPipe,
 		HeadingComponent,
 		AudioPlayerComponent,
 		SharedVideoComponent,

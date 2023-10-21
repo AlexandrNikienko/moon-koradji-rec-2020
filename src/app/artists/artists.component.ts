@@ -2,7 +2,6 @@ import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit, i
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { PipesModule } from './../core/pipes/pipes.module';
 import { DataService } from '../core/services/data.service';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
@@ -15,8 +14,7 @@ import { Artist } from '../core/models/artist.model';
 	imports: [
 		HeadingComponent,
 		CommonModule,
-		RouterModule,
-		PipesModule
+		RouterModule
 	],
 	selector: 'app-artists',
 	templateUrl: './artists.component.html',

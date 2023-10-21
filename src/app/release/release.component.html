@@ -19,10 +19,10 @@
 
 	<div class="offset-md-1 col-md-10">
 		<div class="release-credits">
-			<div class="release-credits__side" *ngIf="release.bandcampLink">
+			<div class="release-credits__side" *ngIf="release.bandcampLink || release.bandcamp24Link">
 				<p class="release-credits__paragraph">{{release.isFree ? "Free Download:" : "Buy Digital:"}}</p>
 
-				<a href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
+				<a *ngIf="release.bandcampLink" href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
 
 				<a *ngIf="release.bandcamp24Link" href="{{release.bandcamp24Link}}" target="_blank" class="release-link">Bandcamp 24 bit</a>
 			</div>
