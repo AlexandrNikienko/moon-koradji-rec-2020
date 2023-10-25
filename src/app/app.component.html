@@ -1,6 +1,6 @@
 <app-header class="sticky-top"></app-header>
 
-<main class="container page">
+<main class="container page" [class.dark]="showBackground">
 	<router-outlet></router-outlet>
 </main>
 
@@ -33,3 +33,21 @@
 </div>
 
 <app-scroll-to-top></app-scroll-to-top>
+
+<ng-container *ngIf="showBackground">
+	<div class="background"></div>
+
+	<div class="background2"></div>
+
+	<div class="anchor">
+		<div class="anchor__side"></div>
+		<div class="anchor__container container"></div>
+		<div class="anchor__side"></div>
+	</div>
+	
+	<div class="anchor bottom">
+		<div class="anchor__side"></div>
+		<div class="anchor__container container"></div>
+		<div class="anchor__side"></div>
+	</div>
+</ng-container>

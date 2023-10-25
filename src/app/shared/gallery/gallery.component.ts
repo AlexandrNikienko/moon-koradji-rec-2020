@@ -36,9 +36,9 @@ export class SharedGalleryComponent implements OnInit {
 		});
 
 		const swiperConfig = {
-			autoplay: true,
-			a11y: true,
-			// slidesPerView: 3,
+			//autoplay: true,
+			//a11y: true,
+			//slidesPerView: 4,
 			spaceBetween: 30,
 			// navigation: true,
 			loop: true,

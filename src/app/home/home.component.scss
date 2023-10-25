@@ -20,13 +20,9 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 	grid-auto-rows: 1fr;
-	grid-gap: 50px;
+	grid-gap: 2rem;
 	position: relative;
 	z-index: 10;
-}
-
-.podcast-wrapper {
-	// height: 100vh;
 }
 
 .bottom {
@@ -50,10 +46,13 @@
 		}
 	}
 
-	@media (min-width: $tablet-width) {
-		background: rgba(0, 0, 0, 0.5);
-		padding: 2rem;
-		border-radius: 1rem;
+	&__left,
+	&__right {
+		@media (min-width: $tablet-width) {
+			background: rgba(0, 0, 0, 0.5);
+			padding: 2rem;
+			border-radius: 1rem;
+		}
 	}
 }
 
