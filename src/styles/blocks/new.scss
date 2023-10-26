@@ -8,6 +8,8 @@
 	margin-top: 5rem;
 	border-radius: 1rem;
 	isolation: isolate;
+	position: relative;
+	overflow: hidden;
 
 	@include mobile {
 		margin-top: 0;
@@ -69,7 +71,19 @@
 		}
 	}
 
-	img {
+	&__bg {
+		position: absolute;
+		inset: 0;
+		opacity: 0.2;
+		z-index: -1;
+		filter: blur(3px);
+	}
+
+	&__bg-image {
+		object-fit: cover;
+	}
+
+	.picture img {
 		width: 400px;
 		border-radius: 1rem;
 		box-shadow: $brand-border;
