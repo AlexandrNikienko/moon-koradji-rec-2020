@@ -4,7 +4,7 @@
 			"artistRoute": "access-gremin",
 			"artistName": "Access Gremlin",
 			"artistRealName": "Thomas Aquino Lobo",
-			"artistCountry": "Goa",
+			"artistCountry": "India",
 			"flag": "in",
 			"artistAvatar": "artist_access_gremlin.jpg",
 			"artistDescription": [
@@ -1821,25 +1821,6 @@
 					"cdLink": "va-blackout"
 				}
 			]
-		},
-		{
-			"artistRoute": "smuds",
-			"artistName": "Smuds",
-			"artistRealName": "Rasmus Leth",
-			"artistCountry": "Denmark",
-			"flag": "dk",
-			"artistAvatar": "artist_smuds.jpg",
-			"artistDescription": [
-				{
-					"paragraph": "We invite this sonic researcher to take the stage, and present the newest and freshest creations directly from his musical laboratory. As a computer scientist, he has the skills to program his many weird machines to do his every bidding, and the result is always atmospheric, puzzling and extremely danceable."
-				},
-				{
-					"paragraph": "All around the world, trancers, DJ's and promoters have picked up the Smuds sound, and we know you will too."
-				}
-			],
-			"artistFacebook": "https://www.facebook.com/rasmus.leth.7",
-			"artistSoundcloud": "https://soundcloud.com/smuds",
-			"releases": false
 		},
 		{
 			"artistRoute": "suddha",

@@ -403,3 +403,34 @@ app-root {
 	background: $dark url("#{$imageFolder}/wood-texture.svg") repeat fixed;
 	background-size: 500px;
 }
+
+.mdc-menu-surface.mat-mdc-select-panel {
+	height: 500px !important;
+	max-height: 60vh !important;
+}
+
+.mat-mdc-select-value,
+.mat-mdc-select-arrow,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: white !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+	.mdc-notched-outline__leading,
+	.mdc-notched-outline__notch,
+	.mdc-notched-outline__trailing {
+		border-color: white;
+	}
+
+	&:not(.mdc-text-field--focused):hover .mdc-notched-outline {
+		.mdc-notched-outline__leading,
+		.mdc-notched-outline__notch,
+		.mdc-notched-outline__trailing {
+			border-color: gray;
+		}
+	}
+}
+
+.mdc-menu-surface {
+	background-color: rgba(white, 0.95);
+}

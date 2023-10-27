@@ -79,7 +79,56 @@
 		}
 	]
 }
-
+{
+	"artistRoute": "shiibashunsuke",
+	"artistName": "Shiibashunsuke",
+	"artistRealName": "Shunsuke Shiiba",
+	"artistCountry": "Japan",
+	"flag": "jp",
+	"artistAvatar": "",
+	"artistDescription": [
+		{
+			"paragraph": "The project has been started in year 2013 by the japanese artist with the real name Shunsuke Shiiba. It was inevitable for him to meet psychedelic music. He had been collecting and experimenting many kinds of music until then."
+		},
+		{
+			"paragraph": "To express the way of sound, psychedelic music was the best suitable him. Everyday Shiibashunsuke keeps experimenting to describe the magnificent universe."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/shiibashunsuke.vertebralleaf",
+	"artistSoundcloud": "https://soundcloud.com/vertebralleaf",
+	"releases": [
+		{
+			"cdName": "Shiibashunsuke - Innermatics",
+			"cdCover": "",
+			"cdLink": "shiibashunsuke-innermatics"
+		}
+	],
+	"mixes": [
+		{
+			"year": "",
+			"embedCode": ""
+		}
+	]
+},
+{
+	"artistRoute": "smuds",
+	"artistName": "Smuds",
+	"artistRealName": "Rasmus Leth",
+	"artistCountry": "Denmark",
+	"flag": "dk",
+	"artistAvatar": "artist_smuds.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "We invite this sonic researcher to take the stage, and present the newest and freshest creations directly from his musical laboratory. As a computer scientist, he has the skills to program his many weird machines to do his every bidding, and the result is always atmospheric, puzzling and extremely danceable."
+		},
+		{
+			"paragraph": "All around the world, trancers, DJ's and promoters have picked up the Smuds sound, and we know you will too."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/rasmus.leth.7",
+	"artistSoundcloud": "https://soundcloud.com/smuds",
+	"releases": false
+},
 {
 	"artistRoute": "metaphyz",
 	"artistName": "Metaphyz",

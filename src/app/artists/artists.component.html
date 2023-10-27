@@ -1,27 +1,35 @@
 <mk-heading class="mt-4" [title]="'Artists'" [subTitle]="'Get to know the creative minds behind our music'"></mk-heading>
 
-<section class="artists-wrapper">
-	<ng-container *ngIf="artists$ | async as artists">
-		<div #artist class="artist-item mb-16" *ngFor="let item of artists">
-			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+<div class="filter">
+	<mat-form-field appearance="outline">
+		<mat-label>Filter by country</mat-label>
 
-				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-			</a>
-		</div>
-	</ng-container>
+		<mat-select [formControl]="countries" multiple>
+			<mat-option *ngFor="let country of countryList" [value]="country.artistCountry">
+				<img class="artist-item__flag" src="/assets/images/flags/{{country.flag}}.svg"> {{country.artistCountry}}
+			</mat-option>
+		</mat-select>
+  </mat-form-field>
+</div>
+
+<section *ngIf="artists" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
+	<div #artist class="artist-item mb-16" *ngFor="let item of artists">
+		<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+			<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+
+			<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+		</a>
+	</div>
 </section>
 
 <mk-heading [title]="'DJs'" [subTitle]="'Meet our talented roster of DJs'"></mk-heading>
 
-<section class="artists-wrapper">
-	<ng-container *ngIf="djs$ | async as djs">
-		<div class="artist-item" *ngFor="let item of djs">
-			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p class="artist-item__name">{{item.artistName}}</p>
+<section *ngIf="djs$ | async as djs" class="artists-wrapper">
+	<div class="artist-item" *ngFor="let item of djs">
+		<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+			<p class="artist-item__name">{{item.artistName}}</p>
 
-				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-			</a>
-		</div>
-	</ng-container>
+			<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+		</a>
+	</div>
 </section>
