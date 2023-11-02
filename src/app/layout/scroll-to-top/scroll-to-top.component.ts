@@ -41,6 +41,6 @@ export class ScrollToTopComponent {
 
 	@HostListener('document:scroll')
 	onScroll(): void {
-		this.showScrollBtn = window.pageYOffset > 100;
+		this.showScrollBtn = window.scrollY > 100;
 	}
 }

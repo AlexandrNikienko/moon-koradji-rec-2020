@@ -1,19 +1,19 @@
 {
 	"purchase": {
-		"title": "Out now",
+		"title": "Coming soon",
 		"subtitle": "Fresh Psychedelic Sounds",
 		"item": {
 			"cover": {
-				"default": "mkdg005_blackout.jpg",
+				"default": "mkrl018_shiibashunsuke_innermatics.jpg",
 				"default2x": "",
-				"webp": "mkdg005_blackout-500.webp",
-				"webp2x": "mkdg005_blackout-1000.webp"
+				"webp": "mkrl018_shiibashunsuke_innermatics-500.webp",
+				"webp2x": "mkrl018_shiibashunsuke_innermatics-1000.webp"
 			},
-			"title": "VA Blackout",
-			"subtitle": "by DJ Omsun",
+			"title": "Shiibashunsuke",
+			"subtitle": "Innermatics",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/va-blackout"
+				"routerLink": "releases/shiibashunsuke-innermatics"
 			}
 		},
 		"deals": [

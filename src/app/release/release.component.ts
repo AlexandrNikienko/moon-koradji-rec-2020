@@ -1,8 +1,8 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, ParamMap, Route, Router, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
-import { takeUntil, switchMap } from 'rxjs/operators';
+import { takeUntil, switchMap, tap } from 'rxjs/operators';
 
 import { DataService } from '../core/services/data.service';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
@@ -14,6 +14,7 @@ import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
+import { ReleaseCardComponent } from '../shared/release-card/release-card.component';
 
 @Component({
 	standalone: true,
@@ -25,7 +26,8 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 		HeadingComponent,
 		AudioPlayerComponent,
 		SharedVideoComponent,
-		PictureComponent
+		PictureComponent,
+		ReleaseCardComponent
 	],
 	templateUrl: './release.component.html',
 	styleUrls: ['release.component.scss']
@@ -33,10 +35,14 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 export class ReleaseComponent implements OnInit, OnDestroy {
 	private route = inject(ActivatedRoute);
+	private router = inject(Router);
 	private dataService = inject(DataService);
 	private metaData = inject(MetaDataService);
+	private viewportScroller = inject(ViewportScroller);
 
 	release: Release;
+	nextRelease: Release;
+	previousRelease: Release;
 	involved: Artist[] = [];
 	private releases$ = this.dataService.requestToData<Release>('releases');
 	private artists$ = this.dataService.requestToData<Artist>('artists');
@@ -46,9 +52,39 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 	private metaDataObj: iMeta;
 
 	ngOnInit() {
+		this.fetchReleaseData(this.releaseRoute);
+
+		this.route.paramMap
+			.pipe(
+				switchMap((params: ParamMap) => {
+					const releaseRoute = params.get('releaseRoute');
+					this.fetchReleaseData(releaseRoute);
+					return this.router.events;
+				}),
+				takeUntil(this.destroyStream)
+			)
+			.subscribe((event) => {
+				if (event instanceof NavigationEnd) {
+					this.scrollToTop();
+				}
+			});
+	}
+
+	ngOnDestroy() {
+		this.destroyStream.next();
+	}
+
+	scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	fetchReleaseData(releaseRoute: string): void {
 		this.releases$.pipe(
 			switchMap(releases => {
-				this.release = releases.find((release: Release) => release['releaseRoute'] === this.releaseRoute);
+				const releaseIndex = releases.findIndex((release: Release) => release['releaseRoute'] === releaseRoute);
+				this.release = releases[releaseIndex];
+				this.nextRelease = releaseIndex === 0 ? null : releases[releaseIndex - 1];
+				this.previousRelease = releaseIndex === releases.length ? null : releases[releaseIndex + 1];
 
 				this.setMetaData(this.release);
 
@@ -58,10 +94,6 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 		).subscribe(artists => {
 			this.involved = this.getInvolvedArtists(artists, this.release.artists);
 		})
-	}
-
-	ngOnDestroy() {
-		this.destroyStream.next();
 	}
 
 	getInvolvedArtists(allArtists: Artist[], releaseArtists: string[]): Artist[] {

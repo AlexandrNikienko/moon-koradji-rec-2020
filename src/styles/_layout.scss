@@ -103,6 +103,10 @@ app-root {
 	padding: 2rem $gap;
 	//margin-bottom: 4rem;
 	//@extend %wood-texture;
+
+	@include mobile {
+		padding: 1rem;
+	}
 }
 
 .dark {
@@ -298,6 +302,10 @@ mk-home .btn {
 			#656e77 11deg 19deg,
 			#dddbde 21deg 30deg
 		);
+	will-change: transform;
+	animation: rotateRight auto linear;
+	animation-timeline: scroll(root);
+	perspective-origin: left;
 }
 
 .background2 {
@@ -310,22 +318,14 @@ mk-home .btn {
 			Dimgray 11deg 20deg,
 			DarkSlateBlue 21deg 30deg
 		);
+	will-change: transform;
+	animation: rotateLeft auto linear;
+	animation-timeline: scroll(root);
+	perspective-origin: right;
 }
 
 app-root {
 	//perspective: 500px;
-}
-
-.background {
-	animation: rotateRight auto linear;
-	animation-timeline: scroll(root);
-	perspective-origin: left;
-}
-
-.background2 {
-	animation: rotateLeft auto linear;
-	animation-timeline: scroll(root);
-	perspective-origin: right;
 }
 
 @keyframes rotateRight {
@@ -345,6 +345,7 @@ app-root {
 	  transform: rotateY(-30deg) scale(1.2);
 	}
 }
+
 .anchor {
 	$height: 400px;
 	position: fixed;
@@ -399,10 +400,10 @@ app-root {
 	}
 }
 
-%wood-texture {
-	background: $dark url("#{$imageFolder}/wood-texture.svg") repeat fixed;
-	background-size: 500px;
-}
+// %wood-texture {
+// 	background: $dark url("#{$imageFolder}/wood-texture.svg") repeat fixed;
+// 	background-size: 500px;
+// }
 
 .mdc-menu-surface.mat-mdc-select-panel {
 	height: 500px !important;

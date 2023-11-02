@@ -4,6 +4,41 @@
 			"isHero": true,
 			"hidden": false,
 			"isNew": true,
+			"releaseNumber": "MKRL018",
+			"releaseNote": "2023",
+			"releaseDate": "Coming soon",
+			"releaseTitle": "Shiibashunsuke - Innermatics",
+			"releaseSubTitle": "coming soons",
+			"releaseCover": {
+				"default": "mkrl018_shiibashunsuke_innermatics.jpg",
+				"default2x": "",
+				"webp": "mkrl018_shiibashunsuke_innermatics-500.webp",
+				"webp2x": "mkrl018_shiibashunsuke_innermatics-1000.webp"
+			},
+			"releaseRoute": "shiibashunsuke-innermatics",
+			"releaseDescription": [
+				{   
+					"paragraph": "Shiibashunsuke, the renowned Japanese psytrance artist, presents a captivating four-track release of his experimental material."
+				},
+				{   
+					"paragraph": "With this release, Shiibashunsuke masterfully bridges the gap between ancient cultural influences and cutting-edge electronic soundscapes, delivering a unique and immersive experience for psytrance vanguardists worldwide."
+				}
+			],
+			"cdAuthor": "Shunsuke Shiiba",
+			"compiledBy": "",
+			"masteredBy": "Ankur",
+			"artworkBy": "Matik",
+			"beatspaceLink": "",
+			"bandcamp24Link": "",
+			"videoLink": "",
+			"artists": [
+				"Shiibashunsuke"
+			],
+			"embedAudio": "",
+			"hub": ""
+		},
+		{
+			"isNew": true,
 			"releaseNumber": "MKDG005",
 			"releaseNote": "2023",
 			"releaseDate": "Sep 23, 2023",

@@ -19,7 +19,7 @@
 
 	<div class="offset-md-1 col-md-10">
 		<div class="release-credits">
-			<div class="release-credits__side" *ngIf="release.bandcampLink || release.bandcamp24Link">
+			<div *ngIf="release.bandcampLink || release.bandcamp24Link" class="release-credits__side">
 				<p class="release-credits__paragraph">{{release.isFree ? "Free Download:" : "Buy Digital:"}}</p>
 
 				<a *ngIf="release.bandcampLink" href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
@@ -27,7 +27,7 @@
 				<a *ngIf="release.bandcamp24Link" href="{{release.bandcamp24Link}}" target="_blank" class="release-link">Bandcamp 24 bit</a>
 			</div>
 
-			<div class="release-credits__side" *ngIf="release.beatspaceLink">
+			<div *ngIf="release.beatspaceLink" class="release-credits__side">
 				<div class="release-credits__icon"></div>
 
 				<p class="release-credits__paragraph">CD Purchase:</p>
@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="release-description">
-			<p class="release-description__paragraph" *ngFor="let description of release.releaseDescription">
+			<p *ngFor="let description of release.releaseDescription" class="release-description__paragraph">
 				{{description.paragraph}}
 			</p>
 		</div>
@@ -56,7 +56,7 @@
 			</p>
 
             <p *ngIf="release.artworkBy" class="release-credits__paragraph dark-color">
-				Cover design by {{release.artworkBy}}
+				Artwork by {{release.artworkBy}}
 			</p>
 
             <p class="release-credits__paragraph dark-color">
@@ -76,11 +76,25 @@
 				</a>
 			</div>
 		</div>
+	</div>
 
-		<app-shared-video *ngIf="release.embedVideo" [embedVideo]="release.embedVideo"></app-shared-video>
+	<div *ngIf="release.embedVideo" class="offset-md-1 col-md-10 col-sm-12">
+		<app-shared-video [embedVideo]="release.embedVideo"></app-shared-video>
 	</div>
 
 	<!-- <div *ngIf="release.hub" class="offset-md-1 col-md-10 col-sm-12">
 		<iframe class="release-hub" [src]="release.hub | safe: 'resourceUrl'" title="{{release.releaseTitle}}"></iframe>
 	</div> -->
+</div>
+
+<div class="catalog">
+	<div *ngIf="previousRelease" class="catalog__prev">
+		<p>Previous release:</p>
+		<app-release-card [releaseItem]="previousRelease"></app-release-card>
+	</div>
+
+	<div *ngIf="nextRelease" class="catalog__next">
+		<p>Next release:</p>
+		<app-release-card [releaseItem]="nextRelease"></app-release-card>
+	</div>
 </div>

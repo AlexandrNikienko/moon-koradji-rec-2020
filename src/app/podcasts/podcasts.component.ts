@@ -24,7 +24,7 @@ export class PodcastsComponent implements OnInit, OnDestroy {
 	private dataService = inject(DataService);
 	private metaData = inject(MetaDataService);
 
-	podcasts$: Observable<any[]> = this.dataService.requestToData('podcasts');
+	podcasts$: Observable<any[]>;
 
 	crystalization = new Crystalization();
 

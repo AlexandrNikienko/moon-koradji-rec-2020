@@ -1740,6 +1740,37 @@
 			]
 		},
 		{
+			"artistRoute": "shiibashunsuke",
+			"artistName": "Shiibashunsuke",
+			"artistRealName": "Shunsuke Shiiba",
+			"artistCountry": "Japan",
+			"flag": "jp",
+			"artistAvatar": "artist_shiibashunsuke.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "The project has been started in year 2013 by the japanese artist with the real name Shunsuke Shiiba. It was inevitable for him to meet psychedelic music. He had been collecting and experimenting many kinds of music until then."
+				},
+				{
+					"paragraph": "To express the way of sound, psychedelic music was the best suitable him. Everyday Shiibashunsuke keeps experimenting to describe the magnificent universe."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/shiibashunsuke.vertebralleaf",
+			"artistSoundcloud": "https://soundcloud.com/vertebralleaf",
+			"releases": [
+				{
+					"cdName": "Shiibashunsuke - Innermatics",
+					"cdCover": "mkrl018_shiibashunsuke_innermatics.jpg",
+					"cdLink": "shiibashunsuke-innermatics"
+				}
+			],
+			"mixes": [
+				{
+					"year": "",
+					"embedCode": ""
+				}
+			]
+		},
+		{
 			"artistRoute": "shotu",
 			"artistName": "Shotu",
 			"artistRealName": "David Marmin",
