@@ -67,25 +67,37 @@
 		text-align: center;
 		font-size: 26px;
 		line-height: 1;
+	}
 
-		&__link {
-			position: relative;
+	&__link {
+		position: relative;
 
-			&::after {
-				content: "\27a4";
-				position: absolute;
-				top: 2px;
-				left: 100%;
-				text-shadow: none;
-				animation: arrow 1s linear infinite;
-			}
+		&::after {
+			content: "\27a4";
+			position: absolute;
+			top: 6px;
+			left: 100%;
+			text-shadow: none;
+			animation: arrow 1s linear infinite;
 		}
 	}
 
 	&__content {
+		text-align: center;
+    	display: flex;
+    	align-items: flex-end;
+		padding-inline: 10rem;
+
 		img {
-			height: 522px;
 			width: auto;
+		}
+
+		@include tablet {
+			padding-inline: 5rem;
+		}
+
+		@include mobile {
+			padding-inline: 2rem;
 		}
 	}
 }
