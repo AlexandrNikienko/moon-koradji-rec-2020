@@ -23,6 +23,12 @@
 	grid-gap: 2rem;
 	position: relative;
 	z-index: 10;
+
+	@include media-breakpoint-down(md) {
+		> app-release-card:last-of-type {
+			display: none;
+		}
+	}
 }
 
 .bottom {
@@ -89,6 +95,7 @@
 		padding-inline: 10rem;
 
 		img {
+			//height: 522px;
 			width: auto;
 		}
 
