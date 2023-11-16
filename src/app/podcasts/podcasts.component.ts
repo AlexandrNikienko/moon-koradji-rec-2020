@@ -30,11 +30,11 @@ export class PodcastsComponent implements OnInit, OnDestroy {
 
 	metaDataObj: iMeta = {
 		title: 'Dive into the Psychedelic Soundscape: Our Podcasts on Moon Koradji Records',
-		description: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko aka DJ Omsun.',
+		description: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.',
 		ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
 		ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
 		ogUrl: 'https://www.moonkoradji.com/podcasts',
-		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Alexandr Nikienko aka DJ Omsun.'
+		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	}
 
 	ngOnInit() {

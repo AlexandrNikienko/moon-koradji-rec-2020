@@ -21,7 +21,7 @@ export class JsonLDService {
 			],
             'logo': 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
             'image': 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
-            'description': 'Ukrainian psytrance label founded in 2007 by Alexandr Nikienko aka DJ Omsun.',
+            'description': 'Ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.',
 			'email': 'info@moonkoradji.com',
 			'member': [
 				{
@@ -29,7 +29,7 @@ export class JsonLDService {
 					'member': {
 						'@type': 'Person',
 						'name': 'Omsun',
-						'givenName': 'Alexandr Nikienko',
+						'givenName': 'Oleksandr Nikiienko',
 						'sameAs': [
 							'https://moonkoradji.com/artists/dj-omsun',
 							'https://www.facebook.com/omsunkoradji',

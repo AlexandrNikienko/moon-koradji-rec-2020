@@ -12,14 +12,14 @@ export class ResourceExistsGuard  {
 	) {}
   
 	resolve(route: ActivatedRouteSnapshot): boolean {
-		this.dataService.existingParams.subscribe(items => {
-			const param = Object.values(route.params)[0];
-			const resourceExists = !!items.find(item => item === param);
-
-			if (!resourceExists) {
-				this.router.navigate(['/404']);
-			}
-		});
+		// this.dataService.existingParams.subscribe(items => {
+		// 	const param = Object.values(route.params)[0];
+		// 	const resourceExists = !!items.find(item => item === param);
+		// 	console.log('route resolver')
+		// 	if (!resourceExists) {
+		// 		this.router.navigate(['/404']);
+		// 	}
+		// });
 
 		return true;
 	}

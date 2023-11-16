@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists: string[] = ['Shiibashunsuke', 'Ziul Oiram', 'Already Maged', 'Inzect', 'Adansonia', 'Molchun', 'Traskel', 'Distorted Goblin', 'Whrikk'];
+	featuredArtists = ['Shiibashunsuke', 'Ziul Oiram', 'Already Maged', 'Inzect', 'Adansonia', 'Molchun', 'Traskel', 'Distorted Goblin', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
@@ -61,11 +61,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.purchase$ = this.dataService.requestToData('purchase');
-		// this.purchaseSub = this.purchase$.subscribe(s => {
-		// 	setTimeout(() => {
-		// 		this.crystalization.init('.new', 180);
-		// 	}, 0)
-		// });
 		this.news$ = this.dataService.requestToData('news');
 		this.releases$ = this.dataService.requestToData('releases');
 
@@ -77,8 +72,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		// this.crystalization.destroy();
-		// this.purchaseSub.unsubscribe();
 	}
 
 	getFeaturedGaleryItems() {

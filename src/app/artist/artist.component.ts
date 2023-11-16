@@ -1,14 +1,15 @@
 import { Artist } from './../core/models/artist.model';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute, ParamMap, Router, RouterModule } from '@angular/router';
+import { Subject } from 'rxjs';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { DataService } from '../core/services/data.service';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
+import { switchMap, takeUntil } from 'rxjs/operators';
 
 @Component({
 	standalone: true,
@@ -23,45 +24,43 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 })
 export class ArtistComponent implements OnInit, OnDestroy {
 	private route = inject(ActivatedRoute);
+	private router = inject(Router);
 	private dataService = inject(DataService);
 	private metaData = inject(MetaDataService);
 
-	public artist: Artist;
+	artist: Artist;
 	private artistName: string;
-	private requestTo: string;
-	private requestTo$: Observable<Artist[]>;
-	private routeSub: Subscription;
-	private requestSub: Subscription;
-	private metaDataObj: iMeta;
+	private destroyStream = new Subject<void>();
 
 	ngOnInit(): void {
-		this.routeSub = this.route.paramMap.subscribe(params => {
-			this.artistName = params.get('artistRoute');
-			// this.dataService.checkIfRouteCorrect(this.artistName);
-			this.requestTo = this.artistName.includes('dj-') ? 'djs' : 'artists';
-			this.requestTo$ = this.dataService.requestToData<Artist>(this.requestTo);
+		this.route.paramMap.pipe(
+			switchMap((params: ParamMap) => {
+				this.artistName = params.get('artistRoute');
+				const requestTo = this.artistName.includes('dj-') ? 'djs' : 'artists';
+				return this.dataService.requestToData<Artist>(requestTo);
+			}),
+			takeUntil(this.destroyStream)
+		)
+		.subscribe(response => {
+			this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
 
-			this.requestSub = this.requestTo$.subscribe(response => {
-				this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
+			if (!this.artist) {
+				this.router.navigate(['/404'])
+				return;
+			}
 
-				this.setMetaData(this.artist);
-			});
-		})
+			this.setMetaData(this.artist);
+		});
 	}
 
 	ngOnDestroy(): void {
-		if (this.routeSub) {
-			this.routeSub.unsubscribe();
-		}
-		if (this.requestSub) {
-			this.requestSub.unsubscribe();
-		}
+		this.destroyStream.next();
 	}
 
 	setMetaData(artist: Artist): void {
 		const artistDesc = artist.artistDescription.reduce((desc, par) => desc + par.paragraph, '');		
 
-		this.metaDataObj = {
+		const metaDataObj: iMeta = {
 			title: `${artist.artistName} | Moon Koradji Records`,
 			description: artistDesc,
 			ogTitle: artist.artistName,
@@ -70,6 +69,6 @@ export class ArtistComponent implements OnInit, OnDestroy {
 			ogDescription: artistDesc
 		}
 
-		this.metaData.setMetaData(this.metaDataObj);
+		this.metaData.setMetaData(metaDataObj);
 	}
 }

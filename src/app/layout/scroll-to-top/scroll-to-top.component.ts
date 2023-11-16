@@ -1,12 +1,11 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component, HostListener } from '@angular/core';
 import {
 	trigger, state, style, animate, transition
 } from '@angular/animations';
+import { Utils } from 'src/app/core/utils';
 
 @Component({
 	standalone: true,
-	// imports: [BrowserAnimationsModule],
 	selector: 'app-scroll-to-top',
 	templateUrl: './scroll-to-top.component.html',
 	styleUrls: ['./scroll-to-top.component.scss'],
@@ -34,7 +33,7 @@ export class ScrollToTopComponent {
 	goToTop: boolean;
 
 	scrollToTop(): void {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		Utils.scrollToTop();
 		this.goToTop = true;
 		setTimeout(() => this.goToTop = false, 1000);
 	}

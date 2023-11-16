@@ -15,7 +15,7 @@ export const routes: Route[] = [
 	{
 		path: 'releases/:releaseRoute',
 		loadComponent: () => import('./release/release.component').then(x => x.ReleaseComponent),
-		//resolve: [ResourceExistsGuard]
+		// resolve: [ResourceExistsGuard]
 	},
 	{
 		path: 'artists',
