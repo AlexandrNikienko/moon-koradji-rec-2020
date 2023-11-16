@@ -1,5 +1,15 @@
 @use 'utils' as * ;
 
+:root {
+	--mdc-outlined-text-field-label-text-color: white; // material select text color
+	--mdc-outlined-text-field-outline-color: white; // material select border color
+	--mdc-outlined-text-field-hover-outline-color: gray; // material select border color on hover
+	--mdc-outlined-text-field-focus-label-text-color: white; // label color in focus
+	--mat-select-enabled-arrow-color: white; // material select arrow color
+	--mat-select-enabled-trigger-text-color: white; // material select selected text color
+	--mat-select-panel-background-color: rgba(255, 255, 255, 0.95); // open select bg color
+}
+
 // @font-face {
 // 	font-family: "Beyond Wonderland";
 // 	src: url("/assets/fonts/beyond-wonderland.regular.ttf") format("truetype");
@@ -101,7 +111,6 @@ app-root {
 
 .page {
 	padding: 2rem $gap;
-	//@extend %wood-texture;
 
 	@include mobile {
 		padding: 1rem;
@@ -289,7 +298,6 @@ mk-home .btn {
 	position: fixed;
 	inset: 0;
 	opacity: 0.1;
-	//transform-style: preserve-3d; // ???
 }
 
 .background {
@@ -320,10 +328,6 @@ mk-home .btn {
 	animation: rotateLeft auto linear;
 	animation-timeline: scroll(root);
 	perspective-origin: right;
-}
-
-app-root {
-	//perspective: 500px;
 }
 
 @keyframes rotateRight {
@@ -365,7 +369,6 @@ app-root {
 				height: $height;
 				clip-path: polygon(0 0, 100% 0, 100% 56%, 86% 38%, 74% 28%, 59% 21%, 45% 18%, 35% 16%, 26% 13%, 13% 6%);
 				background-color: $dark;
-				//@extend %wood-texture;
 			}
 		}
 
@@ -389,7 +392,6 @@ app-root {
 	&__container {
 		height: 224px;
 		background-color: $dark;
-		//@extend %wood-texture;
 	}
 
 	&.bottom {
@@ -398,38 +400,7 @@ app-root {
 	}
 }
 
-// %wood-texture {
-// 	background: $dark url("#{$imageFolder}/wood-texture.svg") repeat fixed;
-// 	background-size: 500px;
-// }
-
 .mdc-menu-surface.mat-mdc-select-panel {
-	height: 500px !important;
-	max-height: 60vh !important;
-}
-
-.mat-mdc-select-value,
-.mat-mdc-select-arrow,
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: white !important;
-}
-
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) {
-	.mdc-notched-outline__leading,
-	.mdc-notched-outline__notch,
-	.mdc-notched-outline__trailing {
-		border-color: white;
-	}
-
-	&:not(.mdc-text-field--focused):hover .mdc-notched-outline {
-		.mdc-notched-outline__leading,
-		.mdc-notched-outline__notch,
-		.mdc-notched-outline__trailing {
-			border-color: gray;
-		}
-	}
-}
-
-.mdc-menu-surface {
-	background-color: rgba(white, 0.95);
+	height: 500px;
+	max-height: 60vh;
 }
