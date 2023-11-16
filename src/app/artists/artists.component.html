@@ -1,4 +1,4 @@
-<mk-heading class="mt-4" [title]="'Artists'" [subTitle]="'Get to know the creative minds behind our music'"></mk-heading>
+<mk-heading class="mt-4" [title]="'Artists'" [subTitle]="'Get to know the creative minds behind our music'"/>
 
 <div class="filter">
 	<mat-form-field appearance="outline">
@@ -13,23 +13,27 @@
 </div>
 
 <section *ngIf="artists" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
-	<div #artist class="artist-item mb-16" *ngFor="let item of artists">
-		<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-			<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+	@for (item of artists; track item.id) {
+		<div #artist class="artist-item mb-16">
+			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
 
-			<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-		</a>
-	</div>
+				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+			</a>
+		</div>
+	}
 </section>
 
-<mk-heading [title]="'DJs'" [subTitle]="'Meet our talented roster of DJs'"></mk-heading>
+<mk-heading [title]="'DJs'" [subTitle]="'Meet our talented roster of DJs'"/>
 
 <section *ngIf="djs$ | async as djs" class="artists-wrapper">
-	<div class="artist-item" *ngFor="let item of djs">
-		<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-			<p class="artist-item__name">{{item.artistName}}</p>
+	@for (item of djs; track item.id) {
+		<div class="artist-item">
+			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+				<p class="artist-item__name">{{item.artistName}}</p>
 
-			<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
-		</a>
-	</div>
+				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+			</a>
+		</div>
+	}
 </section>

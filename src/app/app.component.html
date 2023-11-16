@@ -34,7 +34,7 @@
 
 <app-scroll-to-top></app-scroll-to-top>
 
-<ng-container *ngIf="showBackground">
+@if (showBackground) {
 	<div class="background"></div>
 
 	<div class="background2"></div>
@@ -50,4 +50,4 @@
 		<div class="anchor__container container"></div>
 		<div class="anchor__side"></div>
 	</div>
-</ng-container>
+}

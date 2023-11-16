@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "moon-koradji-rec:build"
+            "buildTarget": "moon-koradji-rec:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "moon-koradji-rec:build:production"
+              "buildTarget": "moon-koradji-rec:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "moon-koradji-rec:build"
+            "buildTarget": "moon-koradji-rec:build"
           }
         },
         "test": {

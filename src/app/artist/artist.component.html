@@ -1,5 +1,5 @@
-<ng-container *ngIf="artist">
-	<mk-heading [title]="artist.artistName"></mk-heading>
+@if (artist) {
+	<mk-heading [title]="artist.artistName"/>
 	
 	<img *ngIf="artist.artistAvatar" class="s-artist-foto" src="/assets/images/artists/{{artist.artistAvatar}}" alt="{{artist.artistName}}">
 
@@ -45,7 +45,7 @@
 		<div class="s-involved__item col-lg-2 col-md-3 col-sm-3 col-xs-3" *ngFor="let release of artist.releases">
 			<a class="s-involved__link " [routerLink]="['/releases', release.cdLink]">
 				<div class="s-involved__image"
-						[ngStyle]="{'background-image': 'url(/assets/images/release-cover/' + release.cdCover + ')'}">
+					[ngStyle]="{'background-image': 'url(/assets/images/release-cover/' + release.cdCover + ')'}">
 				</div>
 
 				<div class="s-involved__name">{{release.cdName}}</div>
@@ -60,4 +60,4 @@
 			<div class="s-mix-block" [innerHTML]="mix.embedCode | safe: 'html'"></div>
 		</div>
 	</div>
-</ng-container>
+}

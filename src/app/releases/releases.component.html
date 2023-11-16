@@ -1,7 +1,7 @@
-<mk-heading [title]="'Our Releases'" [subTitle]="'Purchase digital downloads or physical copies of our releases'"></mk-heading>
+<mk-heading [title]="'Our Releases'" [subTitle]="'Purchase digital downloads or physical copies of our releases'"/>
 
 <div *ngIf="releases$ | async as releases" class="releases">
-	<ng-container *ngFor="let release of releases">
-		<app-release-card [releaseItem]="release" [hidden]="release.hidden"></app-release-card>
-	</ng-container>
+	@for (release of releases; track release.releaseNumber) {
+		<app-release-card [releaseItem]="release" [hidden]="release.hidden"/>
+	}
 </div>
