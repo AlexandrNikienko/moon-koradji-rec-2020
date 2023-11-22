@@ -1,14 +1,10 @@
 <section *ngIf="purchase$ | async as purchase" class="new">
 	<div class="new__left">
-		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'"></app-picture>
+		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'"/>
 	</div>
 
 	<div class="new__right">
-		<mk-heading
-			*ngIf="purchase.title"
-			[title]="purchase.title"
-			[subTitle]="purchase.subtitle">
-		</mk-heading>
+		<mk-heading *ngIf="purchase.title" [title]="purchase.title" [subTitle]="purchase.subtitle"/>
 
 		<div class="new__title">{{purchase.item.title}}</div>
 
@@ -64,22 +60,17 @@
 </section> -->
 
 <section *ngIf="releases$ | async as releases" class="recent-releases-wrapper">
-	<mk-heading
-		[title]="'Recent Releases'"
-		[subTitle]="'New Psychedelic Trance Music From Moon Koradji Records'"
-		[route]="'/releases'">
-	</mk-heading>
+	<mk-heading [title]="'Recent Releases'" [subTitle]="'New Psychedelic Trance Music From Moon Koradji Records'" [route]="'/releases'"/>
 
 	<div class="recent-releases-inner">
-		<ng-container *ngFor="let release of releases; let i = index">
-			<app-release-card *ngIf="(i < 4) && !release.isHero && !release.hidden" [releaseItem]="release">
-			</app-release-card>
-		</ng-container>
+		@for (release of releases; track $index) {
+			<app-release-card *ngIf="($index < 4) && !release.isHero && !release.hidden" [releaseItem]="release"/>
+		}
 	</div>
 </section>
 
 <section class="podcast-wrapper">
-	<app-podcast></app-podcast>
+	<app-podcast/>
 
 	<!-- <a routerLink="/merch" class="s-tshirt" *ngIf="false">
 		<div class="s-tshirt__item s-tshirt__item--hidden">
@@ -126,19 +117,19 @@
 			</ul>
 		</div>
 	
-		<ng-container *ngIf="news$ | async as news">
+		@if (news$ | async; as news) {
 			<div *ngIf="news.length > 0" class="news">
 				<p class="news__header">More News</p>
 		
 				<div class="news__item" *ngFor="let item of news">
-					<!-- <a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
+					<a *ngIf="!item.target" class="news__link" [routerLink]="item.link">
 						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
 						<h1 class="news__desc">
 							<span class="news__title">{{item.title}}</span>
 							<br>
 							<span class="news__info" *ngIf="item.text">{{item.text}}</span>
 						</h1>
-					</a> -->
+					</a>
 		
 					<a *ngIf="item.target" class="news__link" [attr.href]="item.link" [attr.target]="item.target">
 						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
@@ -150,7 +141,7 @@
 					</a>
 				</div>
 			</div>
-		</ng-container>
+		}
 	</div>
 
 	<div class="bottom__right">

@@ -1,4 +1,25 @@
 {
     "news": [
+		{
+            "link": "artists/shiibashunsuke",
+            "image": "assets/images/artists/m_artist_shiibashunsuke.jpg",
+            "title": "Shiibashunsuke",
+            "text": "Welcome to the board",
+            "target": ""
+        },
+		{
+            "link": "https://moon-koradji-records.myspreadshop.com/innermatics+-+moon+koradji+records?idea=6544e55660522920d70a66c6",
+            "image": "assets/images/release-cover/mkrl018_shiibashunsuke_innermatics.jpg",
+            "title": "T-shirts and Hoodies",
+            "text": "New desing in the shop",
+            "target": "_blank"
+        },
+		{
+            "link": "mailto: info@moonkoradji.com",
+            "image": "assets/images/mk_square.jpg",
+            "title": "Cooking a new VA",
+            "text": "Waiting for your demos",
+            "target": "_blank"
+        }
     ]
 }
