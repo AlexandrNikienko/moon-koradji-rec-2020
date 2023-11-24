@@ -69,7 +69,7 @@
 
 	&__title {
 		width: 100%;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		text-align: center;
 		font-size: 26px;
 		line-height: 1;
@@ -92,11 +92,19 @@
 		text-align: center;
     	display: flex;
     	align-items: flex-end;
-		padding-inline: 10rem;
 
 		img {
-			//height: 522px;
 			width: auto;
+
+			&[src*='tshirt-2'] {
+				aspect-ratio: 365/719;
+    			width: 300px;
+			}
+
+			&[src*='tshirt-1'] {
+				aspect-ratio: 292/619;
+    			width: 235px;
+			}
 		}
 
 		@include tablet {

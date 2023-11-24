@@ -1,12 +1,12 @@
-.ringtones {
-    margin-bottom: 2rem;
+.download {
+    margin-bottom: 1rem;
 
     &__title {
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 400;
         color: var(--themeColor);
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
 
     &__list {
@@ -18,13 +18,48 @@
 	}
 	
 	&__item {
-		margin-bottom: 5px;
+		margin-bottom: .75rem;
 	}
 
-    .fa-play {
-        cursor: pointer;
+	&__type {
+		color: var(--themeColor);
+		text-transform: uppercase;
+		font-size: .8em;
+	}
+
+	&__footer {
+		margin-top: 1rem;
+		position: relative;
+		height: 150px;
+		
+		svg {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100px;
+    		height: 150px;
+			transition: opacity .3s;
+
+			&:first-of-type:hover {
+				+ svg {
+					display: block;
+					opacity: 1;
+				}
+			}
+
+			&:last-of-type {
+				display: none;
+				opacity: 0;
+			}
+		}
+	}
+
+    .fas {
         font-size: .75rem;
 		margin-right: 5rem;
+		display: inline-block;
+    	width: 10px;
 		
 		@supports (margin-inline-end: 0) {
 			margin-right: 0;
