@@ -94,16 +94,19 @@
     	align-items: flex-end;
 
 		img {
+			$k: 0.8;
+			$male: 260px;
+			$female: $male * $k;
 			width: auto;
 
 			&[src*='tshirt-2'] {
 				aspect-ratio: 365/719;
-    			width: 300px;
+    			width: $male;
 			}
 
 			&[src*='tshirt-1'] {
 				aspect-ratio: 292/619;
-    			width: 235px;
+    			width: $female;
 			}
 		}
 
