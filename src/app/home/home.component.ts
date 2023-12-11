@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 		this.getFeaturedGaleryItems();
 
-		this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
+		// this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
 		this.metaData.setMetaData(this.metaDataObj);
 	}
