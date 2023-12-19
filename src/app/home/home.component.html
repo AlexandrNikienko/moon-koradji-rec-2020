@@ -60,7 +60,7 @@
 </section> -->
 
 <section *ngIf="releases$ | async as releases" class="recent-releases-wrapper">
-	<mk-heading [title]="'Recent Releases'" [subTitle]="'New Psychedelic Trance Music From Moon Koradji Records'" [route]="'/releases'"/>
+	<mk-heading [title]="'Recent Releases'" [subTitle]="'New psychedelic trance music from Moon Koradji Records'" [route]="'/releases'"/>
 
 	<div class="recent-releases-inner">
 		@for (release of releases; track $index) {

@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 		// this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
-		this.metaData.setMetaData(this.metaDataObj);
+		// this.metaData.setMetaData(this.metaDataObj);
 	}
 
 	ngOnDestroy() {
