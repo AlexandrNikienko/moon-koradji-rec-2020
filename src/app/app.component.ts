@@ -9,6 +9,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { DataService } from './core/services/data.service';
 import { CommonModule } from '@angular/common';
+import { ScrollTopService } from './core/services/scroll-to-top.service';
 
 @Component({
 	standalone: true,
@@ -23,12 +24,15 @@ import { CommonModule } from '@angular/common';
 	],
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	providers: [DataService]
+	providers: [DataService, ScrollTopService]
 })
 export class AppComponent {
 	showBackground = true;
 
-	constructor(private router: Router) {
+	constructor(
+		private router: Router,
+		private scrollTopService: ScrollTopService
+	) {
 		this.router.events.subscribe(event => {
 			if (event instanceof NavigationEnd) {
 			  this.showBackground = this.router.url !== '/podcasts';

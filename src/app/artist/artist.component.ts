@@ -49,7 +49,7 @@ export class ArtistComponent implements OnInit, OnDestroy {
 				return;
 			}
 
-			this.setMetaData(this.artist);
+			// this.setMetaData(this.artist);
 		});
 	}
 

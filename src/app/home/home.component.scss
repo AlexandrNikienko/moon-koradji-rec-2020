@@ -94,8 +94,8 @@
     	align-items: flex-end;
 
 		img {
-			$k: 0.8;
-			$male: 260px;
+			$k: 1;
+			$male: 400px;
 			$female: $male * $k;
 			width: auto;
 
@@ -108,6 +108,16 @@
 				aspect-ratio: 292/619;
     			width: $female;
 			}
+
+			&[src*='2024-dark'] {
+				//aspect-ratio: 447/560;
+    			width: $male;
+			}
+
+			&[src*='2024-color'] {
+				//aspect-ratio: 619/600;
+    			width: $female;
+			}
 		}
 
 		@include tablet {
@@ -117,6 +127,49 @@
 		@include mobile {
 			padding-inline: 2rem;
 		}
+	}
+}
+
+.new-merch {
+	background: url("#{$imageFolder}/t-shirts/3/FB_banner_bg.jpg") no-repeat center / cover;
+	display: flex;
+	padding: 2rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	//margin-top: 5rem;
+	// grid-template-columns: auto;
+	// grid-auto-columns: auto;
+	// grid-template-rows: auto;
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 5rem;
+
+		img {
+			margin-bottom: 1rem;
+			max-width: 250px;
+		}
+
+		a {
+			font-size: 1.5rem;
+    		text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__title,
+	&__item {
+		flex: 1;
 	}
 }
 

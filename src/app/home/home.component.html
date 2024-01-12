@@ -1,3 +1,19 @@
+<!-- <section class="new-merch">
+	<div class="new-merch__title">
+		<img src="./assets/images/t-shirts/3/FB_banner_new_arrival.png" alt="new arrival">
+
+		<a href="https://moon-koradji-records.myspreadshop.com/" target="_blank">In our merchandise shop</a>
+	</div>
+
+	<div class="new-merch__item">
+		<img src="./assets/images/t-shirts/3/FB_banner_dark_t.png" alt="new dark t-shirt">
+	</div>
+
+	<div class="new-merch__item">
+		<img src="./assets/images/t-shirts/3/FB_banner_color_t.png" alt="new color t-shirt">
+	</div>
+</section> -->
+
 <section *ngIf="purchase$ | async as purchase" class="new">
 	<div class="new__left">
 		<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'"/>
@@ -170,6 +186,18 @@
 			
 			<div class="go-to-merch__content">
 				<picture>
+					<source srcset="./assets/images/t-shirts/3/mk-tshirt-design-2024-dark.webp" type="image/webp">
+					<img src="./assets/images/t-shirts/3/mk-tshirt-design-2024-dark.png" alt="dark t-shirt" loading="lazy">
+				</picture>
+				
+				<picture>
+					<source srcset="./assets/images/t-shirts/3/mk-tshirt-design-2024-color.webp" type="image/webp">
+					<img src="./assets/images/t-shirts/3/mk-tshirt-design-2024-color.png" alt="color t-shirt" loading="lazy">
+				</picture>
+			</div>
+
+			<!-- <div class="go-to-merch__content">
+				<picture>
 					<source srcset="./assets/images/merch/tshirt-2.webp" type="image/webp">
 					<img src="./assets/images/merch/tshirt-2.png" alt="" loading="lazy">
 				</picture>
@@ -178,7 +206,7 @@
 					<source srcset="./assets/images/merch/tshirt-1-w1.webp" type="image/webp">
 					<img src="./assets/images/merch/tshirt-1-w1.png" alt="" loading="lazy">
 				</picture>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

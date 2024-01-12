@@ -50,17 +50,10 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.route.paramMap.pipe(
-			switchMap((params: ParamMap) => {
-				const releaseRoute = params.get('releaseRoute');
-				this.fetchReleaseData(releaseRoute);
-				return this.router.events;
-			}),
 			takeUntil(this.destroyStream)
 		)
-		.subscribe((event) => {
-			if (event instanceof NavigationEnd) {
-				Utils.scrollToTop();
-			}
+		.subscribe((params: ParamMap) => {
+			this.fetchReleaseData(params.get('releaseRoute'));
 		});
 	}
 
@@ -82,7 +75,7 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 				this.nextRelease = releaseIndex === 0 ? null : releases[releaseIndex - 1];
 				this.previousRelease = releaseIndex === releases.length ? null : releases[releaseIndex + 1];
 
-				this.setMetaData(this.release);
+				// this.setMetaData(this.release);
 
 				return this.dataService.requestToData<Artist>('artists');
 			}),
