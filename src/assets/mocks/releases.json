@@ -4,6 +4,39 @@
 			"isHero": true,
 			"hidden": false,
 			"isNew": true,
+			"releaseNumber": "MKRL019",
+			"releaseNote": "2024",
+			"releaseDate": "Apr 05, 2024",
+			"releaseTitle": "Irukanji - Springwald",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl019_irukanji_springwald.jpg",
+				"default2x": "",
+				"webp": "",
+				"webp2x": ""
+			},
+			"releaseRoute": "irukanji-springwald",
+			"releaseDescription": [
+				{   
+					"paragraph": ""
+				},
+				{   
+					"paragraph": ""
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Ihor Orlovskyi",
+			"masteredBy": "Zymosis",
+			"artworkBy": "A Realm of Wonder",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Irukanji"
+			],
+			"embedAudio": ""
+		},
+		{
 			"releaseNumber": "MKRL018",
 			"releaseNote": "2023",
 			"releaseDate": "Dec 01, 2023",
@@ -38,7 +71,6 @@
 			"hub": ""
 		},
 		{
-			"isNew": true,
 			"releaseNumber": "MKDG005",
 			"releaseNote": "2023",
 			"releaseDate": "Sep 23, 2023",
