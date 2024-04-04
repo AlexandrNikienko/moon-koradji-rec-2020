@@ -12,8 +12,8 @@
 			"releaseCover": {
 				"default": "mkrl019_irukanji_springwald.jpg",
 				"default2x": "",
-				"webp": "",
-				"webp2x": ""
+				"webp": "mkrl019_irukanji_springwald-500.webp",
+				"webp2x": "mkrl019_irukanji_springwald-1000.webp"
 			},
 			"releaseRoute": "irukanji-springwald",
 			"releaseDescription": [
@@ -26,7 +26,7 @@
 			],
 			"compiledBy": "",
 			"cdAuthor": "Ihor Orlovskyi",
-			"masteredBy": "Zymosis",
+			"masteredBy": "Dimitro @ Zymosis Studio",
 			"artworkBy": "A Realm of Wonder",
 			"beatspaceLink": "",
 			"bandcampLink": "",
