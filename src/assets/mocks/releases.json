@@ -18,10 +18,16 @@
 			"releaseRoute": "irukanji-springwald",
 			"releaseDescription": [
 				{   
-					"paragraph": ""
+					"paragraph": "Behind the name of Irukanji stands the talented Ukrainian producer Ihor Orlovskyi, already well known to the psychedelic community for his psychill and darkprog releases, as well as the impeccable management of his label Sentimony Records."
 				},
 				{   
-					"paragraph": ""
+					"paragraph": "And now Moon Koradji Records is delighted to unveil his new layer of music - the EP titled 'Springwald' - Ihor's vision of ~150bpm psytrance."
+				},
+				{   
+					"paragraph": "'Springwald', meaning 'jumping forest' in German, was once Ihor's ancestral surname. However, during the Ukrainian Soviet era, German surnames faced prejudice, prompting Ihor's grandfather to adopt his mother's surname, Orlovskyi, as a boy."
+				},
+				{
+					"paragraph": "The roots began to stir, awakening from their slumber..."
 				}
 			],
 			"compiledBy": "",
@@ -29,12 +35,12 @@
 			"masteredBy": "Dimitro @ Zymosis Studio",
 			"artworkBy": "A Realm of Wonder",
 			"beatspaceLink": "",
-			"bandcampLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald",
 			"videoLink": "",
 			"artists": [
 				"Irukanji"
 			],
-			"embedAudio": ""
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3405018835/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald\">Irukanji - Springwald by Moon Koradji Records</a></iframe>"
 		},
 		{
 			"releaseNumber": "MKRL018",
