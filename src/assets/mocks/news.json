@@ -1,10 +1,17 @@
 {
     "news": [
 		{
+            "link": "artists/irukanji",
+            "image": "assets/images/artists/m_artist_irukanji.jpg",
+            "title": "Irukanji",
+            "text": "Welcome aboard",
+            "target": ""
+        },
+		{
             "link": "artists/shiibashunsuke",
             "image": "assets/images/artists/m_artist_shiibashunsuke.jpg",
             "title": "Shiibashunsuke",
-            "text": "Welcome to the board",
+            "text": "Welcome aboard",
             "target": ""
         },
 		{
@@ -15,11 +22,9 @@
             "target": "_blank"
         },
 		{
-            "link": "mailto: info@moonkoradji.com",
             "image": "assets/images/mk_square.jpg",
-            "title": "Compiling new VAs",
-            "text": "Waiting for your demos",
-            "target": "_blank"
+            "title": "Waiting for your demos",
+            "text": "info@moonkoradji.com"
         }
     ]
 }
