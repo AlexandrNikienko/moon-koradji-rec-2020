@@ -69,6 +69,11 @@
 			"artistSoundcloud": "https://soundcloud.com/adansonia",
 			"releases": [
 				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				},
+				{
 					"cdName": "VA Neural Embers",
 					"cdCover": "mkcd012_neural_embers.jpg",
 					"cdLink": "va-neural-embers"
@@ -135,6 +140,11 @@
 			"artistFacebook": "https://www.facebook.com/Already-Maged-179276062095555/",
 			"artistSoundcloud": "https://soundcloud.com/alreadymaged",
 			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				},
 				{
 					"cdName": "VA Blackout",
 					"cdCover": "mkdg005_blackout.jpg",
@@ -329,6 +339,31 @@
 			]
 		},
 		{
+			"artistRoute": "bodhi",
+			"artistName": "Bodhi",
+			"artistRealName": "Christopher Martin",
+			"artistCountry": "USA",
+			"flag": "us",
+			"artistAvatar": "artist_bodhi.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "California style psy, scientific and esoteric with a splash of booty funk."
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/Bodhi1320",
+			"artistSoundcloud": "https://soundcloud.com/bodhi1320",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				}
+			]
+		},
+		{
 			"artistRoute": "captain-kirk",
 			"artistName": "Captain Kirk",
 			"artistRealName": "Kir Ylle",
@@ -446,6 +481,11 @@
 			"artistFacebook": "https://www.facebook.com/Distorted-Goblin-287801394154/",
 			"artistSoundcloud": "https://soundcloud.com/distorted-goblin",
 			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				},
 				{
 					"cdName": "VA Blackout",
 					"cdCover": "mkdg005_blackout.jpg",
@@ -569,6 +609,34 @@
 					"cdName": "VA Infinity Keepers 2: depth perception",
 					"cdCover": "mkcd007_infinity_keepers_2.jpg",
 					"cdLink": "va-infinity-keepers-2"
+				}
+			]
+		},
+		{
+			"artistRoute": "faeyan",
+			"artistName": "Faeyan",
+			"artistRealName": "Amine Bakkali",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_faeyan.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Faeyan is the forest psytrance project of Amine, a Moroccan music producer living in France."
+				},
+				{
+					"paragraph": "Inspired by his North African roots, Faeyan reimagines the mythical and historical tales of Moroccan and African cultures, blending them with supernatural entities and imaginary creatures. His music takes listeners on a journey through twisted sonic landscapes, featuring profound atmospheres and disorienting grooves with a touch of both technological and ancient soundscapes."
+				},
+				{
+					"paragraph": "Faeyan's goal remains to make you dance and smile, while taking you to unknown places and voids through both our world and other world's myths and histories."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/faeyanmusic",
+			"artistSoundcloud": "https://soundcloud.com/faeyan",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
 				}
 			]
 		},
@@ -906,6 +974,36 @@
 			]
 		},
 		{
+			"artistRoute": "katatrof",
+			"artistName": "Katastrof",
+			"artistRealName": "Björn Anderson",
+			"artistCountry": "Sweden",
+			"flag": "se",
+			"artistAvatar": "artist_katastrof.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "More info coming soon"
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "https://soundcloud.com/katastrof",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				},
+				{
+					"cdName": "Katastrof - Bent",
+					"cdCover": "mkrl021_katastrof_bent.jpg",
+					"cdLink": "katastrof-bent"
+				}
+			]
+		},
+		{
 			"artistRoute": "kerlivin",
 			"artistName": "Kerlivin",
 			"artistRealName": "Liu Lung-Chiang",
@@ -945,8 +1043,6 @@
 					"paragraph": "As goes for the Kiriyama sound of today, Alex's style has expanded since the start much thanks to his travels having performed in more than 20 countries ranging from Japan in the East to the American Pacific Coast in the West through which he has discovered new sources of inspiration. Thus, it's become increasingly more difficult to categorise his music as the style floats across different genres. Although it's common that people think of Kiriyama as a producer of nocturnal trance music, one could say that today Alex's sound pertains to the Scandinavian goa trance part of the psychedelic music spectrum."
 				}
 			],
-			"artistFacebook": "",
-			"artistSoundcloud": "",
 			"releases": [
 				{
 					"cdName": "VA Intropix",
@@ -977,6 +1073,31 @@
 					"cdName": "Kirna - In Space!",
 					"cdCover": "mkcd006_kirna.jpg",
 					"cdLink": "kirna-in-space!"
+				}
+			]
+		},
+		{
+			"artistRoute": "krapul",
+			"artistName": "Krapul",
+			"artistRealName": "Lopez Benoît",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_krapul.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Krapul is Forest Psytrance project of Lopez Benoît from France. Since a young age he likes to observe the nature and these phenomenon, being also a great lover of music he wanted to associate the two so that these tracks lead you towards environments imaginary."
+				},
+				{
+					"paragraph": "His music is a mix of shaman sounds, animals, cinematic ambience, and shuddering frequencies."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/profile.php?id=100063616065552",
+			"artistSoundcloud": "https://soundcloud.com/krapul84",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
 				}
 			]
 		},
@@ -1620,6 +1741,31 @@
 			]
 		},
 		{
+			"artistRoute": "para-halu",
+			"artistName": "Para Halu",
+			"artistRealName": "Adam Hohmann",
+			"artistCountry": "Hungary",
+			"flag": "hu",
+			"artistAvatar": "artist_para_halu.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Psy-trance project started in 2002. Since September 2003 officially a duo by Hohmann and Fekete. Since 2007 it is a solo project of Hohmann."
+				},
+				{
+					"paragraph": "The man behind Para Halu today is Adam Hohmann from Hungary, musician and producer, who since his very young age has always been enchanted by music. After discovering computer-based music production he tried his hand at different styles, from ambient music to drum'n'bass and at psy-trance in Para Halu."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/parahalu",
+			"artistSoundcloud": "https://soundcloud.com/para-halu",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				}
+			]
+		},
+		{
 			"artistRoute": "phobos-azazel",
 			"artistName": "Phobos Azazel",
 			"artistRealName": "Darko Novevski",
@@ -1736,6 +1882,11 @@
 			"artistSoundcloud": "https://soundcloud.com/mizukinishi",
 			"releases": [
 				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
+				},
+				{
 					"cdName": "VA Blackout",
 					"cdCover": "mkdg005_blackout.jpg",
 					"cdLink": "va-blackout"
@@ -1761,6 +1912,31 @@
 					"cdName": "VA Infinity Keepers",
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
+				}
+			]
+		},
+		{
+			"artistRoute": "seb",
+			"artistName": "Seb",
+			"artistRealName": "Seb Pellerin",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_seb.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Psychedelic trance artist from Saint-Pierre, Réunion."
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "https://soundcloud.com/seb-namaskar",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
 				}
 			]
 		},
@@ -1875,6 +2051,31 @@
 					"cdName": "VA Blackout",
 					"cdCover": "mkdg005_blackout.jpg",
 					"cdLink": "va-blackout"
+				}
+			]
+		},
+		{
+			"artistRoute": "solarythm",
+			"artistName": "Solarythm",
+			"artistRealName": "Jeremie Kagan",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_solarythm.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Project based in Nantes, France, launched in 2014."
+				},
+				{
+					"paragraph": "From melancholic atmospheres to hypnotic and mental grooves, his music invites us to an introspective journey through psychedelic and ambient notes."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/profile.php?id=100063733659223",
+			"artistSoundcloud": "https://soundcloud.com/j-r-mie-kagan",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
 				}
 			]
 		},
@@ -2200,6 +2401,31 @@
 					"cdName": "VA Infinity Keepers 2: depth perception",
 					"cdCover": "mkcd007_infinity_keepers_2.jpg",
 					"cdLink": "va-infinity-keepers-2"
+				}
+			]
+		},
+		{
+			"artistRoute": "weirdbass",
+			"artistName": "Weirdbass",
+			"artistRealName": "Kaio Donato",
+			"artistCountry": "Brazil",
+			"flag": "br",
+			"artistAvatar": "artist_weirdbass.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Psychedelic trance DJ producer from Juiz de Fora, Brazil."
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/TheWeirdbass",
+			"artistSoundcloud": "https://soundcloud.com/theweirdbass",
+			"releases": [
+				{
+					"cdName": "VA Blackout 2: Luminous Darkness",
+					"cdCover": "mkrl020_blackout_2.jpg",
+					"cdLink": "va-blackout-2"
 				}
 			]
 		},

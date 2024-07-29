@@ -75,11 +75,11 @@
 	</div>
 </section> -->
 
-<section *ngIf="releases$ | async as releases" class="recent-releases-wrapper">
+<section *ngIf="filteredReleases$ | async as filteredReleases" class="recent-releases-wrapper">
 	<mk-heading [title]="'Recent Releases'" [subTitle]="'New psychedelic trance music from Moon Koradji Records'" [route]="'/releases'"/>
 
 	<div class="recent-releases-inner">
-		@for (release of releases; track $index) {
+		@for (release of filteredReleases; track $index) {
 			<app-release-card *ngIf="($index < 4) && !release.isHero && !release.hidden" [releaseItem]="release"/>
 		}
 	</div>

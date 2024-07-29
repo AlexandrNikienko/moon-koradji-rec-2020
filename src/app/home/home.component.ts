@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { JsonLDService } from './../core/services/json-ld.service';
@@ -40,13 +41,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists = ['Irukanji', 'Shiibashunsuke', 'Ziul Oiram', 'Already Maged', 'Inzect', 'Adansonia', 'Molchun', 'Traskel', 'Distorted Goblin', 'Whrikk'];
+	featuredArtists = ['Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Shiibashunsuke', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
 	news$: Observable<News[]>;
 	releases$: Observable<Release[]>;
 	purchaseSub: Subscription;
+	filteredReleases$: Observable<Release[]>;
 
 	crystalization = new Crystalization();
 
@@ -63,6 +65,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.purchase$ = this.dataService.requestToData('purchase');
 		this.news$ = this.dataService.requestToData('news');
 		this.releases$ = this.dataService.requestToData('releases');
+		this.filteredReleases$ = this.releases$.pipe(
+			map(releases => releases.filter(release => !release.isHero && !release.hidden).slice(0, 3))
+		);
 
 		this.getFeaturedGaleryItems();
 

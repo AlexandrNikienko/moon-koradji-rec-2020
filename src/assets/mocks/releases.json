@@ -1,8 +1,80 @@
 {
     "releases": [
 		{
+			"isHero": false,
+			"hidden": true,
+			"isNew": false,
+			"releaseNumber": "MKRL021",
+			"releaseNote": "2024",
+			"releaseDate": "Coming soon",
+			"releaseTitle": "Katastrof - Bent",
+			"releaseSubTitle": "coming soon",
+			"releaseCover": {
+				"default": "mkrl021_katastrof_bent.jpg",
+				"default2x": "",
+				"webp": "",
+				"webp2x": ""
+			},
+			"releaseRoute": "katastrof-bent",
+			"releaseDescription": [
+				{   
+					"paragraph": "More info coming soon"
+				},
+				{   
+					"paragraph": ""
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Björn Andersson",
+			"masteredBy": "Ankur",
+			"artworkBy": "Ekaterina Bochkar",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Katastrof"
+			],
+			"embedAudio": "",
+			"hub": ""
+		},
+		{
 			"isHero": true,
 			"hidden": false,
+			"isNew": true,
+			"releaseNumber": "MKRL020",
+			"releaseNote": "2024",
+			"releaseDate": "Coming soon",
+			"releaseTitle": "Blackout 2: Luminous Darkness",
+			"releaseSubTitle": "coming soon",
+			"releaseCover": {
+				"default": "mkrl020_blackout_2.jpg",
+				"default2x": "",
+				"webp": "mkrl020_blackout_2-500.webp",
+				"webp2x": "mkrl020_blackout_2-1000.webp"
+			},
+			"releaseRoute": "va-blackout-2",
+			"releaseDescription": [
+				{   
+					"paragraph": "This journey demonstrates how psychedelic vibrations seep through dark matter, reflecting starlight."
+				},
+				{   
+					"paragraph": ""
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"cdAuthor": "",
+			"masteredBy": "Ankur",
+			"artworkBy": "Salamandra",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Solarythm", "Bodhi", "Para Halu", "Distorted Goblin", "Already Maged", "Adansonia", "Faeyan", "Katastrof", "Savage Scream", "Krapul", "Weirdbass", "Seb"
+			],
+			"embedAudio": "",
+			"hub": ""
+		},
+		{
 			"isNew": true,
 			"releaseNumber": "MKRL019",
 			"releaseNote": "2024",
