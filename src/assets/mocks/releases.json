@@ -12,8 +12,8 @@
 			"releaseCover": {
 				"default": "mkrl021_katastrof_bent.jpg",
 				"default2x": "",
-				"webp": "",
-				"webp2x": ""
+				"webp": "mkrl021_katastrof_bent-500.webp",
+				"webp2x": "mkrl021_katastrof_bent-1000.webp"
 			},
 			"releaseRoute": "katastrof-bent",
 			"releaseDescription": [
@@ -43,9 +43,9 @@
 			"isNew": true,
 			"releaseNumber": "MKRL020",
 			"releaseNote": "2024",
-			"releaseDate": "Coming soon",
+			"releaseDate": "Aug 07, 2024",
 			"releaseTitle": "Blackout 2: Luminous Darkness",
-			"releaseSubTitle": "coming soon",
+			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl020_blackout_2.jpg",
 				"default2x": "",
@@ -63,15 +63,15 @@
 			],
 			"compiledBy": "DJ Omsun",
 			"cdAuthor": "",
-			"masteredBy": "Ankur",
+			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Salamandra",
 			"beatspaceLink": "",
-			"bandcampLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-blackout-2-luminous-darkness",
 			"videoLink": "",
 			"artists": [
-				"Solarythm", "Bodhi", "Para Halu", "Distorted Goblin", "Already Maged", "Adansonia", "Faeyan", "Katastrof", "Savage Scream", "Krapul", "Weirdbass", "Seb"
+				"Solarythm", "Bodhi", "Para Halu", "Distorted Goblin", "Already Maged", "Adansonia", "Faeyan", "Katastrof", "Savage Scream", "Krapul", "Weirdbass", "SEB"
 			],
-			"embedAudio": "",
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=326457146/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout-2-luminous-darkness\">VA Blackout 2: Luminous Darkness by Moon Koradji Records</a></iframe>",
 			"hub": ""
 		},
 		{
@@ -137,7 +137,7 @@
 			],
 			"cdAuthor": "Shunsuke Shiiba",
 			"compiledBy": "",
-			"masteredBy": "Ankur",
+			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Matik",
 			"beatspaceLink": "",
 			"bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-innermatics",
@@ -167,7 +167,7 @@
 				}
 			],
 			"compiledBy": "DJ Omsun",
-			"masteredBy": "Ankur",
+			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Salamandra",
 			"beatspaceLink": "",
 			"bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-blackout",

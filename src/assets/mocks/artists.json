@@ -969,7 +969,7 @@
 			"mixes": [
 				{
 					"year": "2021",
-					"embedCode":"<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1098566617\"></iframe>"
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1098566617\"></iframe>"
 				}
 			]
 		},
@@ -1917,17 +1917,17 @@
 		},
 		{
 			"artistRoute": "seb",
-			"artistName": "Seb",
-			"artistRealName": "Seb Pellerin",
+			"artistName": "SEB",
+			"artistRealName": "Sébastien Pèllerin",
 			"artistCountry": "France",
 			"flag": "fr",
 			"artistAvatar": "artist_seb.jpg",
 			"artistDescription": [
 				{
-					"paragraph": "Psychedelic trance artist from Saint-Pierre, Réunion."
+					"paragraph": "Sébastien Pèllerin was born in 1976. His musical journey began in 1995 in Angers, where he met artists and producers like Fabio Jelly Head and Julien Digital Talk. In 1998, Sébastien's journey led him to the idyllic shores of St Martin in the Antilles, where he DJed and orchestrated unforgettable parties. By 2001, he found himself on Reunion Island, continuing to infuse the local music scene with his vibrant energy."
 				},
 				{
-					"paragraph": ""
+					"paragraph": "Around this time, Seb discovered India, a country whose cultural and musical influences captivated him. Frequent travels to India, especially Goa, led to a creative partnership with Arjuna (Parvati Rec), resulting in several collaborated tracks and the joint project Nomad Soul. Today, you can find more of his solo tracks as part of the SEB project."
 				}
 			],
 			"artistFacebook": "",
