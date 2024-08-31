@@ -1,19 +1,19 @@
 {
 	"purchase": {
-		"title": "Out now",
+		"title": "Coming soon",
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl020_blackout_2.jpg",
+				"default": "mkrl021_katastrof_bent.jpg",
 				"default2x": "",
-				"webp": "mkrl020_blackout_2-500.webp",
-				"webp2x": "mkrl020_blackout_2-1000.webp"
+				"webp": "mkrl021_katastrof_bent-500.webp",
+				"webp2x": "mkrl021_katastrof_bent-1000.webp"
 			},
-			"title": "Blackout 2",
-			"subtitle": " Luminous Darkness",
+			"title": "Katastrof",
+			"subtitle": " Bent",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/va-blackout-2"
+				"routerLink": "releases/katastrof-bent"
 			}
 		},
 		"deals": [

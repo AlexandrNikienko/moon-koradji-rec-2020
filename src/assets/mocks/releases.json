@@ -1,12 +1,11 @@
 {
     "releases": [
 		{
-			"isHero": false,
-			"hidden": true,
-			"isNew": false,
+			"isHero": true,
+			"isNew": true,
 			"releaseNumber": "MKRL021",
 			"releaseNote": "2024",
-			"releaseDate": "Coming soon",
+			"releaseDate": "Sep 6, 2024",
 			"releaseTitle": "Katastrof - Bent",
 			"releaseSubTitle": "coming soon",
 			"releaseCover": {
@@ -18,15 +17,18 @@
 			"releaseRoute": "katastrof-bent",
 			"releaseDescription": [
 				{   
-					"paragraph": "More info coming soon"
+					"paragraph": "Katastrof is the brainchild of Swedish producer Björn Andersson, a solo project that has been crafting deep, dark forest psytrance with a funky twist since 2003. Hailing from Trollhättan, Sweden, Katastrof draws inspiration from horror movies and the high-energy atmosphere of live performances, creating a unique and immersive soundscape."
 				},
 				{   
-					"paragraph": ""
+					"paragraph": "The debut album, Bent, showcases the project’s signature style — a blend of nighttime darkness and groovy rhythms. Expect to be taken on a sonic journey where eerie atmospheres meet infectious grooves, all while paying homage to the electrifying spirit of the night."
+				},
+				{   
+					"paragraph": "Prepare yourself for a powerful and groovy listening experience. Stay tuned for the release of Bent on Bandcamp, Spotify, Apple Music, Beatport, YouTube Music and other platphorms, and dive into the world of Katastrof."
 				}
 			],
 			"compiledBy": "",
 			"cdAuthor": "Björn Andersson",
-			"masteredBy": "Ankur",
+			"masteredBy": "Ankur Seres",
 			"artworkBy": "Ekaterina Bochkar",
 			"beatspaceLink": "",
 			"bandcampLink": "",
@@ -38,8 +40,6 @@
 			"hub": ""
 		},
 		{
-			"isHero": true,
-			"hidden": false,
 			"isNew": true,
 			"releaseNumber": "MKRL020",
 			"releaseNote": "2024",
@@ -75,7 +75,6 @@
 			"hub": ""
 		},
 		{
-			"isNew": true,
 			"releaseNumber": "MKRL019",
 			"releaseNote": "2024",
 			"releaseDate": "Apr 05, 2024",
