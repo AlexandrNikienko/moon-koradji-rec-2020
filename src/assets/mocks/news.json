@@ -1,16 +1,16 @@
 {
     "news": [
 		{
-            "link": "artists/irukanji",
-            "image": "assets/images/artists/m_artist_irukanji.jpg",
-            "title": "Irukanji",
+            "link": "artists/katastrof",
+            "image": "assets/images/artists/m_artist_katastrof.jpg",
+            "title": "Katastrof",
             "text": "Welcome aboard",
             "target": ""
         },
 		{
-            "link": "artists/shiibashunsuke",
-            "image": "assets/images/artists/m_artist_shiibashunsuke.jpg",
-            "title": "Shiibashunsuke",
+            "link": "artists/irukanji",
+            "image": "assets/images/artists/m_artist_irukanji.jpg",
+            "title": "Irukanji",
             "text": "Welcome aboard",
             "target": ""
         },

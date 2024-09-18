@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists = ['Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Shiibashunsuke', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
+	featuredArtists = ['Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Shiibashunsuke', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
