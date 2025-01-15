@@ -80,6 +80,62 @@
 }
 
 {
+	"artistRoute": "claw",
+	"artistName": "CLAW",
+	"artistRealName": "Charalambos Pieris",
+	"artistCountry": "Cyprus",
+	"flag": "cy",
+	"artistAvatar": "artist_claw.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "Charalambos Pieris, the man behind the CLAW project, has been immersed in the world of electronic music since the 1990s, boasting an impressive portfolio of releases spanning house, chillout, and other electronica genres."
+		},
+		{
+			"paragraph": "His journey into DJing started around 2000, eventually leading him into the captivating realm of Psychedelic Trance around 2004. Since then, he has graced numerous countries across the globe with his electrifying performances at parties and festivals. Under the project CLAW, he has released an album, many EPs, and a plethora of singles, solidifying his position as a formidable force in the genre. Furthermore, his collaborations with esteemed producers in the scene, underscore his versatility and innovation."
+		},
+		{
+			"paragraph": "For Charalambos, the essence of being a producer and DJ lies in the exhilaration of captivating audiences with his creations and forging meaningful connections with enthusiasts from diverse cultural backgrounds."
+		},
+		{
+			"paragraph": "CLAW's music resonates with power and emotion, characterized by pulsating basslines and abstract soundscapes. Each composition unfolds as a narrative, inviting listeners on a distinctive and unforgettable journey."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/CLAW.cy",
+	"artistSoundcloud": "https://soundcloud.com/c-l-a-w",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl023_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+{
+	"artistRoute": "gappeq",
+	"artistName": "Gappeq",
+	"artistRealName": "Jiri Tomasek",
+	"artistCountry": "Czech Republic",
+	"flag": "cz",
+	"artistAvatar": "artist_gappeq.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "Gappeq is the psytrance project of Jiří Tomášek, a Czech producer known for his cinematic sound design and dark, atmospheric style."
+		},
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/GappeqParvatiRecords",
+	"artistSoundcloud": "https://soundcloud.com/gappeq",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl023_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+{
 	"artistRoute": "smuds",
 	"artistName": "Smuds",
 	"artistRealName": "Rasmus Leth",
