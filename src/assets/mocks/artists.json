@@ -1089,6 +1089,31 @@
 			]
 		},
 		{
+			"artistRoute": "kluster",
+			"artistName": "Kluster",
+			"artistRealName": "Michael Pettersson",
+			"artistCountry": "Sweden",
+			"flag": "se",
+			"artistAvatar": "artist_kluster.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Kluster is the Swedish psychedelic trance project of Michael Pettersson. Born in Eskilstuna in 1974, Michael has been releasing music since 2001, earning recognition for his fusion of dark, textured forest trance with playful, eccentric samples."
+				},
+				{
+					"paragraph": "Known for crafting immersive and multi-layered soundscapes, his music has appeared on renowned labels such as Digital Psionics, Stoneage, Ketuh, Yggdrasil, and more. Now, Kluster takes a new step with the release of his upcoming EP Mental Rotation on Moon Koradji Records in January 2025, offering another captivating journey into the unique realms of psychedelic trance."
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "",
+			"releases": [
+				{
+					"cdName": "Kluster - Mental Rotation",
+					"cdCover": "mkrl022_kluster_mental_rotation.jpg",
+					"cdLink": "kluster-mental-rotation"
+				}
+			]
+		},
+		{
 			"artistRoute": "krapul",
 			"artistName": "Krapul",
 			"artistRealName": "Lopez Benoît",

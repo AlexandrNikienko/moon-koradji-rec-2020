@@ -4,16 +4,16 @@
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl021_katastrof_bent.jpg",
+				"default": "mkrl022_kluster_mental_rotation.jpg",
 				"default2x": "",
-				"webp": "mkrl021_katastrof_bent-500.webp",
-				"webp2x": "mkrl021_katastrof_bent-1000.webp"
+				"webp": "mkrl022_kluster_mental_rotation-500.webp",
+				"webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
 			},
-			"title": "Katastrof",
-			"subtitle": " Bent",
+			"title": "Kluster",
+			"subtitle": " Mental Rotation",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/katastrof-bent"
+				"routerLink": "releases/kluster-mental-rotation"
 			}
 		},
 		"deals": [

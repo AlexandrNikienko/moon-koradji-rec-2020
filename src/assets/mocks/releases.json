@@ -3,6 +3,39 @@
 		{
 			"isHero": true,
 			"isNew": true,
+			"releaseNumber": "MKRL022",
+			"releaseNote": "2025",
+			"releaseDate": "coming soon",
+			"releaseTitle": "Kluster - Mental Rotation",
+			"releaseSubTitle": "coming soon",
+			"releaseCover": {
+				"default": "mkrl022_kluster_mental_rotation.jpg",
+				"default2x": "",
+				"webp": "mkrl022_kluster_mental_rotation-500.webp",
+				"webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
+			},
+			"releaseRoute": "kluster-mental-rotation",
+			"releaseDescription": [
+				{   
+					"paragraph": "A mind-bending journey through the many shades of psytrance, Mental Rotation delivers four dynamic tracks that twist and turn between night and morning moods."
+				},
+				{   
+					"paragraph": "Featuring two powerful night-time stompers at 148 BPM, a driving twilight tune at 144 BPM, and a groovy morning finisher at 142 BPM, this EP showcases Kluster's signature blend of dark textures, quirky elements, and deep, rolling basslines crafted to keep the dancefloor rotating from dusk till dawn."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Michael Pettersson",
+			"masteredBy": "Anarkick",
+			"artworkBy": "Ekaterina Bochkar",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Kluster"
+			],
+			"embedAudio": ""
+		},
+		{
 			"releaseNumber": "MKRL021",
 			"releaseNote": "2024",
 			"releaseDate": "Sep 6, 2024",
@@ -40,7 +73,6 @@
 			"hub": ""
 		},
 		{
-			"isNew": true,
 			"releaseNumber": "MKRL020",
 			"releaseNote": "2024",
 			"releaseDate": "Aug 07, 2024",
