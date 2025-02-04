@@ -3,6 +3,7 @@
 		{
 			"isHero": true,
 			"isNew": true,
+			"hidden": true,
 			"releaseNumber": "MKRL022",
 			"releaseNote": "2025",
 			"releaseDate": "coming soon",
@@ -36,6 +37,7 @@
 			"embedAudio": ""
 		},
 		{
+			"isHero": true,
 			"releaseNumber": "MKRL021",
 			"releaseNote": "2024",
 			"releaseDate": "Sep 6, 2024",
