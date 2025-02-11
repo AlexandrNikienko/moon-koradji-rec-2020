@@ -1,13 +1,13 @@
 {
 	"purchase": {
-		"title": "Out Now",
+		"title": "Coming Soon",
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
 				"default": "mkrl022_kluster_mental_rotation.jpg",
 				"default2x": "",
-				"webp": "mkrl022_kluster_mental_rotation-500.webp",
-				"webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
+				"_webp": "mkrl022_kluster_mental_rotation-500.webp",
+				"_webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
 			},
 			"title": "Kluster",
 			"subtitle": " Mental Rotation",
