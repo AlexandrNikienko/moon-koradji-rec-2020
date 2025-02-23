@@ -44,7 +44,8 @@
 	&__name {
 		margin: 0;
 		line-height: 45px;
-		text-align: center;
+		padding-inline: 24px;
+    	white-space: nowrap;
 	}
 
 	&__flag {

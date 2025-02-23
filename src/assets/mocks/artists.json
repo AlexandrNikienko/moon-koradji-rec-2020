@@ -2535,6 +2535,12 @@
 					"cdCover": "mkdg003_ziul_oiram_eternal_shadow.jpg",
 					"cdLink": "ziul-oiram-eternal-shadow"
 				}
+			],
+			"mixes": [
+				{
+					"year": "2021",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2039236964\"></iframe>"
+				}
 			]
 		}
 	]
