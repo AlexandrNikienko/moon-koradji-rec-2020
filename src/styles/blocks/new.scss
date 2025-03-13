@@ -37,22 +37,22 @@
 	&__title,
 	&__sub-title {
 		text-align: center;
-		line-height: normal;
 		// background-image: url('#{$imageFolder}/release-cover/mkdg005_blackout.jpg');
-		background-clip: text;
-		color: transparent;
-		background-size: cover;
-		background-position: top;
-		text-shadow: 0 0 1px rgb(255 255 255 / 75%);
+		//background-clip: text;
+		//color: transparent;
+		//background-size: cover;
+		//background-position: top;
+		//text-shadow: 0 0 1px rgb(255 255 255 / 75%);
 	}
 
 	&__title {
 		text-transform: uppercase;
 		font-size: 4rem;
 		font-weight: bold;
-		letter-spacing: .2rem;
+		//letter-spacing: .2rem;
 		line-height: 1;
 		margin-bottom: 0.2em;
+		text-shadow: 2px 2px 0 rgb(41 87 113), 4px 4px 0 #9c9c9c;
 
 		@include tablet {
 			font-size: 2rem;
@@ -60,15 +60,25 @@
 
 		@include mobile {
 			word-break: break-word;
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 	}
 
 	&__sub-title {
 		font-size: 2rem;
-		letter-spacing: .1rem;
-		text-shadow: 0 0 1px rgb(255 255 255 / 75%);
+		line-height: normal;
+		//letter-spacing: .1rem;
+		//text-shadow: 0 0 1px rgb(255 255 255 / 75%);
 		margin-bottom: 2rem;
+
+		&::before,
+		&::after {
+			content: '"';
+		}
+
+		@include tablet {
+			font-size: 1.5rem;
+		}
 
 		@include mobile {
 			font-size: 1.2rem;
