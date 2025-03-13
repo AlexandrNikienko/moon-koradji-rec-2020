@@ -1996,6 +1996,11 @@
 			"artistSoundcloud": "https://soundcloud.com/vertebralleaf",
 			"releases": [
 				{
+					"cdName": "Shiibashunsuke - Abstract Selection",
+					"cdCover": "mkrl023_shiibashunsuke_abstract_selection.jpg",
+					"cdLink": "shiibashunsuke-abstract-selection"
+				},
+				{
 					"cdName": "Shiibashunsuke - Innermatics",
 					"cdCover": "mkrl018_shiibashunsuke_innermatics.jpg",
 					"cdLink": "shiibashunsuke-innermatics"
