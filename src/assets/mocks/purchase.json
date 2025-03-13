@@ -1,19 +1,19 @@
 {
 	"purchase": {
-		"title": "Out Now",
+		"title": "Coming Soon",
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl022_kluster_mental_rotation.jpg",
+				"default": "mkrl023_shiibashunsuke_abstract_selection.jpg",
 				"default2x": "",
-				"_webp": "mkrl022_kluster_mental_rotation-500.webp",
-				"_webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
+				"_webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
+				"_webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
 			},
-			"title": "Kluster",
-			"subtitle": " Mental Rotation",
+			"title": "Shiibashunsuke",
+			"subtitle": "Abstract Selection",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/kluster-mental-rotation"
+				"routerLink": "releases/shiibashunsuke-abstract-selection"
 			}
 		},
 		"deals": [

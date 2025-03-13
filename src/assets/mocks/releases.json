@@ -3,6 +3,43 @@
 		{
 			"isHero": true,
 			"isNew": true,
+			"releaseNumber": "MKRL023",
+			"releaseNote": "2025",
+			"releaseDate": "Coming soon",
+			"releaseTitle": "Shiibashunsuke - Abstract Selection",
+			"releaseSubTitle": "Coming soon",
+			"releaseCover": {
+				"default": "mkrl023_shiibashunsuke_abstract_selection.jpg",
+				"default2x": "",
+				"_webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
+				"_webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
+			},
+			"releaseRoute": "shiibashunsuke-abstract-selection",
+			"releaseDescription": [
+				{   
+					"paragraph": "Shiibashunsuke explores the architecture and groove of past sounds, uncovering hidden archives in this experimental work."
+				},
+				{   
+					"paragraph": "By reviving the atmosphere and style of the past, he pieces together forgotten vibrations into intricate sonic collages. Layers of noise create a rhythmic tapestry, offering glimpses into a lost musical heritage."
+				},
+				{   
+					"paragraph": "With a powerful and abstract vision, Shiibashunsuke bridges past and present, crafting a soundscape that is both nostalgic and fresh—mysterious yet energetic—turning each moment into conviction."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Shunsuke Shiiba",
+			"masteredBy": "",
+			"artworkBy": "Orosz Visual Labs",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"videoLink": "",
+			"artists": [
+				"Shiibashunsuke"
+			],
+			"embedAudio": ""
+		},
+		{
+			"isNew": true,
 			"releaseNumber": "MKRL022",
 			"releaseNote": "2025",
 			"releaseDate": "Feb 21, 2025",
