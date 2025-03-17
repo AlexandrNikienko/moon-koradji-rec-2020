@@ -64,7 +64,7 @@
 			</p>
         </div>
 
-		<div *ngIf="release.artists" class="col-md-12 col-sm-12 s-involved-artists">
+		<div *ngIf="involved.length > 0" class="col-md-12 col-sm-12 s-involved-artists">
 			<p class="s-involved-artists__title">Involved musicians:</p>
 	
 			<div class="s-involved-artists__item" *ngFor="let artist of involved">

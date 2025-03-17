@@ -82,6 +82,7 @@ export class ReleaseComponent implements OnInit, OnDestroy {
 			takeUntil(this.destroyStream)
 		).subscribe(artists => {
 			this.involved = artists ? this.getInvolvedArtists(artists, this.release.artists) : null;
+			console.log('this.involved', this.involved);
 		})
 	}
 

@@ -1,6 +1,48 @@
 {
     "releases": [
 		{
+			"isNew": true,
+			"releaseNumber": "MKRL024",
+			"releaseNote": "2025",
+			"releaseDate": "Coming soon",
+			"releaseTitle": "VA Alphaum",
+			"releaseSubTitle": "coming soon",
+			"releaseCover": {
+				"default": "mkrl024_alphaum.jpg",
+				"default2x": "",
+				"_webp": "",
+				"_webp2x": ""
+			},
+			"releaseRoute": "va-alphaum",
+			"releaseDescription": [
+				{   
+					"_paragraph": "From the void, a pulse emerges."
+				},
+				{   
+					"paragraph": "Alphaum embodies the fusion of Alpha—the beginning, the source—and Aum—the cosmic vibration of existence. "
+				},
+				{   
+					"paragraph": "The artists unite to forge a sonic storm—powerful, hypnotic, and electrifying. More than just a selection of cutting-edge psytrance, this compilation is a tribute to new life, boundless energy, and the infinite cycles of creation and transformation."
+				},
+				{   
+					"paragraph": "Step into the sound. Enter the vibration."
+				},
+				{   
+					"_paragraph": "'I dedicate this compilation to my newborn daughter Victoria.' (c) DJ Omsun"
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"cdAuthor": "",
+			"masteredBy": "",
+			"artworkBy": "Ozan",
+			"beatspaceLink": "",
+			"bandcampLink": "",
+			"artists": [
+				""
+			],
+			"embedAudio": ""
+		},
+		{
 			"isHero": true,
 			"isNew": true,
 			"releaseNumber": "MKRL023",
@@ -28,7 +70,7 @@
 			],
 			"compiledBy": "",
 			"cdAuthor": "Shunsuke Shiiba",
-			"masteredBy": "",
+			"masteredBy": "Wild Mastering",
 			"artworkBy": "Orosz Visual Labs",
 			"beatspaceLink": "",
 			"bandcampLink": "",

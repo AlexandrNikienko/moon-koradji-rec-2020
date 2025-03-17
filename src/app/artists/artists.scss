@@ -86,7 +86,13 @@ mk-heading {
 }
 
 .filter {
-	display: flex;
-	justify-content: center;
 	margin-bottom: 2rem;
+
+	.mat-mdc-slide-toggle {
+		margin-left: 1rem;
+	}
+
+	::ng-deep .mdc-label {
+		color: white
+	}
 }

@@ -53,6 +53,7 @@
 		{
 			"artistRoute": "adansonia",
 			"artistName": "Adansonia",
+			"featured": true,
 			"artistRealName": "Ramiro Martinez Hermet",
 			"artistCountry": "Argentina",
 			"flag": "ar",
@@ -122,6 +123,7 @@
 		{
 			"artistRoute": "already-maged",
 			"artistName": "Already Maged",
+			"featured": true,
 			"artistRealName": "Yehor Yudin",
 			"artistCountry": "Ukraine",
 			"flag": "ua",
@@ -466,6 +468,7 @@
 		{
 			"artistRoute": "distorted-goblin",
 			"artistName": "Distorted Goblin",
+			"featured": true,
 			"artistRealName": "Milan Manasievski",
 			"artistCountry": "Macedonia",
 			"flag": "mk",
@@ -810,6 +813,7 @@
 		{
 			"artistRoute": "inzect",
 			"artistName": "Inzect",
+			"featured": true,
 			"artistRealName": "Jonas Loven",
 			"artistCountry": "Sweden",
 			"flag": "se",
@@ -850,6 +854,7 @@
 		{
 			"artistRoute": "irukanji",
 			"artistName": "Irukanji",
+			"featured": true,
 			"artistRealName": "Ihor Orlovskyi",
 			"artistCountry": "Ukraine",
 			"flag": "ua",
@@ -982,6 +987,7 @@
 		{
 			"artistRoute": "katastrof",
 			"artistName": "Katastrof",
+			"featured": true,
 			"artistRealName": "Björn Anderson",
 			"artistCountry": "Sweden",
 			"flag": "se",
@@ -1091,6 +1097,7 @@
 		{
 			"artistRoute": "kluster",
 			"artistName": "Kluster",
+			"featured": true,
 			"artistRealName": "Michael Pettersson",
 			"artistCountry": "Sweden",
 			"flag": "se",
@@ -1980,6 +1987,7 @@
 		{
 			"artistRoute": "shiibashunsuke",
 			"artistName": "Shiibashunsuke",
+			"featured": true,
 			"artistRealName": "Shunsuke Shiiba",
 			"artistCountry": "Japan",
 			"flag": "jp",
@@ -2258,6 +2266,7 @@
 		{
 			"artistRoute": "traskel",
 			"artistName": "Traskel",
+			"featured": true,
 			"artistRealName": "Marcus Ryman",
 			"artistCountry": "Sweden",
 			"flag": "se",
@@ -2475,6 +2484,7 @@
 			"artistRoute": "whrikk",
 			"artistName": "Whrikk",
 			"artistRealName": "Matthijs Van Der Geest",
+			"featured": true,
 			"artistCountry": "Netherlands",
 			"flag": "nl",
 			"artistAvatar": "artist_whrikk.jpg",
@@ -2520,6 +2530,7 @@
 		{
 			"artistRoute": "ziul-oiram",
 			"artistName": "Ziul Oiram",
+			"featured": true,
 			"artistRealName": "Luiz Mário",
 			"artistCountry": "Brazil",
 			"flag": "br",

@@ -17,4 +17,5 @@ export interface Artist {
     releases?: any[]; // TODO
     embedCode?: string;
     flag?: string;
+	featured?: boolean;
 }

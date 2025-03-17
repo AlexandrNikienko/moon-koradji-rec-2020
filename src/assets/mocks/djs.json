@@ -66,6 +66,7 @@
         {
             "artistRoute": "dj-omsun",
             "artistName": "DJ Omsun",
+			"featured": true,
             "artistRealName": "Oleksandr Nikiienko",
             "artistCountry": "Ukraine",
             "flag": "ua",
@@ -150,6 +151,7 @@
         {
             "artistRoute": "dj-zloj",
             "artistName": "DJ Zloj",
+			"featured": true,
             "artistRealName": "Fabian Djurklou",
             "artistCountry": "Sweden",
             "flag": "se",

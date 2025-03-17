@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { DataService } from '../core/services/data.service';
 
@@ -18,7 +19,7 @@ import { Artist } from '../core/models/artist.model';
 		HeadingComponent,
 		CommonModule,
 		RouterModule,
-		MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule
+		MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatSlideToggleModule
 	],
 	selector: 'app-artists',
 	templateUrl: './artists.component.html',
@@ -31,8 +32,15 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	artists: Artist[] = []
-	public artists$: Observable<Artist[]>;
-	public djs$: Observable<Artist[]>;
+	private allArtists: Artist[] = [];
+	isFeaturedChecked = false;
+	artists$: Observable<Artist[]>;
+	djs$: Observable<Artist[]>;
+	djs: Artist[] = [];
+	private allDjs: Artist[] = [];
+	private filteredByCountryDjs: Artist[] = [];
+	private featuredDjs: Artist[] = [];
+
 	private changesSub: Subscription;
 
 	private metaDataObj: iMeta = {
@@ -51,8 +59,8 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	ngOnInit(): void {
 		this.artists$ = this.dataservice.requestToData('artists');
 		this.artists$.subscribe(artists => {
-			const allArtists = artists;
-			this.artists = allArtists;
+			this.allArtists = artists;
+			this.artists = this.allArtists;
 
 			// Create an array of pairs (artistCountry, flag)
 			const countryFlagPairs = artists.map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
@@ -65,7 +73,7 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 
 			this.countries.valueChanges.subscribe(countries => {
 				this.choosenCountries = countries;
-				this.artists = countries.length > 0 ? allArtists.filter(artist => countries.includes(artist.artistCountry)) : allArtists;
+				this.filterArtists();
 
 				setTimeout(e => {
 					this.setAlphabeticalMarks();
@@ -74,6 +82,12 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 		});
 
 		this.djs$ = this.dataservice.requestToData('djs');
+		this.djs$.subscribe(djs => {
+			this.allDjs = djs;
+			this.djs = this.allDjs;
+			//this.featuredDjs = this.allDjs.filter(dj => dj.featured);
+		});
+
 		this.metaData.setMetaData(this.metaDataObj);
 	}
 
@@ -104,5 +118,30 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 				startLetter = firstLetter;
 			}
 		}
+	}
+
+	filterArtists(): void {
+		let filteredArtists = this.allArtists;
+		let filteredDjs = this.allDjs;
+		
+		// Apply country filter if selected
+		if (this.choosenCountries.length > 0) {
+			filteredArtists = filteredArtists.filter(artist =>
+				this.choosenCountries.includes(artist.artistCountry)
+			);
+		
+			filteredDjs = filteredDjs.filter(dj =>
+				this.choosenCountries.includes(dj.artistCountry)
+			);
+		}
+		
+		// Apply featured filter if toggle is checked
+		if (this.isFeaturedChecked) {
+			filteredArtists = filteredArtists.filter(artist => artist.featured);
+			filteredDjs = filteredDjs.filter(dj => dj.featured);
+		}
+		
+		this.artists = filteredArtists;
+		this.djs = filteredDjs;
 	}
 }

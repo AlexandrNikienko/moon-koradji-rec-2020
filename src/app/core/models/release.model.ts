@@ -1,3 +1,4 @@
+import { Artist } from './artist.model';
 import { Paragraph } from './paragraph.model';
 
 export interface Release {
@@ -27,6 +28,7 @@ export interface Release {
 	embedAudio?: string;
 	artists: Array<string>;
 	hub?: string;
+	involved?: Artist[];
 }
 
 interface ReleaseCover {

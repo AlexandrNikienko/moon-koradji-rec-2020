@@ -1,4 +1,4 @@
-<mk-heading class="mt-4" [title]="'Artists'" [subTitle]="'Get to know the creative minds behind our music'"/>
+<mk-heading class="mt-4" [title]="'Artists (' + artists.length + ')'" [subTitle]="'Get to know the creative minds behind our music'"/>
 
 <div class="filter">
 	<mat-form-field appearance="outline">
@@ -10,9 +10,11 @@
 			</mat-option>
 		</mat-select>
   </mat-form-field>
+
+  <mat-slide-toggle [(ngModel)]="isFeaturedChecked" (change)="filterArtists()" labelPosition="before" color="primary" hidden>Show featured only:</mat-slide-toggle>
 </div>
 
-<section *ngIf="artists" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
+<section *ngIf="artists.length" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
 	@for (item of artists; track item.id) {
 		<div #artist class="artist-item mb-16">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
@@ -24,9 +26,9 @@
 	}
 </section>
 
-<mk-heading [title]="'DJs'" [subTitle]="'Meet our talented roster of DJs'"/>
+<mk-heading [title]="'DJs (' + djs.length + ')'" [subTitle]="'Meet our talented roster of DJs'"/>
 
-<section *ngIf="djs$ | async as djs" class="artists-wrapper">
+<section *ngIf="djs.length" class="artists-wrapper">
 	@for (item of djs; track item.id) {
 		<div class="artist-item">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">

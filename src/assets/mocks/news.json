@@ -1,16 +1,9 @@
 {
     "news": [
 		{
-            "link": "artists/katastrof",
-            "image": "assets/images/artists/m_artist_katastrof.jpg",
-            "title": "Katastrof",
-            "text": "Welcome aboard",
-            "target": ""
-        },
-		{
-            "link": "artists/irukanji",
-            "image": "assets/images/artists/m_artist_irukanji.jpg",
-            "title": "Irukanji",
+            "link": "artists/kluster",
+            "image": "assets/images/artists/m_artist_kluster.jpg",
+            "title": "Kluster",
             "text": "Welcome aboard",
             "target": ""
         },
@@ -19,6 +12,13 @@
             "image": "assets/images/t-shirts/3/mk-tshirt-design-2024-color-avatar.jpg",
             "title": "T-shirts and Hoodies",
             "text": "New desing in the shop",
+            "target": "_blank"
+        },
+		{
+            "link": "https://www.facebook.com/events/1738167593694928",
+            "image": "assets/images/events/shadowofshaman.jpg",
+            "title": "The Shadow Of The Dark Shaman",
+            "text": "Stockholm, Aug 29-31 2025",
             "target": "_blank"
         },
 		{

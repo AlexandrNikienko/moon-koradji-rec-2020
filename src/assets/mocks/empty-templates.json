@@ -1,10 +1,10 @@
 {
     "news": [
         {
-            "link": "https://www.facebook.com/events/1559646241203206",
+            "link": "https://www.facebook.com/events/1738167593694928",
             "image": "assets/images/events/Shadow.jpg",
             "title": "The Shadow Of The Dark Shaman",
-            "text": "Stockholm, Aug 25-27 2023",
+            "text": "Stockholm, Aug 29-31 2025",
             "target": "_blank"
         }
     ]
@@ -105,7 +105,7 @@
 	"releases": [
 		{
 			"cdName": "VA Alphaum",
-			"cdCover": "mkrl023_alphaum.jpg",
+			"cdCover": "mkrl024_alphaum.jpg",
 			"cdLink": "va-alphaum"
 		}
 	]
@@ -130,11 +130,108 @@
 	"releases": [
 		{
 			"cdName": "VA Alphaum",
-			"cdCover": "mkrl023_alphaum.jpg",
+			"cdCover": "mkrl024_alphaum.jpg",
 			"cdLink": "va-alphaum"
 		}
 	]
 },
+{
+	"artistRoute": "nexus",
+	"artistName": "N3XU5",
+	"artistRealName": "Miguel Lopez",
+	"artistCountry": "Portugal",
+	"flag": "pt",
+	"artistAvatar": "artist_nexus.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "N3XU5 is a pioneer of the Portuguese Psy Trance scene, having been active since the end of 2001. His sound, filled with psychedelic synths and underground vibes, quickly led him to tour globally, performing at major city clubs, remote mountain festivals, beaches, and underground events."
+		},
+		{
+			"paragraph": "He’s known for his mind-bending grooves and effects, which electrify the dance floor, as well as for his detailed and characteristic production, which features powerful, energy-driven psychedelic leads."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/N3xu5psychedelic",
+	"artistSoundcloud": "https://soundcloud.com/n3xu5",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl024_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+{
+	"artistRoute": "total",
+	"artistName": "Total",
+	"artistRealName": "Patrik Andersson",
+	"artistCountry": "",
+	"flag": "",
+	"artistAvatar": "artist_total.jpg",
+	"artistDescription": [
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "",
+	"artistSoundcloud": "",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl024_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+{
+	"artistRoute": "argaleth",
+	"artistName": "Argaleth",
+	"artistRealName": "",
+	"artistCountry": "France",
+	"flag": "fr",
+	"artistAvatar": "artist_argaleth.jpg",
+	"artistDescription": [
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "",
+	"artistSoundcloud": "",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl024_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+{
+	"artistRoute": "fafazz",
+	"artistName": "Fafazz",
+	"artistRealName": "",
+	"artistCountry": "France",
+	"flag": "fr",
+	"artistAvatar": "artist_fafazz.jpg",
+	"artistDescription": [
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "",
+	"artistSoundcloud": "",
+	"releases": [
+		{
+			"cdName": "VA Alphaum",
+			"cdCover": "mkrl024_alphaum.jpg",
+			"cdLink": "va-alphaum"
+		}
+	]
+},
+
+
+
+
+
+
 {
 	"artistRoute": "smuds",
 	"artistName": "Smuds",
