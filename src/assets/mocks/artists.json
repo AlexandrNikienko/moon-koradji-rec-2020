@@ -223,6 +223,34 @@
 			]
 		},
 		{
+			"artistRoute": "argaleth",
+			"artistName": "Argaleth",
+			"artistRealName": "Adrien Graziani",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_argaleth.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Being addicted to widespread genras of music and sounds since chillhood, but screwed by few years of academic musical school, I finally found my way back to music by getting in contact with DAWs around 2006-2008."
+				},
+				{
+					"paragraph": "After some years of tripping around with synthetizer and music softwares between 2008 and 2012, it finally gave birth to the Argaleth virtual alterego whitch gave me the possibility to go beyond speech, where shapes, concepts and ideas can be encoded into sounds and rythms."
+				},
+				{
+					"paragraph": "Inspired and directed by life, emotions and peoples I tend to focus on flowy kickbasses, drifting leads and deep textures & atmospheres while still keeping a taste for storytelling."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/Argaleth",
+			"artistSoundcloud": "soundcloud.com/argaleth",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				}
+			]
+		},
+		{
 			"artistRoute": "ascoil-sun",
 			"artistName": "Ascoil Sun",
 			"artistRealName": "Matti Mikkola & Pasi Salo",
@@ -387,6 +415,37 @@
 					"cdName": "VA Legendarium",
 					"cdCover": "mkcd004_legendarium.jpg",
 					"cdLink": "va-legendarium"
+				}
+			]
+		},
+		{
+			"artistRoute": "claw",
+			"artistName": "CLAW",
+			"artistRealName": "Charalambos Pieris",
+			"artistCountry": "Cyprus",
+			"flag": "cy",
+			"artistAvatar": "artist_claw.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Charalambos Pieris, the man behind the CLAW project, has been immersed in the world of electronic music since the 1990s, boasting an impressive portfolio of releases spanning house, chillout, and other electronica genres."
+				},
+				{
+					"paragraph": "His journey into DJing started around 2000, eventually leading him into the captivating realm of Psychedelic Trance around 2004. Since then, he has graced numerous countries across the globe with his electrifying performances at parties and festivals. Under the project CLAW, he has released an album, many EPs, and a plethora of singles, solidifying his position as a formidable force in the genre. Furthermore, his collaborations with esteemed producers in the scene, underscore his versatility and innovation."
+				},
+				{
+					"paragraph": "For Charalambos, the essence of being a producer and DJ lies in the exhilaration of captivating audiences with his creations and forging meaningful connections with enthusiasts from diverse cultural backgrounds."
+				},
+				{
+					"paragraph": "CLAW's music resonates with power and emotion, characterized by pulsating basslines and abstract soundscapes. Each composition unfolds as a narrative, inviting listeners on a distinctive and unforgettable journey."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/CLAW.cy",
+			"artistSoundcloud": "https://soundcloud.com/c-l-a-w",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
 				}
 			]
 		},
@@ -644,6 +703,37 @@
 			]
 		},
 		{
+			"artistRoute": "fafazz",
+			"artistName": "Fafazz",
+			"artistRealName": "Benjamin Lautru",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_fafazz.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Benjamin has been immersed in electronic music from an early age."
+				},
+				{
+					"paragraph": "Rooted in the underground rave scene, he started producing techno and performing live hardware sets at just 15 years old. In 2010, his discovery of Psytrance led him to expand his musical horizons, launching a psychedelic trance project that would shape his artistic journey. By 2013, he had joined Funky Freaks Records, later stepping into a co-manager role."
+				},
+				{
+					"paragraph": "Fafazz’s sound is driven by duality—blending love, compassion, and gratitude with darkness, political struggle, and raw energy. Beyond production, he is deeply involved in music collectives, including Rêves Éphémères and Sub.conscience, fostering underground culture and artistic expression."
+				},
+				{
+					"paragraph": "His DJ sets are a genre-blurring experience, weaving together techno, psy techno, chillout, tribe, and bass music—an invitation to a unique and immersive dancefloor journey."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/Fafazz-451644938181352",
+			"artistSoundcloud": "https://soundcloud.com/fafazz",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				}
+			]
+		},
+		{
 			"artistRoute": "fearkiller",
 			"artistName": "Fearkiller",
 			"artistRealName": "Kirill Godovanyuk",
@@ -687,6 +777,31 @@
 					"cdName": "VA Illusorium",
 					"cdCover": "mkcd011_illusorium.jpg",
 					"cdLink": "va-illusorium"
+				}
+			]
+		},
+		{
+			"artistRoute": "gappeq",
+			"artistName": "Gappeq",
+			"artistRealName": "Jiri Tomasek",
+			"artistCountry": "Czech Republic",
+			"flag": "cz",
+			"artistAvatar": "artist_gappeq.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Gappeq is the psytrance project of Jiří Tomášek, a Czech producer known for his cinematic sound design and dark, atmospheric style."
+				},
+				{
+					"paragraph": ""
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/GappeqParvatiRecords",
+			"artistSoundcloud": "https://soundcloud.com/gappeq",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
 				}
 			]
 		},
@@ -868,6 +983,11 @@
 			"artistSoundcloud": "https://soundcloud.com/irukanji25",
 			"releases": [
 				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
+				{
 					"cdName": "Irukanji - Springwald",
 					"cdCover": "mkrl019_irukanji_springwald.jpg",
 					"cdLink": "irukanji-springwald"
@@ -971,6 +1091,11 @@
 			"artistFacebook": "",
 			"artistSoundcloud": "",
 			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
 				{
 					"cdName": "VA Infinity Keepers",
 					"cdCover": "mkcd002_infinity_keepers.jpg",
@@ -1113,6 +1238,11 @@
 			"artistFacebook": "",
 			"artistSoundcloud": "",
 			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
 				{
 					"cdName": "Kluster - Mental Rotation",
 					"cdCover": "mkrl022_kluster_mental_rotation.jpg",
@@ -1465,6 +1595,31 @@
 			]
 		},
 		{
+			"artistRoute": "nexus",
+			"artistName": "N3XU5",
+			"artistRealName": "Miguel Lopez",
+			"artistCountry": "Portugal",
+			"flag": "pt",
+			"artistAvatar": "artist_nexus.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "N3XU5 is a pioneer of the Portuguese Psy Trance scene, having been active since the end of 2001. His sound, filled with psychedelic synths and underground vibes, quickly led him to tour globally, performing at major city clubs, remote mountain festivals, beaches, and underground events."
+				},
+				{
+					"paragraph": "He’s known for his mind-bending grooves and effects, which electrify the dance floor, as well as for his detailed and characteristic production, which features powerful, energy-driven psychedelic leads."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/N3xu5psychedelic",
+			"artistSoundcloud": "https://soundcloud.com/n3xu5",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				}
+			]
+		},
+		{
 			"artistRoute": "noise-gust",
 			"artistName": "Noise Gust",
 			"artistRealName": "Kagetoshi Nakamura",
@@ -1803,6 +1958,11 @@
 			"artistSoundcloud": "https://soundcloud.com/para-halu",
 			"releases": [
 				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
+				{
 					"cdName": "VA Blackout 2: Luminous Darkness",
 					"cdCover": "mkrl020_blackout_2.jpg",
 					"cdLink": "va-blackout-2"
@@ -1977,6 +2137,11 @@
 			"artistFacebook": "https://www.facebook.com/nomadsoulmusic",
 			"artistSoundcloud": "https://soundcloud.com/seb-namaskar",
 			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
 				{
 					"cdName": "VA Blackout 2: Luminous Darkness",
 					"cdCover": "mkrl020_blackout_2.jpg",
@@ -2264,6 +2429,28 @@
 			]
 		},
 		{
+			"artistRoute": "total",
+			"artistName": "Total",
+			"artistRealName": "Patrik Andersson",
+			"artistCountry": "Sweden",
+			"flag": "se",
+			"artistAvatar": "artist_total.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Patrik made a serious venture into trance music in 2002, and he considers his music to be a mix of many different styles."
+				}
+			],
+			"artistFacebook": "",
+			"artistSoundcloud": "",
+			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				}
+			]
+		},
+		{
 			"artistRoute": "traskel",
 			"artistName": "Traskel",
 			"featured": true,
@@ -2499,6 +2686,11 @@
 			"artistFacebook": "https://www.facebook.com/Whrikk-165180250222659",
 			"artistSoundcloud": "https://soundcloud.com/whrikk",
 			"releases": [
+				{
+					"cdName": "VA Alphaum",
+					"cdCover": "mkrl024_alphaum.jpg",
+					"cdLink": "va-alphaum"
+				},
 				{
 					"cdName": "VA Infinity Keepers 2: depth perception",
 					"cdCover": "mkcd007_infinity_keepers_2.jpg",
