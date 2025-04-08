@@ -1,0 +1,24 @@
+{
+    "events": [
+		{
+            "date": "29-31",
+            "month": "August",
+            "year": "2025",
+            "country": "Sweden",
+            "title": "The Shadow Of The Dark Shaman",
+			"info": "Sanaton 20 years anniversary - psychedelic trance outdoor gathering in the heart of Stockholm",
+			"link": "https://www.facebook.com/events/1738167593694928",
+			"artists": ["Already Maged", "Whrikk", "Inzect", "Traskel", "Purosurpo"]
+        },
+		{
+            "date": "6",
+            "month": "December",
+            "year": "2025",
+            "country": "Sweden",
+            "title": "The Shadow Of The Dark Shaman",
+			"info": "50 trips around the sun - celebrating one of MindGamers founders 50th anniversary",
+			"link": "https://www.facebook.com/events/1212853129806741/",
+			"artists": ["Time For Slime", "Ka-Sol", "Trold", "DJ Zloj"]
+        }
+    ]
+}

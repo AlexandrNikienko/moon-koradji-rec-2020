@@ -16,6 +16,7 @@ import { GalleryModule } from '../shared/gallery/gallery.module';
 import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
 import { Release } from '../core/models/release.model';
+import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
 
@@ -47,6 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	purchase$: Observable<any>;
 	news$: Observable<News[]>;
 	releases$: Observable<Release[]>;
+	events$: Observable<Event[]>;
 	purchaseSub: Subscription;
 	filteredReleases$: Observable<Release[]>;
 
@@ -65,6 +67,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.purchase$ = this.dataService.requestToData('purchase');
 		this.news$ = this.dataService.requestToData('news');
 		this.releases$ = this.dataService.requestToData('releases');
+		this.events$ = this.dataService.requestToData('events');
 		this.filteredReleases$ = this.releases$.pipe(
 			map(releases => releases.filter(release => !release.isHero && !release.hidden).slice(0, 3))
 		);
@@ -91,4 +94,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 			}
 		})
 	}
+
+	getArtistRoute(artist: string): string {
+		return '/artists/' + artist.toLowerCase().replace(/ /g, '-');
+	  }
 }
