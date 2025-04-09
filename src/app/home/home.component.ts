@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists = ['Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Shiibashunsuke', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
+	featuredArtists = ['Shiibashunsuke', 'Kluster', 'Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
@@ -86,10 +86,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.featuredGalleryItems = this.featuredArtists.map(artist => {
 			return {
 				name: artist,
-				route: `/artists/${artist.replace(' ', '-').toLocaleLowerCase()}`,
+				route: `/artists/${artist.replace(/ /g, '-').toLocaleLowerCase()}`,
 				image: {
-					default: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.jpg`,
-					webp: `featured_${artist.replace(' ', '_').toLocaleLowerCase()}.webp`
+					default: `featured_${artist.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
+					webp: `featured_${artist.replace(/ /g, '_').toLocaleLowerCase()}.webp`
 				}
 			}
 		})

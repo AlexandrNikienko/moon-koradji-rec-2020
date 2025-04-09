@@ -1,6 +1,16 @@
 {
     "events": [
 		{
+            "date": "30-7",
+            "month": "June-July",
+            "year": "2025",
+            "country": "Czech Republic",
+            "title": "Masters of Puppets",
+			"info": "Forest, tekno and rage stages",
+			"link": "https://www.facebook.com/events/1008856987115431",
+			"artists": ["Distorted Goblin", "Inzect", "Solarythm", "Troglodytes", "Whrikk"]
+        },
+		{
             "date": "29-31",
             "month": "August",
             "year": "2025",
