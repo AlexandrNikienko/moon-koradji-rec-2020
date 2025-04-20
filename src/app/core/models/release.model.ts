@@ -7,7 +7,7 @@ export interface Release {
 	isNew?: boolean;
 	isFree?: boolean;
 	releaseNumber: string;
-	releaseNote: string;
+	releaseYear: string;
 	releaseDate: string;
 	releaseTitle: string;
 	releaseSubTitle: string;
