@@ -16,10 +16,9 @@
 
 <section *ngIf="artists.length" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
 	@for (item of artists; track item.id) {
-		<div #artist class="artist-item mb-16">
+		<div class="artist-item mb-16">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
 				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
-
 				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
 			</a>
 		</div>

@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit, inject, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
@@ -26,7 +26,7 @@ import { Artist } from '../core/models/artist.model';
 	styleUrls: ['artists.scss']
 })
 export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
-	@ViewChildren('artist') artist: QueryList<Element>;
+	@ViewChildren('artistName') artistNames: QueryList<ElementRef>;
 
 	private dataservice = inject(DataService);
 	private metaData = inject(MetaDataService);
@@ -92,9 +92,17 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	}
 
 	ngAfterViewInit(): void {
-		this.changesSub = this.artist.changes.subscribe(t => {
-			this.setAlphabeticalMarks();
+		// Detect changes in artistNames elements
+		this.changesSub = this.artistNames.changes.subscribe(() => {
+			this.runAlphabeticalMarksAfterRender();
 		});
+
+		// Initial call in case they’re already rendered
+		this.runAlphabeticalMarksAfterRender();
+	}
+
+	private runAlphabeticalMarksAfterRender(): void {
+		setTimeout(() => this.setAlphabeticalMarks(), 0);
 	}
 
 	ngOnDestroy(): void {
@@ -103,21 +111,20 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 		}
 	}
 
-	// TODO
 	setAlphabeticalMarks(): void {
 		document.querySelectorAll('.letter-separator').forEach(e => e.remove());
-		
-		let startLetter = '';
-		let firstLetter = '';
-		const artistNames = document.querySelectorAll('.js-artist-name');
 
-		for (let i = 0; i < artistNames.length; i++) {
-			firstLetter = artistNames[i].textContent.charAt(0);
+		let startLetter = '';
+		this.artistNames.forEach(ref => {
+			const el = ref.nativeElement;
+			const name = el.textContent.trim();
+			const firstLetter = name.charAt(0).toUpperCase();
+
 			if (firstLetter > startLetter) {
-				artistNames[i].insertAdjacentHTML('afterend', `<div class="letter-separator">${firstLetter}</div>`);
+				el.insertAdjacentHTML('afterend', `<div class="letter-separator">${firstLetter}</div>`);
 				startLetter = firstLetter;
 			}
-		}
+		});
 	}
 
 	filterArtists(): void {
