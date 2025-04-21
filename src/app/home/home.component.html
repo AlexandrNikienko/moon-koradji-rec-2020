@@ -215,29 +215,33 @@
 	<mk-heading [title]="'Upcoming Events'" [subTitle]="'Catch our talented artists live'"/>
 
 	<div *ngIf="events$ | async as events" class="event__content">
-		<div *ngFor="let event of events" class="event__item">
-			<div class="event__left">
-				<div class="event__date">{{event.date}}</div>
-				<div class="event__month">{{event.month}}</div>
-				<div class="event__year">{{event.year}}</div>
-				<div class="event__country">{{event.country}}</div>
-			</div>
-
-			<div class="event__right">
-				<div class="event__title">{{event.title}}</div>
-
-				<div class="event__info">{{event.info}}</div>
-				<div class="event__artists">
-					<a *ngFor="let artist of event.artists"
-					class="event__artist"
-					[routerLink]="getArtistRoute(artist)">{{artist}}</a>
-
-					<span class="event__artist">and more</span>
+		@for (event of events; track event.id) {
+			@if (!event.hidden) {
+				<div class="event__item">
+					<div class="event__left">
+						<div class="event__date">{{event.date}}</div>
+						<div class="event__month">{{event.month}}</div>
+						<div class="event__year">{{event.year}}</div>
+						<div class="event__country">{{event.country}}</div>
+					</div>
+	
+					<div class="event__right">
+						<div class="event__title">{{event.title}}</div>
+	
+						<div class="event__info">{{event.info}}</div>
+						<div class="event__artists">
+							<a *ngFor="let artist of event.artists"
+							class="event__artist"
+							[routerLink]="getArtistRoute(artist)">{{artist}}</a>
+	
+							<span class="event__artist">and more</span>
+						</div>
+	
+						<a class="btn btn--light" href="{{event.link}}" target="blank">More info</a>
+					</div>
 				</div>
-
-				<a class="btn btn--light" href="{{event.link}}" target="blank">More info</a>
-			</div>
-		</div>
+			}
+		}
 
 		<div class="event__item">
 			<div class="event__left"></div>
@@ -245,7 +249,6 @@
 				<div class="event__title">Here can be your event</div>
 				<div class="event__info">* if our artist(s) perform there</div>
 			</div>
-			
 		</div>
 	</div>
 </section>

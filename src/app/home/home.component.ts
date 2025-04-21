@@ -67,7 +67,19 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.purchase$ = this.dataService.requestToData('purchase');
 		this.news$ = this.dataService.requestToData('news');
 		this.releases$ = this.dataService.requestToData('releases');
-		this.events$ = this.dataService.requestToData('events');
+		this.events$ = this.dataService.requestToData<Event>('events').pipe(
+			map(events => 
+				events
+					.filter(e => {
+						const today = new Date();
+						const endDate = new Date(e.endDate); // assuming endDate is ISO
+						return endDate >= today;
+					})
+					.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime())
+					.slice(0, 3)
+			)
+		);
+
 		this.filteredReleases$ = this.releases$.pipe(
 			map(releases => releases.filter(release => !release.isHero && !release.hidden).slice(0, 3))
 		);

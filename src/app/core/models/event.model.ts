@@ -9,4 +9,7 @@ export interface Event {
 	info: string;
 	link: string;
 	artists: string[];
+	hidden: boolean;
+	id: string;
+	endDate: string;
 }
