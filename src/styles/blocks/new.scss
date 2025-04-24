@@ -108,6 +108,10 @@
 		margin-bottom: 0;
 	}
 
+	.btn {
+		margin-top: 2rem;
+	}
+
 	@include mobile {
 		flex-direction: column;
 	}

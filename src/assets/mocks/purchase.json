@@ -4,16 +4,16 @@
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl023_shiibashunsuke_abstract_selection.jpg",
+				"default": "mkrl024_alphaum.jpg",
 				"default2x": "",
-				"_webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
-				"_webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
+				"webp": "mkrl024_alphaum-500.webp",
+				"webp2x": "mkrl024_alphaum-1000.webp"
 			},
-			"title": "Shiibashunsuke",
-			"subtitle": "Abstract Selection",
+			"title": "VA Alphaum",
+			"subtitle": "",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/shiibashunsuke-abstract-selection"
+				"routerLink": "releases/va-alphaum"
 			}
 		},
 		"deals": [
