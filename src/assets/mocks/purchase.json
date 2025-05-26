@@ -1,19 +1,19 @@
 {
 	"purchase": {
-		"title": "Out Now",
+		"title": "Coming Soon",
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl024_alphaum.jpg",
+				"default": "mkrl025_para_halu_histora_plethora.jpg",
 				"default2x": "",
-				"webp": "mkrl024_alphaum-500.webp",
-				"webp2x": "mkrl024_alphaum-1000.webp"
+				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
+				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
 			},
-			"title": "VA Alphaum",
-			"subtitle": "Gappeq, Karash, Total, Whrikk, Para Halu, SEB, Kluster, N3XU5, CLAW, Argaleth, Fafazz, Irukanji",
+			"title": "PARA HALU",
+			"subtitle": "Histora Plethora",
 			"button": {
-				"title": "More Info",
-				"routerLink": "releases/va-alphaum"
+				"title": "More Info Soon",
+				"routerLink": ""
 			}
 		},
 		"deals": [
