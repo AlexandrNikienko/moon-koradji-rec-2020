@@ -12,8 +12,8 @@
 			"title": "PARA HALU",
 			"subtitle": "Histora Plethora",
 			"button": {
-				"title": "More Info Soon",
-				"routerLink": ""
+				"title": "More Info",
+				"routerLink": "releases/para-halu-histora-plethora"
 			}
 		},
 		"deals": [

@@ -1,7 +1,37 @@
 {
     "releases": [
 		{
-			"isHero": false,
+			"isHero": true,
+			"isNew": true,
+			"releaseNumber": "MKRL025",
+			"releaseYear": "2025",
+			"releaseDate": "June 6, 2025",
+			"releaseTitle": "Para Halu - Histora Plethora",
+			"releaseSubTitle": "coming soon",
+			"releaseCover": {
+				"default": "mkrl025_para_halu_histora_plethora.jpg",
+				"default2x": "",
+				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
+				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
+			},
+			"releaseRoute": "para-halu-histora-plethora",
+			"releaseDescription": [
+				{   
+					"paragraph": "Wild basslines with nocturnal creatures, unconventional patterns with unexpected twists, melodies with vocal traces - all this is packed into a special new EP from Para Halu."
+				},
+				{
+					"paragraph": "Histora Plethora features four tracks tested loud on diverse dancefloors. Each carries its own distinct energy and personal touch, now finding their home on Moon Koradji Records."
+				}
+			],
+			"cdAuthor": "Adam Hohmann",
+			"masteredBy": "Xenomorph",
+			"artworkBy": "Ozan",
+			"bandcampLink": "",
+			"artists": [
+				"Para Halu"
+			]
+		},
+		{
 			"isNew": true,
 			"releaseNumber": "MKRL024",
 			"releaseYear": "2025",
@@ -17,7 +47,7 @@
 			"releaseRoute": "va-alphaum",
 			"releaseDescription": [
 				{   
-					"paragraph": "Alphaum embodies the fusion of Alpha—the beginning, the source—and Aum—the cosmic vibration of existence. "
+					"paragraph": "Alphaum embodies the fusion of Alpha—the beginning, the source—and Aum—the cosmic vibration of existence."
 				},
 				{   
 					"paragraph": "The artists unite to forge a sonic storm—powerful, hypnotic, and electrifying. More than just a selection of cutting-edge psytrance, this compilation is a tribute to new life, boundless energy, and the infinite cycles of creation and transformation."

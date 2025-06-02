@@ -1958,6 +1958,11 @@
 			"artistSoundcloud": "https://soundcloud.com/para-halu",
 			"releases": [
 				{
+					"cdName": "Para Halu - Histora Plethora",
+					"cdCover": "mkrl025_para_halu_histora_plethora.jpg",
+					"cdLink": "para-halu-histora-plethora"
+				},
+				{
 					"cdName": "VA Alphaum",
 					"cdCover": "mkrl024_alphaum.jpg",
 					"cdLink": "va-alphaum"
