@@ -7,7 +7,7 @@
 			"releaseYear": "2025",
 			"releaseDate": "June 6, 2025",
 			"releaseTitle": "Para Halu - Histora Plethora",
-			"releaseSubTitle": "coming soon",
+			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl025_para_halu_histora_plethora.jpg",
 				"default2x": "",
@@ -26,7 +26,8 @@
 			"cdAuthor": "Adam Hohmann",
 			"masteredBy": "Xenomorph",
 			"artworkBy": "Ozan",
-			"bandcampLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora",
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=4281402348/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora\">Para Halu - Histora Plethora by Moon Koradji Records</a></iframe>",
 			"artists": [
 				"Para Halu"
 			]
