@@ -7,7 +7,6 @@ import { map } from 'rxjs/operators';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { JsonLDService } from './../core/services/json-ld.service';
 import { DataService } from '../core/services/data.service';
-import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { PodcastComponent } from './podcast/podcast.component';
@@ -19,7 +18,6 @@ import { Release } from '../core/models/release.model';
 import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
-
 
 @Component({
 	selector: 'mk-home',
@@ -42,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists = ['Shiibashunsuke', 'Kluster', 'Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
+	featuredArtists = ['Para Halu', 'Shiibashunsuke', 'Kluster', 'Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
@@ -51,8 +49,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 	events$: Observable<Event[]>;
 	purchaseSub: Subscription;
 	filteredReleases$: Observable<Release[]>;
-
-	crystalization = new Crystalization();
 
 	private metaDataObj: iMeta = {
 		title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',

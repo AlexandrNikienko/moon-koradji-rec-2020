@@ -2,8 +2,8 @@
 
 .artists-wrapper {
 	columns: 4;
-	gap: 25px 36px;
-	margin-bottom: 25px;
+	column-gap: 1rem;
+	margin-bottom: 2rem;
 
 	@include desktopSmall {
 		columns: 3;

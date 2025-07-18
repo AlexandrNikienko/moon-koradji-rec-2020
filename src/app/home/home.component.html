@@ -29,7 +29,7 @@
 		<a *ngIf="purchase.item.button"
 			[routerLink]="purchase.item.button?.routerLink"
 			[attr.disabled]="!purchase.item.button?.routerLink"
-			class="btn btn--light"
+			class="btn"
 		>
 			{{purchase.item.button?.title}}
 		</a>
@@ -237,7 +237,7 @@
 							<span class="event__artist">and more</span>
 						</div>
 	
-						<a class="btn btn--light" href="{{event.link}}" target="blank">More info</a>
+						<a class="btn" href="{{event.link}}" target="blank">More info</a>
 					</div>
 				</div>
 			}
