@@ -18,6 +18,7 @@ import { Release } from '../core/models/release.model';
 import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
+import { Artist } from '../core/models/artist.model';
 
 @Component({
 	selector: 'mk-home',
@@ -40,7 +41,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredArtists = ['Para Halu', 'Shiibashunsuke', 'Kluster', 'Katastrof', 'Irukanji', 'Already Maged', 'Distorted Goblin', 'Adansonia', 'Ziul Oiram', 'Inzect', 'Molchun', 'Traskel', 'Whrikk'];
 	featuredGalleryItems: Gallery[] = [];
 
 	purchase$: Observable<any>;
@@ -49,6 +49,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 	events$: Observable<Event[]>;
 	purchaseSub: Subscription;
 	filteredReleases$: Observable<Release[]>;
+	artists$: Observable<Artist[]>;
+	featuredArtists: Artist[] = []
 
 	private metaDataObj: iMeta = {
 		title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
@@ -80,11 +82,23 @@ export class HomeComponent implements OnInit, OnDestroy {
 			map(releases => releases.filter(release => !release.isHero && !release.hidden).slice(0, 3))
 		);
 
-		this.getFeaturedGaleryItems();
+		this.artists$ = this.dataService.requestToData('artists');
+		this.artists$.subscribe(artists => {
+			this.featuredArtists = this.shuffleArray(artists.filter(artist => artist.featured));
+			this.getFeaturedGaleryItems();
+		})
 
 		// this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
 		// this.metaData.setMetaData(this.metaDataObj);
+	}
+
+	shuffleArray(array: any[]): any[] {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+		return array;
 	}
 
 	ngOnDestroy() {
@@ -92,12 +106,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	getFeaturedGaleryItems() {
 		this.featuredGalleryItems = this.featuredArtists.map(artist => {
+			const artistName = artist.artistName;
+
 			return {
-				name: artist,
-				route: `/artists/${artist.replace(/ /g, '-').toLocaleLowerCase()}`,
+				name: artistName,
+				route: `/artists/${artistName.replace(/ /g, '-').toLocaleLowerCase()}`,
 				image: {
-					default: `featured_${artist.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
-					webp: `featured_${artist.replace(/ /g, '_').toLocaleLowerCase()}.webp`
+					default: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
+					webp: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.webp`
 				}
 			}
 		})

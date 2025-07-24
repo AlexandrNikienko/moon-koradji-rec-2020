@@ -18,4 +18,5 @@ export interface Artist {
     embedCode?: string;
     flag?: string;
 	featured?: boolean;
+	inactive?: boolean;
 }

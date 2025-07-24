@@ -1,10 +1,10 @@
 import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit, inject, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { DataService } from '../core/services/data.service';
 
@@ -53,8 +53,12 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	}
 
 	countries = new FormControl('');
-  	countryList: {artistCountry: string, flag: string}[] = [];
+	countryList: { artistCountry: string, flag: string }[] = [];
 	choosenCountries: any = '';
+
+	statuses = new FormControl('All');
+	statusList: string[] = ['Active', 'Inactive', 'Featured', 'All'];
+	choosenStatus: string = 'All';
 
 	ngOnInit(): void {
 		this.artists$ = this.dataservice.requestToData('artists');
@@ -79,6 +83,15 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 					this.setAlphabeticalMarks();
 				}, 0)
 			})
+
+			this.statuses.valueChanges.subscribe(status => {
+				this.choosenStatus = status;
+				this.filterArtists();
+
+				setTimeout(() => {
+					this.setAlphabeticalMarks();
+				}, 0);
+			});
 		});
 
 		this.djs$ = this.dataservice.requestToData('djs');
@@ -130,24 +143,38 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	filterArtists(): void {
 		let filteredArtists = this.allArtists;
 		let filteredDjs = this.allDjs;
-		
+
 		// Apply country filter if selected
 		if (this.choosenCountries.length > 0) {
 			filteredArtists = filteredArtists.filter(artist =>
 				this.choosenCountries.includes(artist.artistCountry)
 			);
-		
+
 			filteredDjs = filteredDjs.filter(dj =>
 				this.choosenCountries.includes(dj.artistCountry)
 			);
 		}
-		
+
 		// Apply featured filter if toggle is checked
-		if (this.isFeaturedChecked) {
-			filteredArtists = filteredArtists.filter(artist => artist.featured);
-			filteredDjs = filteredDjs.filter(dj => dj.featured);
+		// if (this.isFeaturedChecked) {
+		// 	filteredArtists = filteredArtists.filter(artist => artist.featured);
+		// 	filteredDjs = filteredDjs.filter(dj => dj.featured);
+		// }
+
+		// Filter by status
+		if (this.choosenStatus !== 'All') {
+			if (this.choosenStatus === 'Featured') {
+				filteredArtists = filteredArtists.filter(artist => artist.featured);
+				filteredDjs = filteredDjs.filter(dj => dj.featured);
+			} else if (this.choosenStatus === 'Inactive') {
+				filteredArtists = filteredArtists.filter(artist => artist.inactive);
+				filteredDjs = filteredDjs.filter(dj => dj.inactive);
+			} else if (this.choosenStatus === 'Active') {
+				filteredArtists = filteredArtists.filter(artist => !artist.inactive);
+				filteredDjs = filteredDjs.filter(dj => !dj.inactive);
+			}
 		}
-		
+
 		this.artists = filteredArtists;
 		this.djs = filteredDjs;
 	}

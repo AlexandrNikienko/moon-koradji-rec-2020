@@ -48,7 +48,8 @@
 					"cdCover": "mkcd001_shadow_enuin.jpg",
 					"cdLink": "va-shadow-enuin"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "adansonia",
@@ -192,7 +193,8 @@
 					"cdCover": "mkcd003_shadow_enuin_2.jpg",
 					"cdLink": "va-shadow-enuin-2"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "annoyingninjas",
@@ -756,7 +758,8 @@
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "foggy",
@@ -1192,7 +1195,8 @@
 					"cdCover": "mkcd009_intropix.jpg",
 					"cdLink": "va-intropix"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "kirna",
@@ -1539,7 +1543,8 @@
 					"year": "2020",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/810824971\"></iframe>"
 				}
-			]
+			],
+			"featured": true
 		},
 		{
 			"artistRoute": "molokow",
@@ -1829,7 +1834,8 @@
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "olien",
@@ -1859,7 +1865,8 @@
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "oliwave",
@@ -1972,7 +1979,8 @@
 					"cdCover": "mkrl020_blackout_2.jpg",
 					"cdLink": "va-blackout-2"
 				}
-			]
+			],
+			"featured": true
 		},
 		{
 			"artistRoute": "phobos-azazel",
@@ -2122,7 +2130,8 @@
 					"cdCover": "mkcd002_infinity_keepers.jpg",
 					"cdLink": "va-infinity-keepers"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "seb",
@@ -2317,7 +2326,8 @@
 					"cdCover": "mkcd001_shadow_enuin.jpg",
 					"cdLink": "va-shadow-enuin"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "taakelur",
@@ -2623,7 +2633,8 @@
 					"year": "2020",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/832049014\"></iframe>"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "vector-selector",
@@ -2645,7 +2656,8 @@
 					"cdCover": "mkcd007_infinity_keepers_2.jpg",
 					"cdLink": "va-infinity-keepers-2"
 				}
-			]
+			],
+			"inactive": true
 		},
 		{
 			"artistRoute": "weirdbass",

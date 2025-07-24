@@ -11,15 +11,39 @@
 		</mat-select>
   </mat-form-field>
 
-  <mat-slide-toggle [(ngModel)]="isFeaturedChecked" (change)="filterArtists()" labelPosition="before" color="primary" hidden>Show featured only:</mat-slide-toggle>
+  <mat-form-field appearance="outline">
+		<mat-label>Filter by status</mat-label>
+
+		<mat-select [formControl]="statuses">
+			<mat-option *ngFor="let status of statusList" [value]="status">
+				{{status}}
+			</mat-option>
+		</mat-select>
+  </mat-form-field>
+
+  <ul class="filter__list">
+	<li class="filter__list-item">
+		<i class="far fa-gem"></i> - featured artist
+</li>
+	<li class="filter__list-item">
+		<i class="fas fa-skull-crossbones"></i> - inactive/closed project
+	</li>
+  </ul>
 </div>
 
 <section *ngIf="artists.length" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
 	@for (item of artists; track item.id) {
 		<div class="artist-item mb-16">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p #artistName class="artist-item__name js-artist-name">{{item.artistName}}</p>
+				<p #artistName class="artist-item__name js-artist-name">
+					{{item.artistName}}
+					<sup>
+						<i *ngIf="item.featured" class="far fa-gem"></i>
+						<i *ngIf="item.inactive" class="fas fa-skull-crossbones"></i>
+					</sup>
+				</p>
 				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+				
 			</a>
 		</div>
 	}
