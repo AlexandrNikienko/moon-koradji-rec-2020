@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
@@ -52,6 +52,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 	artists$: Observable<Artist[]>;
 	featuredArtists: Artist[] = []
 
+	@ViewChildren(ReleaseCardComponent, { read: ElementRef })
+  	releaseCards!: QueryList<ElementRef>;
+
+	@ViewChildren(PictureComponent, { read: ElementRef })
+  	pictures!: QueryList<ElementRef>;
+
+	private observer!: IntersectionObserver;
+
 	private metaDataObj: iMeta = {
 		title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
 		description: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.',
@@ -102,6 +110,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
+		if (this.observer) {
+			this.observer.disconnect();
+		}
 	}
 
 	getFeaturedGaleryItems() {
@@ -121,5 +132,42 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	getArtistRoute(artist: string): string {
 		return '/artists/' + artist.toLowerCase().replace(/ /g, '-');
-	  }
+	}
+
+	ngAfterViewInit() {
+		this.initScrollAnimation();
+
+		// Re-run when list of releaseCards or pictures changes (async render)
+		this.releaseCards.changes.subscribe(() => this.initScrollAnimation());
+		this.pictures.changes.subscribe(() => this.initScrollAnimation());
+	}
+
+	initScrollAnimation() {
+		if (!this.observer) {
+			this.observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate-in'); // 👈 add CSS animation class
+						//this.observer.unobserve(entry.target);    // animate once
+					} else {
+						entry.target.classList.remove('animate-in')
+					}
+				});
+			}, { threshold: 0.2 }); // trigger when 20% visible
+		}
+
+		console.log("pics", this.pictures)
+
+		// Observe release cards
+		this.releaseCards.forEach(card =>
+			this.observer.observe(card.nativeElement)
+		);
+
+		console.log("pics", this.pictures)
+
+		// Observe pictures
+		this.pictures.forEach(pic =>
+			this.observer.observe(pic.nativeElement)
+		);
+	}
 }

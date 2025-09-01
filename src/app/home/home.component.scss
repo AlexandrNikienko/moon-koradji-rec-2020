@@ -152,6 +152,35 @@
 	}
 }
 
+app-release-card {
+	opacity: 0;
+	transition: .5s;
+
+	@include media-breakpoint-up(lg) {
+		&:nth-child(1) {
+			transform: translateX(-20px);
+		}
+
+		&:nth-child(3) {
+			transform: translateX(20px);
+		}
+	}
+
+	&.animate-in {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+app-picture {
+	opacity: 0;
+	transition: 1s;
+
+	&.animate-in {
+		opacity: 1;
+	}
+}
+
 .bottom {
 	display: flex;
 	flex-wrap: wrap;
