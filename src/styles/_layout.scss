@@ -419,3 +419,36 @@ mk-home .btn {
 .mdc-menu-surface.mat-mdc-select-panel {
 	max-height: 60vh;
 }
+
+.dark-glass {
+	@media (min-width: $tablet-width) {
+		background: rgba(19, 19, 19, 0.85) !important;
+		box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 44px;
+		backdrop-filter: blur(6px);
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			inset: 0px;
+			filter: url(#noiseFilter);
+			opacity: 0.05;
+			pointer-events: none;
+		}
+
+		&:after {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			opacity: 0.5;
+			inset: 0px;
+			border-radius: 16px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: transparent;
+			border-image: initial;
+			background: linear-gradient(210deg, rgba(255, 255, 255, 0.22) 6.2%, rgba(20, 20, 20, 0.5) 21.56%, rgba(50, 50, 50, 0.5) 69.03%, rgba(255, 255, 255, 0.4) 96.99%) border-box border-box;
+			mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) padding-box exclude, linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+		}
+	}
+}

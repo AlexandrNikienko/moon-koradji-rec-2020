@@ -9,6 +9,10 @@
 	isolation: isolate;
 	position: relative;
 	overflow: hidden;
+	border: 1px solid gainsboro;
+
+	//background: radial-gradient(140% 107.13% at 50% 10%, transparent 30%, #63e 100%);
+	background: radial-gradient(140% 100% at 50% 0%, rgba(102, 51, 238, 0.2) 0%, transparent 70%);
 
 	@include mobile {
 		margin-top: 0;
@@ -43,8 +47,11 @@
 		font-size: 4rem;
 		font-weight: bold;
 		line-height: 1;
-		margin-bottom: 0.2em;
-		text-shadow: 2px 2px 0 rgb(41 87 113);
+		margin-top: 1rem;
+		background: linear-gradient(90deg, #00ffff, #ff00ff);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-shadow: 0 0 8px rgba(0,255,255,0.4);
 
 		@include tablet {
 			font-size: 2rem;
@@ -60,6 +67,7 @@
 		font-size: 1.75rem;
 		line-height: normal;
 		margin-bottom: 2rem;
+		color: #ddd;
 
 		@include tablet {
 			font-size: 1.5rem;
@@ -87,10 +95,10 @@
 		width: 475px;
 		border-radius: 1rem;
 		box-shadow: $brand-border;
-	}
 
-	.heading {
-		margin-bottom: 0;
+		@include tablet {
+			width: 310px;
+		}
 	}
 
 	.btn {
@@ -99,5 +107,11 @@
 
 	@include mobile {
 		flex-direction: column;
+	}
+
+	.heading {
+		&__title {
+			//background: linear-gradient(97.13deg, rgb(132 242 7) 8.47%, rgba(255, 193, 7, .5) 108.41%) text !important;
+		}
 	}
 }

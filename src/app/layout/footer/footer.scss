@@ -8,19 +8,23 @@
 	width: 100%;
 	color: #9d9d9d;
 
+	%title {
+		text-transform: uppercase;
+		border-bottom: 1px solid var(--themeColor);
+		padding-bottom: 0.25em;
+		display: inline-block;
+		font-size: 1em;
+		font-weight: 300;
+		margin: 0;
+	}
+
 	.b-short-about {
 		&__header {
 			margin-bottom: 0.75em;
 		}
 
 		&__title {
-			text-transform: uppercase;
-			border-bottom: 1px solid var(--themeColor);
-			padding-bottom: 0.25em;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			margin: 0;
+			@extend %title;
 		}
 
 		&__image {
@@ -28,7 +32,7 @@
 			height: 100px;
 			float: left;
 			float: inline-start;
-			margin: 0 0.5em 0.5em 0;
+			margin: 0 0.5rem 0.5rem 0;
 
 			@supports (margin-inline-end: 0) {
 				margin-right: 0;
@@ -50,6 +54,11 @@
 			color: var(--themeColor);
 			white-space: nowrap;
 			display: inline-block;
+		}
+
+		a {
+			// text-decoration: underline;
+			// color: var(--themeColor);
 		}
 
 		@include mobile {
@@ -86,13 +95,7 @@
 		}
 
 		&__title {
-			text-transform: uppercase;
-			border-bottom: 1px solid var(--themeColor);
-			padding-bottom: 0.25em;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			margin: 0;
+			@extend %title;
 		}
 
 		.btn-group {

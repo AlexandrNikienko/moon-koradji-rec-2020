@@ -41,6 +41,10 @@
 		font-weight: 400;
 		min-width: unset;
 
+		background: linear-gradient(90deg, cyan, #b771e9);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+
         &:hover {
             color: white;
         }
