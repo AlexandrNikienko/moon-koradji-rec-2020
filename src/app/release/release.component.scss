@@ -24,12 +24,16 @@
 
 .release-credits {
 	margin-bottom: 20px;
-	font-style: italic;
 
+	&__title,
 	&__paragraph {
 		margin-bottom: 6px;
 		flex: 1 1 100%;
 		line-height: normal;
+	}
+
+	&__paragraph {
+		font-style: italic;
 
 		&.dark-color {
 			color: #bbb;
@@ -87,13 +91,18 @@
 	&__title {
 		width: 100%;
 		margin-bottom: 10px;
-		color: #bbb;
+		//color: #bbb;
+		font-size: 18px;
 	}
 
 	&__item {
-		flex: 0 0 112px;
+		flex: 0 0 110px;
 		position: relative;
 		aspect-ratio: 1;
+
+		@include tablet {
+			flex-basis: 92px;
+		}
 	}
 
 	&__content {
@@ -123,11 +132,12 @@
 	display: flex;
 	justify-content: space-between;
 	background-color: $darkBg;
-	padding: 2rem;
+	padding: 1rem 2rem;
     border-radius: 1rem;
 
 	&__next {
 		margin-inline-start: auto;
+		
 		p {
 			text-align: right;
 		}

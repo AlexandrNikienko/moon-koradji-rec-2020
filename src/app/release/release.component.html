@@ -1,7 +1,7 @@
 <div class="row" *ngIf="release">
 	<mk-heading [title]="release.releaseTitle"/>
 
-    <div class="offset-md-1 col-md-4 col-sm-12">
+    <div class="offset-lg-1 col-lg-4 col-md-5 col-sm-12">
 		<!-- <a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
 			<span class="fas fa-share fa-2x"></span>
 		</a> -->
@@ -13,14 +13,14 @@
         </a>
     </div>
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-lg-6 col-md-7 col-sm-12">
         <app-audio-player *ngIf="release.embedAudio" [embedAudio]="release.embedAudio"></app-audio-player>
     </div>
 
-	<div class="offset-md-1 col-md-10">
+	<div class="offset-lg-1 col-lg-10">
 		<div class="release-credits">
 			<div *ngIf="release.bandcampLink || release.bandcamp24Link" class="release-credits__side">
-				<p class="release-credits__paragraph">{{release.isFree ? "Free Download:" : "Buy Digital:"}}</p>
+				<p class="release-credits__title">{{release.isFree ? "Free Download:" : "Buy Digital:"}}</p>
 
 				<a *ngIf="release.bandcampLink" href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
 
@@ -30,7 +30,7 @@
 			<div *ngIf="release.beatspaceLink" class="release-credits__side">
 				<div class="release-credits__icon"></div>
 
-				<p class="release-credits__paragraph">CD Purchase:</p>
+				<p class="release-credits__title">CD Purchase:</p>
 
 				<a href="{{release.beatspaceLink}}" target="_blank" class="release-link">Beatspace</a>
 			</div>

@@ -17,6 +17,7 @@
 			white-space: nowrap;
 			font-weight: 400;
 			line-height: normal;
+			display: flex;
 
             &:hover {
                 color: #dee2e6;
@@ -188,4 +189,14 @@
 			}
 		} 
     }
+}
+
+.external-link {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+
+	path {
+		stroke: currentColor;
+	}
 }
