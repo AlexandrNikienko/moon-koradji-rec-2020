@@ -1,5 +1,11 @@
 @use '../../styles/utils' as *;
 
+// :host {
+// 	position: relative;
+// 	padding-top: 65px;
+//     display: block;
+// }
+
 .s-module-title {
 	font-size: 20px;
 	font-weight: 400;
@@ -103,3 +109,20 @@
 		}
 	}
 }
+
+// .deco-p1,
+// .deco-p2 {
+// 	width: 200px;
+// 	height: auto;
+// 	position: absolute;
+// 	top: 0;
+// }
+
+// .deco-p1 {
+//     right: 50%;
+// }
+
+// .deco-p2 {
+//     left: 50%;
+//     transform: rotateY(180deg);
+// }

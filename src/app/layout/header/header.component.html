@@ -14,6 +14,35 @@
 	</div>
 </div>
 
+<div *ngIf="showSupportUkraine && false" class="support-ukraine navbar navbar-expand-md bg-dark">
+	<div class="support-ukraine__link">
+		<img class="support-ua" src="./assets/images/support-ua.png" alt="">
+		
+		<span>Support Ukraine – Boycott Russia</span>
+
+		<span style="position: relative; margin-left: 16px;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="256" height="192" viewBox="0 0 256 192" 
+				style="height: 18px; width: auto; border-radius: 2px;"
+			>
+				<g filter="url(#wavy)">
+					<rect width="256" height="64" y="0" fill="#ffffff"/>
+					<rect width="256" height="64" y="64" fill="#0033a0"/>
+					<rect width="256" height="64" y="128" fill="#d52b1e"/>
+				</g>
+			</svg>
+
+			<i class="fas fa-skull-crossbones" 
+				style="position: absolute; color: red; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 24px; text-shadow: 0 0 1px black;"></i>
+		</span>
+	</div>
+
+	<div class="support-ukraine__close">
+		<button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</div>
+</div>
+
 <header class="m-header">
 	<a routerLink="/about" routerLinkActive="active" title="About">
 		<div id="outer-wrapper">

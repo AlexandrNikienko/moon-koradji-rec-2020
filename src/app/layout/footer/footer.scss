@@ -1,8 +1,9 @@
 @use '../../../styles/utils' as *;
 
 .footer {
+	position: relative;
 	box-sizing: border-box;
-	padding: 2rem 0;
+	padding: 4rem 0;
 	background-color: $dark;
 	background: linear-gradient(135deg, $dark 0%, #000 100%);
 	width: 100%;
@@ -253,4 +254,13 @@
 			display: none;
 		}
 	}
+}
+
+.deco-f {
+	width: 200px;
+    height: auto;
+    position: absolute;
+    bottom: calc(100% - 8px);
+    left: 50%;
+    transform: translate(-50%) rotate(180deg);
 }

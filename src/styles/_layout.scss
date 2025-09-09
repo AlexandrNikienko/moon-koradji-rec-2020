@@ -111,10 +111,10 @@ app-root {
 }
 
 .page {
-	padding: 2rem $gap;
+	padding: 2rem $gap 8rem;
 
 	@include mobile {
-		padding: 1rem;
+		padding: 1rem 1rem 8rem;
 	}
 }
 
@@ -152,6 +152,9 @@ app-visuals {
 	line-height: 1;
 	position: relative;
 	cursor: default;
+	background: linear-gradient(90deg, cyan, violet);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 	&::after,
 	&::before {
@@ -166,12 +169,13 @@ app-visuals {
 
 	&::after {
 		left: 2px;
-		text-shadow: -1px 0 red;
+		text-shadow: -1px 0 cyan;
+		
 	}
 
 	&::before {
 		left: -2px;
-		text-shadow: 1px 0 blue;
+		text-shadow: 1px 0 violet;
 		animation-duration: 3s;
 	}
 
@@ -325,6 +329,13 @@ mk-home .btn {
 			#656e77 11deg 19deg,
 			#dddbde 21deg 30deg
 		);
+	background: 
+		repeating-conic-gradient(
+			from 45deg at 90% 50%,
+			cyan 0 10deg,
+			violet 11deg 20deg,
+			DarkSlateBlue 21deg 30deg
+		);
 	will-change: transform;
 	animation: rotateRight auto linear;
 	animation-timeline: scroll(root);
@@ -337,8 +348,15 @@ mk-home .btn {
 		repeating-conic-gradient(
 			from 45deg at 90% 50%,
 			black 0 10deg,
-			Dimgray 11deg 20deg,
+			violet 11deg 20deg,
 			DarkSlateBlue 21deg 30deg
+		);
+	background:
+		repeating-conic-gradient(
+			from 45deg at 10% 50%,
+			#63e 0 9deg,
+			cyan 11deg 19deg,
+			#3b373b 21deg 30deg
 		);
 	will-change: transform;
 	animation: rotateLeft auto linear;
