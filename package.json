@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+	"build:flags": "svg-sprite --symbol --dest src/assets/images --sprite flags-sprite.svg src/assets/images/flags/*.svg"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
     "protractor": "~7.0.0",
+    "svg-sprite": "^2.0.4",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~5.2.2"

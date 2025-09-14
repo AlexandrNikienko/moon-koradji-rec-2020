@@ -6,7 +6,11 @@
 
 		<mat-select [formControl]="countries" multiple>
 			<mat-option *ngFor="let country of countryList" [value]="country.artistCountry">
-				<img class="artist-item__flag" src="/assets/images/flags/{{country.flag}}.svg"> {{country.artistCountry}}
+				<svg class="artist-item__flag">
+					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + country.flag"></use>
+				</svg>
+				
+				{{country.artistCountry}}
 			</mat-option>
 		</mat-select>
   </mat-form-field>
@@ -42,8 +46,10 @@
 						<i *ngIf="item.inactive" class="fas fa-skull-crossbones"></i>
 					</sup>
 				</p>
-				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
 				
+				<svg class="artist-item__flag">
+					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
+				</svg>
 			</a>
 		</div>
 	}
@@ -57,7 +63,9 @@
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
 				<p class="artist-item__name">{{item.artistName}}</p>
 
-				<img class="artist-item__flag" src="/assets/images/flags/{{item.flag}}.svg">
+				<svg class="artist-item__flag">
+					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
+				</svg>
 			</a>
 		</div>
 	}
