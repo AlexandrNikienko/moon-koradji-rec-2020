@@ -1,0 +1,120 @@
+{
+    "news": [
+        {
+            "link": "https://www.facebook.com/events/1738167593694928",
+            "image": "assets/images/events/Shadow.jpg",
+            "title": "The Shadow Of The Dark Shaman",
+            "text": "Stockholm, Aug 29-31 2025",
+            "target": "_blank"
+        }
+    ]
+}
+
+{
+	"isHero": true,
+	"hidden": false,
+	"isNew": true,
+	"releaseNumber": "",
+	"releaseNote": "",
+	"releaseDate": "",
+	"releaseTitle": "",
+	"releaseSubTitle": "",
+	"releaseCover": {
+		"default": "",
+		"default2x": "",
+		"webp": "",
+		"webp2x": ""
+	},
+	"releaseRoute": "",
+	"releaseDescription": [
+		{   
+			"paragraph": ""
+		},
+		{   
+			"paragraph": ""
+		}
+	],
+	"compiledBy": "",
+	"cdAuthor": "",
+	"masteredBy": "",
+	"artworkBy": "",
+	"beatspaceLink": "",
+	"bandcampLink": "",
+	"videoLink": "",
+	"artists": [
+		""
+	],
+	"embedAudio": ""
+}
+
+{
+	"artistRoute": "",
+	"artistName": "",
+	"artistRealName": "",
+	"artistCountry": "",
+	"flag": "",
+	"artistAvatar": "",
+	"artistDescription": [
+		{
+			"paragraph": ""
+		},
+		{
+			"paragraph": ""
+		}
+	],
+	"artistFacebook": "",
+	"artistSoundcloud": "",
+	"releases": [
+		{
+			"cdName": "",
+			"cdCover": "",
+			"cdLink": ""
+		}
+	],
+	"mixes": [
+		{
+			"year": "",
+			"embedCode": ""
+		}
+	]
+}
+
+{
+	"artistRoute": "smuds",
+	"artistName": "Smuds",
+	"artistRealName": "Rasmus Leth",
+	"artistCountry": "Denmark",
+	"flag": "dk",
+	"artistAvatar": "artist_smuds.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "We invite this sonic researcher to take the stage, and present the newest and freshest creations directly from his musical laboratory. As a computer scientist, he has the skills to program his many weird machines to do his every bidding, and the result is always atmospheric, puzzling and extremely danceable."
+		},
+		{
+			"paragraph": "All around the world, trancers, DJ's and promoters have picked up the Smuds sound, and we know you will too."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/rasmus.leth.7",
+	"artistSoundcloud": "https://soundcloud.com/smuds",
+	"releases": false
+},
+{
+	"artistRoute": "metaphyz",
+	"artistName": "Metaphyz",
+	"artistRealName": "Bat",
+	"artistCountry": "France",
+	"flag": "fr",
+	"artistAvatar": "artist_metaphyz.jpg",
+	"artistDescription": [
+		{
+			"paragraph": "After his birth in a deep cave Bat aka Metaphyz learned how to emit ultrasounds, and he quickly increased his high sensitivity to the earth’s magnetic field."
+		},
+		{
+			"paragraph": "After finding acoustically the right basement, Bat began to produce echoes in order to propagate his own frequencies around the planet. The idea behind the Metaphyz project is to unleash your inner beast and reconnect with your zoanthropic instinct."
+		}
+	],
+	"artistFacebook": "https://www.facebook.com/MetaphyzMusic/",
+	"artistSoundcloud": "https://soundcloud.com/metaphyz",
+	"releases": [
+	]
+},

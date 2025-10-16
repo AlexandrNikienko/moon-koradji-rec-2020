@@ -1,0 +1,23 @@
+{
+    "news": [
+		{
+            "link": "artists/kluster",
+            "image": "assets/images/artists/m_artist_kluster.jpg",
+            "title": "Kluster",
+            "text": "Welcome aboard",
+            "target": ""
+        },
+		{
+            "link": "https://moon-koradji-records.myspreadshop.com/",
+            "image": "assets/images/t-shirts/3/mk-tshirt-design-2024-color-avatar.jpg",
+            "title": "T-shirts and Hoodies",
+            "text": "New desing in the shop",
+            "target": "_blank"
+        },
+		{
+            "image": "assets/images/mk_square.jpg",
+            "title": "Waiting for your demos",
+            "text": "info@moonkoradji.com"
+        }
+    ]
+}

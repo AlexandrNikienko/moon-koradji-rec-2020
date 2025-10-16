@@ -1,0 +1,905 @@
+{
+    "releases": [
+		{
+			"isHero": true,
+			"isNew": true,
+			"releaseNumber": "MKRL025",
+			"releaseYear": "2025",
+			"releaseDate": "June 6, 2025",
+			"releaseTitle": "Para Halu - Histora Plethora",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl025_para_halu_histora_plethora.jpg",
+				"default2x": "",
+				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
+				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
+			},
+			"releaseRoute": "para-halu-histora-plethora",
+			"releaseDescription": [
+				{   
+					"paragraph": "Wild basslines with nocturnal creatures, unconventional patterns with unexpected twists, melodies with vocal traces - all this is packed into a special new EP from Para Halu."
+				},
+				{
+					"paragraph": "Histora Plethora features four tracks tested loud on diverse dancefloors to superb effect. Each carries its own distinct energy and personal touch, now finding a fitting home on Moon Koradji Records."
+				}
+			],
+			"cdAuthor": "Adam Hohmann",
+			"masteredBy": "Xenomorph",
+			"artworkBy": "Ozan",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora",
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=4281402348/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora\">Para Halu - Histora Plethora by Moon Koradji Records</a></iframe>",
+			"artists": [
+				"Para Halu"
+			]
+		},
+		{
+			"releaseNumber": "MKRL024",
+			"releaseYear": "2025",
+			"releaseDate": "Apr 24, 2025",
+			"releaseTitle": "VA Alphaum",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl024_alphaum.jpg",
+				"default2x": "",
+				"webp": "mkrl024_alphaum-500.webp",
+				"webp2x": "mkrl024_alphaum-1000.webp"
+			},
+			"releaseRoute": "va-alphaum",
+			"releaseDescription": [
+				{   
+					"paragraph": "Alphaum embodies the fusion of Alpha—the beginning, the source—and Aum—the cosmic vibration of existence."
+				},
+				{   
+					"paragraph": "The artists unite to forge a sonic storm—powerful, hypnotic, and electrifying. More than just a selection of cutting-edge psytrance, this compilation is a tribute to new life, boundless energy, and the infinite cycles of creation and transformation."
+				},
+				{   
+					"paragraph": "Step into the sound. Enter the vibration."
+				},
+				{   
+					"paragraph": "I dedicate this compilation to my newborn daughter, Victoria. - DJ Omsun"
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"cdAuthor": "",
+			"masteredBy": "Ankur @ Seres Studio",
+			"artworkBy": "Ozan",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-alphaum",
+			"artists": [
+				"Gappeq", "Para Halu", "CLAW", "Whrikk", "Kluster", "Total", "N3XU5", "Karash", "Fafazz", "Argaleth", "SEB", "Irukanji"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2502779302/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-alphaum\">VA Alphaum by Moon Koradji Records</a></iframe>"
+		},
+		{
+			"releaseNumber": "MKRL023",
+			"releaseYear": "2025",
+			"releaseDate": "Mar 27, 2025",
+			"releaseTitle": "Shiibashunsuke - Abstract Selection",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl023_shiibashunsuke_abstract_selection.jpg",
+				"default2x": "",
+				"_webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
+				"_webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
+			},
+			"releaseRoute": "shiibashunsuke-abstract-selection",
+			"releaseDescription": [
+				{   
+					"paragraph": "Shiibashunsuke explores the architecture and groove of past sounds, uncovering hidden archives in this experimental work."
+				},
+				{   
+					"paragraph": "By reviving the atmosphere and style of the past, he pieces together forgotten vibrations into intricate sonic collages. Layers of noise create a rhythmic tapestry, offering glimpses into a lost musical heritage."
+				},
+				{   
+					"paragraph": "With a powerful and abstract vision, Shiibashunsuke bridges past and present, crafting a soundscape that is both nostalgic and fresh—mysterious yet energetic—turning each moment into conviction."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Shunsuke Shiiba",
+			"masteredBy": "Wild Mastering",
+			"artworkBy": "Orosz Visual Labs",
+			"beatspaceLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-abstract-selection",
+			"artists": [
+				"Shiibashunsuke"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1978627189/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-abstract-selection\">Shiibashunsuke - Abstract Selection by Moon Koradji Records</a></iframe>"
+		},
+		{
+			"releaseNumber": "MKRL022",
+			"releaseYear": "2025",
+			"releaseDate": "Feb 21, 2025",
+			"releaseTitle": "Kluster - Mental Rotation",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl022_kluster_mental_rotation.jpg",
+				"default2x": "",
+				"_webp": "mkrl022_kluster_mental_rotation-500.webp",
+				"_webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
+			},
+			"releaseRoute": "kluster-mental-rotation",
+			"releaseDescription": [
+				{   
+					"paragraph": "A mind-bending journey through the many shades of psytrance, Mental Rotation delivers four dynamic tracks that twist and turn between night and morning moods."
+				},
+				{   
+					"paragraph": "Featuring two powerful night-time stompers at 148 BPM, a driving twilight tune at 144 BPM, and a groovy morning finisher at 142 BPM, this EP showcases Kluster's signature blend of dark textures, quirky elements, and deep, rolling basslines crafted to keep the dancefloor rotating from dusk till dawn."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Michael Pettersson",
+			"masteredBy": "Anarkick",
+			"artworkBy": "Ekaterina Bochkar",
+			"beatspaceLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/kluster-mental-rotation",
+			"videoLink": "",
+			"artists": [
+				"Kluster"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2346894843/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/kluster-mental-rotation\">Kluster - Mental Rotation by Moon Koradji Records</a></iframe>"
+		},
+		{
+			"releaseNumber": "MKRL021",
+			"releaseYear": "2024",
+			"releaseDate": "Sep 6, 2024",
+			"releaseTitle": "Katastrof - Bent",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl021_katastrof_bent.jpg",
+				"default2x": "",
+				"webp": "mkrl021_katastrof_bent-500.webp",
+				"webp2x": "mkrl021_katastrof_bent-1000.webp"
+			},
+			"releaseRoute": "katastrof-bent",
+			"releaseDescription": [
+				{   
+					"paragraph": "Katastrof is the brainchild of Swedish producer Björn Andersson, a solo project that has been crafting deep, dark forest psytrance with a funky twist since 2003. Hailing from Trollhättan, Sweden, Katastrof draws inspiration from horror movies and the high-energy atmosphere of live performances, creating a unique and immersive soundscape."
+				},
+				{   
+					"paragraph": "The debut album, Bent, showcases the project’s signature style — a blend of nighttime darkness and groovy rhythms. Expect to be taken on a sonic journey where eerie atmospheres meet infectious grooves, all while paying homage to the electrifying spirit of the night."
+				},
+				{   
+					"paragraph": "Prepare yourself for a powerful and groovy listening experience. Stay tuned for the release of Bent on Bandcamp, Spotify, Apple Music, Beatport, YouTube Music, and other platforms, and dive into the world of Katastrof."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Björn Andersson",
+			"masteredBy": "Ankur @ Seres Studio",
+			"artworkBy": "Ekaterina Bochkar",
+			"beatspaceLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/katastrof-bent",
+			"videoLink": "",
+			"artists": [
+				"Katastrof"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=807684849/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/katastrof-bent\">Katastrof - Bent by Moon Koradji Records</a></iframe>",
+			"hub": ""
+		},
+		{
+			"releaseNumber": "MKRL020",
+			"releaseYear": "2024",
+			"releaseDate": "Aug 07, 2024",
+			"releaseTitle": "Blackout 2: Luminous Darkness",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl020_blackout_2.jpg",
+				"default2x": "",
+				"webp": "mkrl020_blackout_2-500.webp",
+				"webp2x": "mkrl020_blackout_2-1000.webp"
+			},
+			"releaseRoute": "va-blackout-2",
+			"releaseDescription": [
+				{   
+					"paragraph": "This journey demonstrates how psychedelic vibrations seep through dark matter, reflecting starlight."
+				},
+				{   
+					"paragraph": ""
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"cdAuthor": "",
+			"masteredBy": "Ankur @ Seres Studio",
+			"artworkBy": "Salamandra",
+			"beatspaceLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-blackout-2-luminous-darkness",
+			"videoLink": "",
+			"artists": [
+				"Solarythm", "Bodhi", "Para Halu", "Distorted Goblin", "Already Maged", "Adansonia", "Faeyan", "Katastrof", "Savage Scream", "Krapul", "Weirdbass", "SEB"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=326457146/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout-2-luminous-darkness\">VA Blackout 2: Luminous Darkness by Moon Koradji Records</a></iframe>",
+			"hub": ""
+		},
+		{
+			"releaseNumber": "MKRL019",
+			"releaseYear": "2024",
+			"releaseDate": "Apr 05, 2024",
+			"releaseTitle": "Irukanji - Springwald",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl019_irukanji_springwald.jpg",
+				"default2x": "",
+				"webp": "mkrl019_irukanji_springwald-500.webp",
+				"webp2x": "mkrl019_irukanji_springwald-1000.webp"
+			},
+			"releaseRoute": "irukanji-springwald",
+			"releaseDescription": [
+				{   
+					"paragraph": "Behind the name of Irukanji stands the talented Ukrainian producer Ihor Orlovskyi, already well known to the psychedelic community for his psychill and darkprog releases, as well as the impeccable management of his label Sentimony Records."
+				},
+				{   
+					"paragraph": "And now Moon Koradji Records is delighted to unveil his new layer of music - the EP titled 'Springwald' - Ihor's vision of ~150bpm psytrance."
+				},
+				{   
+					"paragraph": "'Springwald', meaning 'jumping forest' in German, was once Ihor's ancestral surname. However, during the Ukrainian Soviet era, German surnames faced prejudice, prompting Ihor's grandfather to adopt his mother's surname, Orlovskyi, as a boy."
+				},
+				{
+					"paragraph": "The roots began to stir, awakening from their slumber..."
+				}
+			],
+			"compiledBy": "",
+			"cdAuthor": "Ihor Orlovskyi",
+			"masteredBy": "Dimitro @ Zymosis Studio",
+			"artworkBy": "A Realm of Wonder",
+			"beatspaceLink": "",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald",
+			"videoLink": "",
+			"artists": [
+				"Irukanji"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3405018835/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald\">Irukanji - Springwald by Moon Koradji Records</a></iframe>"
+		},
+		{
+			"releaseNumber": "MKRL018",
+			"releaseYear": "2023",
+			"releaseDate": "Dec 01, 2023",
+			"releaseTitle": "Shiibashunsuke - Innermatics",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl018_shiibashunsuke_innermatics.jpg",
+				"default2x": "",
+				"webp": "mkrl018_shiibashunsuke_innermatics-500.webp",
+				"webp2x": "mkrl018_shiibashunsuke_innermatics-1000.webp"
+			},
+			"releaseRoute": "shiibashunsuke-innermatics",
+			"releaseDescription": [
+				{   
+					"paragraph": "Shiibashunsuke, the renowned Japanese psytrance artist, presents a captivating four-track release of his trailblazing material."
+				},
+				{   
+					"paragraph": "With this release, Shiibashunsuke masterfully bridges the gap between ancient cultural influences and cutting-edge electronic soundscapes, delivering a unique and immersive experience for psytrance vanguardists worldwide."
+				}
+			],
+			"cdAuthor": "Shunsuke Shiiba",
+			"compiledBy": "",
+			"masteredBy": "Ankur @ Seres Studio",
+			"artworkBy": "Matik",
+			"beatspaceLink": "",
+			"bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-innermatics",
+			"videoLink": "",
+			"artists": [
+				"Shiibashunsuke"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1334069713/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-innermatics\">Shiibashunsuke - Innermatics by Moon Koradji Records</a></iframe>",
+			"hub": ""
+		},
+		{
+			"releaseNumber": "MKDG005",
+			"releaseYear": "2023",
+			"releaseDate": "Sep 23, 2023",
+			"releaseTitle": "VA Blackout",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkdg005_blackout.jpg",
+				"default2x": "",
+				"webp": "mkdg005_blackout-500.webp",
+				"webp2x": "mkdg005_blackout-1000.webp"
+			},
+			"releaseRoute": "va-blackout",
+			"releaseDescription": [
+				{   
+					"paragraph": "When darkness is a source of inspiration, creativity born in the gloom takes on a special power under the light of the stars."
+				}
+			],
+			"compiledBy": "DJ Omsun",
+			"masteredBy": "Ankur @ Seres Studio",
+			"artworkBy": "Salamandra",
+			"beatspaceLink": "",
+			"bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-blackout",
+			"videoLink": "",
+			"artists": [
+				"Akkma", "Mendrion", "GnOhm", "Distorted Goblin", "Simon Hayes", "Critter", "Loom", "Savage Scream", "Oliwave", "Already Maged", "Noise Gust", "Ingraval"
+			],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1107016927/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout\">VA Blackout by Moon Koradji Records</a></iframe>",
+			"hub": "https://music.imusician.pro"
+		},
+        {
+            "releaseNumber": "MKDG004",
+            "releaseYear": "2023",
+            "releaseDate": "Apr 05, 2023",
+            "releaseTitle": "Oliwave - Alive Memory",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkdg004_oliwave_alive_memory.jpg",
+				"default2x": "",
+				"webp": "mkdg004_oliwave_alive_memory-500.webp",
+				"webp2x": "mkdg004_oliwave_alive_memory-1000.webp"
+			},
+            "releaseRoute": "oliwave-alive-memory",
+            "releaseDescription": [
+                {   
+                    "paragraph": "\"Alive Memory\" is more than just a collection of beautiful and mesmerizing sounds. It's an exploration of the human psyche, a journey through the inner workings of our minds and hearts."
+                },
+				{
+                    "paragraph": "From the very first track you'll be transported to a world of pure bliss and euphoria. The melodic and uplifting tones will immediately fill you with positive energy, creating a sense of joy and ecstasy that will stay with you throughout the entire album."
+                },
+				{
+                    "paragraph": "This collection is a true masterpiece of psychedelic trance music, a reflection of the Oliwaves’s own memories and experiences. It will leave you feeling open-minded, inspired, and deeply moved."
+                }
+            ],
+            "cdAuthor": "Oliver Bach",
+            "masteredBy": "Yannick Thiry",
+            "artworkBy": "Mischlichter",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/oliwave-alive-memory",
+            "videoLink": "",
+			"artists": [
+                "Oliwave"
+            ],
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3904856309/size=large/bgcol=333333/linkcol=0687f5/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/oliwave-alive-memory\">Oliwave - Alive Memory by Moon Koradji Records</a></iframe>",
+			"hub": ""
+        },
+		{
+            "releaseNumber": "MKDG003",
+            "releaseYear": "2022",
+            "releaseDate": "Dec 20, 2022",
+            "releaseTitle": "Ziul Oiram - Eternal Shadow",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkdg003_ziul_oiram_eternal_shadow.jpg",
+				"default2x": "",
+				"webp": "",
+				"webp2x": ""
+			},
+            "releaseRoute": "ziul-oiram-eternal-shadow",
+            "releaseDescription": [
+                {
+                    "paragraph": "Mystical, deep and driving sound from Brazilian musician Ziul Oiram. He represents a new generation of artists who develop quality psychedelic music."
+                },
+                {
+                    "paragraph": "Dense bass and drums massage your body, dynamic sounds and percussion call you to dance, mysterious backgrounds envelop the brain and delight the ears with a new story about the sacred."
+                },
+                {
+                    "paragraph": "p.s. Buy full length EP and get a bonus with 24-bit tracks (only on our bandcamp)."
+                }
+            ],
+            "cdAuthor": "Luiz Mario",
+            "masteredBy": "Petran",
+            "artworkBy": "Fernando Fetex",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/ziul-oiram-eternal-shadow-16-24-bit",
+            "artists": [
+                "Ziul Oiram"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=916531499/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/ziul-oiram-eternal-shadow-16-24-bit\">Ziul Oiram - Eternal Shadow (16 &amp; 24 bit) by Moon Koradji Records</a></iframe>",
+			"hub": "https://music.imusician.pro/a/Ye7MKZqr/"
+        },
+        {
+            "releaseNumber": "MKCD012",
+            "releaseYear": "2020",
+            "releaseDate": "May 15, 2020",
+            "releaseTitle": "VA Neural Embers",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd012_neural_embers.jpg",
+				"default2x": "",
+				"webp": "mkcd012_neural_embers-500.webp",
+				"webp2x": "mkcd012_neural_embers-1000.webp"
+			},
+            "releaseRoute": "va-neural-embers",
+            "releaseDescription": [
+                {
+                    "paragraph": "This split includes some of the most unique and avant-garde artists of psytrance scene: Inzect from Sweden, Molchun from Russia and Adansonia from Argentina. Each of them will show his mastery of the transformation of thought into an audio form."
+                },
+                {
+                    "paragraph": "The journey will be entertaining and will undoubtedly open new horizons for you."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Christer Lundström @ Ka-Sol Studio",
+            "artworkBy": "Jonas Lovén @ FAIA Graphic Studio",
+            "beatspaceLink": "https://www.discogs.com/sell/item/2578092141",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers",
+            "bandcamp24Link": "https://moonkoradjirecords.bandcamp.com/album/va-neural-embers-24-bit",
+            "artists": [
+                "Inzect", "Molchun", "Adansonia"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=288505973/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/va-neural-embers-coming-soon\">VA Neural Embers by Moon Koradji Records</a></iframe>",
+			"hub": "https://music.imusician.pro/a/qrtDaYv4/"
+		},
+        {
+            "isFree": true,
+            "releaseNumber": "MKDG002",
+            "releaseYear": "2019",
+            "releaseDate": "November 20, 2019",
+            "releaseTitle": "Ocelot - Iconoclast",
+            "releaseSubTitle": "listen & download",
+            "releaseCover": {
+				"default": "mkdg002_ocelot.jpg",
+				"default2x": "",
+				"webp": "mkdg002_ocelot-500.webp",
+				"webp2x": "mkdg002_ocelot-1000.webp"
+			},
+            "releaseRoute": "ocelot-iconoclast",
+            "releaseDescription": [
+                {
+                    "paragraph": "\"If you meet the Buddha on the road, kill him...\""
+                },
+                {
+                    "paragraph": "This indicates that one should not worship form, formalism, formats, styles, boxes."
+                },
+                {
+                    "paragraph": "If you recall: the first oCeLoT album was called \"Aural Sects\".\nThis is the last oCeLoT album. Conformist box-thought is for suckas.\nQuibbling genre sectarians are boring and played out. On with the show!"
+                }
+            ],
+            "cdAuthor": "Aaron Peacock",
+            "masteredBy": "Aaron Peacock",
+            "artworkBy": "Whrikk",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/iconoclast",
+            "artists": [
+                "Ocelot"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2872029860/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/iconoclast\">Iconoclast by oCeLoT</a></iframe>",
+			"hub": ""
+        },
+        {
+            "isFree": true,
+            "releaseNumber": "MKDG001",
+            "releaseYear": "2019",
+            "releaseDate": "October 01, 2019",
+            "releaseTitle": "EP «Bapholot On Earth»",
+            "releaseSubTitle": "listen & download",
+            "releaseCover": {
+				"default": "mkdg001_bapholot_on_earth.jpg",
+				"default2x": "",
+				"webp": "mkdg001_bapholot_on_earth-500.webp",
+				"webp2x": "mkdg001_bapholot_on_earth-1000.webp"
+			},
+            "releaseRoute": "ep-bapholot-on-earth",
+            "releaseDescription": [
+                {
+                    "paragraph": "An exclusive project created specifically for Moon Koradji Records. The combination of dark avant-garde with synthetic superiority. A unique blend of leaders in their genres."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Yannick Thiry",
+            "artworkBy": "Gaoshan Oolong",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/ep-bapholot-on-earth",
+            "videoLink": "",
+            "artists": [
+                "Baphomet Engine", "Ocelot", "Ghreg on Earth"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3898821852/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/ep-bapholot-on-earth\">EP Bapholot On Earth by Moon Koradji Records</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD011",
+            "releaseYear": "2019",
+            "releaseDate": "September 19, 2019",
+            "releaseTitle": "VA Illusorium",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd011_illusorium.jpg",
+				"default2x": "",
+				"webp": "mkcd011_illusorium-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-illusorium",
+            "releaseDescription": [
+                {
+                    "paragraph": "The compilation of mystic acoustic vibrations, which will transfer you to the place that is full of secrets and puzzles of the Universe."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Kim Svendsen",
+            "artworkBy": "Salamandra",
+            "beatspaceLink": "https://www.discogs.com/sell/item/1061308166",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/illusorium",
+            "videoLink": "",
+            "artists": [
+                "Adansonia", "Saikozaurus", "Time For Slime", "Uttu", "Molchun", "Olien", "Mik-Ha", "NoizeBug", "Trold", "Traskel", "FoGgY"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2422477240/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/illusorium\">Illusorium by Various Artists</a></iframe>",
+			"hub": "https://music.imusician.pro/a/JY8RuXLw/"
+        },
+        {
+            "releaseNumber": "MKCD010",
+            "releaseYear": "2017",
+            "releaseDate": "February 15, 2017",
+            "releaseTitle": "VA Mind Games",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd010_mind_games.jpg",
+				"default2x": "",
+				"webp": "mkcd010_mind_games-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-mind-games",
+            "releaseDescription": [
+                {
+                    "paragraph": "Mind Games is a psychedelic journey with beautiful melodies and massive kicks."
+                },
+                {
+                    "paragraph": "It will twist your thoughts and turn your mind inside out. Feelings, confusions, clearity and craziness."
+                },
+                {
+                    "paragraph": "Prepare yourself for a psychedelic experience from beginning to end."
+                }
+            ],
+            "compiledBy": "DJ Zloj",
+            "masteredBy": "Ka-Sol",
+            "artworkBy": "Gaoshan Oolong",
+            "internationalReleaseLink": "",
+            "ukrainianReleaseLink": "",
+            "beatspaceLink": "https://www.discogs.com/sell/item/2837105452",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/mind-games",
+            "videoLink": "https://www.youtube.com/embed/dIPugj2SiDs",
+            "embedVideo": "<iframe src=\"https://www.youtube-nocookie.com/embed/dIPugj2SiDs\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+            "artists": [
+                "Molchun", "Odr", "Inzect", "Taigan Sunset", "Distorted Goblin", "Taakelur", "Already Maged", "Tersius", "Uttu", "Purosurpo", "Kanka"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1812939013/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/mind-games\">Mind Games by Various Artists</a></iframe>",
+			"hub": "https://music.imusician.pro/a/zHS2o4jj/"
+        },
+        {
+            "releaseNumber": "MKCD009",
+            "releaseYear": "2013",
+            "releaseDate": "December 9, 2013",
+            "releaseTitle": "VA Intropix",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd009_intropix.jpg",
+				"default2x": "",
+				"webp": "mkcd009_intropix-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-intropix",
+            "releaseDescription": [
+                {
+                    "paragraph": "The state of Intropix is an astral projection of mind, soul and body to the world of fancy flora and fauna, memorable experience, flow of new emotions, underworld adventure alone with your imaginations."
+                },
+                {
+                    "paragraph": "The recipe of this trip will enhance your capacity for neurodiving. There are 9 special ingredients for more natural and deep effect, the preparation of which took more than one year."
+                },
+                {
+                    "paragraph": "Welcome to the new dimension."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Makus Overdream",
+            "artworkBy": "MadeInRealtime",
+            "internationalReleaseLink": "http://forum.isratrance.com/va-intropix-moon-koradji-rec-2013/",
+            "ukrainianReleaseLink": "http://forum.psyshine.org.ua/viewtopic.php?t=10681",
+            "beatspaceLink": "hhttps://www.discogs.com/sell/item/2181085514",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/intropix",
+            "videoLink": "https://www.youtube.com/embed/Dvh4MdCADTQ",
+            "embedVideo": "<iframe src=\"https://www.youtube-nocookie.com/embed/Dvh4MdCADTQ\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
+            "artists": [
+                "Ka-Sol", "Time For Slime", "Troglodytes", "Traskel", "Nolm", "Attoya", "Kanka", "Kiriyama", "Battle Of The Future Buddhas"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=205038030/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/intropix\">Intropix by Various Artists</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD008",
+            "releaseYear": "2013",
+            "releaseDate": "May 13th, 2013",
+            "releaseTitle": "Ocelot - Night & Day",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd008_ocelot.jpg",
+				"default2x": "",
+				"webp": "mkcd008_ocelot-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "ocelot-night-and-day",
+            "releaseDescription": [
+                {
+                    "paragraph": "Thank you and congratulations. You are one of a few people who have chosen this CD. May it bring you pleasure. This work was some years in the making and as such it spans a range of sounds."
+                },
+                {
+                    "paragraph": "'Thank You' to: You, the listener, Taras Habrel and Victor TrueShiva who gave life and magic to the artwork of the CD, Moon Koradji and life for it's constant evolution."
+                },
+                {
+                    "paragraph": "Innovate, invent, morph, go beyond and grow."
+                },
+                {
+                    "paragraph": "Peace."
+                }
+            ],
+            "cdAuthor": "Aaron Peacock",
+            "compiledBy": "",
+            "masteredBy": "Clement",
+            "artworkBy": "Taras Habrel (outside) & Victor TrueShiva (inside)",
+            "beatspaceLink": "https://www.discogs.com/sell/item/2577625476",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/night-day",
+            "videoLink": "https://www.youtube.com/embed/Dvh4MdCADTQ",
+            "artists": [
+                "Ocelot"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2601701/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/night-day\">Night &amp; Day by OCELOT</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD007",
+            "releaseYear": "2012",
+            "releaseDate": "July 4, 2012",
+            "releaseTitle": "VA Infinity Keepers 2: Depth Perception",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd007_infinity_keepers_2.jpg",
+				"default2x": "",
+				"webp": "mkcd007_infinity_keepers_2-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-infinity-keepers-2",
+            "releaseDescription": [
+                {
+                    "paragraph": "The unique mix of sonic messages "
+                },
+                {
+                    "paragraph": "from the major creators "
+                },
+                {
+                    "paragraph": "will let you plunge into a deep journey "
+                },
+                {
+                    "paragraph": "of the body and soul, "
+                },
+                {
+                    "paragraph": "descending deeper and deeper into the cosmic abyss "
+                },
+                {
+                    "paragraph": "in search of new sensations."
+                },
+                {
+                    "paragraph": "Infinity Keepers will prompt you the direction "
+                },
+                {
+                    "paragraph": "and help you to reach a suitable depth of flight "
+                },
+                {
+                    "paragraph": "for the contact..."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Already Maged",
+			"beatspaceLink": "https://www.discogs.com/sell/item/2560473981",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/infinity-keepers-2-depth-perception",
+            "videoLink": "",
+            "artists": [
+                "Vector Selector", "LAB", "Ghreg on Earth", "Silent Horror", "Taigan Sunset", "Baphomet Engine", "Mind Distortion System", "Whrikk", "Enichkin", "Ocelot", "Dylalien"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2850070742/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers-2-depth-perception\">Infinity Keepers 2: depth perception by Various Artists</a></iframe>",
+			"hub": "https://music.imusician.pro/a/7eRtVtwl/"
+        },
+        {
+            "releaseNumber": "MKCD006",
+            "releaseYear": "2012",
+            "releaseDate": "April 18, 2012",
+            "releaseTitle": "Kirna - In Space!",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd006_kirna.jpg",
+				"default2x": "",
+				"webp": "mkcd006_kirna-500.webp",
+				"webp2x": "mkcd006_kirna-1000.webp"
+			},
+            "releaseRoute": "kirna-in-space!",
+            "releaseDescription": [
+                {
+                    "paragraph": "After all these years, after many live performances and most importantly after a lots time spent in studio, Kirna's debut album is finally seeing the daylight. Each track on this album has been carefully crafted and attentively tweaked for a period of 4 years. Every little nuance has been considered, and all musical passages have been taken into account."
+                },
+                {
+                    "paragraph": "This album functions as a gateway to a galaxy far far away. Intended to be listened as a full trip, it connects each musical piece in a way of a planetary system. Still, each track is independent, with its own mindset for exploring sonic grounds and surroundings."
+                },
+                {
+                    "paragraph": "Acoustic horizon of this record covers wide range of surreal and ordinary soundscapes, designed to tingle and tangle every layer of your mind. Playful progressions within beautiful compositions assure that melodic receptor of your auditory sense will be stimulated emotionally and challenged musically. Let this music guide your way In Space!"
+                }
+            ],
+            "cdAuthor": "Kir Ylle",
+            "masteredBy": "Monno Onkel Dunkel",
+            "artworkBy": "Kirna",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/in-space",
+            "videoLink": "",
+            "artists": [
+                "Kirna"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2912520009/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/in-space\">In Space! by KIRNA</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD005",
+            "releaseYear": "2012",
+            "releaseDate": "January 11, 2012",
+            "releaseTitle": "Ascoil Sun - Emergence",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd005_ascoil_sun.jpg",
+				"default2x": "",
+				"webp": "mkcd005_ascoil_sun-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "ascoil-sun-emergence",
+            "releaseDescription": [
+                {
+                    "paragraph": "Formed back in 2008 by Matti Mikkola and Pasi Salo, Ascoil Sun presents their debut album 'Emergence'. Despite the young age of the project, two minds behind it have been interacting musically for a long time, and after releasing their debut EP, Ascoil Sun have occupied Lunar studios to sculpture their sound - resulting in a truly unique blend of vibes that only Ascoil Sun delivers."
+                },
+                {
+                    "paragraph": "Aiming towards feelings of spontaniousness and progressive vibes, with eteric slide-guitar melodies echoing colourful psychedelia of 60-70`s, synth-solos taking you into the journey to the future. Emergence is carefully crafted to a true experience which takes you from the surface to the ocean floor, building its pressure in emotion, complexity and mood towards its ending, where it all implodes to surreal beauty."
+                },
+                {
+                    "paragraph": "Representing a wide-range of musical styles Emergence bombards the listener with constant aural surprises in form of a unique mixture of sounds and melodies, yet keeping the ethereal psychedelia and vivid story telling in the front - a blend between future and past is definitely one way of describing the LP. Although this album is ment to be a story with beginning, middle and end - each track serve as a individual trip to planes of sound."
+                },
+                {
+                    "paragraph": "Let yourself dive in your thoughts, let your mind emerge and blossom."
+                }
+            ],
+            "cdAuthor": "Matti Mikkola & Pasi Salo",
+            "compiledBy": "",
+            "masteredBy": "Makus",
+            "artworkBy": "Nystrom (Darkstorn)",
+            "beatspaceLink": "https://www.discogs.com/sell/item/1726462594",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/emergence",
+            "videoLink": "",
+            "artists": [
+                "Ascoil Sun"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=560698242/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/emergence\">Emergence by ASCOIL SUN</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD004",
+            "releaseYear": "2010",
+            "releaseDate": "December 3, 2010",
+            "releaseTitle": "VA Legendarium",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd004_legendarium.jpg",
+				"default2x": "",
+				"webp": "mkcd004_legendarium-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-legendarium",
+            "releaseDescription": [
+                {
+                    "paragraph": "Moon Koradji Records proudly present the new conceptual audio CD 'Legendarium' a collection of musical journeys from different worlds and epochs, ten spellbinding stories permeated with intriguing sounds and mythical beings, mysterious melodies and enigmatic secrets."
+                },
+                {
+                    "paragraph": "The compilation includes unreleased tracks from well-known artists as well as rising stars on the world trance scene from countries such as Finland, Netherlands, Taiwan, Ukraine, Denmark, England, Sweden and Israel."
+                },
+                {
+                    "paragraph": "Find your legend and become its hero!"
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Azur",
+            "beatspaceLink": "",
+            "bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/legendarium",
+            "videoLink": "",
+            "artists": [
+                "Captain Kirk", "Whrikk", "Kerlivin", "Already Maged", "Drone Bixie", "Tersius", "Troglodytes", "Taigan Sunset", "Attoya", "Oil", "Molokow"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3132695529/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/legendarium\">Legendarium by VA</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD003",
+            "releaseYear": "2009",
+            "releaseDate": "April 24, 2009",
+            "releaseTitle": "VA Shadow Enuin 2",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd003_shadow_enuin_2.jpg",
+				"default2x": "",
+				"webp": "mkcd003_shadow_enuin_2-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-shadow-enuin-2",
+            "releaseDescription": [
+                {
+                    "paragraph": "There is a place in the universe completely hidden from human eyes. Here rustles of night and breath of mist, whispers of wind and voices of nature create mysterious sense of magic. Colourful stream of supernatural sounds will rush right to your consciousness. Here your thoughts materialize."
+                },
+                {
+                    "paragraph": "For those, who prefer wild mixture of sounds, for travelers between the lands of dreams and reality - Moon Koradji prepared a space flight beyond the borders of understanding. Stars will draw you the way, and music is the key to open the access to the unexplored dimension of the Enuin planet."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Xenomorph",
+            "artworkBy": "Hypomicro",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-shadow-enuin-2",
+            "videoLink": "",
+            "artists": [
+                "Access Gremlin", "Digitalian", "Whrikk", "Amorphous", "Purosurpo", "Pandora's Box", "Traskel", "AnnoyingNinjas", "Distorted Goblin", "Krussedull"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1789906262/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/shadow-enuin-2\">Shadow Enuin 2 by VA</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD002",
+            "releaseYear": "2008",
+            "releaseDate": "September 26, 2008",
+            "releaseTitle": "VA Infinity Keepers",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd002_infinity_keepers.jpg",
+				"default2x": "",
+				"webp": "mkcd002_infinity_keepers-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-infinity-keepers",
+            "releaseDescription": [
+                {
+                    "paragraph": "Under the cover of night, when lightning flashes cut the sky and the shadow of darkness absorbs last sun beam... here comes the dark side of Moon Koradji."
+                },
+                {
+                    "paragraph": "Prayers of Wizard will fly round the Earth with hurricane winds. He turns to the Infinity Keepers in order to touch the secrets, which eternity keeps in its depth. Through music the answers will be received. Through vibes He will feel the uncontrolable power of nature elements!"
+                },
+                {
+                    "paragraph": "Listen and feel..."
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Tim Schuldt",
+            "artworkBy": "Ihtianderson",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-infinity-keepers",
+            "videoLink": "",
+            "artists": [
+                "Ocelot", "Schizobot", "Digitalist", "Silent Horror", "Already Maged", "Karash", "Magma Ohm", "Olien", "Oil", "Fearkiller"
+            ],
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=471755579/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers\">Infinity Keepers by VA</a></iframe>",
+			"hub": ""
+        },
+        {
+            "releaseNumber": "MKCD001",
+            "releaseYear": "2008",
+            "releaseDate": "April 8, 2008",
+            "releaseTitle": "VA Shadow Enuin: at the Earth's edge",
+            "releaseSubTitle": "listen & purchase",
+            "releaseCover": {
+				"default": "mkcd001_shadow_enuin.jpg",
+				"default2x": "",
+				"webp": "mkcd001_shadow_enuin-500.webp",
+				"webp2x": ""
+			},
+            "releaseRoute": "va-shadow-enuin",
+            "releaseDescription": [
+                {
+                    "paragraph": "Moon Koradji records is a new born label for supporting of qualitative music production. After years of listening to psychedelic electronic music, going to parties, djing and organizing events DJ Omsun finally unleash his first compilation on the world."
+                },
+                {
+                    "paragraph": "Shadow Enuin - is a unique excursion through the minds and imagination of famous musicians and masters of psychedelic dimension. Enuin - a synthesis of magic and nature, a reflection of trick, free flight under the hidden paths of undiscovered civilisations, an elf-like creature, radiating waves of mystical sounds from the depth of wild soul."
+                },
+                {
+                    "paragraph": "Moon Koradji is proud to introduce you their first licensed CD and leaves three dots for your own comprehension of deserving attention material. Have a nice trip!"
+                }
+            ],
+            "compiledBy": "DJ Omsun",
+            "masteredBy": "Furious",
+            "artworkBy": "Juaho",
+            "beatspaceLink": "",
+            "bandcampLink": "http://moonkoradjirecords.bandcamp.com/album/va-shadow-enuin-at-the-earths-edge",
+            "videoLink": "",
+            "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=786405981/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/shadow-enuin-at-the-earths-edge\">Shadow Enuin: at the Earth&#39;s edge by VA</a></iframe>",
+            "artists": [
+                "Shotu", "Whrikk", "Gidra", "Kuro Fusion", "Pandora's Box", "Mubali", "Phobos Azazel", "Drury Nevil", "Acid Goblins", "Tromo"
+            ],
+			"hub": ""
+        }
+    ]
+}

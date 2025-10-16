@@ -1,0 +1,23 @@
+{
+	"purchase": {
+		"title": "Out Now",
+		"subtitle": "Fresh psychedelic sounds",
+		"item": {
+			"cover": {
+				"default": "mkrl025_para_halu_histora_plethora.jpg",
+				"default2x": "",
+				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
+				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
+			},
+			"title": "PARA HALU",
+			"subtitle": "Histora Plethora",
+			"button": {
+				"title": "More Info",
+				"routerLink": "releases/para-halu-histora-plethora"
+			}
+		},
+		"deals": [
+
+		]
+	}
+}
