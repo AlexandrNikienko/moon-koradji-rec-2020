@@ -60,14 +60,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	private observer!: IntersectionObserver;
 
-	private metaDataObj: iMeta = {
-		title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
-		description: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.',
-		ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
-		ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
-		ogUrl: 'https://www.moonkoradji.com/',
-		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
-	}
+	// private metaDataObj: iMeta = {
+	// 	title: 'Enter the Realm of Psychedelic Sounds: Moon Koradji Records\' home page',
+	// 	description: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.',
+	// 	ogTitle: 'Moon Koradji Records - Worl Wide Psychedelic',
+	// 	ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
+	// 	ogUrl: 'https://www.moonkoradji.com/',
+	// 	ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
+	// }
 
 	ngOnInit() {
 		this.purchase$ = this.dataService.requestToData('purchase');
