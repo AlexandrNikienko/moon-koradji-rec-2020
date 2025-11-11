@@ -16,7 +16,7 @@ export interface Release {
 	releaseRoute?: string;
 	paragraph?: string;
 	compiledBy?: string;
-	cdAuthor?: string;
+	releaseAuthor?: string;
 	masteredBy?: string;
 	artworkBy?: string;
 	beatspaceLink?: string;

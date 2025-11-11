@@ -3,6 +3,39 @@
 		{
 			"isHero": true,
 			"isNew": true,
+			"releaseNumber": "MKRL026",
+			"releaseYear": "2025",
+			"releaseDate": "November 11, 2025",
+			"releaseTitle": "Taakelur - Totem",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl026_taakelur_totem.jpg",
+				"webp": "mkrl026_taakelur_totem-500.webp",
+				"webp2x": "mkrl026_taakelur_totem-1000.webp"
+			},
+			"releaseRoute": "taakelur-totem",
+			"releaseDescription": [
+				{   
+					"paragraph": "After a very long process, as usual with endless revisions, studio upgrades, and both personal and musical growth, this EP is finally over the finish line with three tracks as result."
+				},
+				{
+					"paragraph": "What began as a clear idea transformed over time into something unexpected, shaped by exploration and intuition."
+				},
+				{
+					"paragraph": "Enjoy these taaketracks — with peace and good vibes."
+				}
+			],
+			"releaseAuthor": "Geir Kristian",
+			"masteredBy": "Anarkick",
+			"artworkBy": "Payta Easton",
+			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/taakelur-totem",
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=322617094/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/taakelur-totem\">Taakelur - Totem by Moon Koradji Records</a></iframe>",
+			"artists": [
+				"Taakelur"
+			]
+		},
+		{
+			"isNew": true,
 			"releaseNumber": "MKRL025",
 			"releaseYear": "2025",
 			"releaseDate": "June 6, 2025",
@@ -10,7 +43,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl025_para_halu_histora_plethora.jpg",
-				"default2x": "",
 				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
 				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
 			},
@@ -23,7 +55,7 @@
 					"paragraph": "Histora Plethora features four tracks tested loud on diverse dancefloors to superb effect. Each carries its own distinct energy and personal touch, now finding a fitting home on Moon Koradji Records."
 				}
 			],
-			"cdAuthor": "Adam Hohmann",
+			"releaseAuthor": "Adam Hohmann",
 			"masteredBy": "Xenomorph",
 			"artworkBy": "Ozan",
 			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora",
@@ -40,7 +72,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl024_alphaum.jpg",
-				"default2x": "",
 				"webp": "mkrl024_alphaum-500.webp",
 				"webp2x": "mkrl024_alphaum-1000.webp"
 			},
@@ -60,7 +91,7 @@
 				}
 			],
 			"compiledBy": "DJ Omsun",
-			"cdAuthor": "",
+			"releaseAuthor": "",
 			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Ozan",
 			"bandcampLink": "https://moonkoradjirecords.bandcamp.com/album/va-alphaum",
@@ -77,9 +108,8 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl023_shiibashunsuke_abstract_selection.jpg",
-				"default2x": "",
-				"_webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
-				"_webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
+				"webp": "mkrl023_shiibashunsuke_abstract_selection-500.webp",
+				"webp2x": "mkrl023_shiibashunsuke_abstract_selection-1000.webp"
 			},
 			"releaseRoute": "shiibashunsuke-abstract-selection",
 			"releaseDescription": [
@@ -94,7 +124,7 @@
 				}
 			],
 			"compiledBy": "",
-			"cdAuthor": "Shunsuke Shiiba",
+			"releaseAuthor": "Shunsuke Shiiba",
 			"masteredBy": "Wild Mastering",
 			"artworkBy": "Orosz Visual Labs",
 			"beatspaceLink": "",
@@ -112,9 +142,8 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl022_kluster_mental_rotation.jpg",
-				"default2x": "",
-				"_webp": "mkrl022_kluster_mental_rotation-500.webp",
-				"_webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
+				"webp": "mkrl022_kluster_mental_rotation-500.webp",
+				"webp2x": "mkrl022_kluster_mental_rotation-1000.webp"
 			},
 			"releaseRoute": "kluster-mental-rotation",
 			"releaseDescription": [
@@ -126,7 +155,7 @@
 				}
 			],
 			"compiledBy": "",
-			"cdAuthor": "Michael Pettersson",
+			"releaseAuthor": "Michael Pettersson",
 			"masteredBy": "Anarkick",
 			"artworkBy": "Ekaterina Bochkar",
 			"beatspaceLink": "",
@@ -145,7 +174,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl021_katastrof_bent.jpg",
-				"default2x": "",
 				"webp": "mkrl021_katastrof_bent-500.webp",
 				"webp2x": "mkrl021_katastrof_bent-1000.webp"
 			},
@@ -162,7 +190,7 @@
 				}
 			],
 			"compiledBy": "",
-			"cdAuthor": "Björn Andersson",
+			"releaseAuthor": "Björn Andersson",
 			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Ekaterina Bochkar",
 			"beatspaceLink": "",
@@ -182,7 +210,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl020_blackout_2.jpg",
-				"default2x": "",
 				"webp": "mkrl020_blackout_2-500.webp",
 				"webp2x": "mkrl020_blackout_2-1000.webp"
 			},
@@ -196,7 +223,7 @@
 				}
 			],
 			"compiledBy": "DJ Omsun",
-			"cdAuthor": "",
+			"releaseAuthor": "",
 			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Salamandra",
 			"beatspaceLink": "",
@@ -216,7 +243,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl019_irukanji_springwald.jpg",
-				"default2x": "",
 				"webp": "mkrl019_irukanji_springwald-500.webp",
 				"webp2x": "mkrl019_irukanji_springwald-1000.webp"
 			},
@@ -236,7 +262,7 @@
 				}
 			],
 			"compiledBy": "",
-			"cdAuthor": "Ihor Orlovskyi",
+			"releaseAuthor": "Ihor Orlovskyi",
 			"masteredBy": "Dimitro @ Zymosis Studio",
 			"artworkBy": "A Realm of Wonder",
 			"beatspaceLink": "",
@@ -255,7 +281,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkrl018_shiibashunsuke_innermatics.jpg",
-				"default2x": "",
 				"webp": "mkrl018_shiibashunsuke_innermatics-500.webp",
 				"webp2x": "mkrl018_shiibashunsuke_innermatics-1000.webp"
 			},
@@ -268,7 +293,7 @@
 					"paragraph": "With this release, Shiibashunsuke masterfully bridges the gap between ancient cultural influences and cutting-edge electronic soundscapes, delivering a unique and immersive experience for psytrance vanguardists worldwide."
 				}
 			],
-			"cdAuthor": "Shunsuke Shiiba",
+			"releaseAuthor": "Shunsuke Shiiba",
 			"compiledBy": "",
 			"masteredBy": "Ankur @ Seres Studio",
 			"artworkBy": "Matik",
@@ -289,7 +314,6 @@
 			"releaseSubTitle": "listen & purchase",
 			"releaseCover": {
 				"default": "mkdg005_blackout.jpg",
-				"default2x": "",
 				"webp": "mkdg005_blackout-500.webp",
 				"webp2x": "mkdg005_blackout-1000.webp"
 			},
@@ -319,7 +343,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkdg004_oliwave_alive_memory.jpg",
-				"default2x": "",
 				"webp": "mkdg004_oliwave_alive_memory-500.webp",
 				"webp2x": "mkdg004_oliwave_alive_memory-1000.webp"
 			},
@@ -335,7 +358,7 @@
                     "paragraph": "This collection is a true masterpiece of psychedelic trance music, a reflection of the Oliwaves’s own memories and experiences. It will leave you feeling open-minded, inspired, and deeply moved."
                 }
             ],
-            "cdAuthor": "Oliver Bach",
+            "releaseAuthor": "Oliver Bach",
             "masteredBy": "Yannick Thiry",
             "artworkBy": "Mischlichter",
             "beatspaceLink": "",
@@ -355,7 +378,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkdg003_ziul_oiram_eternal_shadow.jpg",
-				"default2x": "",
 				"webp": "",
 				"webp2x": ""
 			},
@@ -371,7 +393,7 @@
                     "paragraph": "p.s. Buy full length EP and get a bonus with 24-bit tracks (only on our bandcamp)."
                 }
             ],
-            "cdAuthor": "Luiz Mario",
+            "releaseAuthor": "Luiz Mario",
             "masteredBy": "Petran",
             "artworkBy": "Fernando Fetex",
             "beatspaceLink": "",
@@ -390,7 +412,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd012_neural_embers.jpg",
-				"default2x": "",
 				"webp": "mkcd012_neural_embers-500.webp",
 				"webp2x": "mkcd012_neural_embers-1000.webp"
 			},
@@ -424,7 +445,6 @@
             "releaseSubTitle": "listen & download",
             "releaseCover": {
 				"default": "mkdg002_ocelot.jpg",
-				"default2x": "",
 				"webp": "mkdg002_ocelot-500.webp",
 				"webp2x": "mkdg002_ocelot-1000.webp"
 			},
@@ -440,7 +460,7 @@
                     "paragraph": "If you recall: the first oCeLoT album was called \"Aural Sects\".\nThis is the last oCeLoT album. Conformist box-thought is for suckas.\nQuibbling genre sectarians are boring and played out. On with the show!"
                 }
             ],
-            "cdAuthor": "Aaron Peacock",
+            "releaseAuthor": "Aaron Peacock",
             "masteredBy": "Aaron Peacock",
             "artworkBy": "Whrikk",
             "beatspaceLink": "",
@@ -460,7 +480,6 @@
             "releaseSubTitle": "listen & download",
             "releaseCover": {
 				"default": "mkdg001_bapholot_on_earth.jpg",
-				"default2x": "",
 				"webp": "mkdg001_bapholot_on_earth-500.webp",
 				"webp2x": "mkdg001_bapholot_on_earth-1000.webp"
 			},
@@ -490,7 +509,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd011_illusorium.jpg",
-				"default2x": "",
 				"webp": "mkcd011_illusorium-500.webp",
 				"webp2x": ""
 			},
@@ -520,7 +538,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd010_mind_games.jpg",
-				"default2x": "",
 				"webp": "mkcd010_mind_games-500.webp",
 				"webp2x": ""
 			},
@@ -559,7 +576,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd009_intropix.jpg",
-				"default2x": "",
 				"webp": "mkcd009_intropix-500.webp",
 				"webp2x": ""
 			},
@@ -598,7 +614,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd008_ocelot.jpg",
-				"default2x": "",
 				"webp": "mkcd008_ocelot-500.webp",
 				"webp2x": ""
 			},
@@ -617,7 +632,7 @@
                     "paragraph": "Peace."
                 }
             ],
-            "cdAuthor": "Aaron Peacock",
+            "releaseAuthor": "Aaron Peacock",
             "compiledBy": "",
             "masteredBy": "Clement",
             "artworkBy": "Taras Habrel (outside) & Victor TrueShiva (inside)",
@@ -638,7 +653,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd007_infinity_keepers_2.jpg",
-				"default2x": "",
 				"webp": "mkcd007_infinity_keepers_2-500.webp",
 				"webp2x": ""
 			},
@@ -692,7 +706,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd006_kirna.jpg",
-				"default2x": "",
 				"webp": "mkcd006_kirna-500.webp",
 				"webp2x": "mkcd006_kirna-1000.webp"
 			},
@@ -708,7 +721,7 @@
                     "paragraph": "Acoustic horizon of this record covers wide range of surreal and ordinary soundscapes, designed to tingle and tangle every layer of your mind. Playful progressions within beautiful compositions assure that melodic receptor of your auditory sense will be stimulated emotionally and challenged musically. Let this music guide your way In Space!"
                 }
             ],
-            "cdAuthor": "Kir Ylle",
+            "releaseAuthor": "Kir Ylle",
             "masteredBy": "Monno Onkel Dunkel",
             "artworkBy": "Kirna",
             "beatspaceLink": "",
@@ -728,7 +741,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd005_ascoil_sun.jpg",
-				"default2x": "",
 				"webp": "mkcd005_ascoil_sun-500.webp",
 				"webp2x": ""
 			},
@@ -747,7 +759,7 @@
                     "paragraph": "Let yourself dive in your thoughts, let your mind emerge and blossom."
                 }
             ],
-            "cdAuthor": "Matti Mikkola & Pasi Salo",
+            "releaseAuthor": "Matti Mikkola & Pasi Salo",
             "compiledBy": "",
             "masteredBy": "Makus",
             "artworkBy": "Nystrom (Darkstorn)",
@@ -768,7 +780,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd004_legendarium.jpg",
-				"default2x": "",
 				"webp": "mkcd004_legendarium-500.webp",
 				"webp2x": ""
 			},
@@ -804,7 +815,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd003_shadow_enuin_2.jpg",
-				"default2x": "",
 				"webp": "mkcd003_shadow_enuin_2-500.webp",
 				"webp2x": ""
 			},
@@ -837,7 +847,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd002_infinity_keepers.jpg",
-				"default2x": "",
 				"webp": "mkcd002_infinity_keepers-500.webp",
 				"webp2x": ""
 			},
@@ -873,7 +882,6 @@
             "releaseSubTitle": "listen & purchase",
             "releaseCover": {
 				"default": "mkcd001_shadow_enuin.jpg",
-				"default2x": "",
 				"webp": "mkcd001_shadow_enuin-500.webp",
 				"webp2x": ""
 			},

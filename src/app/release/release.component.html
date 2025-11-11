@@ -47,8 +47,8 @@
 				Compiled by <a routerLink="{{'/artists/' + release.compiledBy.replace(' ', '-').toLowerCase()}}">{{release.compiledBy}}</a>
 			</p>
 
-            <p *ngIf="release.cdAuthor" class="release-credits__paragraph dark-color">
-				W&P by {{release.cdAuthor}}
+            <p *ngIf="release.releaseAuthor" class="release-credits__paragraph dark-color">
+				W&P by {{release.releaseAuthor}}
 			</p>
 
             <p *ngIf="release.masteredBy" class="release-credits__paragraph dark-color">

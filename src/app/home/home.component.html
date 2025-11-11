@@ -43,7 +43,7 @@
 
 		<div class="new__title">{{purchase.item.title}}</div>
 
-		<div *ngIf="purchase.item.subtitle" class="new__sub-title">{{purchase.item.subtitle}}</div>
+		<div *ngIf="purchase.item.subtitle" class="new__sub-title">&laquo;{{purchase.item.subtitle}}&raquo;</div>
 
 		<a *ngIf="purchase.item.button"
 			[routerLink]="purchase.item.button?.routerLink"

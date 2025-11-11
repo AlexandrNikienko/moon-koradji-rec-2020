@@ -4,20 +4,16 @@
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
 			"cover": {
-				"default": "mkrl025_para_halu_histora_plethora.jpg",
-				"default2x": "",
-				"webp": "mkrl025_para_halu_histora_plethora-500.webp",
-				"webp2x": "mkrl025_para_halu_histora_plethora-1000.webp"
+				"default": "mkrl026_taakelur_totem.jpg",
+				"webp": "mkrl026_taakelur_totem-500.webp",
+				"webp2x": "mkrl026_taakelur_totem-1000.webp"
 			},
-			"title": "PARA HALU",
-			"subtitle": "Histora Plethora",
+			"title": "Taakelur",
+			"subtitle": "Totem",
 			"button": {
 				"title": "More Info",
-				"routerLink": "releases/para-halu-histora-plethora"
+				"routerLink": "releases/taakelur-totem"
 			}
-		},
-		"deals": [
-
-		]
+		}
 	}
 }

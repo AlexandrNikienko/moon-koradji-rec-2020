@@ -2345,6 +2345,11 @@
 			"artistSoundcloud": "https://soundcloud.com/taakelur",
 			"releases": [
 				{
+					"cdName": "Taakelur - Totem",
+					"cdCover": "mkrl026_taakelur_totem.jpg",
+					"cdLink": "taakelur-totem"
+				},
+				{
 					"cdName": "VA Mind Games",
 					"cdCover": "mkcd010_mind_games.jpg",
 					"cdLink": "va-mind-games"

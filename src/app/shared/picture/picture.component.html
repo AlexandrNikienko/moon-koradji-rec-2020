@@ -1,7 +1,26 @@
 <picture class="picture">
-	<source srcset="{{IMAGEFOLDER + imageFolder + (cover.webp2x || cover.default2x || cover.webp || cover.default)}} 2x" type="image/webp">
-	<source srcset="{{IMAGEFOLDER + imageFolder + (cover.default2x || cover.default)}} 2x" type="image/jpeg">
-	<source srcset="{{IMAGEFOLDER + imageFolder + (cover.webp || cover.default)}}" type="image/webp">
-	<source srcset="{{IMAGEFOLDER + imageFolder + cover.default}}" type="image/jpeg">
-	<img [class]="class" src="{{IMAGEFOLDER + imageFolder + cover.default}}" alt="" loading="lazy">
+  <source
+    *ngIf="cover.webp2x"
+    [srcset]="IMAGEFOLDER + imageFolder + cover.webp2x + ' 2x'"
+    type="image/webp"
+  >
+
+  <source
+    *ngIf="cover.webp"
+    [srcset]="IMAGEFOLDER + imageFolder + cover.webp"
+    type="image/webp"
+  >
+
+  <!-- <source
+    *ngIf="cover.default"
+    [srcset]="IMAGEFOLDER + imageFolder + cover.default"
+    type="image/jpeg"
+  > -->
+
+  <img
+    [class]="class"
+    [src]="IMAGEFOLDER + imageFolder + cover.default"
+    alt=""
+    loading="lazy"
+  >
 </picture>
