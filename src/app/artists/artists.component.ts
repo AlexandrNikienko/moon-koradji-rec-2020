@@ -57,7 +57,7 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	choosenCountries: any = '';
 
 	statuses = new FormControl('All');
-	statusList: string[] = ['Active', 'Inactive', 'Featured', 'All'];
+	statusList: string[] = ['Active', 'Inactive', 'Featured', 'All', 'Has Podcast'];
 	choosenStatus: string = 'All';
 
 	ngOnInit(): void {
@@ -155,12 +155,6 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 			);
 		}
 
-		// Apply featured filter if toggle is checked
-		// if (this.isFeaturedChecked) {
-		// 	filteredArtists = filteredArtists.filter(artist => artist.featured);
-		// 	filteredDjs = filteredDjs.filter(dj => dj.featured);
-		// }
-
 		// Filter by status
 		if (this.choosenStatus !== 'All') {
 			if (this.choosenStatus === 'Featured') {
@@ -172,6 +166,9 @@ export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 			} else if (this.choosenStatus === 'Active') {
 				filteredArtists = filteredArtists.filter(artist => !artist.inactive);
 				filteredDjs = filteredDjs.filter(dj => !dj.inactive);
+			} else if (this.choosenStatus === 'Has Podcast') {
+				filteredArtists = filteredArtists.filter(artist => artist.mixes?.length > 0);
+				filteredDjs = filteredDjs.filter(dj => dj.mixes?.length > 0);
 			}
 		}
 

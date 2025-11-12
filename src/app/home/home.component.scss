@@ -247,14 +247,14 @@ app-release-card {
 	}
 }
 
-app-picture {
-	opacity: 0;
-	transition: 1s;
+// app-picture {
+// 	opacity: 0;
+// 	transition: 1s;
 
-	&.animate-in {
-		opacity: 1;
-	}
-}
+// 	&.animate-in {
+// 		opacity: 1;
+// 	}
+// }
 
 .bottom {
 	display: flex;

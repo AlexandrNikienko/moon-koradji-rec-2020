@@ -55,8 +55,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 	@ViewChildren(ReleaseCardComponent, { read: ElementRef })
   	releaseCards!: QueryList<ElementRef>;
 
-	@ViewChildren(PictureComponent, { read: ElementRef })
-  	pictures!: QueryList<ElementRef>;
+	// @ViewChildren(PictureComponent, { read: ElementRef })
+  	// pictures!: QueryList<ElementRef>;
 
 	private observer!: IntersectionObserver;
 
@@ -139,7 +139,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 		// Re-run when list of releaseCards or pictures changes (async render)
 		this.releaseCards.changes.subscribe(() => this.initScrollAnimation());
-		this.pictures.changes.subscribe(() => this.initScrollAnimation());
+		//this.pictures.changes.subscribe(() => this.initScrollAnimation());
 	}
 
 	initScrollAnimation() {
@@ -156,18 +156,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 			}, { threshold: 0.2 }); // trigger when 20% visible
 		}
 
-		console.log("pics", this.pictures)
-
 		// Observe release cards
 		this.releaseCards.forEach(card =>
 			this.observer.observe(card.nativeElement)
 		);
 
-		console.log("pics", this.pictures)
-
 		// Observe pictures
-		this.pictures.forEach(pic =>
-			this.observer.observe(pic.nativeElement)
-		);
+		// this.pictures.forEach(pic =>
+		// 	this.observer.observe(pic.nativeElement)
+		// );
 	}
 }

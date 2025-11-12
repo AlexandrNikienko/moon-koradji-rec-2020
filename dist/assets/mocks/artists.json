@@ -1653,8 +1653,12 @@
 			],
 			"mixes": [
 				{
+					"year": "2024",
+					"embedCode": "<iframe width=\"100%\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1781046753\"></iframe>"
+				},
+				{
 					"year": "2020",
-					"embedCode": "<iframe width=\"100%\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/889197328&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
+					"embedCode": "<iframe width=\"100%\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/889197328\"></iframe>"
 				}
 			]
 		},
@@ -2192,12 +2196,6 @@
 					"cdCover": "mkrl018_shiibashunsuke_innermatics.jpg",
 					"cdLink": "shiibashunsuke-innermatics"
 				}
-			],
-			"mixes": [
-				{
-					"year": "",
-					"embedCode": ""
-				}
 			]
 		},
 		{
@@ -2333,6 +2331,7 @@
 			"artistRoute": "taakelur",
 			"artistName": "Taakelur",
 			"artistRealName": "Geir Kristian",
+			"featured": true,
 			"artistCountry": "Norway",
 			"flag": "no",
 			"artistAvatar": "artist_taakelur.jpg",
@@ -2686,6 +2685,12 @@
 					"cdName": "VA Blackout 2: Luminous Darkness",
 					"cdCover": "mkrl020_blackout_2.jpg",
 					"cdLink": "va-blackout-2"
+				}
+			],
+			"mixes": [
+				{
+					"year": "2025",
+					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2196852927\"></iframe>"
 				}
 			]
 		},
