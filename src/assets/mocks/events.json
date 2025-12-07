@@ -1,48 +1,15 @@
 {
     "events": [
 		{
-            "date": "30-2",
-            "month": "May-June",
-            "year": "2025",
-			"endDate": "2025-06-02",
-            "country": "India",
-            "title": "Parvati Peaking",
-			"info": "Celebrating 20 Years of Sanaton Records in the Himalayas",
-			"link": "https://www.instagram.com/parvatipeakingofficial/",
-			"artists": ["Inzect", "Time For Slime", "Whrikk"]
-        },
-		{
-            "date": "30-7",
-            "month": "June-July",
-            "year": "2025",
-			"endDate": "2025-07-07",
-            "country": "Czech Republic",
-            "title": "Masters of Puppets",
-			"info": "Forest, tekno and rage stages",
-			"link": "https://www.facebook.com/events/1008856987115431",
-			"artists": ["Distorted Goblin", "Inzect", "Solarythm", "Troglodytes", "Whrikk"]
-        },
-		{
-            "date": "29-31",
+            "date": "17-24",
             "month": "August",
-            "year": "2025",
-			"endDate": "2025-08-31",
-            "country": "Sweden",
-            "title": "The Shadow Of The Dark Shaman",
-			"info": "Sanaton 20 years anniversary - psychedelic trance outdoor gathering in the heart of Stockholm",
-			"link": "https://www.facebook.com/events/1738167593694928",
-			"artists": ["Already Maged", "Whrikk", "Inzect", "Traskel", "Purosurpo"]
-        },
-		{
-            "date": "6",
-            "month": "December",
-            "year": "2025",
-			"endDate": "2025-12-06",
-            "country": "Sweden",
-            "title": "The Shadow Of The Dark Shaman",
-			"info": "50 trips around the sun - celebrating one of MindGamers founders 50th anniversary",
-			"link": "https://www.facebook.com/events/1212853129806741/",
-			"artists": ["Time For Slime", "Ka-Sol", "Trold", "DJ Zloj"]
+            "year": "2026",
+			"endDate": "2026-08-24",
+            "country": "Romania",
+            "title": "Glia Gathering",
+			"info": "Psytrance festival in Romanian mountains",
+			"link": "https://www.facebook.com/profile.php?id=100070371251345",
+			"artists": ["Whrikk", "Molchun", "Noise Gust", "DJ Zloj"]
         }
     ]
 }
