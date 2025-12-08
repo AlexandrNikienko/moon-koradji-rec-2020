@@ -10,15 +10,14 @@ import { Observable } from 'rxjs';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 
 @Component({
-	standalone: true,
-	imports: [
-		CommonModule,
-		SafeHtmlPipe,
-		SharedLoaderComponent
-	],
-	selector: 'app-podcasts',
-	templateUrl: './podcasts.component.html',
-	styleUrls: ['podcasts.component.scss']
+    imports: [
+        CommonModule,
+        SafeHtmlPipe,
+        SharedLoaderComponent
+    ],
+    selector: 'app-podcasts',
+    templateUrl: './podcasts.component.html',
+    styleUrls: ['podcasts.component.scss']
 })
 export class PodcastsComponent implements OnInit, OnDestroy {
 	private dataService = inject(DataService);

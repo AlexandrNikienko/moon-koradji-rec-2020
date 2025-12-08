@@ -11,18 +11,17 @@ import { CommonModule } from '@angular/common';
 import { ScrollTopService } from './core/services/scroll-to-top.service';
 
 @Component({
-	standalone: true,
-	imports: [
-		RouterModule,
-		CommonModule,
-		HeaderComponent,
-		FooterComponent,
-		ScrollToTopComponent,
-		MatTooltipModule
-	],
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	providers: [DataService, ScrollTopService]
+    imports: [
+        RouterModule,
+        CommonModule,
+        HeaderComponent,
+        FooterComponent,
+        ScrollToTopComponent,
+        MatTooltipModule
+    ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    providers: [DataService, ScrollTopService]
 })
 export class AppComponent {
 	showBackground = true;

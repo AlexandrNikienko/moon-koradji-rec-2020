@@ -9,9 +9,10 @@ register();
 import { Swiper } from 'swiper/types';
 
 @Component({
-	selector: 'app-shared-gallery',
-	templateUrl: './gallery.component.html',
-	styleUrls: ['swiper.scss']
+    selector: 'app-shared-gallery',
+    templateUrl: './gallery.component.html',
+    styleUrls: ['swiper.scss'],
+    standalone: false
 })
 export class SharedGalleryComponent implements OnInit {
 	@Input() items: Gallery[];

@@ -21,19 +21,18 @@ import { PictureComponent } from '../shared/picture/picture.component';
 import { Artist } from '../core/models/artist.model';
 
 @Component({
-	selector: 'mk-home',
-	standalone: true,
-	imports: [
-		CommonModule,
-		RouterModule,
-		GalleryModule, // TODO
-		HeadingComponent,
-		ReleaseCardComponent,
-		PodcastComponent,
-		PictureComponent
-	],
-	templateUrl: './home.component.html',
-	styleUrls: ['home.component.scss']
+    selector: 'mk-home',
+    imports: [
+        CommonModule,
+        RouterModule,
+        GalleryModule, // TODO
+        HeadingComponent,
+        ReleaseCardComponent,
+        PodcastComponent,
+        PictureComponent
+    ],
+    templateUrl: './home.component.html',
+    styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
 	private dataService = inject(DataService);

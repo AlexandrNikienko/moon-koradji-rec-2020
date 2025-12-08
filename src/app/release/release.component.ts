@@ -18,20 +18,19 @@ import { ReleaseCardComponent } from '../shared/release-card/release-card.compon
 import { Utils } from '../core/utils';
 
 @Component({
-	standalone: true,
-	selector: 'app-release',
-	imports: [
-		CommonModule,
-		RouterModule,
-		SafeHtmlPipe,
-		HeadingComponent,
-		AudioPlayerComponent,
-		SharedVideoComponent,
-		PictureComponent,
-		ReleaseCardComponent
-	],
-	templateUrl: './release.component.html',
-	styleUrls: ['release.component.scss']
+    selector: 'app-release',
+    imports: [
+        CommonModule,
+        RouterModule,
+        SafeHtmlPipe,
+        HeadingComponent,
+        AudioPlayerComponent,
+        SharedVideoComponent,
+        PictureComponent,
+        ReleaseCardComponent
+    ],
+    templateUrl: './release.component.html',
+    styleUrls: ['release.component.scss']
 })
 
 export class ReleaseComponent implements OnInit, OnDestroy {

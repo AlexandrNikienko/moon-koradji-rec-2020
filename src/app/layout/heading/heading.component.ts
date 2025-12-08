@@ -3,11 +3,10 @@ import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-	standalone: true,
-	imports: [CommonModule, RouterModule],
-	selector: 'mk-heading',
-	templateUrl: './heading.component.html',
-	styleUrls: ['./heading.component.scss']
+    imports: [CommonModule, RouterModule],
+    selector: 'mk-heading',
+    templateUrl: './heading.component.html',
+    styleUrls: ['./heading.component.scss']
 })
 export class HeadingComponent {	
 	@Input()

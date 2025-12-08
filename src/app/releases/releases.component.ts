@@ -10,16 +10,15 @@ import { HeadingComponent } from './../layout/heading/heading.component';
 import { Release } from '../core/models/release.model';
 
 @Component({
-	standalone: true,
-	imports: [
-		CommonModule,
-		RouterModule,
-		HeadingComponent,
-		ReleaseCardComponent
-	],
-	selector: 'app-releases',
-	templateUrl: './releases.component.html',
-	styleUrls: ['releases.scss']
+    imports: [
+        CommonModule,
+        RouterModule,
+        HeadingComponent,
+        ReleaseCardComponent
+    ],
+    selector: 'app-releases',
+    templateUrl: './releases.component.html',
+    styleUrls: ['releases.scss']
 })
 export class ReleasesComponent implements OnInit {
 	private dataService = inject(DataService);

@@ -3,10 +3,9 @@ import { iMeta, MetaDataService } from './../core/services/meta-data.service';
 import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
-	standalone: true,
-	imports: [RouterModule],
-	templateUrl: 'about.component.html',
-	styleUrls: ['about.component.scss'] 
+    imports: [RouterModule],
+    templateUrl: 'about.component.html',
+    styleUrls: ['about.component.scss']
 })
 export class AboutComponent implements OnInit {
 	private metaData = inject(MetaDataService);

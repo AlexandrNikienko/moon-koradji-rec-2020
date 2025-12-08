@@ -6,10 +6,9 @@ import { IMAGEFOLDER } from '../../../environments/environment';
 import { PictureComponent } from '../picture/picture.component';
 
 @Component({
-	standalone: true,
-	imports: [CommonModule, RouterModule, PictureComponent],
-	selector: 'app-release-card',
-	templateUrl: './release-card.component.html'
+    imports: [CommonModule, RouterModule, PictureComponent],
+    selector: 'app-release-card',
+    templateUrl: './release-card.component.html'
 })
 export class ReleaseCardComponent {
 	@Input() releaseItem: Release;

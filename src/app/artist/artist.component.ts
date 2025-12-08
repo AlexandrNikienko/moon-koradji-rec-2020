@@ -12,15 +12,14 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 import { switchMap, takeUntil } from 'rxjs/operators';
 
 @Component({
-	standalone: true,
-	imports: [
-		HeadingComponent,
-		SafeHtmlPipe,
-		CommonModule, 
-		RouterModule
-	],
-	templateUrl: 'artist.component.html',
-	styleUrls: ['artist.component.scss']
+    imports: [
+        HeadingComponent,
+        SafeHtmlPipe,
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: 'artist.component.html',
+    styleUrls: ['artist.component.scss']
 })
 export class ArtistComponent implements OnInit, OnDestroy {
 	private route = inject(ActivatedRoute);

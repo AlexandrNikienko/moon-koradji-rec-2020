@@ -3,11 +3,10 @@ import { SharedLoaderComponent } from './../../shared/loader/loader.component';
 import { Component, Input } from '@angular/core';
 
 @Component({
-	standalone: true,
-	imports: [SharedLoaderComponent, SafeHtmlPipe],
-	selector: 'app-audio-player',
-	templateUrl: './audio-player.component.html',
-	styleUrls: ['audio-player.scss']
+    imports: [SharedLoaderComponent, SafeHtmlPipe],
+    selector: 'app-audio-player',
+    templateUrl: './audio-player.component.html',
+    styleUrls: ['audio-player.scss']
 })
 export class AudioPlayerComponent {
 	@Input() embedAudio: string;

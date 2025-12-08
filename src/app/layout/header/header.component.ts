@@ -5,11 +5,10 @@ import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	standalone: true,
-	imports: [CommonModule, RouterModule, MatTooltipModule, MatButtonModule],
-	selector: 'app-header',
-	templateUrl: './header.component.html',
-	styleUrls: ['header.scss']
+    imports: [CommonModule, RouterModule, MatTooltipModule, MatButtonModule],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['header.scss']
 })
 export class HeaderComponent implements OnInit { 
 	showSupportUkraine: boolean;

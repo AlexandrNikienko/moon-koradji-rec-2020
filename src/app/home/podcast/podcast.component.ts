@@ -9,11 +9,10 @@ import { PodcastAdv } from '../../core/models/podcast-adv.model';
 import { map, tap } from 'rxjs/operators';
 
 @Component({
-	standalone: true,
-	imports: [CommonModule, RouterModule, HeadingComponent],
-	selector: 'app-podcast',
-	templateUrl: './podcast.component.html',
-	styleUrls: ['podcasts-adv.scss']
+    imports: [CommonModule, RouterModule, HeadingComponent],
+    selector: 'app-podcast',
+    templateUrl: './podcast.component.html',
+    styleUrls: ['podcasts-adv.scss']
 })
 export class PodcastComponent implements OnInit {
 	private dataService = inject(DataService);

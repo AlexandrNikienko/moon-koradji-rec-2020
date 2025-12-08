@@ -14,16 +14,15 @@ import { Observable, Subscription } from 'rxjs';
 import { Artist } from '../core/models/artist.model';
 
 @Component({
-	standalone: true,
-	imports: [
-		HeadingComponent,
-		CommonModule,
-		RouterModule,
-		MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatSlideToggleModule
-	],
-	selector: 'app-artists',
-	templateUrl: './artists.component.html',
-	styleUrls: ['artists.scss']
+    imports: [
+        HeadingComponent,
+        CommonModule,
+        RouterModule,
+        MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatSlideToggleModule
+    ],
+    selector: 'app-artists',
+    templateUrl: './artists.component.html',
+    styleUrls: ['artists.scss']
 })
 export class ArtistsComponent implements OnInit, AfterViewInit, OnDestroy {
 	@ViewChildren('artistName') artistNames: QueryList<ElementRef>;
