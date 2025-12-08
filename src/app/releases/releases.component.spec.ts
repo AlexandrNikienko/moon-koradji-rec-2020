@@ -2,7 +2,7 @@ import { DataService } from './../core/services/data.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReleasesComponent } from './releases.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ReleasesComponent', () => {
 	let component: ReleasesComponent;
@@ -10,10 +10,10 @@ describe('ReleasesComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			imports: [HttpClientModule],
-			declarations: [ReleasesComponent],
-			providers: [DataService]
-		})
+    declarations: [ReleasesComponent],
+    imports: [],
+    providers: [DataService, provideHttpClient(withInterceptorsFromDi())]
+})
 		.compileComponents();
 	}));
 

@@ -1,5 +1,4 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -14,7 +13,6 @@ import { ScrollTopService } from './core/services/scroll-to-top.service';
 @Component({
 	standalone: true,
 	imports: [
-		HttpClientModule,
 		RouterModule,
 		CommonModule,
 		HeaderComponent,

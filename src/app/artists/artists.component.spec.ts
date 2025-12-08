@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DataService } from '../core/services/data.service';
 import { ArtistsComponent } from './artists.component';
@@ -10,10 +10,10 @@ describe('ArtistsComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			imports: [HttpClientModule],
-			declarations: [ArtistsComponent],
-			providers: [DataService]
-		})
+    declarations: [ArtistsComponent],
+    imports: [],
+    providers: [DataService, provideHttpClient(withInterceptorsFromDi())]
+})
 			.compileComponents();
 	}));
 

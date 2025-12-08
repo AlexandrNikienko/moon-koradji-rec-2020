@@ -1,8 +1,9 @@
 import { DataService } from './../core/services/data.service';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { provideHttpClientTesting } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ArtistComponent } from './artist.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ArtistComponent', () => {
 	let component: ArtistComponent;
@@ -10,10 +11,10 @@ describe('ArtistComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			imports: [RouterTestingModule, HttpClientTestingModule],
-			declarations: [ArtistComponent],
-			providers: [DataService]
-		})
+    declarations: [ArtistComponent],
+    imports: [RouterTestingModule],
+    providers: [DataService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+})
 			.compileComponents();
 	}));
 
