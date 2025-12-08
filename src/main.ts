@@ -1,6 +1,6 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withNavigationErrorHandler } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
 import { environment } from './environments/environment';
@@ -14,7 +14,12 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
 	providers: [
-		provideRouter(routes),
+		provideRouter(
+			routes,
+			withNavigationErrorHandler((error) => {
+				console.error('Navigation error:', error);
+			}
+	)),
 		importProvidersFrom(BrowserAnimationsModule),
 		provideHttpClient()
 	]
