@@ -1,4 +1,3 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
