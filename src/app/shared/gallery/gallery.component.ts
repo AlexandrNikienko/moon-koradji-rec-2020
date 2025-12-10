@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 import { Gallery } from '../../core/models/gallery.model';

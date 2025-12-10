@@ -1,72 +1,81 @@
 <mk-heading class="mt-4" [title]="'Artists (' + artists.length + ')'" [subTitle]="'Get to know the creative minds behind our music'"/>
 
 <div class="filter">
-	<mat-form-field appearance="outline">
-		<mat-label>Filter by country</mat-label>
+  <mat-form-field appearance="outline">
+    <mat-label>Filter by country</mat-label>
 
-		<mat-select [formControl]="countries" multiple>
-			<mat-option *ngFor="let country of countryList" [value]="country.artistCountry">
-				<svg class="artist-item__flag">
-					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + country.flag"></use>
-				</svg>
-				
-				{{country.artistCountry}}
-			</mat-option>
-		</mat-select>
+    <mat-select [formControl]="countries" multiple>
+      @for (country of countryList; track country) {
+        <mat-option [value]="country.artistCountry">
+          <svg class="artist-item__flag">
+            <use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + country.flag"></use>
+          </svg>
+          {{country.artistCountry}}
+        </mat-option>
+      }
+    </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-		<mat-label>Filter by status</mat-label>
+    <mat-label>Filter by status</mat-label>
 
-		<mat-select [formControl]="statuses">
-			<mat-option *ngFor="let status of statusList" [value]="status">
-				{{status}}
-			</mat-option>
-		</mat-select>
+    <mat-select [formControl]="statuses">
+      @for (status of statusList; track status) {
+        <mat-option [value]="status">
+          {{status}}
+        </mat-option>
+      }
+    </mat-select>
   </mat-form-field>
 
   <ul class="filter__list">
-	<li class="filter__list-item">
-		<i class="far fa-gem"></i> - featured artist
-</li>
-	<li class="filter__list-item">
-		<i class="fas fa-skull-crossbones"></i> - inactive/closed project
-	</li>
+    <li class="filter__list-item">
+      <i class="far fa-gem"></i> - featured artist
+    </li>
+    <li class="filter__list-item">
+      <i class="fas fa-skull-crossbones"></i> - inactive/closed project
+    </li>
   </ul>
 </div>
 
-<section *ngIf="artists.length" class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
-	@for (item of artists; track item.id) {
-		<div class="artist-item mb-16">
-			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p #artistName class="artist-item__name js-artist-name">
-					{{item.artistName}}
-					<sup>
-						<i *ngIf="item.featured" class="far fa-gem"></i>
-						<i *ngIf="item.inactive" class="fas fa-skull-crossbones"></i>
-					</sup>
-				</p>
-				
-				<svg class="artist-item__flag">
-					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
-				</svg>
-			</a>
-		</div>
-	}
-</section>
+@if (artists.length) {
+  <section class="artists-wrapper mb-16" [class.filter-active]="choosenCountries.length">
+    @for (item of artists; track item.id) {
+      <div class="artist-item mb-16">
+        <a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+          <p #artistName class="artist-item__name js-artist-name">
+            {{item.artistName}}
+            <sup>
+              @if (item.featured) {
+                <i class="far fa-gem"></i>
+              }
+              @if (item.inactive) {
+                <i class="fas fa-skull-crossbones"></i>
+              }
+            </sup>
+          </p>
+          <svg class="artist-item__flag">
+            <use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
+          </svg>
+        </a>
+      </div>
+    }
+  </section>
+}
 
 <mk-heading [title]="'DJs (' + djs.length + ')'" [subTitle]="'Meet our talented roster of DJs'"/>
 
-<section *ngIf="djs.length" class="artists-wrapper">
-	@for (item of djs; track item.id) {
-		<div class="artist-item mb-16">
-			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
-				<p class="artist-item__name">{{item.artistName}}</p>
-
-				<svg class="artist-item__flag">
-					<use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
-				</svg>
-			</a>
-		</div>
-	}
-</section>
+@if (djs.length) {
+  <section class="artists-wrapper">
+    @for (item of djs; track item.id) {
+      <div class="artist-item mb-16">
+        <a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
+          <p class="artist-item__name">{{item.artistName}}</p>
+          <svg class="artist-item__flag">
+            <use [attr.xlink:href]="'assets/images/flags-sprite.svg#' + item.flag"></use>
+          </svg>
+        </a>
+      </div>
+    }
+  </section>
+}

@@ -6,18 +6,17 @@ import { ScrollToTopComponent } from './layout/scroll-to-top/scroll-to-top.compo
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { DataService } from './core/services/data.service';
-import { CommonModule } from '@angular/common';
+
 import { ScrollTopService } from './core/services/scroll-to-top.service';
 
 @Component({
     imports: [
-        RouterModule,
-        CommonModule,
-        HeaderComponent,
-        FooterComponent,
-        ScrollToTopComponent,
-        MatTooltipModule
-    ],
+    RouterModule,
+    HeaderComponent,
+    FooterComponent,
+    ScrollToTopComponent,
+    MatTooltipModule
+],
     selector: 'app-root',
     templateUrl: './app.component.html',
     providers: [DataService, ScrollTopService]

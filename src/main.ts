@@ -1,4 +1,4 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, withNavigationErrorHandler } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
@@ -14,7 +14,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
 	providers: [
-		provideRouter(
+		provideZoneChangeDetection(),provideRouter(
 			routes,
 			withNavigationErrorHandler((error) => {
 				console.error('Navigation error:', error);

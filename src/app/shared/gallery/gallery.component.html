@@ -1,19 +1,20 @@
 <div class="swiper-container">
-	<swiper-container>
-		<swiper-slide *ngFor="let item of items">
-			<a class="slide" routerLink="{{item.route}}">
-				<div class="slide__image">
-					<app-picture [cover]="item.image" [imageFolder]="'artists/featured/'"></app-picture>
-				</div>
+  <swiper-container>
+    @for (item of items; track item) {
+      <swiper-slide>
+        <a class="slide" routerLink="{{item.route}}">
+          <div class="slide__image">
+            <app-picture [cover]="item.image" [imageFolder]="'artists/featured/'"></app-picture>
+          </div>
+          <div class="slide__text">
+            {{item.name}}
+          </div>
+        </a>
+      </swiper-slide>
+    }
+  </swiper-container>
 
-				<div class="slide__text">
-					{{item.name}}
-				</div>
-			</a>
-		</swiper-slide>
-	</swiper-container>
+  <div class="swiper-button-prev"></div>
 
-	<div class="swiper-button-prev"></div>
-	
-    <div class="swiper-button-next"></div>
+  <div class="swiper-button-next"></div>
 </div>

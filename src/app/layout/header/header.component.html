@@ -1,161 +1,160 @@
-<div *ngIf="showSupportUkraine && false" class="support-ukraine navbar navbar-expand-md bg-dark">
-	<a class="support-ukraine__link" href="https://u24.gov.ua/" target="_blank">
-		<span>Support Ukraine</span>
+@if (showSupportUkraine && false) {
+  <div class="support-ukraine navbar navbar-expand-md bg-dark">
+    <a class="support-ukraine__link" href="https://u24.gov.ua/" target="_blank">
+      <span>Support Ukraine</span>
+      <img class="support-ua" src="./assets/images/support-ua.png" alt="">
+      <span class="message">Help Provide Humanitarian Aid to Ukraine.</span>
+    </a>
+    <div class="support-ukraine__close">
+      <button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+}
 
-		<img class="support-ua" src="./assets/images/support-ua.png" alt="">
-
-		<span class="message">Help Provide Humanitarian Aid to Ukraine.</span>
-	</a>
-
-	<div class="support-ukraine__close">
-		<button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
-			<i class="fa fa-times" aria-hidden="true"></i>
-		</button>
-	</div>
-</div>
-
-<div *ngIf="showSupportUkraine && false" class="support-ukraine navbar navbar-expand-md bg-dark">
-	<div class="support-ukraine__link">
-		<img class="support-ua" src="./assets/images/support-ua.png" alt="">
-		
-		<span>Support Ukraine – Boycott Russia</span>
-
-		<span style="position: relative; margin-left: 16px;">
-			<svg xmlns="http://www.w3.org/2000/svg" width="256" height="192" viewBox="0 0 256 192" 
-				style="height: 18px; width: auto; border-radius: 2px;"
-			>
-				<g filter="url(#wavy)">
-					<rect width="256" height="64" y="0" fill="#ffffff"/>
-					<rect width="256" height="64" y="64" fill="#0033a0"/>
-					<rect width="256" height="64" y="128" fill="#d52b1e"/>
-				</g>
-			</svg>
-
-			<i class="fas fa-skull-crossbones" 
-				style="position: absolute; color: red; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 24px; text-shadow: 0 0 1px black;"></i>
-		</span>
-	</div>
-
-	<div class="support-ukraine__close">
-		<button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
-			<i class="fa fa-times" aria-hidden="true"></i>
-		</button>
-	</div>
-</div>
+@if (showSupportUkraine && false) {
+  <div class="support-ukraine navbar navbar-expand-md bg-dark">
+    <div class="support-ukraine__link">
+      <img class="support-ua" src="./assets/images/support-ua.png" alt="">
+      <span>Support Ukraine – Boycott Russia</span>
+      <span style="position: relative; margin-left: 16px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="192" viewBox="0 0 256 192"
+          style="height: 18px; width: auto; border-radius: 2px;"
+          >
+          <g filter="url(#wavy)">
+            <rect width="256" height="64" y="0" fill="#ffffff"/>
+            <rect width="256" height="64" y="64" fill="#0033a0"/>
+            <rect width="256" height="64" y="128" fill="#d52b1e"/>
+          </g>
+        </svg>
+        <i class="fas fa-skull-crossbones"
+        style="position: absolute; color: red; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 24px; text-shadow: 0 0 1px black;"></i>
+      </span>
+    </div>
+    <div class="support-ukraine__close">
+      <button (click)="closeSupportBanner()" mat-icon-button color="primary" aria-label="Close Support Ukraine banner">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+}
 
 <header class="m-header">
-	<a routerLink="/about" routerLinkActive="active" title="About">
-		<div id="outer-wrapper">
-			<div id="wrapper">
-				<div id="moon"></div>
-				<div id="black_planet"></div>
-				<div id="crystal_png"></div>
-			</div>
-		</div>
-	</a>
+  <a routerLink="/about" routerLinkActive="active" title="About">
+    <div id="outer-wrapper">
+      <div id="wrapper">
+        <div id="moon"></div>
+        <div id="black_planet"></div>
+        <div id="crystal_png"></div>
+      </div>
+    </div>
+  </a>
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-		<div class="container-fluid">
-			<a  *ngIf="!showSupportUkraine && false"
-				href="https://u24.gov.ua/" class="support-link" target="_blank"
-				[matTooltip]="'Support Ukraine'"
-				[matTooltipPosition]="'below'"
-				[matTooltipShowDelay]="100"
-				aria-label="Flag of Ukraine"
-			>
-				<img class="support-ua" src="./assets/images/support-ua.png" alt="">
-			</a>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      @if (!showSupportUkraine && false) {
+        <a
+          href="https://u24.gov.ua/" class="support-link" target="_blank"
+          [matTooltip]="'Support Ukraine'"
+          [matTooltipPosition]="'below'"
+          [matTooltipShowDelay]="100"
+          aria-label="Flag of Ukraine"
+          >
+          <img class="support-ua" src="./assets/images/support-ua.png" alt="">
+        </a>
+      }
 
-			<a class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
+      <a class="navbar-brand" routerLink="/">Moon Koradji Rec.</a>
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-				aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-			<div class="collapse navbar-collapse" id="navbarToggler">
-				<ul class="navbar-nav">
-					<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-						<a class="nav-link" routerLink="/">
-							<i class="fas fa-om" aria-hidden="true"></i>Home
-						</a>
-					</li>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link" routerLink="/">
+              <i class="fas fa-om" aria-hidden="true"></i>Home
+            </a>
+          </li>
 
-					<li class="nav-item" routerLinkActive="active">
-						<a class="nav-link" routerLink="/releases">
-							<i class="fas fa-compact-disc" aria-hidden="true"></i>Releases
-						</a>
-					</li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/releases">
+              <i class="fas fa-compact-disc" aria-hidden="true"></i>Releases
+            </a>
+          </li>
 
-					<li class="nav-item" routerLinkActive="active">
-						<a class="nav-link" routerLink="/artists">
-							<i class="fas fa-headphones-alt" aria-hidden="true"></i>Artists
-						</a>
-					</li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/artists">
+              <i class="fas fa-headphones-alt" aria-hidden="true"></i>Artists
+            </a>
+          </li>
 
-					<!--<li class="nav-item" routerLinkActive="active">
-						<a class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
-					</li>-->
+          <!--<li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/merch"><i class="fas fa-tshirt" aria-hidden="true"></i>Merch</a>
+        </li>-->
 
-					<li class="nav-item" routerLinkActive="active">
-						<a class="nav-link" routerLink="/podcasts">
-							<i class="fas fa-podcast" aria-hidden="true"></i>Podcasts
-						</a>
-					</li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/podcasts">
+            <i class="fas fa-podcast" aria-hidden="true"></i>Podcasts
+          </a>
+        </li>
 
-					<li class="nav-item" routerLinkActive="active">
-						<a class="nav-link" routerLink="/about">
-							<i class="fas fa-info" aria-hidden="true"></i>About
-						</a>
-					</li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/about">
+            <i class="fas fa-info" aria-hidden="true"></i>About
+          </a>
+        </li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">
-							<i class="fas fa-tshirt" aria-hidden="true"></i>Merch
+        <li class="nav-item">
+          <a class="nav-link" href="https://shop.spreadshirt.com/moon-koradji-records/" target="_blank">
+            <i class="fas fa-tshirt" aria-hidden="true"></i>Merch
 
-							<svg class="external-link" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
-								<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/>
-							</svg>
-						</a>
-					</li>
+            <svg class="external-link" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/>
+            </svg>
+          </a>
+        </li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle">
-							<i class="fas fa-external-link-alt"></i>Streaming
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle">
+            <i class="fas fa-external-link-alt"></i>Streaming
 
-							<svg class="external-link" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
-								<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/>
-							</svg>
-						</a>
+            <svg class="external-link" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/>
+            </svg>
+          </a>
 
-						<ul class="dropdown-menu dropdown-menu-dark">
-							<li>
-								<a class="nav-link" href="https://music.apple.com/ua/playlist/moon-koradji-records-official-playlist/pl.u-r2yBDVqsR4566lx?l=en" target="_blank">Apple Music</a>
-							</li>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <a class="nav-link" href="https://music.apple.com/ua/playlist/moon-koradji-records-official-playlist/pl.u-r2yBDVqsR4566lx?l=en" target="_blank">Apple Music</a>
+            </li>
 
-							<li>
-								<a class="nav-link" href="https://www.beatport.com/library/playlists/5492912" target="_blank">Beatport</a>
-							</li>
-							
-							<li>
-								<a class="nav-link" href="https://www.deezer.com/us/playlist/11291361544" target="_blank">Deezer</a>
-							</li>
+            <li>
+              <a class="nav-link" href="https://www.beatport.com/library/playlists/5492912" target="_blank">Beatport</a>
+            </li>
 
-							<li>
-								<a class="nav-link" href="https://open.spotify.com/user/4gk1x57oss4st6tx32rfkpmd8" target="_blank">Spotify</a>
-							</li>
+            <li>
+              <a class="nav-link" href="https://www.deezer.com/us/playlist/11291361544" target="_blank">Deezer</a>
+            </li>
 
-							<li>
-								<a class="nav-link" href="https://listen.tidal.com/playlist/6571e38b-3dcc-4d4f-ba82-c836db4fe9e4" target="_blank">Tidal</a>
-							</li>
+            <li>
+              <a class="nav-link" href="https://open.spotify.com/user/4gk1x57oss4st6tx32rfkpmd8" target="_blank">Spotify</a>
+            </li>
 
-							<li>
-								<a class="nav-link" href="https://music.youtube.com/playlist?list=PL5ER29DAoUrwfyn5dm-Nk05MsEyaBW-RF" target="_blank">YouTube Music</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+            <li>
+              <a class="nav-link" href="https://listen.tidal.com/playlist/6571e38b-3dcc-4d4f-ba82-c836db4fe9e4" target="_blank">Tidal</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="https://music.youtube.com/playlist?list=PL5ER29DAoUrwfyn5dm-Nk05MsEyaBW-RF" target="_blank">YouTube Music</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </header>

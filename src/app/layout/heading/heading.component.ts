@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-    imports: [CommonModule, RouterModule],
+    imports: [RouterModule],
     selector: 'mk-heading',
     templateUrl: './heading.component.html',
     styleUrls: ['./heading.component.scss']

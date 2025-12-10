@@ -1,6 +1,6 @@
 import { Component, QueryList, ViewChildren, AfterViewInit, OnDestroy, OnInit, inject, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,11 +15,14 @@ import { Artist } from '../core/models/artist.model';
 
 @Component({
     imports: [
-        HeadingComponent,
-        CommonModule,
-        RouterModule,
-        MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatSlideToggleModule
-    ],
+    HeadingComponent,
+    RouterModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule
+],
     selector: 'app-artists',
     templateUrl: './artists.component.html',
     styleUrls: ['artists.scss']
