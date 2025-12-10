@@ -14,12 +14,13 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
 	providers: [
-		provideZoneChangeDetection(),provideRouter(
+		provideZoneChangeDetection(),
+		provideRouter(
 			routes,
 			withNavigationErrorHandler((error) => {
 				console.error('Navigation error:', error);
-			}
-	)),
+			})
+		),
 		importProvidersFrom(BrowserAnimationsModule),
 		provideHttpClient()
 	]
