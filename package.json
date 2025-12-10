@@ -45,6 +45,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
     "protractor": "~7.0.0",
+    "sass": "^1.95.0",
     "svg-sprite": "^2.0.4",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
