@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, input, ViewChild, ElementRef } from '@angular/core';
 
 import { Gallery } from '../../core/models/gallery.model';
 
@@ -15,7 +15,7 @@ import { Swiper } from 'swiper/types';
     standalone: false
 })
 export class SharedGalleryComponent implements OnInit {
-	@Input() items: Gallery[];
+	items = input<Gallery[]>();
 
 	// @ViewChild('swiper') swiperRef: ElementRef | undefined;
 

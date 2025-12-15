@@ -1,6 +1,6 @@
 import { SafeHtmlPipe } from 'src/app/core/pipes/safe-html.pipe';
 import { SharedLoaderComponent } from './../../shared/loader/loader.component';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
     imports: [SharedLoaderComponent, SafeHtmlPipe],
@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['audio-player.scss']
 })
 export class AudioPlayerComponent {
-	@Input() embedAudio: string;
+	embedAudio = input<string>();
 }

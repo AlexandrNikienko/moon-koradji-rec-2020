@@ -17,9 +17,9 @@ bootstrapApplication(AppComponent, {
 		provideZoneChangeDetection(),
 		provideRouter(
 			routes,
-			withNavigationErrorHandler((error) => {
-				console.error('Navigation error:', error);
-			})
+			// withNavigationErrorHandler((error) => {
+			// 	console.error('Navigation error:', error);
+			// })
 		),
 		importProvidersFrom(BrowserAnimationsModule),
 		provideHttpClient()

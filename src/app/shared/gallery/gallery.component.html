@@ -1,6 +1,6 @@
 <div class="swiper-container">
   <swiper-container>
-    @for (item of items; track item) {
+    @for (item of items(); track item) {
       <swiper-slide>
         <a class="slide" routerLink="{{item.route}}">
           <div class="slide__image">

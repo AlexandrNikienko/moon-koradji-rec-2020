@@ -1,5 +1,5 @@
 import { SafeHtmlPipe } from 'src/app/core/pipes/safe-html.pipe';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
     imports: [SafeHtmlPipe],
@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
     templateUrl: './video.component.html'
 })
 export class SharedVideoComponent {
-	@Input() embedVideo: string;
+	embedVideo = input<string>();
 }

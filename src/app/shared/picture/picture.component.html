@@ -1,27 +1,27 @@
 <picture class="picture">
-  @if (cover.webp2x) {
+  @if (cover().webp2x) {
     <source
-      [srcset]="IMAGEFOLDER + imageFolder + cover.webp2x + ' 2x'"
+      [srcset]="IMAGEFOLDER + imageFolder() + cover().webp2x + ' 2x'"
       type="image/webp"
       >
   }
 
-  @if (cover.webp) {
+  @if (cover().webp) {
     <source
-      [srcset]="IMAGEFOLDER + imageFolder + cover.webp"
+      [srcset]="IMAGEFOLDER + imageFolder() + cover().webp"
       type="image/webp"
       >
   }
 
   <!-- <source
-  *ngIf="cover.default"
-  [srcset]="IMAGEFOLDER + imageFolder + cover.default"
+  *ngIf="cover().default"
+  [srcset]="IMAGEFOLDER + imageFolder() + cover().default"
   type="image/jpeg"
   > -->
 
   <img
-    [class]="class"
-    [src]="IMAGEFOLDER + imageFolder + cover.default"
+    [class]="class()"
+    [src]="IMAGEFOLDER + imageFolder() + cover().default"
     alt=""
     loading="lazy"
     >

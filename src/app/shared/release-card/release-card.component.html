@@ -1,34 +1,32 @@
 <div class="release-card">
-  @if (releaseItem.releaseRoute) {
-    <a class="release-card__link" [routerLink]="['/releases', releaseItem.releaseRoute]"></a>
+  @if (releaseItem().releaseRoute) {
+    <a class="release-card__link" [routerLink]="['/releases', releaseItem().releaseRoute]"></a>
   }
 
-  <app-picture [cover]="releaseItem.releaseCover" [class]="'release-card__image'" [imageFolder]="'release-cover/'"></app-picture>
-
+  <app-picture [cover]="releaseItem().releaseCover" [class]="'release-card__image'" [imageFolder]="'release-cover/'"></app-picture>
   <div class="release-card__inner">
     <div class="release-card__top">
       <div class="release-card__top-title">
-        {{releaseItem.releaseNumber}}
-
-        @if (releaseItem.isNew) {
+        {{releaseItem().releaseNumber}}
+        @if (releaseItem().isNew) {
           <img class="release-card__new" src="assets/images/icon_new.gif" loading="lazy">
         }
       </div>
 
       <div class="release-card__top-text">
-        {{releaseItem.releaseYear}}
+        {{releaseItem().releaseYear}}
       </div>
     </div>
 
     <div class="release-card__bottom">
       <div class="release-card__bottom-title">
-        @if (releaseItem.isFree) {
+        @if (releaseItem().isFree) {
           <span class="free-icon">Free</span>
-          }{{releaseItem.releaseTitle}}
+          }{{releaseItem().releaseTitle}}
         </div>
 
         <div class="release-card__bottom-text">
-          {{releaseItem.releaseSubTitle}}
+          {{releaseItem().releaseSubTitle}}
         </div>
       </div>
     </div>

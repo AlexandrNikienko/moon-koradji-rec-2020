@@ -1,5 +1,5 @@
 
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,12 +9,7 @@ import { RouterModule } from '@angular/router';
     styleUrls: ['./heading.component.scss']
 })
 export class HeadingComponent {	
-	@Input()
-	title: string;
-
-	@Input()
-	subTitle: string;
-
-	@Input()
-	route: string;
+	title = input<string>();
+	subTitle = input<string>();
+	route = input<string>();
 }
