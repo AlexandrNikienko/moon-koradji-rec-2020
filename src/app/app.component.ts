@@ -11,12 +11,12 @@ import { ScrollTopService } from './core/services/scroll-to-top.service';
 
 @Component({
     imports: [
-    RouterModule,
-    HeaderComponent,
-    FooterComponent,
-    ScrollToTopComponent,
-    MatTooltipModule
-],
+		RouterModule,
+		HeaderComponent,
+		FooterComponent,
+		ScrollToTopComponent,
+		MatTooltipModule
+	],
     selector: 'app-root',
     templateUrl: './app.component.html',
     providers: [DataService, ScrollTopService]

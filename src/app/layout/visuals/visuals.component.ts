@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-	standalone: true,
 	selector: 'app-visuals',
 	templateUrl: './visuals.component.html'
 })
