@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChildren, OnDestroy, OnInit, inject, ElementRef, signal, computed, effect } from '@angular/core';
+import { Component, viewChildren, OnDestroy, OnInit, inject, ElementRef, signal, computed, effect } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { MatSelectModule } from '@angular/material/select';
@@ -17,20 +17,20 @@ type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
 
 @Component({
     imports: [
-    HeadingComponent,
-    RouterModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSlideToggleModule
-],
+		HeadingComponent,
+		RouterModule,
+		MatFormFieldModule,
+		MatSelectModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatSlideToggleModule
+	],
     selector: 'app-artists',
     templateUrl: './artists.component.html',
     styleUrls: ['artists.scss']
 })
 export class ArtistsComponent implements OnInit, OnDestroy {
-	@ViewChildren('artistName') artistNames: QueryList<ElementRef>;
+	artistNames = viewChildren('artistName', { read: ElementRef });
 
 	private dataservice = inject(DataService);
 	private metaData = inject(MetaDataService);
@@ -112,7 +112,7 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 		document.querySelectorAll('.letter-separator').forEach(e => e.remove());
 
 		let startLetter = '';
-		this.artistNames.forEach(ref => {
+		this.artistNames().forEach(ref => {
 			const el = ref.nativeElement;
 			const name = el.textContent.trim();
 			const firstLetter = name.charAt(0).toUpperCase();
