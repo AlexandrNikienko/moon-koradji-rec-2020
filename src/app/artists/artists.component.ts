@@ -36,53 +36,21 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 	private allArtists = signal<Artist[]>([]);
 	private allDjs = signal<Artist[]>([]);
 
-	public artists = computed<Artist[]>(() => {
-		let list = this.allArtists();
-		const countries = this.choosenCountries();
-		const status = this.choosenStatus();
+	public artists = computed(() =>
+		this.filterArtists(
+			this.allArtists(),
+			this.choosenCountries(),
+			this.choosenStatus()
+		)
+	);
 
-		if (countries && countries.length > 0) {
-			list = list.filter(artist => countries.includes(artist.artistCountry));
-		}
-
-		if (status && status !== 'All') {
-			if (status === 'Featured') {
-				list = list.filter(artist => artist.featured);
-			} else if (status === 'Inactive') {
-				list = list.filter(artist => artist.inactive);
-			} else if (status === 'Active') {
-				list = list.filter(artist => !artist.inactive);
-			} else if (status === 'Has Podcast') {
-				list = list.filter(artist => artist.mixes?.length > 0);
-			}
-		}
-
-		return list;
-	});
-
-	public djs = computed<Artist[]>(() => {
-		let list = this.allDjs();
-		const countries = this.choosenCountries();
-		const status = this.choosenStatus();
-
-		if (countries && countries.length > 0) {
-			list = list.filter(dj => countries.includes(dj.artistCountry));
-		}
-
-		if (status && status !== 'All') {
-			if (status === 'Featured') {
-				list = list.filter(dj => dj.featured);
-			} else if (status === 'Inactive') {
-				list = list.filter(dj => dj.inactive);
-			} else if (status === 'Active') {
-				list = list.filter(dj => !dj.inactive);
-			} else if (status === 'Has Podcast') {
-				list = list.filter(dj => dj.mixes?.length > 0);
-			}
-		}
-
-		return list;
-	});
+	public djs = computed(() =>
+		this.filterArtists(
+			this.allDjs(),
+			this.choosenCountries(),
+			this.choosenStatus()
+		)
+	);
 
 	private alphabetEffect = effect(() => {
 		this.artists(); // track dependency
@@ -112,7 +80,7 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 		const artistsSub = this.dataservice.requestToData<Artist>('artists').subscribe(artists => {
 			this.allArtists.set(artists);
 
-			// Create an array of pairs (artistCountry, flag)
+			// Create an array of alphabet pairs (artistCountry, flag)
 			const countryFlagPairs = artists.map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
 			const uniquePairsSet = new Set(countryFlagPairs.map(o => JSON.stringify(o)));
 			const uniquePairs = Array.from(uniquePairsSet).map(o => JSON.parse(o));
@@ -162,5 +130,26 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 
 	private runAlphabeticalMarksAfterRender(): void {
 		queueMicrotask(() => this.setAlphabeticalMarks());
+	}
+
+	private filterArtists(list: Artist[], countries: string[], status: string): Artist[] {
+		let result = list;
+
+		if (countries.length > 0) {
+			result = result.filter(a => countries.includes(a.artistCountry));
+		}
+
+		switch (status) {
+			case 'Featured':
+				return result.filter(a => a.featured);
+			case 'Inactive':
+				return result.filter(a => a.inactive);
+			case 'Active':
+				return result.filter(a => !a.inactive);
+			case 'Has Podcast':
+				return result.filter(a => (a.mixes?.length ?? 0) > 0);
+			default:
+				return result;
+		}
 	}
 }
