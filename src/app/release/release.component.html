@@ -1,77 +1,77 @@
-@if (release) {
+@if (release()) {
   <div class="row">
-    <mk-heading [title]="release.releaseTitle"/>
+    <mk-heading [title]="release().releaseTitle"/>
     <div class="offset-lg-1 col-lg-4 col-md-5 col-sm-12">
       <!-- <a (click)="shareOnFacebook()" class="btn btn-link" href="javascript: void(0)" title="Share on Facebook" style="position: absolute">
       <span class="fas fa-share fa-2x"></span>
     </a> -->
-    <app-picture [cover]="release.releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
+    <app-picture [cover]="release().releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
     <a class="s-go-back mb-16" routerLink="/releases">
       <i class="fas fa-long-arrow-alt-left"></i>Go to Releases page
     </a>
   </div>
   <div class="col-lg-6 col-md-7 col-sm-12">
-    @if (release.embedAudio) {
-      <app-audio-player [embedAudio]="release.embedAudio"></app-audio-player>
+    @if (release().embedAudio) {
+      <app-audio-player [embedAudio]="release().embedAudio"></app-audio-player>
     }
   </div>
   <div class="offset-lg-1 col-lg-10">
     <div class="release-credits">
-      @if (release.bandcampLink || release.bandcamp24Link) {
+      @if (release().bandcampLink || release().bandcamp24Link) {
         <div class="release-credits__side">
-          <p class="release-credits__title">{{release.isFree ? "Free Download:" : "Buy Digital:"}}</p>
-          @if (release.bandcampLink) {
-            <a href="{{release.bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
+          <p class="release-credits__title">{{release().isFree ? "Free Download:" : "Buy Digital:"}}</p>
+          @if (release().bandcampLink) {
+            <a href="{{release().bandcampLink}}" target="_blank" class="release-link">Bandcamp</a>
           }
-          @if (release.bandcamp24Link) {
-            <a href="{{release.bandcamp24Link}}" target="_blank" class="release-link">Bandcamp 24 bit</a>
+          @if (release().bandcamp24Link) {
+            <a href="{{release().bandcamp24Link}}" target="_blank" class="release-link">Bandcamp 24 bit</a>
           }
         </div>
       }
-      @if (release.beatspaceLink) {
+      @if (release().beatspaceLink) {
         <div class="release-credits__side">
           <div class="release-credits__icon"></div>
           <p class="release-credits__title">CD Purchase:</p>
-          <a href="{{release.beatspaceLink}}" target="_blank" class="release-link">Beatspace</a>
+          <a href="{{release().beatspaceLink}}" target="_blank" class="release-link">Beatspace</a>
         </div>
       }
     </div>
     <div class="release-description">
-      @for (description of release.releaseDescription; track description) {
+      @for (description of release().releaseDescription; track description) {
         <p class="release-description__paragraph">
           {{description.paragraph}}
         </p>
       }
     </div>
     <div class="release-credits text-align-right">
-      @if (release.compiledBy) {
+      @if (release().compiledBy) {
         <p class="release-credits__paragraph dark-color">
-          Compiled by <a routerLink="{{'/artists/' + release.compiledBy.replace(' ', '-').toLowerCase()}}">{{release.compiledBy}}</a>
+          Compiled by <a routerLink="{{'/artists/' + release().compiledBy.replace(' ', '-').toLowerCase()}}">{{release().compiledBy}}</a>
         </p>
       }
-      @if (release.releaseAuthor) {
+      @if (release().releaseAuthor) {
         <p class="release-credits__paragraph dark-color">
-          W&P by {{release.releaseAuthor}}
+          W&P by {{release().releaseAuthor}}
         </p>
       }
-      @if (release.masteredBy) {
+      @if (release().masteredBy) {
         <p class="release-credits__paragraph dark-color">
-          Mastering by {{release.masteredBy}}
+          Mastering by {{release().masteredBy}}
         </p>
       }
-      @if (release.artworkBy) {
+      @if (release().artworkBy) {
         <p class="release-credits__paragraph dark-color">
-          Artwork by {{release.artworkBy}}
+          Artwork by {{release().artworkBy}}
         </p>
       }
       <p class="release-credits__paragraph dark-color">
-        Release date: {{release.releaseDate || "Coming soon" }}
+        Release date: {{release().releaseDate || "Coming soon" }}
       </p>
     </div>
-    @if (involved.length > 0) {
+    @if (involvedArtists().length > 0) {
       <div class="col-md-12 col-sm-12 s-involved-artists">
         <p class="s-involved-artists__title">Involved musicians:</p>
-        @for (artist of involved; track artist) {
+        @for (artist of involvedArtists(); track artist) {
           <div class="s-involved-artists__item">
             <a [routerLink]="['/artists', artist.artistRoute]"
               class="s-involved-artists__content"
@@ -84,26 +84,26 @@
       </div>
     }
   </div>
-  @if (release.embedVideo) {
+  @if (release().embedVideo) {
     <div class="offset-md-1 col-md-10 col-sm-12">
-      <app-shared-video [embedVideo]="release.embedVideo"></app-shared-video>
+      <app-shared-video [embedVideo]="release().embedVideo"></app-shared-video>
     </div>
   }
 </div>
 }
 
 <div class="catalog">
-  @if (previousRelease) {
+  @if (previousRelease()) {
     <div class="catalog__prev">
       <p>Previous release:</p>
-      <app-release-card [releaseItem]="previousRelease"></app-release-card>
+      <app-release-card [releaseItem]="previousRelease()"></app-release-card>
     </div>
   }
 
-  @if (nextRelease) {
+  @if (nextRelease()) {
     <div class="catalog__next">
       <p>Next release:</p>
-      <app-release-card [releaseItem]="nextRelease"></app-release-card>
+      <app-release-card [releaseItem]="nextRelease()"></app-release-card>
     </div>
   }
 </div>

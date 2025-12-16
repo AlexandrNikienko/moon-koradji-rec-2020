@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, ParamMap, Router, RouterModule } from '@angular/router';
-import { Observable, Subject, of } from 'rxjs';
-import { takeUntil, switchMap, tap } from 'rxjs/operators';
+import { Component, DestroyRef, OnInit, computed, effect, inject, signal } from '@angular/core';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 import { DataService } from '../core/services/data.service';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
@@ -13,84 +13,93 @@ import { SharedVideoComponent } from './../shared/video/video.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
-import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 import { ReleaseCardComponent } from '../shared/release-card/release-card.component';
-import { Utils } from '../core/utils';
 
 @Component({
-    selector: 'app-release',
-    imports: [
-        CommonModule,
-        RouterModule,
-        SafeHtmlPipe,
-        HeadingComponent,
-        AudioPlayerComponent,
-        SharedVideoComponent,
-        PictureComponent,
-        ReleaseCardComponent
-    ],
-    templateUrl: './release.component.html',
-    styleUrls: ['release.component.scss']
+	selector: 'app-release',
+	imports: [
+		CommonModule,
+		RouterModule,
+		HeadingComponent,
+		AudioPlayerComponent,
+		SharedVideoComponent,
+		PictureComponent,
+		ReleaseCardComponent
+	],
+	templateUrl: './release.component.html',
+	styleUrls: ['release.component.scss']
 })
 
-export class ReleaseComponent implements OnInit, OnDestroy {
+export class ReleaseComponent implements OnInit {
 	private route = inject(ActivatedRoute);
 	private router = inject(Router);
 	private dataService = inject(DataService);
 	private metaData = inject(MetaDataService);
-
-	release: Release;
-	nextRelease: Release;
-	previousRelease: Release;
-	involved: Artist[] = [];
-	private destroyStream = new Subject<void>();
+	private destroyRef = inject(DestroyRef);
 
 	private metaDataObj: iMeta;
 
-	ngOnInit() {
-		this.route.paramMap.pipe(
-			takeUntil(this.destroyStream)
-		)
-		.subscribe((params: ParamMap) => {
-			this.fetchReleaseData(params.get('releaseRoute'));
-		});
-	}
+	releaseRoute = toSignal(
+		this.route.paramMap.pipe(map(params => params.get('releaseRoute'))),
+		{ initialValue: null }
+	);
 
-	ngOnDestroy() {
-		this.destroyStream.next();
-	}
+	allReleases = signal<Release[]>([]);
+	allArtists = signal<Artist[]>([]);
 
-	fetchReleaseData(releaseRoute: string): void {
-		this.dataService.requestToData<Release>('releases').pipe(
-			switchMap(releases => {
-				const releaseIndex = releases.findIndex((release: Release) => release['releaseRoute'] === releaseRoute);
+	releaseIndex = computed<number>(() =>
+		this.allReleases().findIndex(r => r.releaseRoute === this.releaseRoute())
+	);
 
-				if (releaseIndex === -1) {
-					this.router.navigate(['/404'])
-					return of(null);
-				}
+	release = computed<Release | null>(() =>
+		this.releaseIndex() >= 0 ? this.allReleases()[this.releaseIndex()] : null
+	);
 
-				this.release = releases[releaseIndex];
-				this.nextRelease = releaseIndex === 0 ? null : releases[releaseIndex - 1];
-				this.previousRelease = releaseIndex === releases.length ? null : releases[releaseIndex + 1];
+	nextRelease = computed<Release | null>(() => {
+		const i = this.releaseIndex();
+		return i > 0 ? this.allReleases()[i - 1] : null;
+	});
 
-				// this.setMetaData(this.release);
+	previousRelease = computed<Release | null>(() => {
+		const i = this.releaseIndex();
+		return i >= 0 && i < this.allReleases().length - 1 ? this.allReleases()[i + 1] : null;
+	});
 
-				return this.dataService.requestToData<Artist>('artists');
-			}),
-			takeUntil(this.destroyStream)
-		).subscribe(artists => {
-			this.involved = artists ? this.getInvolvedArtists(artists, this.release.artists) : null;
-			console.log('this.involved', this.involved);
-		})
-	}
+	involvedArtists = computed<Artist[]>(() => {
+		const release = this.release();
+		if (!release) return [];
 
-	getInvolvedArtists(allArtists: Artist[], releaseArtists: string[]): Artist[] {
-		return allArtists.filter(artist => releaseArtists.includes(artist.artistName));
+		return this.allArtists().filter(a => release.artists.includes(a.artistName));
+	});
+
+	private releaseEffect = effect(() => {
+		if (
+			this.allReleases().length > 0 &&
+			this.releaseRoute() &&
+			!this.release()
+		) {
+			this.router.navigate(['/404']);
+		}
+
+		// if (this.release()) {
+		// 	this.setMetaData(this.release()!);
+		// }
+	});
+
+	ngOnInit(): void {
+		this.dataService
+			.requestToData<Release>('releases')
+			.pipe(takeUntilDestroyed(this.destroyRef))
+			.subscribe(data => this.allReleases.set(data));
+
+		this.dataService
+			.requestToData<Artist>('artists')
+			.pipe(takeUntilDestroyed(this.destroyRef))
+			.subscribe(data => this.allArtists.set(data));
 	}
 
 	shareOnFacebook(): void {
-		window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent('https://www.moonkoradji.com/releases/' + this.release.releaseRoute), '_blank');
+		window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent('https://www.moonkoradji.com/releases/' + this.release().releaseRoute), '_blank');
 	}
 
 	setMetaData(release: Release): void {
