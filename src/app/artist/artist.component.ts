@@ -1,15 +1,16 @@
 import { Artist } from './../core/models/artist.model';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, signal, computed, effect } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { DataService } from '../core/services/data.service';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
-import { switchMap, takeUntil } from 'rxjs/operators';
+import { map, switchMap, takeUntil } from 'rxjs/operators';
 
 @Component({
     imports: [
@@ -26,28 +27,29 @@ export class ArtistComponent implements OnInit, OnDestroy {
 	private router = inject(Router);
 	private dataService = inject(DataService);
 	private metaData = inject(MetaDataService);
-
-	artist: Artist;
-	private artistName: string;
 	private destroyStream = new Subject<void>();
 
+	artistRoute = toSignal(
+		this.route.paramMap.pipe(map(params => params.get('artistRoute'))),
+		{ initialValue: null }
+	);
+
+	allArtists = signal<Artist[]>([]);
+
+	artist = computed<Artist>(() =>
+		this.allArtists().find(a => a.artistRoute === this.artistRoute()) ?? null
+	);
+
 	ngOnInit(): void {
-		this.route.paramMap.pipe(
-			switchMap((params: ParamMap) => {
-				this.artistName = params.get('artistRoute');
-				return this.dataService.requestToData<Artist>('artists');
-			}),
-			takeUntil(this.destroyStream)
-		)
-		.subscribe(response => {
-			this.artist = response.find((obj: Artist) => obj['artistRoute'] === this.artistName);
+		this.dataService.requestToData<Artist>('artists')
+			.pipe(takeUntil(this.destroyStream))
+			.subscribe(data => this.allArtists.set(data));
 
-			if (!this.artist) {
-				this.router.navigate(['/404'])
-				return;
+		effect(() => {
+			if (this.artist() === null && this.artistRoute() !== null) {
+				this.router.navigate(['/404']);
+				// this.setMetaData(this.artist());
 			}
-
-			// this.setMetaData(this.artist);
 		});
 	}
 
