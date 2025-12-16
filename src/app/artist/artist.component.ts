@@ -1,7 +1,7 @@
 import { Artist } from './../core/models/artist.model';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy, inject, signal, computed, effect } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
@@ -10,7 +10,7 @@ import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { DataService } from '../core/services/data.service';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
-import { map, switchMap, takeUntil } from 'rxjs/operators';
+import { map, takeUntil } from 'rxjs/operators';
 
 @Component({
     imports: [
@@ -40,17 +40,17 @@ export class ArtistComponent implements OnInit, OnDestroy {
 		this.allArtists().find(a => a.artistRoute === this.artistRoute()) ?? null
 	);
 
+	private artistEffect = effect(() => {
+		if (this.allArtists().length > 0 && !this.artist() && this.artistRoute()) {
+			this.router.navigate(['/404']);
+			// this.setMetaData(this.artist());
+		}
+	});
+
 	ngOnInit(): void {
 		this.dataService.requestToData<Artist>('artists')
 			.pipe(takeUntil(this.destroyStream))
 			.subscribe(data => this.allArtists.set(data));
-
-		effect(() => {
-			if (this.artist() === null && this.artistRoute() !== null) {
-				this.router.navigate(['/404']);
-				// this.setMetaData(this.artist());
-			}
-		});
 	}
 
 	ngOnDestroy(): void {
