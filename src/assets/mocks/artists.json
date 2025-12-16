@@ -2777,6 +2777,193 @@
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2039236964\"></iframe>"
 				}
 			]
-		}
+		},
+		{
+			"role": "dj",
+            "artistRoute": "dj-injir",
+            "artistName": "DJ Injir",
+            "artistRealName": "Oleksii Salmin",
+            "artistCountry": "Ukraine",
+            "flag": "ua",
+            "artistAvatar": "dj_injir.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Oleksii Salmin was born in Ukraine in 1981. A strong addiction to trippy psychedelic music from his school days led Oleksii to party organizing and DJing in the mid-2000s."
+                },
+                {
+                    "paragraph": "And since that time, in every DJ set he delivers a playful vibe, organic sound design, and a deep commitment to psychedelic atmospheres that will bring mind, body and soul into incredible cosmic dance."
+                }
+            ],
+            "artistFacebook": "https://www.facebook.com/oleksiisalmin",
+            "artistSoundcloud": "https://soundcloud.com/injir",
+            "mixes": [
+                {
+                    "year": "2019",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/415934802&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
+                }
+            ]
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-liinad",
+            "artistName": "DJ Liinad",
+            "artistRealName": "Daniil Lebedyntsev",
+            "artistCountry": "Ukraine",
+            "flag": "ua",
+            "artistAvatar": "dj_liinad.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Daniil, the body-mind mechanism behind DJ Liinad, also known as Saikozaurus, was born in Odessa, Ukraine in 1980. He discovered psychedelic trance music again back in 1998 and then it was only a matter of time before he started to DJ in 2001. From the beginning, he was always on the “dark side” of the psychedelic trance. In 2004 Daniil felt in love with scandinavian forest music, so since that time his sets became more deep, mystic and foresty. "
+                },
+                {
+                    "paragraph": "As a practitioner psychologist and therapist in his “daily human life”, Daniil sees great healing potential in combination of altered states of consciousness and hypnotic psychedelic rhythms, so he always chooses tracks for his sets with this idea in mind. Depending on the time he plays and the vibe of the party, it can be wide range of psychedelic music, but listener always can expect deep, dance floor friendly and trippy forest sets for the most experienced psychedelic travelers as well as for open minded newcomers. His exquisite taste in music, rich psychedelic background, personal experience of being a psytrance producer and boundless devotion to the spirit of trance makes that special moments at the party during his sets."
+                },
+                {
+                    "paragraph": "May all beings be happy and free!"
+                }
+            ],
+            "artistFacebook": "https://www.facebook.com/daniilliinad",
+            "artistSoundcloud": "https://soundcloud.com/liinad108",
+            "mixes": [
+                {
+                    "year": "2018",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/510188817\"></iframe>"
+                },
+                {
+                    "year": "2018",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/507587193\"></iframe>"
+                }
+            ]
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-manu",
+            "artistName": "DJ Manu",
+            "artistRealName": "Oleksiy Chaika",
+            "artistCountry": "Ukraine",
+            "flag": "ua",
+            "artistAvatar": "dj_manu.jpg"
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-omsun",
+            "artistName": "DJ Omsun",
+			"featured": true,
+            "artistRealName": "Oleksandr Nikiienko",
+            "artistCountry": "Ukraine",
+            "flag": "ua",
+            "artistAvatar": "dj_omsun.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Oleksandr Nikiienko was born in Kyiv in 1982. He heard trance music first at the age of ten. First happened to visit psy-trance party when reaching the age of twelve. It was 1995 - the year of birth of trance culture in Ukraine. The culture almost absorbed him and greatly changed his life."
+                },
+                {
+                    "paragraph": "From the year of 2000 starts his DJ and organizer career. He is a founder of one of the oldest promo-systems of Ukraine called Moon Koradji."
+                },
+                {
+                    "paragraph": "In august 2007 was made first steps to compile first CD. That days was created Moon Koradji Records."
+                }
+            ],
+            "personalFacebook": "https://www.facebook.com/omsun.moonkoradji",
+            "artistFacebook": "https://www.facebook.com/omsunkoradji",
+            "artistSoundcloud": "http://soundcloud.com/moonkoradji",
+            "artistMixcloud": "https://www.mixcloud.com/Omsun/playlists/dj-omsun/",
+            "mixes": [
+                {
+					"embedCode": "<iframe class=\"playlist-iframe\" width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1428110791&color=%23a2d400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>"
+                }
+            ]
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-tek",
+            "artistName": "DJ Tek",
+            "artistRealName": "Tove Ek",
+            "artistCountry": "Sweden",
+            "flag": "se",
+            "artistAvatar": "dj_tek.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Straight outta Stockholm, Tek has a deep affection for the Scandinavian forest sound and its parallels from around the world. "
+                },
+                {
+                    "paragraph": "Organizing and DJ’ing in Stockholm’s Mindgamers crew, and playing at parties around the world, she has developed her own style, and an ability to make one intensely psychedelic track flow into another in a tightly mixed set that makes you jump around for hours."
+                }
+            ],
+            "artistFacebook": "https://www.facebook.com/tove.ek.73",
+            "artistSoundcloud": "https://soundcloud.com/tek-534574023",
+            "mixes": [
+                {
+                    "year": "2016",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/277250114\"></iframe>"
+                },
+                {
+                    "year": "2015",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221414592\"></iframe>"
+                }
+            ]
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-thales",
+            "artistName": "DJ Thales",
+            "artistRealName": "Thales Rodrigues",
+            "artistCountry": "Brazil",
+            "flag": "br",
+            "artistAvatar": "dj_thales.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Thales Rodrigues was born in 1989 in Porto Alegre, South Brazil. He met psy-trance at the age of 17 going to small parties. His first contact with a CDJ was in 2013 and since then his involvement to the psy-trance scene was a non-stop journey until finding and working with Lua Negra crew by organizing parties and festivals."
+                },
+                {
+                    "paragraph": "Thales’ sets are immersed on forest music synths and ambiences, an intense passage through a well-thought psychedelic mix."
+                }
+            ],
+            "artistFacebook": "https://www.facebook.com/thales.a.rod",
+            "artistSoundcloud": "https://soundcloud.com/thales-rodrigues",
+            "mixes": [
+                {
+                    "year": "2020",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/819646783\"></iframe>"
+                },
+                {
+                    "year": "2018",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/396722661\"></iframe>"
+                }
+            ]
+        },
+        {
+			"role": "dj",
+            "artistRoute": "dj-zloj",
+            "artistName": "DJ Zloj",
+			"featured": true,
+            "artistRealName": "Fabian Djurklou",
+            "artistCountry": "Sweden",
+            "flag": "se",
+            "artistAvatar": "dj_zloj.jpg",
+            "artistDescription": [
+                {
+                    "paragraph": "Fabian Djurklou was born in Thailand 1975. He was adopted by a Swedish family in 1976."
+                },
+                {
+                    "paragraph": "Fabian discovered the psychedelic trance scene around year 2000, was spellbound and soon started djing & organizing parties."
+                },
+                {
+                    "paragraph": "A true forest connoisseur, deeply involved in the Swedish forest movement. As a label DJ for the renowned Moon Koradji Records and as an organizer of countless underground parties in the woods, he has the mark of an experienced pro. He will bring his huge collection of tracks - both released and unreleased, old and new - and put together a face-melting, body-twisting set that won’t leave any room for speculation."
+                }
+            ],
+            "artistFacebook": "https://www.facebook.com/Dj-Zloj-1018532261530687",
+            "artistSoundcloud": "https://soundcloud.com/dj-zloj",
+            "mixes": [
+                {
+                    "year": "2016",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251828527\"></iframe>"
+                },
+                {
+                    "year": "2015",
+                    "embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148834594\"></iframe>"
+                }
+            ]
+        }
 	]
 }

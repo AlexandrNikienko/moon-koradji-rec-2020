@@ -35,8 +35,7 @@ export class ArtistComponent implements OnInit, OnDestroy {
 		this.route.paramMap.pipe(
 			switchMap((params: ParamMap) => {
 				this.artistName = params.get('artistRoute');
-				const requestTo = this.artistName.includes('dj-') ? 'djs' : 'artists';
-				return this.dataService.requestToData<Artist>(requestTo);
+				return this.dataService.requestToData<Artist>('artists');
 			}),
 			takeUntil(this.destroyStream)
 		)

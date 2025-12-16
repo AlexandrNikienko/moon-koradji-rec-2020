@@ -13,6 +13,8 @@ import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Subscription } from 'rxjs';
 import { Artist } from '../core/models/artist.model';
 
+type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
+
 @Component({
     imports: [
     HeadingComponent,
@@ -34,19 +36,18 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 	private metaData = inject(MetaDataService);
 
 	private allArtists = signal<Artist[]>([]);
-	private allDjs = signal<Artist[]>([]);
 
-	public artists = computed(() =>
+	public artists = computed<Artist[]>(() =>
 		this.filterArtists(
-			this.allArtists(),
+			this.allArtists().filter(a => a.role !== 'dj'),
 			this.choosenCountries(),
 			this.choosenStatus()
 		)
 	);
 
-	public djs = computed(() =>
+	public djs = computed<Artist[]>(() =>
 		this.filterArtists(
-			this.allDjs(),
+			this.allArtists().filter(a => a.role === 'dj'),
 			this.choosenCountries(),
 			this.choosenStatus()
 		)
@@ -72,9 +73,9 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 	countryList = signal<{ artistCountry: string, flag: string }[]>([]);
 	choosenCountries = signal<string[]>([]);
 
-	statuses = new FormControl('All');
-	statusList: string[] = ['Active', 'Inactive', 'Featured', 'All', 'Has Podcast'];
-	choosenStatus = signal<string>('All');
+	statuses = new FormControl<ArtistStatus>('All');
+	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
+	choosenStatus = signal<ArtistStatus>('All');
 
 	ngOnInit(): void {
 		const artistsSub = this.dataservice.requestToData<Artist>('artists').subscribe(artists => {
@@ -88,18 +89,13 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 		});
 		this.subs.add(artistsSub);
 
-		const djsSub = this.dataservice.requestToData<Artist>('djs').subscribe(djs => {
-			this.allDjs.set(djs);
-		});
-		this.subs.add(djsSub);
-
 		const countriesSub = this.countries.valueChanges.subscribe(countries => {
 			this.choosenCountries.set(countries ?? []);
 		});
 		this.subs.add(countriesSub);
 
 		const statusesSub = this.statuses.valueChanges.subscribe(status => {
-			this.choosenStatus.set(status || 'All');
+			this.choosenStatus.set(status);
 		});
 		this.subs.add(statusesSub);
 
@@ -132,7 +128,11 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 		queueMicrotask(() => this.setAlphabeticalMarks());
 	}
 
-	private filterArtists(list: Artist[], countries: string[], status: string): Artist[] {
+	private filterArtists(
+		list: Artist[], 
+		countries: string[], 
+		status: ArtistStatus
+	): Artist[] {
 		let result = list;
 
 		if (countries.length > 0) {

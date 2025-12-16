@@ -1,6 +1,7 @@
 import { Paragraph } from './paragraph.model';
 import { Release } from './release.model';
 
+export type Role = 'artist' | 'dj';
 export interface Artist {
     id: string;
     artistRoute: string;
@@ -19,4 +20,5 @@ export interface Artist {
     flag?: string;
 	featured?: boolean;
 	inactive?: boolean;
+	role?: Role;
 }
