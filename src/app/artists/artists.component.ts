@@ -68,7 +68,7 @@ export class ArtistsComponent {
 	countries = new FormControl<string[]>([]);
 	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
 		// Create an array of alphabet pairs (artistCountry, flag)
-		const countryFlagPairs = this.artists().map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
+		const countryFlagPairs = this.allArtists().map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
 		const uniquePairsSet = new Set(countryFlagPairs.map(o => JSON.stringify(o)));
 		const uniquePairs = Array.from(uniquePairsSet).map(o => JSON.parse(o));
 		return uniquePairs.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
