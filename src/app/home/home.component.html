@@ -34,32 +34,34 @@
 </section>
 
 @if (purchase()) {
-  <section class="new">
-    <div class="new__left">
-      <app-picture [cover]="purchase().item.cover" [imageFolder]="'release-cover/'"/>
-    </div>
-    <div class="new__right">
-      @if (purchase().title) {
-        <mk-heading [title]="purchase().title" [subTitle]="purchase().subtitle"/>
-      }
-      <div class="new__title">{{purchase().item.title}}</div>
-      @if (purchase().item.subtitle) {
-        <div class="new__sub-title">&laquo;{{purchase().item.subtitle}}&raquo;</div>
-      }
-      @if (purchase().item.button) {
-        <a
-          [routerLink]="purchase().item.button?.routerLink"
-          [attr.disabled]="!purchase().item.button?.routerLink"
-          class="btn"
-          >
-          {{purchase().item.button?.title}}
-        </a>
-      }
-    </div>
-    <div class="new__bg">
-      <img class="new__bg-image" src="{{coverFolder + purchase().item.cover.default}}" alt="">
-    </div>
-  </section>
+	@for (purchase of purchase(); track $index) {
+		<section class="new">
+			<div class="new__left">
+			<app-picture [cover]="purchase.item.cover" [imageFolder]="'release-cover/'"/>
+			</div>
+			<div class="new__right">
+			@if (purchase.title) {
+				<mk-heading [title]="purchase.title" [subTitle]="purchase.subtitle"/>
+			}
+			<div class="new__title">{{purchase.item.title}}</div>
+			@if (purchase.item.subtitle) {
+				<div class="new__sub-title">&laquo;{{purchase.item.subtitle}}&raquo;</div>
+			}
+			@if (purchase.item.button) {
+				<a
+				[routerLink]="purchase.item.button?.routerLink"
+				[attr.disabled]="!purchase.item.button?.routerLink"
+				class="btn"
+				>
+				{{purchase.item.button?.title}}
+				</a>
+			}
+			</div>
+			<div class="new__bg">
+			<img class="new__bg-image" src="{{coverFolder + purchase.item.cover.default}}" alt="">
+			</div>
+		</section>
+	}
 }
 
 <!-- <section *ngIf="_purchase$ | async as purchase" class="hero-wrapper">

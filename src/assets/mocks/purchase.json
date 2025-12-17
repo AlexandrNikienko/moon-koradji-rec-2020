@@ -1,5 +1,5 @@
 {
-	"purchase": {
+	"purchase": [{
 		"title": "Out Now",
 		"subtitle": "Fresh psychedelic sounds",
 		"item": {
@@ -15,5 +15,5 @@
 				"routerLink": "releases/taakelur-totem"
 			}
 		}
-	}
+	}]
 }

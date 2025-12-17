@@ -17,6 +17,7 @@ import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
 import { Artist } from '../core/models/artist.model';
+import { Purchase } from '../core/models/purchase.model';
 
 @Component({
     selector: 'mk-home',
@@ -40,7 +41,7 @@ export class HomeComponent {
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
 
-	purchase: Signal<any> = this.dataSignalService.getData<any>('purchase');
+	purchase: Signal<Purchase[]> = this.dataSignalService.getData<Purchase>('purchase');
 
 	allReleases: Signal<Release[]> = this.dataSignalService.getData<Release>('releases');
 
