@@ -1,12 +1,13 @@
-import { Component, viewChildren, OnDestroy, OnInit, inject, ElementRef, signal, computed, effect } from '@angular/core';
+import { Component, viewChildren, inject, ElementRef, computed, effect, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { DataService } from '../core/services/data.service';
+import { DataSignalService } from '../core/services/data-signal';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
@@ -29,13 +30,13 @@ type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
     templateUrl: './artists.component.html',
     styleUrls: ['artists.scss']
 })
-export class ArtistsComponent implements OnInit, OnDestroy {
+export class ArtistsComponent {
 	artistNames = viewChildren('artistName', { read: ElementRef });
 
-	private dataservice = inject(DataService);
+	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
 
-	private allArtists = signal<Artist[]>([]);
+	private allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
 	public artists = computed<Artist[]>(() =>
 		this.filterArtists(
@@ -53,11 +54,6 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 		)
 	);
 
-	private alphabetEffect = effect(() => {
-		this.artists(); // track dependency
-		this.runAlphabeticalMarksAfterRender();
-	});
-
 	private subs: Subscription = new Subscription();
 
 	private metaDataObj: iMeta = {
@@ -70,42 +66,32 @@ export class ArtistsComponent implements OnInit, OnDestroy {
 	}
 
 	countries = new FormControl<string[]>([]);
-	countryList = signal<{ artistCountry: string, flag: string }[]>([]);
-	choosenCountries = signal<string[]>([]);
+	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
+		// Create an array of alphabet pairs (artistCountry, flag)
+		const countryFlagPairs = this.artists().map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
+		const uniquePairsSet = new Set(countryFlagPairs.map(o => JSON.stringify(o)));
+		const uniquePairs = Array.from(uniquePairsSet).map(o => JSON.parse(o));
+		return uniquePairs.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
+	});
+	choosenCountries = toSignal(
+		this.countries.valueChanges ?? null, 
+		{ initialValue: [] }
+	);
 
 	statuses = new FormControl<ArtistStatus>('All');
 	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
-	choosenStatus = signal<ArtistStatus>('All');
+	choosenStatus = toSignal(
+		this.statuses.valueChanges ?? null,
+		{ initialValue: 'All' }
+	);
 
-	ngOnInit(): void {
-		const artistsSub = this.dataservice.requestToData<Artist>('artists').subscribe(artists => {
-			this.allArtists.set(artists);
-
-			// Create an array of alphabet pairs (artistCountry, flag)
-			const countryFlagPairs = artists.map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
-			const uniquePairsSet = new Set(countryFlagPairs.map(o => JSON.stringify(o)));
-			const uniquePairs = Array.from(uniquePairsSet).map(o => JSON.parse(o));
-			this.countryList.set(uniquePairs.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry)));
+	constructor() {
+		effect(() => {	
+			if (this.artists()) {
+				this.runAlphabeticalMarksAfterRender();
+				this.metaData.setMetaData(this.metaDataObj);
+			}
 		});
-		this.subs.add(artistsSub);
-
-		const countriesSub = this.countries.valueChanges.subscribe(countries => {
-			this.choosenCountries.set(countries ?? []);
-		});
-		this.subs.add(countriesSub);
-
-		const statusesSub = this.statuses.valueChanges.subscribe(status => {
-			this.choosenStatus.set(status);
-		});
-		this.subs.add(statusesSub);
-
-		this.metaData.setMetaData(this.metaDataObj);
-	}
-
-	ngOnDestroy(): void {
-		if (this.subs) {
-			this.subs.unsubscribe();
-		}
 	}
 
 	setAlphabeticalMarks(): void {

@@ -1,9 +1,9 @@
 <mk-heading [title]="'Our Releases'" [subTitle]="'Purchase digital downloads or physical copies of our releases'"/>
 
-@if (releases$ | async; as releases) {
-  <div class="releases">
-    @for (release of releases; track release.releaseNumber) {
-      <app-release-card [releaseItem]="release" [hidden]="release.hidden"/>
-    }
-  </div>
+@if (releases()) {
+	<div class="releases">
+		@for (release of releases(); track release.releaseNumber) {
+			<app-release-card [releaseItem]="release" [hidden]="release.hidden"/>
+		}
+	</div>
 }

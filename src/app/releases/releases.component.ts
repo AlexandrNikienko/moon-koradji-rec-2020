@@ -1,9 +1,8 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit, Inject, inject } from '@angular/core';
+import { Component, inject, Signal, effect } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { DataService } from '../core/services/data.service';
+import { DataSignalService } from '../core/services/data-signal';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
 import { HeadingComponent } from './../layout/heading/heading.component';
@@ -20,11 +19,11 @@ import { Release } from '../core/models/release.model';
     templateUrl: './releases.component.html',
     styleUrls: ['releases.scss']
 })
-export class ReleasesComponent implements OnInit {
-	private dataService = inject(DataService);
+export class ReleasesComponent {
+	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
 	
-	public releases$: Observable<Release[]>;
+	public releases: Signal<Release[]> = this.dataSignalService.getData<Release>('releases');
 
 	private metaDataObj: iMeta = {
 		title: 'Our Catalogue | Moon Koradji Records',
@@ -35,9 +34,11 @@ export class ReleasesComponent implements OnInit {
 		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	}
 
-	ngOnInit(): void {
-		this.releases$ = this.dataService.requestToData('releases');
-
-		this.metaData.setMetaData(this.metaDataObj);
+	constructor() {
+		effect(() => {
+			if (this.releases()) {
+				this.metaData.setMetaData(this.metaDataObj);
+			}
+		});
 	}
 }

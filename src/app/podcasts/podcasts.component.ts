@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, Signal, afterNextRender, effect, inject } from '@angular/core';
 
-import { DataService } from '../core/services/data.service';
+import { DataSignalService } from '../core/services/data-signal';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { Crystalization } from '../../assets/scripts/crystal-paralax';
 
-import { SharedLoaderComponent } from './../shared/loader/loader.component';
-import { Observable } from 'rxjs';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
+import { SharedLoaderComponent } from '../shared/loader/loader.component';
 
 @Component({
     imports: [
@@ -19,11 +18,12 @@ import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
     templateUrl: './podcasts.component.html',
     styleUrls: ['podcasts.component.scss']
 })
-export class PodcastsComponent implements OnInit, OnDestroy {
-	private dataService = inject(DataService);
+export class PodcastsComponent {
+	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
+	private destroyRef = inject(DestroyRef);
 
-	podcasts$: Observable<any[]>;
+	podcasts: Signal<any[]> = this.dataSignalService.getData<any[]>('podcasts');
 
 	crystalization = new Crystalization();
 
@@ -36,14 +36,19 @@ export class PodcastsComponent implements OnInit, OnDestroy {
 		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	}
 
-	ngOnInit() {
-		this.podcasts$ = this.dataService.requestToData('podcasts');
-		this.metaData.setMetaData(this.metaDataObj);
+	constructor() {
+		effect(() => {
+			if (this.podcasts()) {
+				this.metaData.setMetaData(this.metaDataObj);
+			}
+		});
 
-		this.crystalization.init();
-	}
+		afterNextRender(() => {
+			this.crystalization.init();
 
-	ngOnDestroy() {
-		this.crystalization.destroy();
+			this.destroyRef.onDestroy(() => {
+				this.crystalization.destroy();
+			});
+		});
 	}
 }
