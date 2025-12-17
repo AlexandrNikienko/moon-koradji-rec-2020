@@ -1,5 +1,5 @@
 
-import { Component, OnInit, input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 
 import { Gallery } from '../../core/models/gallery.model';
 
@@ -16,10 +16,6 @@ import { Swiper } from 'swiper/types';
 })
 export class SharedGalleryComponent implements OnInit {
 	items = input<Gallery[]>();
-
-	// @ViewChild('swiper') swiperRef: ElementRef | undefined;
-
-	// swiper?: Swiper;
 
 	ngOnInit() {
 		const swiperEl = document.querySelector('swiper-container');

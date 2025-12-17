@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
     imports: [RouterModule],
@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './footer.component.html',
     styleUrls: ['footer.scss']
 })
-export class FooterComponent implements OnInit {
-	public year: number;
+export class FooterComponent {
+	year = signal<number>(0);
 
-	ngOnInit() {
-		this.getCurrentYear();
+	constructor() {
+		this.year.set(this.getCurrentYear());
 	}
 
 	getCurrentYear(): number {
-		return this.year = (new Date()).getFullYear();
+		return new Date().getFullYear()
 	}
 }

@@ -1,8 +1,7 @@
-import { MatButtonModule } from '@angular/material/button';
-
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
     imports: [RouterModule, MatTooltipModule, MatButtonModule],
@@ -10,25 +9,25 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './header.component.html',
     styleUrls: ['header.scss']
 })
-export class HeaderComponent implements OnInit { 
-	showSupportUkraine: boolean;
-	localStorage: string | null;
+export class HeaderComponent { 
+	showSupportUkraine = signal(false);
+	localStorage = signal<string | null>(null);
 	expiredIn = 30; // days
-	showAgain: boolean;
+	showAgain = signal(false);
 
-	ngOnInit(): void {
+	constructor() {
 		const now = new Date().getTime();
-		this.localStorage = localStorage.getItem('supportUkraine');
-		this.showAgain = this.localStorage &&
-							now - JSON.parse(this.localStorage).hiddenTime > this.expiredIn*24*60*60*1000;
+		this.localStorage.set(localStorage.getItem('supportUkraine'));
+		this.showAgain.set(this.localStorage() &&
+							now - JSON.parse(this.localStorage()).hiddenTime > this.expiredIn*24*60*60*1000);
 
 		if (this.showAgain) localStorage.clear();
 
-		this.showSupportUkraine =  !this.localStorage;
+		this.showSupportUkraine.set(!this.localStorage());
 	}
 	
 	closeSupportBanner(): void {
-		this.showSupportUkraine = false;
+		this.showSupportUkraine.set(false);
 		localStorage.setItem('supportUkraine', JSON.stringify({
 			hiddenTime: new Date().getTime()
 		}));
