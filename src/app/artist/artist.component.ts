@@ -1,15 +1,15 @@
 import { Artist } from './../core/models/artist.model';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject, signal, computed, effect, DestroyRef } from '@angular/core';
+import { Component, inject, computed, effect, DestroyRef, Signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
-import { DataService } from '../core/services/data.service';
 import { SafeHtmlPipe } from '../core/pipes/safe-html.pipe';
 import { map } from 'rxjs/operators';
+import { DataSignalService } from '../core/services/data-signal';
 
 @Component({
     imports: [
@@ -21,42 +21,37 @@ import { map } from 'rxjs/operators';
     templateUrl: 'artist.component.html',
     styleUrls: ['artist.component.scss']
 })
-export class ArtistComponent implements OnInit {
+export class ArtistComponent {
 	private route = inject(ActivatedRoute);
 	private router = inject(Router);
-	private dataService = inject(DataService);
+	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
-	private destroyRef = inject(DestroyRef);
 
 	artistRoute = toSignal(
 		this.route.paramMap.pipe(map(params => params.get('artistRoute'))),
 		{ initialValue: null }
 	);
 
-	allArtists = signal<Artist[]>([]);
+	allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
 	artist = computed<Artist | null>(() =>
 		this.allArtists().find(a => a.artistRoute === this.artistRoute()) ?? null
 	);
 
-	private artistEffect = effect(() => {
-		if (
-			this.allArtists().length > 0 && 
-			!this.artist() && 
-			this.artistRoute()
-		) {
-			this.router.navigate(['/404']);
-		}
+	constructor() {
+		effect(() => {
+			if (
+				this.allArtists().length > 0 && 
+				!this.artist() && 
+				this.artistRoute()
+			) {
+				this.router.navigate(['/404']);
+			}
 
-		// if (this.artist()) {
-			// 	this.setMetaData(this.artist());
-		// }
-	});
-
-	ngOnInit(): void {
-		this.dataService.requestToData<Artist>('artists')
-			.pipe(takeUntilDestroyed(this.destroyRef))
-			.subscribe(data => this.allArtists.set(data));
+			// if (this.artist()) {
+				// 	this.setMetaData(this.artist());
+			// }
+		});
 	}
 
 	setMetaData(artist: Artist): void {

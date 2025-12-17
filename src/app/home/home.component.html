@@ -187,42 +187,42 @@
 	
 		@if (news$ | async; as news) {
 			@if (news.length > 0) {
-<div class="news">
-				<p class="news__header">More News</p>
-		
-				@for (item of news; track item) {
-<div class="news__item">
-					@if (!item.target) {
-<a class="news__link" [routerLink]="item.link">
-						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-						<h1 class="news__desc">
-							<span class="news__title">{{item.title}}</span>
-							<br>
-							@if (item.text) {
-<span class="news__info">{{item.text}}</span>
-}
-						</h1>
-					</a>
-}
-		
-					@if (item.target) {
-<a class="news__link" [attr.href]="item.link" [attr.target]="item.target">
-						<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
-						<h1 class="news__desc">
-							<span class="news__title">{{item.title}}</span>
-							<br>
-							@if (item.text) {
-<span class="news__info">{{item.text}}</span>
-}
-						</h1>
-					</a>
-}
+				<div class="news">
+					<p class="news__header">More News</p>
+				
+					@for (item of news; track item) {
+					<div class="news__item">
+						@if (!item.target) {
+						<a class="news__link" [routerLink]="item.link">
+							<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+							<h1 class="news__desc">
+								<span class="news__title">{{item.title}}</span>
+								<br>
+								@if (item.text) {
+								<span class="news__info">{{item.text}}</span>
+								}
+							</h1>
+						</a>
+						}
+				
+						@if (item.target) {
+						<a class="news__link" [attr.href]="item.link" [attr.target]="item.target">
+							<div class="news__image" [ngStyle]="{backgroundImage: 'url(' + item.image + ')'}"></div>
+							<h1 class="news__desc">
+								<span class="news__title">{{item.title}}</span>
+								<br>
+								@if (item.text) {
+								<span class="news__info">{{item.text}}</span>
+								}
+							</h1>
+						</a>
+						}
+					</div>
+					}
 				</div>
-}
-			</div>
-}
+			}
 		}
-	</div>
+		</div>
 
 	<div class="bottom__right dark-glass">
 		<div class="go-to-merch">

@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, DestroyRef, OnInit, computed, effect, inject, signal } from '@angular/core';
+import { Component, computed, effect, inject, Signal, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 
-import { DataService } from '../core/services/data.service';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
@@ -14,6 +13,7 @@ import { HeadingComponent } from './../layout/heading/heading.component';
 import { Artist } from '../core/models/artist.model';
 import { Release } from '../core/models/release.model';
 import { ReleaseCardComponent } from '../shared/release-card/release-card.component';
+import { DataSignalService } from '../core/services/data-signal';
 
 @Component({
 	selector: 'app-release',
@@ -30,12 +30,11 @@ import { ReleaseCardComponent } from '../shared/release-card/release-card.compon
 	styleUrls: ['release.component.scss']
 })
 
-export class ReleaseComponent implements OnInit {
+export class ReleaseComponent {
 	private route = inject(ActivatedRoute);
 	private router = inject(Router);
-	private dataService = inject(DataService);
+	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
-	private destroyRef = inject(DestroyRef);
 
 	private metaDataObj: iMeta;
 
@@ -44,8 +43,8 @@ export class ReleaseComponent implements OnInit {
 		{ initialValue: null }
 	);
 
-	allReleases = signal<Release[]>([]);
-	allArtists = signal<Artist[]>([]);
+	allReleases: Signal<Release[]> = this.dataSignalService.getData<Release>('releases');
+  	allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
 	releaseIndex = computed<number>(() =>
 		this.allReleases().findIndex(r => r.releaseRoute === this.releaseRoute())
@@ -72,30 +71,20 @@ export class ReleaseComponent implements OnInit {
 		return this.allArtists().filter(a => release.artists.includes(a.artistName));
 	});
 
-	private releaseEffect = effect(() => {
-		if (
-			this.allReleases().length > 0 &&
-			this.releaseRoute() &&
-			!this.release()
-		) {
-			this.router.navigate(['/404']);
-		}
+	constructor() {
+		effect(() => {
+			if (
+				this.allReleases().length > 0 &&
+				this.releaseRoute() &&
+				!this.release()
+			) {
+				this.router.navigate(['/404']);
+			}
 
-		// if (this.release()) {
-		// 	this.setMetaData(this.release()!);
-		// }
-	});
-
-	ngOnInit(): void {
-		this.dataService
-			.requestToData<Release>('releases')
-			.pipe(takeUntilDestroyed(this.destroyRef))
-			.subscribe(data => this.allReleases.set(data));
-
-		this.dataService
-			.requestToData<Artist>('artists')
-			.pipe(takeUntilDestroyed(this.destroyRef))
-			.subscribe(data => this.allArtists.set(data));
+			// if (this.release()) {
+			// 	this.setMetaData(this.release()!);
+			// }
+		});
 	}
 
 	shareOnFacebook(): void {
