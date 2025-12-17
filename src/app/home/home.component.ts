@@ -1,12 +1,10 @@
-import { Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
+import { Component, ElementRef, OnDestroy, QueryList, Signal, ViewChildren, computed, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
 import { JsonLDService } from './../core/services/json-ld.service';
-import { DataService } from '../core/services/data.service';
+import { DataSignalService } from '../core/services/data-signal';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { PodcastComponent } from './podcast/podcast.component';
@@ -34,22 +32,54 @@ import { Artist } from '../core/models/artist.model';
     templateUrl: './home.component.html',
     styleUrls: ['home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
-	private dataService = inject(DataService);
+export class HomeComponent implements OnDestroy {
+	private dataSignalService = inject(DataSignalService);
 	private jsonLDService = inject(JsonLDService);
 	private metaData = inject(MetaDataService);
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
-	featuredGalleryItems: Gallery[] = [];
 
-	purchase$: Observable<any>;
-	news$: Observable<News[]>;
-	releases$: Observable<Release[]>;
-	events$: Observable<Event[]>;
-	purchaseSub: Subscription;
-	filteredReleases$: Observable<Release[]>;
-	artists$: Observable<Artist[]>;
-	featuredArtists: Artist[] = []
+	purchase: Signal<any> = this.dataSignalService.getData<any>('purchase');
+
+	allReleases: Signal<Release[]> = this.dataSignalService.getData<Release>('releases');
+
+	recentReleases: Signal<Release[]> = computed<Release[]>(() =>
+		this.allReleases().filter(release => !release.isHero && !release.hidden).slice(0, 3)
+	);
+
+	artists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
+
+	featuredArtists: Signal<Artist[]> = computed<Artist[]>(() =>
+		this.artists().filter(artist => artist.featured && artist.role !== 'dj')
+	);
+
+	featuredGalleryItems: Signal<Gallery[]> = computed<Gallery[]>(() => {
+		return this.featuredArtists().map(artist => {
+			const artistName = artist.artistName;
+
+			return {
+				name: artistName,
+				route: `/artists/${artistName.replace(/ /g, '-').toLocaleLowerCase()}`,
+				image: {
+					default: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
+					webp: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.webp`
+				}
+			};
+		})
+	});
+
+	news: Signal<News[]> = this.dataSignalService.getData<News>('news');
+
+	events: Signal<Event[]> = this.dataSignalService.getData<Event>('events');
+
+	futureEvents: Signal<Event[]> = computed<Event[]>(() => {
+		const today = new Date();
+
+		return this.events()
+			.filter(e => new Date(e.endDate) >= today)
+			.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime())
+			.slice(0, 3);
+	});
 
 	@ViewChildren(ReleaseCardComponent, { read: ElementRef })
   	releaseCards!: QueryList<ElementRef>;
@@ -68,37 +98,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 	// 	ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	// }
 
-	ngOnInit() {
-		this.purchase$ = this.dataService.requestToData('purchase');
-		this.news$ = this.dataService.requestToData('news');
-		this.releases$ = this.dataService.requestToData('releases');
-		this.events$ = this.dataService.requestToData<Event>('events').pipe(
-			map(events => 
-				events
-					.filter(e => {
-						const today = new Date();
-						const endDate = new Date(e.endDate); // assuming endDate is ISO
-						return endDate >= today;
-					})
-					.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime())
-					.slice(0, 3)
-			)
-		);
+	// ngOnInit() {
+	// 	// this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
 
-		this.filteredReleases$ = this.releases$.pipe(
-			map(releases => releases.filter(release => !release.isHero && !release.hidden).slice(0, 3))
-		);
-
-		this.artists$ = this.dataService.requestToData('artists');
-		this.artists$.subscribe(artists => {
-			this.featuredArtists = this.shuffleArray(artists.filter(artist => artist.featured));
-			this.getFeaturedGaleryItems();
-		})
-
-		// this.jsonLDService.insertSchema(this.jsonLDService.orgSchema);
-
-		// this.metaData.setMetaData(this.metaDataObj);
-	}
+	// 	// this.metaData.setMetaData(this.metaDataObj);
+	// }
 
 	shuffleArray(array: any[]): any[] {
 		for (let i = array.length - 1; i > 0; i--) {
@@ -112,21 +116,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 		if (this.observer) {
 			this.observer.disconnect();
 		}
-	}
-
-	getFeaturedGaleryItems() {
-		this.featuredGalleryItems = this.featuredArtists.map(artist => {
-			const artistName = artist.artistName;
-
-			return {
-				name: artistName,
-				route: `/artists/${artistName.replace(/ /g, '-').toLocaleLowerCase()}`,
-				image: {
-					default: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
-					webp: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.webp`
-				}
-			}
-		})
 	}
 
 	getArtistRoute(artist: string): string {

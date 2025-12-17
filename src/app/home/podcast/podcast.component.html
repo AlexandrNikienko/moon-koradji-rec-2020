@@ -30,7 +30,7 @@
   [route]="'/podcasts'">
 </mk-heading>
 
-@if (podcast$ | async; as podcast) {
+@if (podcast()) {
   <div class="podcast-adv">
     <div class="podcast-adv__border podcast-adv__border--top"></div>
     <div class="podcast-adv__border podcast-adv__border--right"></div>
@@ -42,17 +42,17 @@
       <div class="podcast-adv__subtitle">podcasts</div>
       @if (false) {
         <div class="recent-podcast">
-          @if (logo$ | async; as logo) {
+          @if (logo()) {
             <div
               class="recent-podcast__image"
-            style="background-image: url(/assets/images/podcasts/{{logo}})"></div>
+            style="background-image: url('/assets/images/podcasts/{{logo()}}')"></div>
           }
           <h1 class="recent-podcast__desc">
             <p class="recent-podcast__title">
-              {{podcast[0].month}} Episode #{{podcast[0].number}}
+              {{podcast()[0].month}} Episode #{{podcast()[0].number}}
             </p>
             <p class="recent-podcast__info">
-              with <strong>{{podcast[0].artist}}</strong>
+              with <strong>{{podcast()[0].artist}}</strong>
             </p>
           </h1>
         </div>

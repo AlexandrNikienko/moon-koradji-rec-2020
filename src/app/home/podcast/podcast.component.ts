@@ -1,12 +1,10 @@
 import { HeadingComponent } from './../../layout/heading/heading.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, inject } from "@angular/core";
-import { Observable, Subscription } from 'rxjs';
+import { Component, Signal, computed, inject } from "@angular/core";
 
-import { DataService } from './../../core/services/data.service';
+import { DataSignalService } from './../../core/services/data-signal';
 import { PodcastAdv } from '../../core/models/podcast-adv.model';
-import { map, tap } from 'rxjs/operators';
 
 @Component({
     imports: [CommonModule, RouterModule, HeadingComponent],
@@ -14,11 +12,11 @@ import { map, tap } from 'rxjs/operators';
     templateUrl: './podcast.component.html',
     styleUrls: ['podcasts-adv.scss']
 })
-export class PodcastComponent implements OnInit {
-	private dataService = inject(DataService);
+export class PodcastComponent {
+	private dataSignalService = inject(DataSignalService);
 
-	podcast$: Observable<PodcastAdv[]>;
-	logo$: Observable<string>;
+	podcast: Signal<PodcastAdv[]> = this.dataSignalService.getData<PodcastAdv>('podcast');
+	logo: Signal<string> = computed<string>(() => this.podcast().length ? this.logoMap[this.podcast()[0].month.toLowerCase()] : '');
 
 	logoMap: object = {
 		january: "01-mk-logo-jan-200.jpg",
@@ -33,13 +31,5 @@ export class PodcastComponent implements OnInit {
 		october: "10-mk-logo-oct-200.jpg",
 		november: "11-mk-logo-nov-200.jpg",
 		december: "12-mk-logo-dec-200.jpg",
-	}
-
-	ngOnInit(): void {
-		this.podcast$ = this.dataService.requestToData<PodcastAdv>('podcast');
-
-		this.logo$ = this.podcast$.pipe(
-			map(podcastArray => this.logoMap[podcastArray[0].month.toLowerCase()])
-		)
 	}
 }
