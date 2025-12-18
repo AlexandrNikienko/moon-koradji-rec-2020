@@ -1,8 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import {
 	trigger, state, style, animate, transition
 } from '@angular/animations';
 import { Utils } from 'src/app/core/utils';
+import { fromEvent } from 'rxjs';
+import { throttleTime } from 'rxjs/operators';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
 	selector: 'app-scroll-to-top',
@@ -28,17 +31,24 @@ import { Utils } from 'src/app/core/utils';
 	]
 })
 export class ScrollToTopComponent {
-	showScrollBtn: boolean;
-	goToTop: boolean;
+	showScrollBtn = signal(false);
+	goToTop = signal(false);
+	destroyRef = inject(DestroyRef);
+
+	constructor() {
+		fromEvent(window, 'scroll')
+			.pipe(
+				throttleTime(200),
+				takeUntilDestroyed(this.destroyRef)
+			)
+			.subscribe(() => {
+				this.showScrollBtn.set(window.scrollY > 100);
+			});
+		}
 
 	scrollToTop(): void {
 		Utils.scrollToTop();
-		this.goToTop = true;
-		setTimeout(() => this.goToTop = false, 1000);
-	}
-
-	@HostListener('document:scroll')
-	onScroll(): void {
-		this.showScrollBtn = window.scrollY > 100;
+		this.goToTop.set(true);
+		setTimeout(() => this.goToTop.set(false), 1000);
 	}
 }

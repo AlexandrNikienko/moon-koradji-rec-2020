@@ -1,4 +1,4 @@
 <div class="scroll-to-top"
 	(click)="scrollToTop()"
-	[hidden]="!showScrollBtn"
-	[@animate]="goToTop ? 'to' : 'from'"></div>
+	[hidden]="!showScrollBtn()"
+	[@animate]="goToTop() ? 'to' : 'from'"></div>
