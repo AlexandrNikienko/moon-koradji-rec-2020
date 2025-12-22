@@ -56,7 +56,7 @@ export class HomeComponent {
 	);
 
 	featuredGalleryItems: Signal<Gallery[]> = computed<Gallery[]>(() => {
-		return this.featuredArtists().map(artist => {
+		return this.shuffleArray(this.featuredArtists()).map(artist => {
 			const artistName = artist.artistName;
 
 			return {
@@ -134,7 +134,7 @@ export class HomeComponent {
 		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	}
 
-	shuffleArray(array: any[]): any[] {
+	shuffleArray<T>(array: T[]): T[] {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			[array[i], array[j]] = [array[j], array[i]];

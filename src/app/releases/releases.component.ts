@@ -35,10 +35,6 @@ export class ReleasesComponent {
 	}
 
 	constructor() {
-		effect(() => {
-			if (this.releases()) {
-				this.metaData.setMetaData(this.metaDataObj);
-			}
-		});
+		this.metaData.setMetaData(this.metaDataObj);
 	}
 }

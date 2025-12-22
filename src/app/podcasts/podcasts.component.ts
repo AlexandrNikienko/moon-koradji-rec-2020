@@ -37,11 +37,7 @@ export class PodcastsComponent {
 	}
 
 	constructor() {
-		effect(() => {
-			if (this.podcasts()) {
-				this.metaData.setMetaData(this.metaDataObj);
-			}
-		});
+		this.metaData.setMetaData(this.metaDataObj);
 
 		afterNextRender(() => {
 			this.crystalization.init();

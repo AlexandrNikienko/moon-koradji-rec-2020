@@ -1,4 +1,4 @@
-import { Component, viewChildren, inject, ElementRef, computed, effect, Signal } from '@angular/core';
+import { Component, inject, computed, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 
@@ -11,10 +11,11 @@ import { DataSignalService } from '../core/services/data-signal';
 
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { MetaDataService, iMeta } from './../core/services/meta-data.service';
-import { Subscription } from 'rxjs';
 import { Artist } from '../core/models/artist.model';
 
 type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
+
+type artistsWithLetters = Artist & { letter: string | null };
 
 @Component({
     imports: [
@@ -31,30 +32,26 @@ type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
     styleUrls: ['artists.scss']
 })
 export class ArtistsComponent {
-	artistNames = viewChildren('artistName', { read: ElementRef });
-
 	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
 
 	private allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
-	public artists = computed<Artist[]>(() =>
-		this.filterArtists(
-			this.allArtists().filter(a => a.role !== 'dj'),
-			this.choosenCountries(),
-			this.choosenStatus()
-		)
+	filteredArtists = computed<Artist[]>(() => {
+		const artists = this.allArtists();
+		const countries = this.choosenCountries();
+		const status = this.choosenStatus();
+
+		return this.filterArtists(artists, countries, status);
+	});
+
+	artists = computed<Artist[]>(() =>
+		this.filteredArtists().filter(a => a.role !== 'dj')
 	);
 
-	public djs = computed<Artist[]>(() =>
-		this.filterArtists(
-			this.allArtists().filter(a => a.role === 'dj'),
-			this.choosenCountries(),
-			this.choosenStatus()
-		)
+	djs = computed<Artist[]>(() =>
+		this.filteredArtists().filter(a => a.role === 'dj')
 	);
-
-	private subs: Subscription = new Subscription();
 
 	private metaDataObj: iMeta = {
 		title: 'Innovative Sounds of Psychedelic Trance: Meet Our Talented Artists and DJs',
@@ -68,10 +65,15 @@ export class ArtistsComponent {
 	countries = new FormControl<string[]>([]);
 	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
 		// Create an array of alphabet pairs (artistCountry, flag)
-		const countryFlagPairs = this.allArtists().map(artist => ({ artistCountry: artist.artistCountry, flag: artist.flag }));
-		const uniquePairsSet = new Set(countryFlagPairs.map(o => JSON.stringify(o)));
-		const uniquePairs = Array.from(uniquePairsSet).map(o => JSON.parse(o));
-		return uniquePairs.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
+		const map = new Map<string, string>();
+
+		for (const a of this.allArtists()) {
+			map.set(a.artistCountry, a.flag);
+		}
+
+		return Array.from(map.entries())
+			.map(([artistCountry, flag]) => ({ artistCountry, flag }))
+			.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
 	});
 	choosenCountries = toSignal(
 		this.countries.valueChanges ?? null, 
@@ -85,33 +87,20 @@ export class ArtistsComponent {
 		{ initialValue: 'All' }
 	);
 
-	constructor() {
-		effect(() => {	
-			if (this.artists()) {
-				this.runAlphabeticalMarksAfterRender();
-				this.metaData.setMetaData(this.metaDataObj);
-			}
-		});
-	}
-
-	setAlphabeticalMarks(): void {
-		document.querySelectorAll('.letter-separator').forEach(e => e.remove());
-
+	artistsWithLetters = computed<artistsWithLetters[]>(() => {
 		let startLetter = '';
-		this.artistNames().forEach(ref => {
-			const el = ref.nativeElement;
-			const name = el.textContent.trim();
-			const firstLetter = name.charAt(0).toUpperCase();
 
-			if (firstLetter > startLetter) {
-				el.insertAdjacentHTML('afterend', `<div class="letter-separator">${firstLetter}</div>`);
-				startLetter = firstLetter;
-			}
+		return this.artists().map(artist => {
+			const currentLetter = artist.artistName.charAt(0).toUpperCase();
+			const letter = currentLetter !== startLetter ? currentLetter : null;
+			startLetter = currentLetter;
+
+			return {...artist, letter };
 		});
-	}
+	});
 
-	private runAlphabeticalMarksAfterRender(): void {
-		queueMicrotask(() => this.setAlphabeticalMarks());
+	constructor() {
+		this.metaData.setMetaData(this.metaDataObj);
 	}
 
 	private filterArtists(
