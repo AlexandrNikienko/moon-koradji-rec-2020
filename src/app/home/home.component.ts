@@ -19,6 +19,8 @@ import { PictureComponent } from '../shared/picture/picture.component';
 import { Artist } from '../core/models/artist.model';
 import { Purchase } from '../core/models/purchase.model';
 
+type EventWithArtistRoutes = Event & { artists: { artistName: string; artistRoute: string }[] };
+
 @Component({
     selector: 'mk-home',
     imports: [
@@ -74,13 +76,20 @@ export class HomeComponent {
 
 	events: Signal<Event[]> = this.dataSignalService.getData<Event>('events');
 
-	futureEvents: Signal<Event[]> = computed<Event[]>(() => {
+	futureEvents: Signal<EventWithArtistRoutes[]> = computed<EventWithArtistRoutes[]>(() => {
 		const today = new Date();
 
 		return this.events()
 			.filter(e => new Date(e.endDate) >= today)
 			.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime())
-			.slice(0, 3);
+			.slice(0, 3)
+			.map(event => ({
+				...event,
+				artists: event.artists.map(artistName => ({
+					artistName,
+					artistRoute: this.getArtistRoute(artistName)
+				}))
+			} as EventWithArtistRoutes));
 	});
 
 	releaseCards = viewChildren(ReleaseCardComponent, { read: ElementRef });
@@ -142,7 +151,7 @@ export class HomeComponent {
 		return array;
 	}
 
-	getArtistRoute(artist: string): string {
-		return '/artists/' + artist.toLowerCase().replace(/ /g, '-');
+	getArtistRoute(artistName: string): string {
+		return `/artists/${artistName.replace(/ /g, '-').toLocaleLowerCase()}`
 	}
 }
