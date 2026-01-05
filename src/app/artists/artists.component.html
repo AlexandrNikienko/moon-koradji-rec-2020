@@ -4,7 +4,7 @@
   <mat-form-field appearance="outline">
     <mat-label>Filter by country</mat-label>
 
-    <mat-select [formControl]="countries" multiple>
+    <mat-select [(ngModel)]="choosenCountries" multiple>
       @for (country of countryList(); track country) {
         <mat-option [value]="country.artistCountry">
           <svg class="artist-item__flag">
@@ -19,7 +19,7 @@
   <mat-form-field appearance="outline">
     <mat-label>Filter by status</mat-label>
 
-    <mat-select [formControl]="statuses">
+    <mat-select [(ngModel)]="choosenStatus">
       @for (status of statusList; track status) {
         <mat-option [value]="status">
           {{status}}

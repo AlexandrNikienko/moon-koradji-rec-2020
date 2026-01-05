@@ -11,5 +11,5 @@ export class PictureComponent {
 	cover = input<Cover>();
 	class = input<string>();
 	imageFolder = input<string>();
-	public IMAGEFOLDER = IMAGEFOLDER;
+	IMAGEFOLDER = IMAGEFOLDER;
 }

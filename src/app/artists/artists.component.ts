@@ -1,11 +1,8 @@
-import { Component, inject, computed, Signal } from '@angular/core';
+import { Component, inject, computed, Signal, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { toSignal } from '@angular/core/rxjs-interop';
 
 import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
 
 import { DataSignalService } from '../core/services/data-signal';
 
@@ -21,11 +18,8 @@ type artistsWithLetters = Artist & { letter: string | null };
     imports: [
 		HeadingComponent,
 		RouterModule,
-		MatFormFieldModule,
 		MatSelectModule,
 		FormsModule,
-		ReactiveFormsModule,
-		MatSlideToggleModule
 	],
     selector: 'app-artists',
     templateUrl: './artists.component.html',
@@ -37,6 +31,24 @@ export class ArtistsComponent {
 
 	private allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
+	choosenCountries = signal<string[]>([]);
+    choosenStatus = signal<ArtistStatus>('All');
+
+	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
+		// Create an array of alphabet pairs (artistCountry, flag)
+		const map = new Map<string, string>();
+
+		for (const a of this.allArtists()) {
+			map.set(a.artistCountry, a.flag);
+		}
+
+		return Array.from(map.entries())
+			.map(([artistCountry, flag]) => ({ artistCountry, flag }))
+			.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
+	});
+
+	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
+	
 	filteredArtists = computed<Artist[]>(() => {
 		const artists = this.allArtists();
 		const countries = this.choosenCountries();
@@ -61,31 +73,6 @@ export class ArtistsComponent {
 		ogUrl: 'https://www.moonkoradji.com/artists',
 		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
 	}
-
-	countries = new FormControl<string[]>([]);
-	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
-		// Create an array of alphabet pairs (artistCountry, flag)
-		const map = new Map<string, string>();
-
-		for (const a of this.allArtists()) {
-			map.set(a.artistCountry, a.flag);
-		}
-
-		return Array.from(map.entries())
-			.map(([artistCountry, flag]) => ({ artistCountry, flag }))
-			.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
-	});
-	choosenCountries = toSignal(
-		this.countries.valueChanges ?? null, 
-		{ initialValue: [] }
-	);
-
-	statuses = new FormControl<ArtistStatus>('All');
-	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
-	choosenStatus = toSignal(
-		this.statuses.valueChanges ?? null,
-		{ initialValue: 'All' }
-	);
 
 	artistsWithLetters = computed<artistsWithLetters[]>(() => {
 		let startLetter = '';
