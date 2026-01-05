@@ -2,7 +2,7 @@ import { Component, inject, computed, Signal, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import {form, Field} from '@angular/forms/signals';
 
 import { DataSignalService } from '../core/services/data-signal';
 
@@ -14,12 +14,17 @@ type ArtistStatus = 'All' | 'Active' | 'Inactive' | 'Featured' | 'Has Podcast';
 
 type artistsWithLetters = Artist & { letter: string | null };
 
+interface FilterData {
+  	country: string[];
+  	status: ArtistStatus;
+}
+
 @Component({
     imports: [
 		HeadingComponent,
 		RouterModule,
 		MatSelectModule,
-		FormsModule,
+		Field
 	],
     selector: 'app-artists',
     templateUrl: './artists.component.html',
@@ -29,10 +34,16 @@ export class ArtistsComponent {
 	private dataSignalService = inject(DataSignalService);
 	private metaData = inject(MetaDataService);
 
-	private allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
+	private filterModel = signal<FilterData>({
+		country: [],
+		status: 'All',
+	});
 
-	choosenCountries = signal<string[]>([]);
-    choosenStatus = signal<ArtistStatus>('All');
+	filterForm = form(this.filterModel);
+
+	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
+
+	private allArtists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
 	countryList = computed<{ artistCountry: string, flag: string }[]>(() => {
 		// Create an array of alphabet pairs (artistCountry, flag)
@@ -47,12 +58,11 @@ export class ArtistsComponent {
 			.sort((a, b) => a.artistCountry.localeCompare(b.artistCountry));
 	});
 
-	statusList: ArtistStatus[] = ['All', 'Active', 'Inactive', 'Featured', 'Has Podcast'];
 	
 	filteredArtists = computed<Artist[]>(() => {
 		const artists = this.allArtists();
-		const countries = this.choosenCountries();
-		const status = this.choosenStatus();
+		const countries = this.filterForm.country().value();
+		const status = this.filterForm.status().value();
 
 		return this.filterArtists(artists, countries, status);
 	});
