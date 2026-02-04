@@ -32,4 +32,16 @@ export class HeaderComponent {
 			hiddenTime: new Date().getTime()
 		}));
 	}
+
+	closeMenu(): void {
+		const navbarToggler = document.querySelector<HTMLButtonElement>('.navbar-toggler');
+		const navbarCollapse = document.querySelector<HTMLElement>('#navbarToggler');
+		
+		if (navbarCollapse && navbarToggler) {
+			const isOpen = navbarCollapse.classList.contains('show');
+			if (isOpen) {
+				navbarToggler.click();
+			}
+		}
+	}
 }
