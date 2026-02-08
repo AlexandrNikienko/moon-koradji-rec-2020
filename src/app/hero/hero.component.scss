@@ -2,15 +2,15 @@
 
 .hero {
     position: relative;
-    height: 90vh;
+    height: calc(100vh - 2rem * 2 - 58px * 2);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     margin-inline: -2rem;
 
     @include mobile {
         margin-inline: -1rem;
+		height: calc(100vh - 1rem * 2 - 58px * 2);
     }
 }
 
@@ -108,7 +108,7 @@
 
 .chevron {
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
