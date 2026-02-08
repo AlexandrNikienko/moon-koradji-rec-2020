@@ -8,6 +8,26 @@
     justify-content: center;
     margin-inline: -2rem;
 
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 100%;
+		top: 0;
+		z-index: 1;
+	}
+
+	&:before {
+		left: 0;
+		background: linear-gradient(90deg, #111, rgba(#111, 0));
+	}
+
+	&::after {
+		right: 0;
+		background: linear-gradient(90deg, rgba(#111, 0), #111);
+	}
+
     @include mobile {
         margin-inline: -1rem;
 		height: calc(100vh - 1rem * 2 - 58px * 2);
