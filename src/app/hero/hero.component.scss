@@ -61,7 +61,7 @@
     text-transform: uppercase;
     border-radius: 999px;
     color: #c1eaeb;
-    opacity: 0; // Will be animated by GSAP
+    opacity: 0;
 }
 
 .hero-title {
@@ -75,7 +75,7 @@
 .title {
     margin: 0 0 1rem 0;
     color: #c1eaeb;
-    opacity: 0; // Will be animated by GSAP
+    opacity: 0;
 }
 
 .title-accent {
@@ -88,12 +88,22 @@
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
 }
 
+.letter {
+    display: inline-block;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    
+    &.space {
+        margin-right: 0.3em;
+    }
+}
+
 .subtitle {
     color: #64748b;
     max-width: 56rem;
     margin: 0;
     font-weight: 300;
-    opacity: 0; // Will be animated by GSAP
+    opacity: 0;
 }
 
 .chevron {

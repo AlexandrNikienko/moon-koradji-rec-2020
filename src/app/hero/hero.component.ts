@@ -101,6 +101,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
     // GSAP text animations
     this.animateHeroText();
+    
+    // Setup letter hover effects
+    this.setupLetterHoverEffects();
   }
 
   private animateHeroText(): void {
@@ -137,6 +140,33 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
       { opacity: 1, duration: 0.8, ease: 'power3.out' },
       0.4
     );
+  }
+
+  private setupLetterHoverEffects(): void {
+    const letters = document.querySelectorAll('.letter');
+    
+    letters.forEach((letter) => {
+      letter.addEventListener('mouseenter', (e) => {
+        gsap.to(e.target, {
+          scale: 1.3,
+          rotationZ: (Math.random() * 20 - 10), // Random rotation -10 to 10 degrees
+          filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.8))',
+          duration: 0.3,
+          ease: 'back.out'
+        });
+      });
+
+      letter.addEventListener('mouseleave', (e) => {
+        gsap.to(e.target, {
+          scale: 1,
+          rotationZ: 0,
+          filter: 'drop-shadow(0 0 0px rgba(0, 255, 255, 0))',
+          duration: 0.3,
+          ease: 'back.out',
+          clearProps: 'transform,filter'
+        });
+      });
+    });
   }
 
   ngOnDestroy(): void {
