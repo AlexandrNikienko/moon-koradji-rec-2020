@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('eyebrow', { static: false }) eyebrowRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('titleAccent', { static: false }) titleAccentRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('titleRecords', { static: false }) titleRecordsRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('subtitle', { static: false }) subtitleRef!: ElementRef<HTMLParagraphElement>;
 
   private ctx!: CanvasRenderingContext2D | null;
   private animationId: number | null = null;
@@ -93,6 +98,45 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
     // store resize handler to remove later
     (this as any)._resizeHandler = resize;
+
+    // GSAP text animations
+    this.animateHeroText();
+  }
+
+  private animateHeroText(): void {
+    const tl = gsap.timeline({ delay: 0.2 });
+
+    // Eyebrow fade in & up
+    tl.fromTo(
+      this.eyebrowRef.nativeElement,
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+      0
+    );
+
+    // Title 1 (MOON KORADJI) - slide up
+    tl.fromTo(
+      this.titleAccentRef.nativeElement,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+      0.15
+    );
+
+    // Title 2 (RECORDS) - slide up
+    tl.fromTo(
+      this.titleRecordsRef.nativeElement,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+      0.25
+    );
+
+    // Subtitle fade in
+    tl.fromTo(
+      this.subtitleRef.nativeElement,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.8, ease: 'power3.out' },
+      0.4
+    );
   }
 
   ngOnDestroy(): void {
