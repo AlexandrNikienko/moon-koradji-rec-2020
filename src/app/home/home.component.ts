@@ -9,6 +9,7 @@ import { DataSignalService } from '../core/services/data-signal';
 import { HeadingComponent } from './../layout/heading/heading.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { ReleaseCardComponent } from './../shared/release-card/release-card.component';
+import { HeroComponent } from '../hero/hero.component';
 import { GalleryModule } from '../shared/gallery/gallery.module';
 import { Gallery } from '../core/models/gallery.model';
 import { News } from '../core/models/news.model';
@@ -27,6 +28,7 @@ type EventWithArtistRoutes = Event & { artists: { artistName: string; artistRout
         CommonModule,
         RouterModule,
         GalleryModule, // TODO
+		HeroComponent,
         HeadingComponent,
         ReleaseCardComponent,
         PodcastComponent,
