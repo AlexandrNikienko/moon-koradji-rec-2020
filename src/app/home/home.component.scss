@@ -12,7 +12,7 @@
 // .event,
 //.bottom 
 {
-	margin-bottom: 10rem;
+	margin-bottom: 12rem;
 
 	@include mobile {
 		margin-bottom: 6rem;
@@ -420,7 +420,7 @@ app-release-card {
 
 .deco {
 	svg {
-		width: 300px;
+		width: 250px;
 		height: auto;
 		margin: auto;
 		display: block;
@@ -467,5 +467,5 @@ app-release-card {
 }
 
 .deco1 {
-	margin-top: 4.25rem;
+	margin-bottom: 1rem;
 }
