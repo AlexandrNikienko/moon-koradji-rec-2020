@@ -18,7 +18,6 @@ import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
 import { Artist } from '../core/models/artist.model';
-import { Purchase } from '../core/models/purchase.model';
 
 type EventWithArtistRoutes = Event & { artists: { artistName: string; artistRoute: string }[] };
 
@@ -45,9 +44,35 @@ export class HomeComponent {
 
 	coverFolder = IMAGEFOLDER + 'release-cover/';
 
-	purchase: Signal<Purchase[]> = this.dataSignalService.getData<Purchase>('purchase');
-
 	allReleases: Signal<Release[]> = this.dataSignalService.getData<Release>('releases');
+
+	heroRelease: Signal<Release | undefined> = computed<Release | undefined>(() =>
+		this.allReleases().find(release => release.isHero)
+	);
+
+	heroReleaseStatus: Signal<string> = computed<string>(() => {
+		const release = this.heroRelease();
+		if (!release || !release.releaseDate) return 'Coming Soon';
+		
+		try {
+			// Parse date format like "February 12th, 2026"
+			// Remove ordinal suffixes (st, nd, rd, th)
+			const cleanedDate = release.releaseDate.replace(/(\d+)(st|nd|rd|th),/, '$1,');
+			const releaseDate = new Date(cleanedDate);
+			
+			if (isNaN(releaseDate.getTime())) {
+				return 'Coming Soon';
+			}
+			
+			const today = new Date();
+			today.setHours(0, 0, 0, 0);
+			releaseDate.setHours(0, 0, 0, 0);
+			
+			return releaseDate > today ? 'Coming Soon' : 'Out Now';
+		} catch {
+			return 'Coming Soon';
+		}
+	});
 
 	recentReleases: Signal<Release[]> = computed<Release[]>(() =>
 		this.allReleases().filter(release => !release.isHero && !release.hidden).slice(0, 3)
