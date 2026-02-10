@@ -3,6 +3,42 @@
 		{
 			"isHero": true,
 			"isNew": true,
+			"releaseNumber": "MKRL027",
+			"releaseYear": "2026",
+			"releaseDate": "February 12th, 2026",
+			"releaseTitle": "N3XU5 - Chrome",
+			"releaseSubTitle": "listen & purchase",
+			"releaseCover": {
+				"default": "mkrl027_nexus_chrome.jpg",
+				"webp": "mkrl027_nexus_chrome-500.webp",
+				"webp2x": "mkrl027_nexus_chrome-1000.webp"
+			},
+			"releaseRoute": "nexus-chrome",
+			"releaseDescription": [
+				{   
+					"paragraph": "Chrome is the new EP by N3XU5, inspired by cyberpunk visions of human–machine fusion. It dives into a dystopian future driven by advanced technology, synthetic consciousness, and robotic evolution."
+				},
+				{
+					"paragraph": "The EP features a collaboration with Gu and a powerful remix of legendary Digital Talk track, reimagined with deeper psychedelic layers and a groovier drive."
+				},
+				{
+					"paragraph": "P.S. In cyberpunk, \"chrome\" is slang for advanced cybernetic implants and mechanical body enhancements."
+				},
+				{
+					"paragraph": "Upgrade yourself. Welcome to the future."
+				}
+			],
+			"releaseAuthor": "Miguel Lopes",
+			"masteredBy": "Petran",
+			"artworkBy": "Joe Sanchez",
+			"bandcampLink": "",
+			"embedAudio": "",
+			"artists": [
+				"N3XU5", "Gu", "Digital Talk"
+			]
+		},
+		{
+			"isNew": true,
 			"releaseNumber": "MKRL026",
 			"releaseYear": "2025",
 			"releaseDate": "November 11, 2025",
@@ -35,7 +71,6 @@
 			]
 		},
 		{
-			"isNew": true,
 			"releaseNumber": "MKRL025",
 			"releaseYear": "2025",
 			"releaseDate": "June 6, 2025",

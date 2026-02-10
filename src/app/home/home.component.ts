@@ -65,7 +65,7 @@ export class HomeComponent {
 
 			return {
 				name: artistName,
-				route: `/artists/${artistName.replace(/ /g, '-').toLocaleLowerCase()}`,
+				route: `/artists/${artist.artistRoute}`,
 				image: {
 					default: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.jpg`,
 					webp: `featured_${artistName.replace(/ /g, '_').toLocaleLowerCase()}.webp`

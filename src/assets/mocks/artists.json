@@ -502,6 +502,34 @@
 			]
 		},
 		{
+			"artistRoute": "digital-talk",
+			"artistName": "Digital Talk",
+			"artistRealName": "Julien Fougea & Jean Luc Achintre",
+			"artistCountry": "France",
+			"flag": "fr",
+			"artistAvatar": "artist_digital_talk.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "Digital Talk is Julien Fougea and Luc Achintre, a unique psytrance duo. After experimenting with different aspects of acoustic music, these two childhood friends were drawn into the 90s techno scene."
+				},
+				{
+					"paragraph": "In 1996, alongside their respective projects Mandukya and The Crow, they created the visionary band Droidsect with two other friends. Over five years, they unleashed a huge amount of unreleased tunes, mostly played at underground parties in Goa. The project ended quickly, but a new kind of trance music was born."
+				},
+				{
+					"paragraph": "Building on their previous work while adding new musical directions, Julien and Luc joined forces to create Digital Talk in 2002. The French duo soon began performing at electronic music events all over the globe…"
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/digital.talk.project",
+			"artistSoundcloud": "https://soundcloud.com/digitaltalk",
+			"releases": [
+				{
+					"cdName": "N3XU5 - Chrome",
+					"cdCover": "mkrl027_nexus_chrome.jpg",
+					"cdLink": "nexus-chrome"
+				}
+			]
+		},
+		{
 			"artistRoute": "digitalist",
 			"artistName": "Digitalist",
 			"artistRealName": "Thomas Franske",
@@ -897,6 +925,31 @@
 				{
 					"year": "2021",
 					"embedCode": "<iframe width=\"100%\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1114116088\"></iframe>"
+				}
+			]
+		},
+		{
+			"artistRoute": "gu",
+			"artistName": "Gu",
+			"artistRealName": "Takumi Yamaguchi",
+			"artistCountry": "Japan",
+			"flag": "jp",
+			"artistAvatar": "artist_gu.jpg",
+			"artistDescription": [
+				{
+					"paragraph": "In 2004 Takumi wandered onto the Indian subcontinent, and stumbled into Goa, completely unaware that he was about to have his life changed. In Goa he had his first encounter with this thing known as trance music. After dancing at a couple of parties he decided to become a DJ."
+				},
+				{
+					"paragraph": "He is heavily influenced by the sound of all psychedelic music in the world. In 2006, with the aid of a DAW, he wanted to create an original sound when he started to produce his own music. Dark sounds with groovy basslines being his signature."
+				}
+			],
+			"artistFacebook": "https://www.facebook.com/gu.takumiyamaguchi",
+			"artistSoundcloud": "https://soundcloud.com/gu-jp",
+			"releases": [
+				{
+					"cdName": "N3XU5 - Chrome",
+					"cdCover": "mkrl027_nexus_chrome.jpg",
+					"cdLink": "nexus-chrome"
 				}
 			]
 		},
@@ -1600,9 +1653,10 @@
 			]
 		},
 		{
+			"featured": true,
 			"artistRoute": "nexus",
 			"artistName": "N3XU5",
-			"artistRealName": "Miguel Lopez",
+			"artistRealName": "Miguel Lopes",
 			"artistCountry": "Portugal",
 			"flag": "pt",
 			"artistAvatar": "artist_nexus.jpg",
@@ -1617,6 +1671,11 @@
 			"artistFacebook": "https://www.facebook.com/N3xu5psychedelic",
 			"artistSoundcloud": "https://soundcloud.com/n3xu5",
 			"releases": [
+				{
+					"cdName": "N3XU5 - Chrome",
+					"cdCover": "mkrl027_nexus_chrome.jpg",
+					"cdLink": "nexus-chrome"
+				},
 				{
 					"cdName": "VA Alphaum",
 					"cdCover": "mkrl024_alphaum.jpg",
