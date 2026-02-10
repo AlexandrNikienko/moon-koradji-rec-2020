@@ -66,7 +66,7 @@ export class HomeComponent {
 			
 			const today = new Date();
 			today.setHours(0, 0, 0, 0);
-			releaseDate.setHours(0, 0, 0, 0);
+			releaseDate.setHours(12, 0, 0, 0);
 			
 			return releaseDate > today ? 'Coming Soon' : 'Out Now';
 		} catch {
