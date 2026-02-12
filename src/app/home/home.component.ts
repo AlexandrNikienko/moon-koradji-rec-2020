@@ -59,13 +59,13 @@ export class HomeComponent {
 			// Remove ordinal suffixes (st, nd, rd, th)
 			const cleanedDate = release.releaseDate.replace(/(\d+)(st|nd|rd|th),/, '$1,');
 			const releaseDate = new Date(cleanedDate);
+
 			
 			if (isNaN(releaseDate.getTime())) {
 				return 'Coming Soon';
 			}
 			
 			const today = new Date();
-			today.setHours(0, 0, 0, 0);
 			releaseDate.setHours(12, 0, 0, 0); //12AM
 			
 			return releaseDate > today ? 'Coming Soon' : 'Out Now';
