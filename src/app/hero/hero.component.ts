@@ -19,6 +19,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   private animationId: number | null = null;
   private time = 0;
   private waves: Array<any> = [];
+  private mouseX = 0;
+  private mouseY = 0;
+  private scrollY = 0;
 
   ngAfterViewInit(): void {
     const canvas = this.canvasRef.nativeElement as HTMLCanvasElement;
@@ -30,6 +33,19 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
     };
     resize();
     window.addEventListener('resize', resize);
+
+    // Track mouse movement
+    const handleMouseMove = (e: MouseEvent) => {
+      this.mouseX = e.clientX;
+      this.mouseY = e.clientY;
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Track scroll
+    const handleScroll = () => {
+      this.scrollY = window.scrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
 
     // create waves
     for (let i = 0; i < 5; i++) {
@@ -54,10 +70,20 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
       // flowing waves
       this.waves.forEach((wave, idx) => {
         ctx.beginPath();
+        
         for (let x = 0; x < w; x += 2) {
+          // Calculate distance from cursor X position
+          const distFromMouse = Math.abs(x - this.mouseX);
+          const maxDistance = w / 3; // influence range
+          const influence = Math.max(0, 1 - distFromMouse / maxDistance);
+          
+          // Scroll influence remains global
+          const scrollInfluence = Math.min(1, this.scrollY / 500);
+          
+          // Apply wave with localized mouse influence
           const y = h / 2 +
-            Math.sin(x * wave.frequency + this.time * wave.speed + wave.offset) * wave.amplitude +
-            Math.sin(x * wave.frequency * 2 + this.time * wave.speed * 1.5) * (wave.amplitude / 2);
+            Math.sin(x * wave.frequency + this.time * wave.speed + wave.offset) * wave.amplitude * (1 + influence * 0.6) +
+            Math.sin(x * wave.frequency * 2 + this.time * wave.speed * 1.5 + influence * 3) * (wave.amplitude / 2) * (1 + influence * 0.4);
 
           if (x === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
@@ -96,8 +122,10 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
     this.animationId = requestAnimationFrame(animate);
 
-    // store resize handler to remove later
+    // store handlers to remove later
     (this as any)._resizeHandler = resize;
+    (this as any)._mouseMoveHandler = handleMouseMove;
+    (this as any)._scrollHandler = handleScroll;
 
     // GSAP text animations
     this.animateHeroText();
@@ -172,5 +200,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     if (this.animationId) cancelAnimationFrame(this.animationId);
     if ((this as any)._resizeHandler) window.removeEventListener('resize', (this as any)._resizeHandler);
+    if ((this as any)._mouseMoveHandler) window.removeEventListener('mousemove', (this as any)._mouseMoveHandler);
+    if ((this as any)._scrollHandler) window.removeEventListener('scroll', (this as any)._scrollHandler);
   }
 }
