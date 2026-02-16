@@ -41,7 +41,9 @@ export class DataSignalService {
 
 		this.loading.update(l => ({ ...l, [key]: true }));
 
-		const url = `${DATAFOLDER}${key}.json`;
+		// Cache busts every 1 hour - auto-refresh without rebuild
+		const cacheVersion = Math.floor(Date.now() / (60 * 60 * 1000));
+		const url = `${DATAFOLDER}${key}.json?v=${cacheVersion}`;
 
 		this.http.get<{ [k: string]: T[] }>(url).subscribe({
 			next: data => {

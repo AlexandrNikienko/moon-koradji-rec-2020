@@ -1,4 +1,3 @@
-import { DataService } from './data.service';
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRouteSnapshot } from '@angular/router';
 
@@ -7,7 +6,6 @@ import { Router, ActivatedRouteSnapshot } from '@angular/router';
 })
 export class ResourceExistsGuard  {
 	constructor(
-		private dataService: DataService,
 		private router: Router
 	) {}
   

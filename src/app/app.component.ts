@@ -5,7 +5,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { ScrollToTopComponent } from './layout/scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { DataService } from './core/services/data.service';
 
 import { ScrollTopService } from './core/services/scroll-to-top.service';
 
@@ -19,7 +18,7 @@ import { ScrollTopService } from './core/services/scroll-to-top.service';
 	],
     selector: 'app-root',
     templateUrl: './app.component.html',
-    providers: [DataService, ScrollTopService]
+    providers: [ScrollTopService]
 })
 export class AppComponent {
 	showBackground = true;
