@@ -21,7 +21,10 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   private waves: Array<any> = [];
   private mouseX = 0;
   private mouseY = 0;
+  private targetMouseX = 0;
+  private targetMouseY = 0;
   private scrollY = 0;
+  private readonly MOUSE_LERP_SPEED = 0.1; // smoothing factor (0-1, lower = smoother)
 
   ngAfterViewInit(): void {
     const canvas = this.canvasRef.nativeElement as HTMLCanvasElement;
@@ -36,8 +39,8 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
     // Track mouse movement
     const handleMouseMove = (e: MouseEvent) => {
-      this.mouseX = e.clientX;
-      this.mouseY = e.clientY;
+      this.targetMouseX = e.clientX;
+      this.targetMouseY = e.clientY;
     };
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -66,6 +69,10 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
       ctx.clearRect(0, 0, w, h);
       this.time += 0.01;
+
+      // Smoothly interpolate mouse position towards target
+      this.mouseX += (this.targetMouseX - this.mouseX) * this.MOUSE_LERP_SPEED;
+      this.mouseY += (this.targetMouseY - this.mouseY) * this.MOUSE_LERP_SPEED;
 
       // flowing waves
       this.waves.forEach((wave, idx) => {

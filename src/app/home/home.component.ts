@@ -81,7 +81,7 @@ export class HomeComponent {
 	artists: Signal<Artist[]> = this.dataSignalService.getData<Artist>('artists');
 
 	featuredArtists: Signal<Artist[]> = computed<Artist[]>(() =>
-		this.artists().filter(artist => artist.featured && artist.role !== 'dj')
+		this.artists().filter(artist => artist.featured)
 	);
 
 	featuredGalleryItems: Signal<Gallery[]> = computed<Gallery[]>(() => {
