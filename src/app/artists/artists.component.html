@@ -30,10 +30,10 @@
 
   <ul class="filter__list">
     <li class="filter__list-item">
-      <i class="far fa-gem"></i> - featured artist
+      <i class="far fa-star"></i> - featured artist
     </li>
     <li class="filter__list-item">
-      <i class="fas fa-skull-crossbones"></i> - inactive/closed project
+      <i class="far fa-eye-slash"></i> - inactive/closed project
     </li>
   </ul>
 </div>
@@ -41,26 +41,26 @@
 @if (artistsWithLetters().length) {
 <section class="artists-wrapper mb-16">
 	@for (item of artistsWithLetters(); track item.id) {
-		<div class="artist-item mb-16">
+		@if (item.letter) {
+			<div class="letter-separator">
+				{{ item.letter }}
+			</div>
+		}
+
+		<div class="artist-item">
 			<a [routerLink]="['/artists', item.artistRoute]" class="artist-item__link">
 				<p class="artist-item__name">
-					@if (item.letter) {
-						<div class="letter-separator">
-							{{ item.letter }}
-						</div>
-					}
-
 					{{item.artistName}}
 
-					<sup>
+					<span class="artist-item__icon">
 						@if (item.featured) {
-							<i class="far fa-gem"></i>
+							<i class="far fa-star"></i>
 						}
 
 						@if (item.inactive) {
-							<i class="fas fa-skull-crossbones"></i>
+							<i class="far fa-eye-slash"></i>
 						}
-					</sup>
+					</span>
 				</p>
 
 				<svg class="artist-item__flag">
@@ -82,7 +82,7 @@
 					<p class="artist-item__name">{{item.artistName}}
 						<sup>
 							@if (item.featured) {
-								<i class="far fa-gem"></i>
+								<i class="far fa-star"></i>
 							}
 						</sup>
 					</p>
