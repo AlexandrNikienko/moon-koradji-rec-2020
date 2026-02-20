@@ -29,6 +29,11 @@ export interface Release {
 	artists: Array<string>;
 	hub?: string;
 	involved?: Artist[];
+	streamingLinks: {
+		spotify?: string;
+		appleMusic?: string;
+		beatport?: string;
+	}
 }
 
 interface ReleaseCover {

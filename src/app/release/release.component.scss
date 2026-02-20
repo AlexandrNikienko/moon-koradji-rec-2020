@@ -22,10 +22,31 @@
 	}
 }
 
+.release-actions {
+	margin-block: 1rem 2rem;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+
+	&__title {
+		font-size: 14px;
+		color: #bbb;
+		margin-bottom: 6px;
+	}
+
+	&__icon {
+		background: url("#{$imageFolder}/long-play-record-cover.svg") no-repeat center;
+		width: 18px;
+		height: 18px;
+		margin-inline-end: 0;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+}
+
 .release-credits {
 	margin-bottom: 20px;
 
-	&__title,
 	&__paragraph {
 		margin-bottom: 6px;
 		flex: 1 1 100%;
@@ -39,32 +60,26 @@
 			color: #bbb;
 		}
 	}
-
-	&__icon {
-		display: none;
-		background: url("#{$imageFolder}/long-play-record-cover.svg") no-repeat center;
-		width: 40px;
-		height: 40px;
-		float: left;
-		float: inline-start;
-		margin-right: 0.75rem;
-
-		@supports (margin-inline-end: 0) {
-			margin-right: 0;
-			margin-inline-end: 0.75rem;
-		}
-	}
 }
 
 .release-link {
 	display: inline-block;
-	margin-bottom: 16px;
-	margin-right: 8px;
-	padding: 8px 16px;
-	border: 1px solid;
-	border-radius: 4px;
-	background-color: rgba(0255, 255, 255, 0.25);
-	line-height: normal;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    line-height: normal;
+	white-space: nowrap;
+	font-size: .9rem;
+
+	+ .release-link {
+		margin-left: 0.5rem;
+	}
+
+	&:hover {
+		border-color: rgba(255, 255, 255, 0.3);
+		background-color: rgba(255, 255, 255, 0.1);
+	}
 
 	@include mobile {
 		font-size: 14px;
@@ -90,8 +105,6 @@
 
 	&__title {
 		width: 100%;
-		margin-bottom: 10px;
-		//color: #bbb;
 		font-size: 18px;
 	}
 
@@ -156,5 +169,35 @@
 	@include mobile {
 		margin-top: 0;
 		padding: 1rem;
+	}
+}
+
+.small-title {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	color: #06b6d480;
+	position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+	width: 100%;
+
+	&.text-right {
+		flex-direction: row-reverse;
+
+		&:after {
+			background: linear-gradient(to right, #ff00ff1a, #06b6d480);
+		}
+	}
+
+	&:after {
+		content: "";
+		height: 1px;
+		display: block;
+		flex: 1;
+		background: linear-gradient(to left, #ff00ff1a, #06b6d480);
 	}
 }

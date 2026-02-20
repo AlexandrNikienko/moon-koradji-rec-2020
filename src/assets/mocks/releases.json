@@ -35,7 +35,12 @@
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1436902750/size=large/bgcol=333333/linkcol=0687f5/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/n3xu5-chrome\">N3XU5 - Chrome by Moon Koradji Records</a></iframe>",
 			"artists": [
 				"N3XU5", "Gu", "Digital Talk"
-			]
+			],
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/1IfgABvblxgeak5D6d3zbT",
+				"appleMusic": "https://music.apple.com/ua/album/chrome/1876800124",
+				"beatport": "https://www.beatport.com/release/chrome/5921918"
+			}
 		},
 		{
 			"isNew": true,
@@ -68,7 +73,12 @@
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=322617094/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/taakelur-totem\">Taakelur - Totem by Moon Koradji Records</a></iframe>",
 			"artists": [
 				"Taakelur"
-			]
+			],
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/6FcrSnzzKQWken8xWtVga7",
+				"appleMusic": "https://music.apple.com/ua/album/totem-single/1852774934",
+				"beatport": "https://www.beatport.com/release/totem/5577503"
+			}
 		},
 		{
 			"releaseNumber": "MKRL025",
@@ -97,7 +107,12 @@
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=4281402348/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/para-halu-histora-plethora\">Para Halu - Histora Plethora by Moon Koradji Records</a></iframe>",
 			"artists": [
 				"Para Halu"
-			]
+			],
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/7CE1zOeyt4tgonvAmIOztO",
+				"appleMusic": "https://music.apple.com/ua/album/histora-plethora/1819906661",
+				"beatport": "https://www.beatport.com/release/histora-plethora/5123193"
+			}
 		},
 		{
 			"releaseNumber": "MKRL024",
@@ -133,7 +148,12 @@
 			"artists": [
 				"Gappeq", "Para Halu", "CLAW", "Whrikk", "Kluster", "Total", "N3XU5", "Karash", "Fafazz", "Argaleth", "SEB", "Irukanji"
 			],
-			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2502779302/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-alphaum\">VA Alphaum by Moon Koradji Records</a></iframe>"
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2502779302/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-alphaum\">VA Alphaum by Moon Koradji Records</a></iframe>",
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/7AShCyJExAhhmkuFgdEJM8",
+				"appleMusic": "https://music.apple.com/ua/album/alphaum/1811131365",
+				"beatport": "https://www.beatport.com/release/alphaum/5061768"
+			}
 		},
 		{
 			"releaseNumber": "MKRL023",
@@ -167,7 +187,12 @@
 			"artists": [
 				"Shiibashunsuke"
 			],
-			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1978627189/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-abstract-selection\">Shiibashunsuke - Abstract Selection by Moon Koradji Records</a></iframe>"
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1978627189/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-abstract-selection\">Shiibashunsuke - Abstract Selection by Moon Koradji Records</a></iframe>",
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/4AcGTYVpD7ZIEK0xSCra7x",
+				"appleMusic": "https://music.apple.com/ua/album/abstract-selection/1806120806",
+				"beatport": "https://www.beatport.com/release/abstract-selection/5018779"
+			}
 		},
 		{
 			"releaseNumber": "MKRL022",
@@ -199,7 +224,12 @@
 			"artists": [
 				"Kluster"
 			],
-			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2346894843/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/kluster-mental-rotation\">Kluster - Mental Rotation by Moon Koradji Records</a></iframe>"
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2346894843/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/kluster-mental-rotation\">Kluster - Mental Rotation by Moon Koradji Records</a></iframe>",
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/6HtP9ALI7DLXf1eySlG0FW",
+				"appleMusic": "https://music.apple.com/ua/album/mental-rotation/1798437730",
+				"beatport": "https://www.beatport.com/release/mental-rotation/4958550"
+			}
 		},
 		{
 			"releaseNumber": "MKRL021",
@@ -235,7 +265,11 @@
 				"Katastrof"
 			],
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=807684849/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/katastrof-bent\">Katastrof - Bent by Moon Koradji Records</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/0SaoF4Q8FKp1x01b2jcOqk",
+				"appleMusic": "https://music.apple.com/ua/album/bent/1768751165",
+				"beatport": "https://www.beatport.com/release/bent/4728630"
+			}
 		},
 		{
 			"releaseNumber": "MKRL020",
@@ -268,7 +302,11 @@
 				"Solarythm", "Bodhi", "Para Halu", "Distorted Goblin", "Already Maged", "Adansonia", "Faeyan", "Katastrof", "Savage Scream", "Krapul", "Weirdbass", "SEB"
 			],
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=326457146/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout-2-luminous-darkness\">VA Blackout 2: Luminous Darkness by Moon Koradji Records</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/0C83Jmf5S0vmTtbb07rlTM",
+				"appleMusic": "https://music.apple.com/ua/album/blackout-2-luminous-darkness/1762600913",
+				"beatport": "https://www.beatport.com/release/blackout-2-luminous-darkness/4689445"
+			}
 		},
 		{
 			"releaseNumber": "MKRL019",
@@ -306,7 +344,12 @@
 			"artists": [
 				"Irukanji"
 			],
-			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3405018835/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald\">Irukanji - Springwald by Moon Koradji Records</a></iframe>"
+			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3405018835/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/irukanji-springwald\">Irukanji - Springwald by Moon Koradji Records</a></iframe>",
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/4zoRkNOdSIPFeEGAplrN8D",
+				"appleMusic": "https://music.apple.com/ua/album/springwald/1740151793",
+				"beatport": "https://www.beatport.com/release/springwald/4526440"
+			}
 		},
 		{
 			"releaseNumber": "MKRL018",
@@ -339,7 +382,11 @@
 				"Shiibashunsuke"
 			],
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1334069713/size=large/bgcol=333333/linkcol=e99708/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/shiibashunsuke-innermatics\">Shiibashunsuke - Innermatics by Moon Koradji Records</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/1DLwX6RZSzzULhvh79woLi",
+				"appleMusic": "https://music.apple.com/ua/album/innermatics/1718077995",
+				"beatport": "https://www.beatport.com/release/innermatics/4350900"
+			}
 		},
 		{
 			"releaseNumber": "MKDG005",
@@ -368,7 +415,11 @@
 				"Akkma", "Mendrion", "GnOhm", "Distorted Goblin", "Simon Hayes", "Critter", "Loom", "Savage Scream", "Oliwave", "Already Maged", "Noise Gust", "Ingraval"
 			],
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1107016927/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/va-blackout\">VA Blackout by Moon Koradji Records</a></iframe>",
-			"hub": "https://music.imusician.pro"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/5XGdgCQHZROcP0TCSCDUVF",
+				"appleMusic": "https://music.apple.com/ua/album/blackout/1709312274",
+				"beatport": "https://www.beatport.com/release/blackout/4282266"
+			}
 		},
         {
             "releaseNumber": "MKDG004",
@@ -403,7 +454,11 @@
                 "Oliwave"
             ],
 			"embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3904856309/size=large/bgcol=333333/linkcol=0687f5/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/oliwave-alive-memory\">Oliwave - Alive Memory by Moon Koradji Records</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/0ae6iuGxaGso2UhakowwdG",
+				"appleMusic": "https://music.apple.com/ua/album/alive-memory/1681111870",
+				"beatport": "https://www.beatport.com/release/alive-memory/4086492"
+			}
         },
 		{
             "releaseNumber": "MKDG003",
@@ -437,7 +492,11 @@
                 "Ziul Oiram"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=916531499/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"https://moonkoradjirecords.bandcamp.com/album/ziul-oiram-eternal-shadow-16-24-bit\">Ziul Oiram - Eternal Shadow (16 &amp; 24 bit) by Moon Koradji Records</a></iframe>",
-			"hub": "https://music.imusician.pro/a/Ye7MKZqr/"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/1XZG5qitiYlHlnxsLczZGa",
+				"appleMusic": "https://music.apple.com/ua/album/eternal-shadow-ep/1662982676",
+				"beatport": "https://www.beatport.com/release/eternal-shadow/3980840"
+			}
         },
         {
             "releaseNumber": "MKCD012",
@@ -469,7 +528,11 @@
                 "Inzect", "Molchun", "Adansonia"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=288505973/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/va-neural-embers-coming-soon\">VA Neural Embers by Moon Koradji Records</a></iframe>",
-			"hub": "https://music.imusician.pro/a/qrtDaYv4/"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/3DQ0idyppXLm76Il9Y4RYh",
+				"appleMusic": "https://music.apple.com/ua/album/neural-embers/1512414276",
+				"beatport": "https://www.beatport.com/release/neural-embers/2960615"
+			}
 		},
         {
             "isFree": true,
@@ -504,7 +567,11 @@
                 "Ocelot"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2872029860/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/iconoclast\">Iconoclast by oCeLoT</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/2FIWqDP2SjO5YovHn0Lryb",
+				"appleMusic": "https://music.apple.com/ua/album/iconoclast/1681186126",
+				"beatport": ""
+			}
         },
         {
             "isFree": true,
@@ -534,7 +601,11 @@
                 "Baphomet Engine", "Ocelot", "Ghreg on Earth"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3898821852/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/ep-bapholot-on-earth\">EP Bapholot On Earth by Moon Koradji Records</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/3j2r1dY1slT431LhmTrNo6",
+				"appleMusic": "https://music.apple.com/ua/album/bapholot-on-earth-single/1483467787",
+				"beatport": "https://www.beatport.com/release/bapholot-on-earth/2743690"
+			}
         },
         {
             "releaseNumber": "MKCD011",
@@ -563,7 +634,11 @@
                 "Adansonia", "Saikozaurus", "Time For Slime", "Uttu", "Molchun", "Olien", "Mik-Ha", "NoizeBug", "Trold", "Traskel", "FoGgY"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2422477240/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/illusorium\">Illusorium by Various Artists</a></iframe>",
-			"hub": "https://music.imusician.pro/a/JY8RuXLw/"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/5gXeqgHtDYdynBv30ebTsX",
+				"appleMusic": "https://music.apple.com/ua/album/illusorium/1482677409",
+				"beatport": "https://www.beatport.com/release/illusorium/2730487"
+			}
         },
         {
             "releaseNumber": "MKCD010",
@@ -601,7 +676,11 @@
                 "Molchun", "Odr", "Inzect", "Taigan Sunset", "Distorted Goblin", "Taakelur", "Already Maged", "Tersius", "Uttu", "Purosurpo", "Kanka"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1812939013/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/mind-games\">Mind Games by Various Artists</a></iframe>",
-			"hub": "https://music.imusician.pro/a/zHS2o4jj/"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/3kH1Vfvp1Tba66skZ8Cz6Z",
+				"appleMusic": "https://music.apple.com/ua/album/mind-games/1214417374",
+				"beatport": "https://www.beatport.com/release/mind-games/1977070"
+			}
         },
         {
             "releaseNumber": "MKCD009",
@@ -639,7 +718,11 @@
                 "Ka-Sol", "Time For Slime", "Troglodytes", "Traskel", "Nolm", "Attoya", "Kanka", "Kiriyama", "Battle Of The Future Buddhas"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=205038030/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/intropix\">Intropix by Various Artists</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/2iF4fJYE4gtLIj6l9RVXjU",
+				"appleMusic": "https://music.apple.com/ua/album/intropix/1559559744",
+				"beatport": "https://www.beatport.com/release/intropix/3338369"
+			}
         },
         {
             "releaseNumber": "MKCD008",
@@ -678,7 +761,11 @@
                 "Ocelot"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2601701/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/night-day\">Night &amp; Day by OCELOT</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/2jKRt4YCfdWaikWqFhgFQe",
+				"appleMusic": "https://music.apple.com/ua/album/night-day/659466922",
+				"beatport": "https://www.beatport.com/release/night-day/1107336"
+			}
         },
         {
             "releaseNumber": "MKCD007",
@@ -731,7 +818,11 @@
                 "Vector Selector", "LAB", "Ghreg on Earth", "Silent Horror", "Taigan Sunset", "Baphomet Engine", "Mind Distortion System", "Whrikk", "Enichkin", "Ocelot", "Dylalien"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2850070742/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers-2-depth-perception\">Infinity Keepers 2: depth perception by Various Artists</a></iframe>",
-			"hub": "https://music.imusician.pro/a/7eRtVtwl/"
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/7lHvci5AMNmYfTTc2kAXUj",
+				"appleMusic": "https://music.apple.com/ua/album/infinity-keepers-2-depth-perception/1551634159",
+				"beatport": "https://www.beatport.com/release/infinity-keepers-2-depth-perception/3275364"
+			}
         },
         {
             "releaseNumber": "MKCD006",
@@ -766,7 +857,11 @@
                 "Kirna"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2912520009/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/in-space\">In Space! by KIRNA</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/3wZuMdxaihr2zRXPFp0o7f",
+				"appleMusic": "https://music.apple.com/ua/album/in-space/526526500",
+				"beatport": "https://www.beatport.com/release/in-space/912629"
+			}
         },
         {
             "releaseNumber": "MKCD005",
@@ -805,7 +900,11 @@
                 "Ascoil Sun"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=560698242/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/emergence\">Emergence by ASCOIL SUN</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/1HL7CjCzyCQEifAtoPcqoq",
+				"appleMusic": "https://music.apple.com/ua/album/emergence/500706334",
+				"beatport": "https://www.beatport.com/release/emergence/879240"
+			}
         },
         {
             "releaseNumber": "MKCD004",
@@ -840,7 +939,11 @@
                 "Captain Kirk", "Whrikk", "Kerlivin", "Already Maged", "Drone Bixie", "Tersius", "Troglodytes", "Taigan Sunset", "Attoya", "Oil", "Molokow"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3132695529/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/legendarium\">Legendarium by VA</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/4S0CwtFgi88gZfeRDSh1bd",
+				"appleMusic": "https://music.apple.com/ua/album/legendarium/1550330555",
+				"beatport": "https://www.beatport.com/release/legendarium/3262142"
+			}
         },
         {
             "releaseNumber": "MKCD003",
@@ -872,7 +975,11 @@
                 "Access Gremlin", "Digitalian", "Whrikk", "Amorphous", "Purosurpo", "Pandora's Box", "Traskel", "AnnoyingNinjas", "Distorted Goblin", "Krussedull"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1789906262/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/shadow-enuin-2\">Shadow Enuin 2 by VA</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/5rLNVhEwGbXWS8AfpDDtxo",
+				"appleMusic": "https://music.apple.com/ua/album/shadow-enuin-vol-2/1543495435",
+				"beatport": "https://www.beatport.com/release/shadow-enuin-vol-2/3216336"
+			}
         },
         {
             "releaseNumber": "MKCD002",
@@ -907,7 +1014,11 @@
                 "Ocelot", "Schizobot", "Digitalist", "Silent Horror", "Already Maged", "Karash", "Magma Ohm", "Olien", "Oil", "Fearkiller"
             ],
             "embedAudio": "<iframe style=\"border: 0; width: 100%; height: 405px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=471755579/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/\" seamless><a href=\"http://moonkoradjirecords.bandcamp.com/album/infinity-keepers\">Infinity Keepers by VA</a></iframe>",
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/7I7NZ3pltrl6sDXmTZXByg",
+				"appleMusic": "https://music.apple.com/ua/album/infinity-keepers/1542963772",
+				"beatport": "https://www.beatport.com/release/infinity-keepers/3215256"
+			}
         },
         {
             "releaseNumber": "MKCD001",
@@ -942,7 +1053,11 @@
             "artists": [
                 "Shotu", "Whrikk", "Gidra", "Kuro Fusion", "Pandora's Box", "Mubali", "Phobos Azazel", "Drury Nevil", "Acid Goblins", "Tromo"
             ],
-			"hub": ""
+			"streamingLinks": {
+				"spotify": "https://open.spotify.com/album/12ZqxAjCkVHtcO825m0M9w",
+				"appleMusic": "https://music.apple.com/ua/album/shadow-enuin-at-the-earths-edge/1547981954",
+				"beatport": "https://www.beatport.com/release/shadow-enuin-at-the-earths-edge/3249063"
+			}
         }
     ]
 }

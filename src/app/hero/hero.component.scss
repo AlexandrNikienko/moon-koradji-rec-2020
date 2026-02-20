@@ -108,7 +108,7 @@
 
 .letter {
     display: inline-block;
-    cursor: pointer;
+    cursor: default;
     transition: filter 0.3s ease;
     
     &.space {
