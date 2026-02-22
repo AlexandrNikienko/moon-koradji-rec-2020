@@ -1,54 +1,62 @@
 @if (artist()) {
 	<mk-heading [title]="artist().artistName" />
 
-	@if (artist().artistAvatar) {
-		<img class="s-artist-foto" src="/assets/images/artists/{{artist().artistAvatar}}" alt="{{artist().artistName}}">
-	}
-
-	<a class="s-go-back" routerLink="/artists">
-		<i class="fas fa-long-arrow-alt-left"></i>Go to Artists page
-	</a>
-
-	<!-- <div *ngIf="artist().artistRealName" class="s-artist-details">Real name: {{artist().artistRealName}}</div> -->
-
-	<div class="s-artist-details">Country: {{artist().artistCountry}}</div>
-
-	<div class="s-artist-description">
-		@for (description of artist().artistDescription; track description) {
-			<p class="s-artist-description__item">
-				{{description.paragraph}}
-			</p>
+	<div class="artist-wrapper">
+		@if (artist().artistAvatar) {
+			<div class="artist-foto-wrapper">
+				<img class="artist-foto" src="/assets/images/artists/{{artist().artistAvatar}}" alt="{{artist().artistName}}">
+			</div>
 		}
-	</div>
 
-	<div class="btn-group float-end" role="group">
-		<!--<a class="btn btn-link" href="javascript: void(0)" (click)="share()"
-			title="Share on Facebook">
-			<i class="fas fa-share fa-2x"></i>
-		</a>-->
-
-		@if (artist().artistFacebook) {
-			<a class="btn btn-link" href="{{artist().artistFacebook}}" target="_blank" title="Facebook page">
-				<i class="fab fa-facebook-square fa-2x"></i>
+		<div class="artist-details-wrapper">
+			<a class="s-go-back" routerLink="/artists">
+				<i class="fas fa-long-arrow-alt-left"></i>Go to Artists page
 			</a>
-		}
 
-		@if (artist().artistSoundcloud) {
-			<a class="btn btn-link" href="{{artist().artistSoundcloud}}" target="_blank" title="SoundCloud page">
-				<i class="fab fa-soundcloud fa-2x"></i>
-			</a>
-		}
+			@if (artist().artistRealName) {
+				<div class="s-artist-details">Real name: {{artist().artistRealName}}</div>
+			}
 
-		@if (artist().artistMixcloud) {
-			<a class="btn btn-link" href="{{artist().artistMixcloud}}" target="_blank" title="Mixcloud page">
-				<i class="fab fa-mixcloud fa-2x"></i>
-			</a>
-		}
+			<div class="s-artist-details">Country: {{artist().artistCountry}}</div>
+
+			<div class="s-artist-description">
+				@for (description of artist().artistDescription; track description) {
+					<p class="s-artist-description__item">
+						{{description.paragraph}}
+					</p>
+				}
+			</div>
+
+			<div class="btn-group float-end" role="group">
+				<!--<a class="btn btn-link" href="javascript: void(0)" (click)="share()"
+					title="Share on Facebook">
+					<i class="fas fa-share fa-2x"></i>
+				</a>-->
+
+				@if (artist().artistFacebook) {
+					<a class="btn btn-link" href="{{artist().artistFacebook}}" target="_blank" title="Facebook page">
+						<i class="fab fa-facebook-square fa-2x"></i>
+					</a>
+				}
+
+				@if (artist().artistSoundcloud) {
+					<a class="btn btn-link" href="{{artist().artistSoundcloud}}" target="_blank" title="SoundCloud page">
+						<i class="fab fa-soundcloud fa-2x"></i>
+					</a>
+				}
+
+				@if (artist().artistMixcloud) {
+					<a class="btn btn-link" href="{{artist().artistMixcloud}}" target="_blank" title="Mixcloud page">
+						<i class="fab fa-mixcloud fa-2x"></i>
+					</a>
+				}
+			</div>
+		</div>
 	</div>
 
 	@if (artist().releases) {
 		<div class="s-involved row">
-			<div class="s-involved__title">Moon Koradji Records releases with {{artist().artistName}}:</div>
+			<div class="small-title">Releases with {{artist().artistName}}</div>
 
 			@for (release of artist().releases; track release) {
 				<div class="s-involved__item col-lg-2 col-md-3 col-sm-3 col-xs-3">

@@ -1,30 +1,31 @@
 @use '../../styles/_utils.scss' as *;
 
-.s-artist-foto {
+.artist-wrapper {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.artist-details-wrapper {
+	flex: 1 0 514px;
+}
+
+.artist-foto-wrapper {
+	flex: 0 0 350px;
 	width: 350px;
-	margin: 0 1rem 0.75rem 0;
+	height: 350px;
 	box-shadow: $brand-border;
-	border-radius: 6px;
-	float: left;
-	float: inline-start;
-	display: block;
-	max-width: 100%;
-	height: auto;
+	border-radius: 4px;;
+}
 
-	@supports (margin-inline-end: 0) {
-		margin-right: 32px;
-		margin-inline-end: 2rem;
-	}
-
-	@supports (margin-block-end: 0) {
-		margin-bottom: 16px;
-		margin-block-end: 1rem;
-	}
+.artist-foto {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .s-artist-details {
 	font-size: 18px;
-	margin-top: 10px;
 	margin-bottom: 16px;
 }
 
