@@ -24,7 +24,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   private targetMouseX = 0;
   private targetMouseY = 0;
   private scrollY = 0;
-  private readonly MOUSE_LERP_SPEED = 0.1; // smoothing factor (0-1, lower = smoother)
+  private readonly MOUSE_LERP_SPEED = 0.05; // smoothing factor (0-1, lower = smoother)
 
   ngAfterViewInit(): void {
     const canvas = this.canvasRef.nativeElement as HTMLCanvasElement;

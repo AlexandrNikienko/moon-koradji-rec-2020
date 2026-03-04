@@ -35,13 +35,15 @@
 			<div class="release-actions__side">
 				<p class="release-actions__title">{{release().isFree ? "Free Download:" : "Buy Digital:"}}</p>
 
-				@if (release().bandcampLink) {
-					<a href="{{release().bandcampLink}}" target="_blank" class="release-link"><i class="fab fa-bandcamp"></i> Bandcamp</a>
-				}
+				<div class="release-actions__links">
+					@if (release().bandcampLink) {
+						<a href="{{release().bandcampLink}}" target="_blank" class="release-link"><i class="fab fa-bandcamp"></i> Bandcamp</a>
+					}
 
-				@if (release().bandcamp24Link) {
-					<a href="{{release().bandcamp24Link}}" target="_blank" class="release-link"><i class="fab fa-bandcamp"></i> Bandcamp 24 bit</a>
-				}
+					@if (release().bandcamp24Link) {
+						<a href="{{release().bandcamp24Link}}" target="_blank" class="release-link"><i class="fab fa-bandcamp"></i> Bandcamp 24 bit</a>
+					}
+				</div>
 			</div>
 		}
 
@@ -49,25 +51,27 @@
 			<div class="release-actions__side">
 				<p class="release-actions__title">Streaming:</p>
 
-				@if (release().streamingLinks.spotify) {
-				<a href="{{release().streamingLinks.spotify}}" target="_blank" class="release-link">
-					<i class="fab fa-spotify"></i> Spotify
-				</a>
-				}
+				<div class="release-actions__links">
+					@if (release().streamingLinks.spotify) {
+					<a href="{{release().streamingLinks.spotify}}" target="_blank" class="release-link">
+						<i class="fab fa-spotify"></i> Spotify
+					</a>
+					}
 
-				@if (release().streamingLinks.appleMusic) {
-				<a href="{{release().streamingLinks.appleMusic}}" target="_blank" class="release-link">
-					<i class="fab fa-apple"></i> Apple Music
-				</a>
-				}
+					@if (release().streamingLinks.appleMusic) {
+					<a href="{{release().streamingLinks.appleMusic}}" target="_blank" class="release-link">
+						<i class="fab fa-apple"></i> Apple Music
+					</a>
+					}
 
-				@if (release().streamingLinks.beatport) {
-				<a href="{{release().streamingLinks.beatport}}" target="_blank" class="release-link">
-					<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" height="24" width="24" style="width: 16px; margin-block: -6px; margin-left: -4px;">
-						<path d="M21.429 17.055a7.114 7.114 0 0 1 -0.794 3.246 6.917 6.917 0 0 1 -2.181 2.492 6.698 6.698 0 0 1 -3.063 1.163 6.653 6.653 0 0 1 -3.239 -0.434 6.796 6.796 0 0 1 -2.668 -1.932 7.03 7.03 0 0 1 -1.481 -2.983 7.124 7.124 0 0 1 0.049 -3.345 7.015 7.015 0 0 1 1.566 -2.937l-4.626 4.73 -2.421 -2.479 5.201 -5.265a3.791 3.791 0 0 0 1.066 -2.675V0h3.41v6.613a7.172 7.172 0 0 1 -0.519 2.794 7.02 7.02 0 0 1 -1.559 2.353l-0.153 0.156a6.768 6.768 0 0 1 3.49 -1.725 6.687 6.687 0 0 1 3.845 0.5 6.873 6.873 0 0 1 2.959 2.564 7.118 7.118 0 0 1 1.118 3.8Zm-3.089 0a3.89 3.89 0 0 0 -0.611 -2.133 3.752 3.752 0 0 0 -1.666 -1.424 3.65 3.65 0 0 0 -2.158 -0.233 3.704 3.704 0 0 0 -1.92 1.037 3.852 3.852 0 0 0 -1.031 1.955 3.908 3.908 0 0 0 0.205 2.213c0.282 0.7 0.76 1.299 1.374 1.721a3.672 3.672 0 0 0 2.076 0.647 3.637 3.637 0 0 0 2.635 -1.096c0.347 -0.351 0.622 -0.77 0.81 -1.231 0.188 -0.461 0.285 -0.956 0.286 -1.456Z" fill="#ffffff" stroke-width="1"/>
-					</svg> Beatport
-				</a>
-				}
+					@if (release().streamingLinks.beatport) {
+					<a href="{{release().streamingLinks.beatport}}" target="_blank" class="release-link">
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" height="24" width="24" style="width: 16px; margin-block: -6px; margin-left: -4px;">
+							<path d="M21.429 17.055a7.114 7.114 0 0 1 -0.794 3.246 6.917 6.917 0 0 1 -2.181 2.492 6.698 6.698 0 0 1 -3.063 1.163 6.653 6.653 0 0 1 -3.239 -0.434 6.796 6.796 0 0 1 -2.668 -1.932 7.03 7.03 0 0 1 -1.481 -2.983 7.124 7.124 0 0 1 0.049 -3.345 7.015 7.015 0 0 1 1.566 -2.937l-4.626 4.73 -2.421 -2.479 5.201 -5.265a3.791 3.791 0 0 0 1.066 -2.675V0h3.41v6.613a7.172 7.172 0 0 1 -0.519 2.794 7.02 7.02 0 0 1 -1.559 2.353l-0.153 0.156a6.768 6.768 0 0 1 3.49 -1.725 6.687 6.687 0 0 1 3.845 0.5 6.873 6.873 0 0 1 2.959 2.564 7.118 7.118 0 0 1 1.118 3.8Zm-3.089 0a3.89 3.89 0 0 0 -0.611 -2.133 3.752 3.752 0 0 0 -1.666 -1.424 3.65 3.65 0 0 0 -2.158 -0.233 3.704 3.704 0 0 0 -1.92 1.037 3.852 3.852 0 0 0 -1.031 1.955 3.908 3.908 0 0 0 0.205 2.213c0.282 0.7 0.76 1.299 1.374 1.721a3.672 3.672 0 0 0 2.076 0.647 3.637 3.637 0 0 0 2.635 -1.096c0.347 -0.351 0.622 -0.77 0.81 -1.231 0.188 -0.461 0.285 -0.956 0.286 -1.456Z" fill="#ffffff" stroke-width="1"/>
+						</svg> Beatport
+					</a>
+					}	
+				</div>
 			</div>
 		}
     </div>
