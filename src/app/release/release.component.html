@@ -7,7 +7,9 @@
       <span class="fas fa-share fa-2x"></span>
     </a> -->
 
-    <app-picture [cover]="release().releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
+    <div class="cover-container" (click)="toggleCoverModal()">
+      <app-picture [cover]="release().releaseCover" [class]="'release-cover'" [imageFolder]="'release-cover/'"></app-picture>
+    </div>
 
     <a class="s-go-back" routerLink="/releases">
       <i class="fas fa-long-arrow-alt-left"></i>Go to Releases page
@@ -142,6 +144,17 @@
     </div>
   }
 </div>
+}
+
+@if (coverModalOpen()) {
+  <div class="cover-modal" (click)="toggleCoverModal()">
+    <div class="cover-modal__content" (click)="$event.stopPropagation()">
+      <button class="cover-modal__close" (click)="toggleCoverModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <app-picture [cover]="release().releaseCover" [class]="'release-cover-zoom'" [imageFolder]="'release-cover/'"></app-picture>
+    </div>
+  </div>
 }
 
 <div class="catalog">

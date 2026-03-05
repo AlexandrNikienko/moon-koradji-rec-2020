@@ -71,6 +71,8 @@ export class ReleaseComponent {
 		return this.allArtists().filter(a => release.artists.includes(a.artistName));
 	});
 
+	coverModalOpen = signal<boolean>(false);
+
 	constructor() {
 		effect(() => {
 			if (
@@ -89,6 +91,10 @@ export class ReleaseComponent {
 
 	shareOnFacebook(): void {
 		window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent('https://www.moonkoradji.com/releases/' + this.release().releaseRoute), '_blank');
+	}
+
+	toggleCoverModal(): void {
+		this.coverModalOpen.set(!this.coverModalOpen());
 	}
 
 	setMetaData(release: Release): void {
