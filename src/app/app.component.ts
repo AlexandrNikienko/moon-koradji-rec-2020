@@ -1,5 +1,6 @@
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ScrollToTopComponent } from './layout/scroll-to-top/scroll-to-top.component';
@@ -14,7 +15,8 @@ import { ScrollTopService } from './core/services/scroll-to-top.service';
 		HeaderComponent,
 		FooterComponent,
 		ScrollToTopComponent,
-		MatTooltipModule
+		MatTooltipModule,
+		CommonModule
 	],
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -22,14 +24,21 @@ import { ScrollTopService } from './core/services/scroll-to-top.service';
 })
 export class AppComponent {
 	showBackground = true;
+	showing = false;
 
 	constructor(
 		private router: Router,
 		private scrollTopService: ScrollTopService
 	) {
-		this.router.events.subscribe(event => {
-			if (event instanceof NavigationEnd) {
-			  this.showBackground = this.router.url !== '/podcasts';
+		this.router.events.subscribe(e => {
+			if (e instanceof NavigationStart) {
+				this.showing = false;
+			}
+			if (e instanceof NavigationEnd) {
+				// defer showing the UI until after the current render cycle
+				setTimeout(() => this.showing = true);
+
+			  	this.showBackground = this.router.url !== '/podcasts';
 			}
 		  });
 	}
