@@ -18,6 +18,7 @@ import { Event } from '../core/models/event.model';
 import { IMAGEFOLDER } from '../../environments/environment';
 import { PictureComponent } from '../shared/picture/picture.component';
 import { Artist } from '../core/models/artist.model';
+import { Utils } from '../core/utils';
 
 type EventWithArtistRoutes = Event & { artists: { artistName: string; artistRoute: string }[] };
 
@@ -85,7 +86,7 @@ export class HomeComponent {
 	);
 
 	featuredGalleryItems: Signal<Gallery[]> = computed<Gallery[]>(() => {
-		return this.shuffleArray(this.featuredArtists()).map(artist => {
+		return Utils.shuffleArray(this.featuredArtists()).map(artist => {
 			const artistName = artist.artistName;
 
 			return {
@@ -168,14 +169,6 @@ export class HomeComponent {
 		ogImage: 'https://www.moonkoradji.com/assets/images/mk_square.jpg',
 		ogUrl: 'https://www.moonkoradji.com/',
 		ogDescription: 'Independent ukrainian psytrance label founded in 2007 by Oleksandr Nikiienko aka DJ Omsun.'
-	}
-
-	shuffleArray<T>(array: T[]): T[] {
-		for (let i = array.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[array[i], array[j]] = [array[j], array[i]];
-		}
-		return array;
 	}
 
 	getArtistRoute(artistName: string): string {
